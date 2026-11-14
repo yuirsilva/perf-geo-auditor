@@ -18,7 +18,7 @@ It returns a **typed diagnosis** (Zod schema + structured outputs, `src/lib/audi
 
 ## Stack
 
-Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind 4 · Postgres + Drizzle · Better Auth · Anthropic TypeScript SDK (tool runner + structured outputs)
+Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind 4 · Postgres (PGlite locally) + Drizzle · Better Auth · Anthropic TypeScript SDK (tool runner + structured outputs)
 
 ## Architecture
 
@@ -41,12 +41,12 @@ Security notes:
 ```bash
 pnpm install
 cp .env.example .env          # then fill in the values below
-pnpm db:push                  # create tables
+pnpm db:push                  # create tables (in ./.pglite by default)
 pnpm dev
 ```
 
 `.env` values you need:
-- `DATABASE_URL`: any Postgres. Use the one already on your machine (`createdb auditor`), or a free [Neon](https://neon.tech) database, which you'll need for the deploy anyway.
+- `DATABASE_URL`: leave empty to use PGlite (Postgres running inside the app, data in `./.pglite`, no server or password). Set it to a `postgres://` URL to use a Postgres server instead.
 - `BETTER_AUTH_SECRET`: any random 32+ byte string (`openssl rand -base64 32`)
 - `ANTHROPIC_API_KEY`: from platform.claude.com
 - `PAGESPEED_API_KEY`: free from Google Cloud ("PageSpeed Insights API"). **Without it you'll hit Google's shared anonymous quota almost immediately.**
