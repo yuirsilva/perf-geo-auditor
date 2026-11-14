@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Perf & GEO Auditor
 
-## Getting Started
+Paste a URL. Get the **root causes** of slow Core Web Vitals and poor AI-search visibility, with fixes you can ship.
 
-First, run the development server:
+It combines three data sources, then has Claude investigate them with tools:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Source | What it gives | Where |
+|---|---|---|
+| **CrUX** (via PageSpeed Insights) | Real-user p75 LCP / INP / CLS / TTFB, page- or origin-level | `src/lib/audit/psi.ts` |
+| **Lighthouse** (via PageSpeed Insights) | Lab metrics, category scores, failing audits with details | `src/lib/audit/psi.ts` |
+| **Crawl** | Meta, headings, images, render-blocking resources, JSON-LD, robots.txt rules for AI crawlers, llms.txt | `src/lib/audit/crawl.ts` |
+
+**Claude** (`src/lib/audit/diagnose.ts`) gets a compact summary and two tools:
+- `get_lighthouse_audit`: pull the rows of a specific failing audit (e.g. the LCP element) on demand, instead of stuffing everything into the prompt
+- `inspect_resource`: check an asset's size, compression and caching headers
+
+It returns a **typed diagnosis** (Zod schema + structured outputs, `src/lib/audit/diagnosis-schema.ts`): prioritized issues with evidence, root cause, fix, a code snippet and estimated impact, plus a structured-data and AI-crawler assessment. Token usage, cost and latency are stored per audit.
+
+## Stack
+
+Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind 4 · Postgres + Drizzle · Better Auth · Anthropic TypeScript SDK (tool runner + structured outputs)
+
+## Architecture
+
+```
+form (server action) ──► insert audit (queued) ──► redirect to /audits/:id
+                              │
+                         after() ──► runAudit(id)
+                                       ├─ collecting: PSI ∥ crawl  ──► save psi, crawl
+                                       ├─ diagnosing: Claude + tools ──► save diagnosis, tokens, cost
+                                       └─ done | failed
+/audits/:id  ── polls with router.refresh() until done
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Security notes:
+- **SSRF guard** (`url-guard.ts`): user URLs and every redirect hop are resolved and checked against private/loopback/link-local ranges before fetching. Bodies are size-capped and fetches time out.
+- Audits are always queried by `id` **and** `userId`. Server actions re-check the session.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Run it locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm install
+cp .env.example .env          # then fill in the values below
+pnpm db:push                  # create tables
+pnpm dev
+```
 
-## Learn More
+`.env` values you need:
+- `DATABASE_URL`: any Postgres. Use the one already on your machine (`createdb auditor`), or a free [Neon](https://neon.tech) database, which you'll need for the deploy anyway.
+- `BETTER_AUTH_SECRET`: any random 32+ byte string (`openssl rand -base64 32`)
+- `ANTHROPIC_API_KEY`: from platform.claude.com
+- `PAGESPEED_API_KEY`: free from Google Cloud ("PageSpeed Insights API"). **Without it you'll hit Google's shared anonymous quota almost immediately.**
 
-To learn more about Next.js, take a look at the following resources:
+Try the data collection without spending any API credits:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm collect https://your-site.com
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy (Vercel + Neon)
 
-## Deploy on Vercel
+1. Use your Neon database (or create one) and run `pnpm db:push` against it.
+2. Import the repo in Vercel and set the same env vars, with `BETTER_AUTH_URL` set to your production URL.
+3. The pipeline runs inside `after()`, so it's bound by the function's max duration. If audits time out, move `runAudit` onto a queue (see roadmap).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Roadmap (the 14-day sprint)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] **Evals:** ~15 real sites with the expected diagnosis written down. Score Claude's output against them (`scripts/` + a judge prompt) and track the score as you change prompts or effort.
+- [ ] Cost and latency dashboard from the stored per-audit numbers. Try caching and `CLAUDE_EFFORT=low`, and measure whether quality holds.
+- [ ] Background queue (Inngest / QStash / pg-boss) with retries
+- [ ] Compare runs over time for the same URL
+- [ ] Desktop + mobile strategies side by side
+- [ ] Shareable public report links
