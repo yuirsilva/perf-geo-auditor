@@ -13,7 +13,8 @@
     "db:studio": "drizzle-kit studio",
     "typecheck": "tsc --noEmit",
     "collect": "tsx --conditions=react-server scripts/collect.ts",
-    "fixture": "tsx --conditions=react-server scripts/fixture.ts"
+    "fixture": "tsx --conditions=react-server scripts/fixture.ts",
+    "eval": "tsx --conditions=react-server scripts/eval.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",

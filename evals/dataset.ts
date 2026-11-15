@@ -28,14 +28,13 @@ export const dataset: DatasetCase[] =
     {
         fixture: 'aese',
         expected: {
-            topIssueMetric: ["TTFB", "LCP"],
             mustFind: [
                 "Real users pass all Core Web Vitals",
-                "Server response is slow for real users (TTFB 715ms vs 240ms in the lab), likely no CDN or HTML caching",
+                "Real-user TTFB (715ms) is Good but the closest metric to its limit (800ms), and about 3x the lab value (240ms)",
                 "Render-blocking CSS/JS delays the first paint"
             ],
             mustNotFlag: ["CLS"],
-            notes: "Passing site. TTFB has the least headroom (715ms vs 800ms). CLS is 0, so there's no CLS issue."
+            notes: "Passing site: every field metric is Good, so there's no top issue. TTFB has the least headroom (715ms vs 800ms). CLS is 0, so there's no CLS issue."
         }
     },
     {
@@ -45,8 +44,8 @@ export const dataset: DatasetCase[] =
             mustFind: [
                 "Real users doesn't pass all Core Web Vitals",
                 "Server response is slow for real users (TTFB 1515ms vs 410ms in the lab)",
-                "Unused JS affects the LCP (est. savings of 1.33 MB) (19.5s in the lab)",
-                "4 CLS caused by images without an explicit width and height"
+                "Ships ~1.3 MB of unused JavaScript",
+                "Almost all the CLS is one shift in the Nominees section, caused by a media element without an explicit size"
             ],
             mustNotFlag: ["INP"],
             notes: "Not passing site."
@@ -70,7 +69,7 @@ export const dataset: DatasetCase[] =
         expected: {
             topIssueMetric: "TTFB",
             mustFind: [
-                "Real users pass all Core Web Vitals",
+                "LCP and CLS are Good for real users; INP has no field data, so a full pass can't be confirmed",
                 "Render-blocking CSS/JS delays the first paint",
                 "Server response is slow for real users (TTFB 988ms vs 30ms in the lab)",
             ],
@@ -98,11 +97,11 @@ export const dataset: DatasetCase[] =
             topIssueMetric: ["TTFB", "CLS"],
             mustFind: [
                 "Real users doesn't pass all Core Web Vitals",
-                "Unused JS affects the LCP (est. savings of 0.11 MB)",
+                "Ships ~115 KB of unused JavaScript",
                 "Server response is slow for real users (TTFB 1853ms vs 10ms in the lab)",
                 "Layout shift is almost at POOR (0.2 for real users, 0.17 in the lab), from the main content feed moving",
                 "Clicks are slow for real users (INP 332ms - AVERAGE), though the lab shows little blocking (TBT 130ms), so the slowness is likely in interactions after load",
-                "robots.txt blocks AI crawlers (GPTBot, ClaudeBot, CCBot...), so the page can't appear in AI answers",
+                "robots.txt blocks AI training bot crawlers (GPTBot, ClaudeBot and CCBot)",
                 "No llms.txt present to help AI agents understand key content",
                 "No structured data (JSON-LD) to help search engines (SEO) and AI agents (GEO)"
             ],
@@ -117,7 +116,7 @@ export const dataset: DatasetCase[] =
             mustFind: [
                 "Real users doesn't pass all Core Web Vitals",
                 "Layout shift is beyond POOR (SLOW - 0.89), but 0 in the lab, because the lab doesn't scroll or interact",
-                "Unused JS affects the LCP (est. savings of 0.429 MB)",
+                "Ships ~430 KB of unused JavaScript",
                 "Server response is slow for real users (TTFB 882ms vs 10ms in the lab)",
                 "JS execution time is increasing main-thread block time (INP at 319ms), against the FAST limit of 200ms. TBT at 350ms in the lab.",
             ],
@@ -147,7 +146,7 @@ export const dataset: DatasetCase[] =
             topIssueMetric: ["LCP", "TTFB"],
             mustFind: [
                 "Real users doesn't pass all Core Web Vitals",
-                "Unused JS affects the LCP (est. savings of 0.61 MB)",
+                "Ships ~600 KB of unused JavaScript",
                 "JS blocks the main thread for a long time in the lab (TBT 970ms, 4.9s of main-thread work)",
                 "Server response is slow for real users (1711ms, almost POOR; 30ms in the lab due to Lighthouse), likely no CDN or HTML caching. Almost 1.7s of the 3.0s LCP is spent waiting for the server"
             ],

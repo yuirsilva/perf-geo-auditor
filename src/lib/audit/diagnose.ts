@@ -11,15 +11,15 @@ const client = new Anthropic();
 
 // Haiku for development and eval iteration (~$0.01/audit). Compare against
 // claude-sonnet-5-5 / claude-opus-5-5 on the evals before deciding on production.
-const MODEL = process.env.CLAUDE_MODEL ?? "claude-haiku-5-5";
+const MODEL = process.env.AUDIT_MODEL ?? "claude-haiku-5-5";
 
 // Server-side refusal fallbacks exist on these models only (not on Haiku 5.5).
 const SUPPORTS_FALLBACKS = ["claude-opus-5-5", "claude-sonnet-5-5", "claude-fable-5-2"];
 type Effort = "low" | "medium" | "high" | "xhigh" | "max";
-const EFFORT = (process.env.CLAUDE_EFFORT ?? "medium") as Effort;
+const EFFORT = (process.env.AUDIT_EFFORT ?? "medium") as Effort;
 
 // $ per 1M tokens (input, output). Cache reads are ~0.1x input, writes ~1.25x.
-const PRICES: Record<string, { input: number; output: number }> = {
+export const PRICES: Record<string, { input: number; output: number }> = {
   "claude-opus-5-5": { input: 4, output: 20 },
   "claude-sonnet-5-5": { input: 2, output: 10 },
   "claude-haiku-5-5": { input: 0.1, output: 0.5 },
@@ -41,7 +41,21 @@ How to work:
 - Name the framework when the HTML makes it obvious (Next.js, Shopify, WordPress...) and tailor code snippets to it.
 - Every issue must cite concrete evidence from the data. If the data doesn't support a claim, don't make it.
 - GEO (generative engine optimization): check whether AI crawlers are blocked, whether the content is server-rendered and readable without JS, and whether structured data describes the page well.
-- Prioritize: the first issue should be the change with the biggest real-user impact.`;
+- Prioritize: the first issue should be the change with the biggest real-user impact.
+
+Core Web Vitals thresholds (field p75):
+| Metric | Good    | Poor    |
+| LCP    | ≤2500ms | >4000ms |
+| INP    | ≤200ms  | >500ms  |
+| CLS    | ≤0.1    | >0.25   |
+| FCP    | ≤1800ms | >3000ms |
+| TTFB   | ≤800ms  | >1800ms |
+
+- A page passes Core Web Vitals only when LCP, INP and CLS are all Good. Between Good and Poor is "needs improvement", which is not a pass. If a metric has no field data, say its status can't be confirmed.
+- Rank issues by how far each field metric is above its Good limit (p75 ÷ Good). Then account for causes: TTFB is part of LCP, so a slow server can come before a slow LCP.
+- Only set an issue's metric to a field metric that is above Good. If real users are already fine on that metric, use "none" and say the gain is lab-only.
+- Label an issue by the metric its fix moves most directly. A server or HTML caching fix is TTFB, even though it also helps FCP and LCP.
+`;
 
 export type DiagnoseResult = {
   diagnosis: Diagnosis;

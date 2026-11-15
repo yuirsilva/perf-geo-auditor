@@ -66,7 +66,7 @@ pnpm collect https://your-site.com
 ## Roadmap (the 14-day sprint)
 
 - [ ] **Evals:** ~15 real sites with the expected diagnosis written down. Score Claude's output against them (`scripts/` + a judge prompt) and track the score as you change prompts or effort.
-- [ ] Cost and latency dashboard from the stored per-audit numbers. Try caching and `CLAUDE_EFFORT=low`, and measure whether quality holds.
+- [ ] Cost and latency dashboard from the stored per-audit numbers. Try caching and `AUDIT_EFFORT=low`, and measure whether quality holds.
 - [ ] Background queue (Inngest / QStash / pg-boss) with retries
 - [ ] Compare runs over time for the same URL
 - [ ] Desktop + mobile strategies side by side

@@ -10,7 +10,7 @@ export const IssueSchema = z.object({
   category: z.enum(["performance", "seo", "geo", "accessibility"]),
   metric: z
     .enum(["LCP", "INP", "CLS", "TTFB", "FCP", "none"])
-    .describe("Core Web Vital this mainly affects, or 'none'"),
+    .describe("Field metric this issue fixes, only if real users are above Good on it; otherwise 'none'"),
   severity: z.enum(["critical", "high", "medium", "low"]),
   evidence: z
     .string()
