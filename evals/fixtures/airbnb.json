@@ -1,0 +1,862 @@
+{
+  "name": "airbnb",
+  "url": "https://www.airbnb.com/",
+  "collectedAt": "2026-11-15T16:36:23.315Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-15T16:36:23.312Z",
+    "finalUrl": "https://www.airbnb.com/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 46,
+      "accessibility": 95,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 3318,
+        "category": "AVERAGE"
+      },
+      "inpMs": {
+        "p75": 374,
+        "category": "AVERAGE"
+      },
+      "cls": {
+        "p75": 0.13,
+        "category": "AVERAGE"
+      },
+      "fcpMs": {
+        "p75": 1348,
+        "category": "FAST"
+      },
+      "ttfbMs": {
+        "p75": 717,
+        "category": "FAST"
+      },
+      "overall": "AVERAGE"
+    },
+    "lab": {
+      "lcp": {
+        "value": 20481.50557515612,
+        "display": "20.5 s"
+      },
+      "cls": {
+        "value": 0,
+        "display": "0"
+      },
+      "tbt": {
+        "value": 936.5,
+        "display": "940 ms"
+      },
+      "fcp": {
+        "value": 1245.505575156119,
+        "display": "1.2 s"
+      },
+      "speedIndex": {
+        "value": 7953.783822737427,
+        "display": "8.0 s"
+      },
+      "ttfb": {
+        "value": 347,
+        "display": "Root document took 350 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 1,036 KiB",
+        "savingsMs": {
+          "LCP": 4500,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 86341,
+            "totalBytes": 99224,
+            "wastedPercent": 87.01666598510731,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/signup-and-login/utils/modalRenderer.c0e30ee911.js"
+          },
+          {
+            "wastedPercent": 42.64012422693551,
+            "totalBytes": 181658,
+            "wastedBytes": 77459,
+            "url": "https://www.airbnb.com/gtg/gtm-46mk/k1-RPHeiJcOxrWHta7FxZUE6n9H5Lj7crr3d8V-0B0_AQzEt"
+          },
+          {
+            "wastedPercent": 75.35497802847763,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.7b3092f4a8.js",
+            "wastedBytes": 71128,
+            "totalBytes": 94391
+          },
+          {
+            "wastedBytes": 69959,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/2cea.71543ba2b1.js",
+            "totalBytes": 90387,
+            "wastedPercent": 77.39901757281177
+          },
+          {
+            "wastedBytes": 60914,
+            "wastedPercent": 31.973043654259964,
+            "totalBytes": 190515,
+            "url": "https://www.airbnb.com/gtg/gtm-46mk/gtm.js?id=GTM-46MK"
+          },
+          {
+            "wastedPercent": 68.83164088234625,
+            "wastedBytes": 54526,
+            "totalBytes": 79216,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/7945.8d869735c8.js"
+          },
+          {
+            "totalBytes": 83504,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/13e8.192d4634d9.js",
+            "wastedPercent": 60.560916127664086,
+            "wastedBytes": 50570
+          },
+          {
+            "totalBytes": 61903,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/52fc.4a77155924.js",
+            "wastedPercent": 72.58585353065942,
+            "wastedBytes": 44933
+          },
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/search-location-sections/sections/StaysMap/StaysMapCompact.75494512d8.js",
+            "totalBytes": 55437,
+            "wastedBytes": 43820,
+            "wastedPercent": 79.04478841739746
+          },
+          {
+            "wastedPercent": 60.015556342402064,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/e9eb.44b7c5d210.js",
+            "wastedBytes": 41645,
+            "totalBytes": 69390
+          }
+        ]
+      },
+      {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0,
+        "displayValue": "Est savings of 424 KiB",
+        "savingsMs": {
+          "LCP": 2100,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedPercent": 95.46721550922852,
+            "wastedBytes": 433719,
+            "totalBytes": 454312,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-spa/entrypoints/client.ce4b1bad02.css"
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 710 ms",
+        "savingsMs": {
+          "LCP": 700,
+          "FCP": 700
+        },
+        "items": [
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/1a96.49a51f3caa.js",
+            "totalBytes": 117727
+          },
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/5645.8c7709eb61.js",
+            "totalBytes": 28493
+          },
+          {
+            "totalBytes": 19800,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/c8d2.81d5f5f46e.js"
+          },
+          {
+            "totalBytes": 15752,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/6ca1.abe1ea7444.js"
+          },
+          {
+            "totalBytes": 23116,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/534b.690d160b80.js"
+          },
+          {
+            "totalBytes": 54261,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/7e3e.1131d9b6b5.js"
+          },
+          {
+            "totalBytes": 14536,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/0f9d.c360fec55f.js"
+          },
+          {
+            "totalBytes": 21225,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/a049.02ed043b0d.js"
+          },
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/7945.8d869735c8.js",
+            "totalBytes": 80571
+          },
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/fe42.b18aff1ab0.js",
+            "totalBytes": 31336
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "4.5 s",
+        "savingsMs": {
+          "TBT": 950
+        },
+        "items": [
+          {
+            "duration": 2304.1895999999633,
+            "groupLabel": "Script Evaluation",
+            "group": "scriptEvaluation"
+          },
+          {
+            "group": "scriptParseCompile",
+            "groupLabel": "Script Parsing & Compilation",
+            "duration": 942.5651999999998
+          },
+          {
+            "groupLabel": "Other",
+            "duration": 623.6423999999915,
+            "group": "other"
+          },
+          {
+            "groupLabel": "Garbage Collection",
+            "group": "garbageCollection",
+            "duration": 277.3704
+          },
+          {
+            "groupLabel": "Style & Layout",
+            "duration": 243.74039999999988,
+            "group": "styleLayout"
+          },
+          {
+            "duration": 101.06280000000008,
+            "groupLabel": "Parse HTML & CSS",
+            "group": "parseHTML"
+          },
+          {
+            "groupLabel": "Rendering",
+            "duration": 36.666000000000125,
+            "group": "paintCompositeRender"
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "2.3 s",
+        "savingsMs": {
+          "TBT": 800
+        },
+        "items": [
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/b571.9e605aa258.js",
+            "total": 495.32999999999765,
+            "scriptParseCompile": 13.883999999999999,
+            "scripting": 233.5067999999983
+          },
+          {
+            "total": 483.38760000000025,
+            "scripting": 57.29520000000022,
+            "scriptParseCompile": 2.1419999999999995,
+            "url": "https://www.airbnb.com/"
+          },
+          {
+            "total": 422.20439999999815,
+            "scripting": 321.33239999999813,
+            "scriptParseCompile": 98.6112,
+            "url": "https://www.airbnb.com/gtg/gtm-46mk/gtm.js?id=GTM-46MK"
+          },
+          {
+            "scripting": 63.791999999999966,
+            "url": "Unattributable",
+            "scriptParseCompile": 0,
+            "total": 387.38879999999585
+          },
+          {
+            "total": 241.77240000000012,
+            "scripting": 136.4868000000001,
+            "url": "https://d0a7e.airbnb.com/tags.js",
+            "scriptParseCompile": 11.7876
+          },
+          {
+            "total": 216.0972000000005,
+            "scripting": 142.30800000000048,
+            "url": "https://www.airbnb.com/gtg/gtm-46mk/k1-RPHeiJcOxrWHta7FxZUE6n9H5Lj7crr3d8V-0B0_AQzEt",
+            "scriptParseCompile": 72.92040000000001
+          },
+          {
+            "scripting": 175.6151999999987,
+            "total": 208.6919999999987,
+            "scriptParseCompile": 22.321199999999997,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/1a96.49a51f3caa.js"
+          },
+          {
+            "scripting": 168.18360000000018,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/core-guest-spa/entrypoints/client.3fed98130b.js",
+            "scriptParseCompile": 24.112799999999996,
+            "total": 192.86280000000016
+          },
+          {
+            "scripting": 112.13160000000003,
+            "scriptParseCompile": 4.9596,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/339b.dfa2d32c5c.js",
+            "total": 144.37680000000003
+          },
+          {
+            "total": 127.70400000000022,
+            "scripting": 117.43560000000024,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-spa/entrypoints/initializer.8e781dbfe6.js",
+            "scriptParseCompile": 1.2528
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 37 KiB",
+        "savingsMs": {
+          "LCP": 250,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "cacheLifetimeMs": 1414000,
+            "url": "https://d0a7e.airbnb.com/tags.js",
+            "totalBytes": 42711,
+            "wastedBytes": 37410.683541666665
+          },
+          {
+            "cacheLifetimeMs": 0,
+            "wastedBytes": 361,
+            "url": "https://i.sng.link/A6f9up/lo82?_dl=https%3A%2F%2Fwww.airbnb.com%2Fhomes&_ddl=https%3A%2F%2Fwww.airbnb.com%2Fhomes&_p=&pcn=control_v&pscn=hp&pcid=1794760554_EANzM5MTI3YzRhYz&_smtype=3&p=Android&ve=11",
+            "totalBytes": 361
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0,
+        "displayValue": "Est savings of 10 KiB",
+        "savingsMs": {
+          "LCP": 50,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 10247,
+            "subItems": {
+              "items": [
+                {
+                  "signal": "Math.hypot",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/a7f9.f03a20e283.js"
+          }
+        ]
+      },
+      {
+        "id": "lcp-breakdown-insight",
+        "title": "LCP breakdown",
+        "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "headings": [
+              {
+                "valueType": "text",
+                "key": "label",
+                "label": "Subpart"
+              },
+              {
+                "valueType": "ms",
+                "label": "Duration",
+                "key": "duration"
+              }
+            ],
+            "type": "table",
+            "items": [
+              {
+                "label": "Time to first byte",
+                "subpart": "timeToFirstByte",
+                "duration": 347.219
+              },
+              {
+                "label": "Element render delay",
+                "duration": 3298.741,
+                "subpart": "elementRenderDelay"
+              }
+            ]
+          },
+          {
+            "snippet": "<h2 class=\"hifxi0b atm_c8_21sjza atm_g3_1wvsxh1 atm_fr_1t2fc69 atm_cs_1mexzig atm_gq_…\">",
+            "selector": "div.c1dbtjd2 > div.cff48sj > div > h2.hifxi0b",
+            "lhId": "page-0-H2",
+            "path": "1,HTML,1,BODY,6,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,4,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,H2",
+            "boundingRect": {
+              "bottom": 318,
+              "width": 364,
+              "right": 388,
+              "top": 292,
+              "left": 24,
+              "height": 26
+            },
+            "type": "node",
+            "nodeLabel": "Inspiration for future getaways"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "div.lnah8cm > div.c1q8ecwv > span.bacnnrh > button.l1lx1n3h",
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "boundingRect": {
+                "height": 30,
+                "right": 133,
+                "width": 117,
+                "bottom": 1890,
+                "top": 1860,
+                "left": 16
+              },
+              "path": "1,HTML,1,BODY,6,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,4,DIV,2,DIV,0,FOOTER,0,DIV,2,DIV,1,SECTION,0,DIV,0,DIV,0,DIV,0,SPAN,0,BUTTON",
+              "snippet": "<button aria-label=\"Choose a language\" variant=\"tertiary\" data-variant=\"tertiary\" type=\"button\" class=\"l1lx1n3h atm_npmupv_14b5rvc_10saat9 atm_4s4swg_18xq13z_10saat9 atm_u9em2p_…\" style=\"--dls-button_padding-top: 6px; --dls-button_padding-right: 8px;\">",
+              "lhId": "1-2-BUTTON",
+              "nodeLabel": "English (US)"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "R$\nBRL",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "selector": "div.lnah8cm > div.c1q8ecwv > span.bacnnrh > button.l1lx1n3h",
+              "lhId": "1-3-BUTTON",
+              "path": "1,HTML,1,BODY,6,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,4,DIV,2,DIV,0,FOOTER,0,DIV,2,DIV,1,SECTION,0,DIV,0,DIV,0,DIV,1,SPAN,0,BUTTON",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 1890,
+                "left": 137,
+                "height": 30,
+                "top": 1860,
+                "width": 67,
+                "right": 204
+              },
+              "snippet": "<button aria-label=\"Choose a currency\" variant=\"tertiary\" data-variant=\"tertiary\" type=\"button\" class=\"l1lx1n3h atm_npmupv_14b5rvc_10saat9 atm_4s4swg_18xq13z_10saat9 atm_u9em2p_…\" style=\"--dls-button_padding-top: 6px; --dls-button_padding-right: 8px;\">"
+            }
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+        "description": "Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. [Learn more about roles and required children elements](https://dequeuniversity.com/rules/axe/4.14/aria-required-children).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "selector": "div.c1yo0219 > div > div.c127e6vu > div.t1g1bh56",
+              "lhId": "1-0-DIV",
+              "nodeLabel": "All\nHomes\nHotels\nExperiences\nServices",
+              "explanation": "Fix any of the following:\n  Element has children which are not allowed: div[tabindex]",
+              "snippet": "<div class=\"t1g1bh56 atm_1ujhsu9_ke7zzc atm_kvy0mz_idpfg4 atm_p8pv89_idpfg4 atm_15nrvw…\" role=\"tablist\">",
+              "type": "node",
+              "path": "1,HTML,1,BODY,6,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,2,DIV,3,DIV,0,DIV,0,DIV,0,DIV,0,DIV",
+              "boundingRect": {
+                "top": 141,
+                "height": 68,
+                "bottom": 209,
+                "right": 412,
+                "left": 0,
+                "width": 412
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "valid-source-maps",
+        "title": "Missing source maps for large first-party JavaScript",
+        "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "scriptUrl": "https://www.airbnb.com/gtg/gtm-46mk/k1-RPHeiJcOxrWHta7FxZUE6n9H5Lj7crr3d8V-0B0_AQzEt",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                }
+              ]
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                }
+              ]
+            },
+            "scriptUrl": "https://www.airbnb.com/gtg/gtm-46mk/gtm.js?id=GTM-46MK"
+          },
+          {
+            "sourceMapUrl": "https://sourcemaps.d.musta.ch/airbnb/static/packages/web/common/frontend/user-consent/components/CookiesBannerContainer.3e9025d5f5.js.map",
+            "subItems": {
+              "items": [
+                {
+                  "error": "Error: Timed out fetching resource"
+                }
+              ],
+              "type": "subitems"
+            },
+            "scriptUrl": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/user-consent/components/CookiesBannerContainer.9c142d5350.js"
+          },
+          {
+            "sourceMapUrl": "https://sourcemaps.d.musta.ch/airbnb/static/packages/web/common/frontend/stays-search/sections/client/StaysShowMapButton/StaysShowMapButtonCompact.62ee7107a7.js.map",
+            "scriptUrl": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/stays-search/sections/client/StaysShowMapButton/StaysShowMapButtonCompact.662e30ffd6.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Error: Timed out fetching resource"
+                }
+              ]
+            }
+          },
+          {
+            "scriptUrl": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/stays-search/sections/client/StaysListingsGrid/StaysListingsGrid.ab029eee4f.js",
+            "subItems": {
+              "items": [
+                {
+                  "error": "Error: Timed out fetching resource"
+                }
+              ],
+              "type": "subitems"
+            },
+            "sourceMapUrl": "https://sourcemaps.d.musta.ch/airbnb/static/packages/web/common/frontend/stays-search/sections/client/StaysListingsGrid/StaysListingsGrid.b81c805628.js.map"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "error": "Error: Timed out fetching resource"
+                }
+              ],
+              "type": "subitems"
+            },
+            "sourceMapUrl": "https://sourcemaps.d.musta.ch/airbnb/static/packages/web/common/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.0313cb3a89.js.map",
+            "scriptUrl": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.7b3092f4a8.js"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "error": "Error: Timed out fetching resource"
+                }
+              ],
+              "type": "subitems"
+            },
+            "sourceMapUrl": "https://sourcemaps.d.musta.ch/airbnb/static/packages/web/common/frontend/simple-footer/variants/base/FooterWithBottomSpacing.ab74ed6e03.js.map",
+            "scriptUrl": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/simple-footer/variants/base/FooterWithBottomSpacing.9aabdcf71f.js"
+          },
+          {
+            "sourceMapUrl": "https://sourcemaps.d.musta.ch/airbnb/static/packages/web/common/frontend/signup-and-login/utils/modalRenderer.43ba5128be.js.map",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Error: Timed out fetching resource"
+                }
+              ]
+            },
+            "scriptUrl": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/signup-and-login/utils/modalRenderer.c0e30ee911.js"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "error": "Error: Timed out fetching resource"
+                }
+              ],
+              "type": "subitems"
+            },
+            "scriptUrl": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/search-location-sections/sections/StaysMap/StaysMapCompact.75494512d8.js",
+            "sourceMapUrl": "https://sourcemaps.d.musta.ch/airbnb/static/packages/web/common/frontend/search-location-sections/sections/StaysMap/StaysMapCompact.83964d1b29.js.map"
+          },
+          {
+            "sourceMapUrl": "https://sourcemaps.d.musta.ch/airbnb/static/packages/web/common/frontend/search-input-sections/sections/StaysSearchInputHeader/shared/components/TabBar/PillTabBar.0af801c3d8.js.map",
+            "scriptUrl": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/search-input-sections/sections/StaysSearchInputHeader/shared/components/TabBar/PillTabBar.e18bbe10ac.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Error: Timed out fetching resource"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "displayValue": "20.5 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.01,
+        "displayValue": "21.9 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.22,
+        "displayValue": "8.0 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.3,
+        "displayValue": "940 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 4,192 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-spa/entrypoints/client.ce4b1bad02.css",
+            "totalBytes": 455698
+          },
+          {
+            "totalBytes": 191579,
+            "url": "https://www.airbnb.com/gtg/gtm-46mk/gtm.js?id=GTM-46MK"
+          },
+          {
+            "url": "https://www.airbnb.com/gtg/gtm-46mk/k1-RPHeiJcOxrWHta7FxZUE6n9H5Lj7crr3d8V-0B0_AQzEt",
+            "totalBytes": 182680
+          },
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/airmetro/browser/asyncRequire.72acc13962.js",
+            "totalBytes": 152551
+          },
+          {
+            "totalBytes": 117727,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/common/1a96.49a51f3caa.js"
+          },
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/signup-and-login/utils/modalRenderer.c0e30ee911.js",
+            "totalBytes": 100614
+          },
+          {
+            "totalBytes": 100028,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/core-guest-spa/entrypoints/client.3fed98130b.js"
+          },
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/frontend/stays-search/routes/StaysSearchRoute/StaysSearchRoute.7b3092f4a8.js",
+            "totalBytes": 95746
+          },
+          {
+            "totalBytes": 91759,
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/2cea.71543ba2b1.js"
+          },
+          {
+            "url": "https://a0.muscache.com/airbnb/static/packages/web/en/13e8.192d4634d9.js",
+            "totalBytes": 84871
+          }
+        ]
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.61,
+        "displayValue": "220 ms",
+        "savingsMs": null,
+        "items": []
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.airbnb.com/",
+    "status": 200,
+    "htmlBytes": 695549,
+    "headers": {
+      "contentType": "text/html;charset=utf-8",
+      "cacheControl": "no-store, max-age=0, private, must-revalidate",
+      "contentEncoding": "br",
+      "xRobotsTag": null,
+      "server": "envoy"
+    },
+    "meta": {
+      "title": "Airbnb: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences",
+      "description": "Get an Airbnb for every kind of trip → 8 million vacation rentals → 2 million Guest Favorites → 220+ countries and regions worldwide",
+      "canonical": "https://www.airbnb.com/",
+      "lang": "en",
+      "robots": null,
+      "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+      "openGraph": {
+        "og:site_name": "Airbnb",
+        "og:locale": "en_US",
+        "og:url": "https://www.airbnb.com/",
+        "og:title": "Airbnb | Vacation rentals, cabins, beach houses, & more",
+        "og:description": "Get an Airbnb for every kind of trip → 8 million vacation rentals → 2 million Guest Favorites → 220+ countries and regions worldwide",
+        "og:image": "https://a0.muscache.com/im/pictures/fe7217ff-0b24-438d-880d-b94722c75bf5.jpg?im_w=1200",
+        "og:type": "website"
+      }
+    },
+    "headings": [
+      {
+        "level": 1,
+        "text": "Airbnb homepage"
+      },
+      {
+        "level": 2,
+        "text": "Inspiration for future getaways"
+      },
+      {
+        "level": 2,
+        "text": "Site Footer"
+      },
+      {
+        "level": 3,
+        "text": "Support"
+      },
+      {
+        "level": 3,
+        "text": "Hosting"
+      },
+      {
+        "level": 3,
+        "text": "Airbnb"
+      }
+    ],
+    "h1Count": 1,
+    "images": {
+      "total": 1,
+      "missingAlt": 1,
+      "missingDimensions": 0,
+      "lazy": 0,
+      "firstImages": [
+        {
+          "src": "https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-UserProfile/original/5347d650-16de-4f5a-a38e-79edc988befa.png?im_w=120",
+          "alt": null,
+          "loading": null,
+          "fetchpriority": null,
+          "width": "48",
+          "height": "48"
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 0,
+      "blockingScripts": 0,
+      "preloads": [],
+      "preconnects": []
+    },
+    "scripts": {
+      "total": 0,
+      "external": 43,
+      "thirdPartyHosts": [
+        "a0.muscache.com",
+        "d0a7e.airbnb.com"
+      ]
+    },
+    "structuredData": {
+      "jsonLdBlocks": 1,
+      "types": [
+        "WebSite"
+      ],
+      "invalidBlocks": 0,
+      "raw": [
+        "{\"@context\":\"http://schema.org\",\"@type\":\"WebSite\",\"url\":\"https://www.airbnb.com/\",\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://www.airbnb.com/s/homes?query={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"
+      ]
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [
+        "GPTBot",
+        "ClaudeBot",
+        "Applebot-Extended"
+      ],
+      "allowed": [
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "CCBot"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "Skip to contentAirbnb homepageAllAllHomesHomesHotelsHotelsExperiencesExperiencesServicesServicesWhereWhenAdd datesWhoAdd guestsLanguages & currencyHelp CenterBecome a hostIt's easy to start hosting and earn extra income.Refer a HostFind a co-hostGift cardsLog in or sign upInspiration for future getawaysPopularCoastalHistoricIslandsOutdoorsThings to doTravel tips & inspirationAirbnb-friendly apartmentsGaranhuns House rentalsMadrid Hostel rentalsGravatá Rentals with poolsSuzano Cabin rentalsAtibaia Vacation rentalsSão Bento do Sapucaí Vacation rentalsPontal do Paraná Vacation rentalsCamboriú Cabin rentalsMontevideo Apartment rentalsBarcelona Chalet rentalsCaraguatatuba Apartment rentalsShow morePraia de Martin de Sa Apartment rentalsDourados Rentals with poolsSantiago Centro Vacation rentalsCampo Largo Rentals with poolsNova Iguaçu Vacation rentalsPraia de Itaguaré Rentals with poolsPonta Grossa Vacation rentalsMilan Hostel rentalsGovernador Celso Ramos House rentalsCunha Cabin rentalsSão José dos Pinhais Chalet rentalsAnchieta Apartment rentalsMonte Verde House rentalsProvidencia Hostel rentalsIlha Grande Chalet rentalsBeto Carrero World House rentalsMacapá Vacation rentalsSantarém Apartment rentalsUberlândia House rentalsLos Angeles Vacation rentalsGramado Apartment rentalsSão Bernardo do Campo Rentals with poolsKissimmee Vacation rentalsEncarnación Apartment rentalsCanela Cabin rentalsAraraquara Rentals with poolsCanoas Rentals with poolsSao Roque Chalet rentalsBragança Paul…"
+  }
+}

@@ -1,0 +1,1905 @@
+{
+  "name": "theguardian",
+  "url": "https://www.theguardian.com/international",
+  "collectedAt": "2026-11-15T17:11:57.667Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-15T17:11:57.664Z",
+    "finalUrl": "https://www.theguardian.com/international",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 32,
+      "accessibility": 86,
+      "best-practices": 54,
+      "seo": 85
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 929,
+        "category": "FAST"
+      },
+      "inpMs": {
+        "p75": 135,
+        "category": "FAST"
+      },
+      "cls": {
+        "p75": 0,
+        "category": "FAST"
+      },
+      "fcpMs": {
+        "p75": 796,
+        "category": "FAST"
+      },
+      "ttfbMs": {
+        "p75": 374,
+        "category": "FAST"
+      },
+      "overall": "FAST"
+    },
+    "lab": {
+      "lcp": {
+        "value": 10606.3456958059,
+        "display": "10.6 s"
+      },
+      "cls": {
+        "value": 0,
+        "display": "0"
+      },
+      "tbt": {
+        "value": 1585,
+        "display": "1,590 ms"
+      },
+      "fcp": {
+        "value": 5743.605250118633,
+        "display": "5.7 s"
+      },
+      "speedIndex": {
+        "value": 7479.634854611533,
+        "display": "7.5 s"
+      },
+      "ttfb": {
+        "value": 21,
+        "display": "Root document took 20 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 650 KiB",
+        "savingsMs": {
+          "LCP": 1600,
+          "FCP": 750
+        },
+        "items": [
+          {
+            "wastedPercent": 66.13480771939709,
+            "totalBytes": 223073,
+            "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611110201/pubads_impl.js?cb=122882263",
+            "wastedBytes": 147529
+          },
+          {
+            "wastedBytes": 94698,
+            "subItems": {
+              "items": [
+                {
+                  "source": "…modules/ixBidAdapter.js",
+                  "sourceBytes": 7682,
+                  "sourceWastedBytes": 7290
+                },
+                {
+                  "source": "…modules/ozoneBidAdapter.js",
+                  "sourceWastedBytes": 7203,
+                  "sourceBytes": 7372
+                },
+                {
+                  "source": "…modules/appnexusBidAdapter.js",
+                  "sourceWastedBytes": 5453,
+                  "sourceBytes": 5952
+                },
+                {
+                  "sourceWastedBytes": 5141,
+                  "sourceBytes": 5809,
+                  "source": "…modules/rubiconBidAdapter.js"
+                },
+                {
+                  "sourceWastedBytes": 4488,
+                  "source": "…modules/pubmaticBidAdapter.js",
+                  "sourceBytes": 4759
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://assets.guim.co.uk/commercial/092a2d69028265fd2548/graun.455.commercial.js",
+            "wastedPercent": 73.58400057277186,
+            "totalBytes": 128694
+          },
+          {
+            "wastedBytes": 79138,
+            "wastedPercent": 59.94510563705139,
+            "totalBytes": 132017,
+            "url": "https://cdn.confiant-integrations.net/gptprebidnative/202611091850/wrap.js"
+          },
+          {
+            "wastedBytes": 71158,
+            "wastedPercent": 72.4747643216003,
+            "totalBytes": 98182,
+            "url": "https://sourcepoint.theguardian.com/PrivacyManagerUS.9a6bf.js"
+          },
+          {
+            "totalBytes": 183186,
+            "subItems": {
+              "items": [
+                {
+                  "sourceWastedBytes": 8847,
+                  "source": "…../node_modules/.pnpm/@guardian+identity-auth@6.0.1_@guardian+libs@32.0.0_@guardian+ophan-tracker-js@5.4.0_ts_0ef50e4de0da350099c2ff08cb86c99d/node_modules/@guardian/identity-auth/dist/token.js",
+                  "sourceBytes": 9416
+                },
+                {
+                  "sourceWastedBytes": 7598,
+                  "source": "(unmapped)",
+                  "sourceBytes": 18525
+                },
+                {
+                  "source": "…../node_modules/.pnpm/@guardian+consent-manager@2.3.0_@guardian+ophan-tracker-js@5.4.0_tslib@2.6.2_typescript@6.0.3/node_modules/@guardian/consent-manager/dist/stub_tcfv2.js",
+                  "sourceWastedBytes": 3850,
+                  "sourceBytes": 3854
+                },
+                {
+                  "sourceBytes": 2061,
+                  "source": "…../src/components.js",
+                  "sourceWastedBytes": 1705
+                },
+                {
+                  "sourceWastedBytes": 1604,
+                  "source": "…../node_modules/.pnpm/@guardian+commercial-core@35.1.0_@guardian+consent-manager@2.3.0_@guardian+ophan-tracke_00e24575569b2c5c2b14a47a7230054c/node_modules/@guardian/commercial-core/dist/esm/event-timer.js",
+                  "sourceBytes": 2184
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://assets.guim.co.uk/assets/index.client.web.103b5bf4b6b86edec94f.js",
+            "wastedPercent": 29.936239668970337,
+            "wastedBytes": 54839
+          },
+          {
+            "url": "https://c.amazon-adsystem.com/aax2/apstag.js",
+            "wastedBytes": 54011,
+            "totalBytes": 93954,
+            "wastedPercent": 57.48605003811317
+          },
+          {
+            "wastedBytes": 37464,
+            "url": "https://cdn.permutive.app/d6691a17-6fdb-4d26-85d6-b3dd27f55f08-web.js",
+            "totalBytes": 552493,
+            "wastedPercent": 6.780823742107824
+          },
+          {
+            "totalBytes": 46813,
+            "wastedBytes": 37179,
+            "wastedPercent": 79.42125704283136,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "sourceBytes": 3000,
+                  "sourceWastedBytes": 2604,
+                  "source": "…@guardian+bridget@8.14.0/node_modules/@guardian/bridget/Videos.js"
+                },
+                {
+                  "sourceBytes": 2767,
+                  "sourceWastedBytes": 2405,
+                  "source": "…@guardian+bridget@8.14.0/node_modules/@guardian/bridget/User.js"
+                },
+                {
+                  "source": "…@guardian+bridget@8.14.0/node_modules/@guardian/bridget/ListenToArticle.js",
+                  "sourceWastedBytes": 2209,
+                  "sourceBytes": 2524
+                },
+                {
+                  "source": "…@guardian+bridget@8.14.0/node_modules/@guardian/bridget/LiveActivities.js",
+                  "sourceBytes": 2344,
+                  "sourceWastedBytes": 2078
+                },
+                {
+                  "sourceBytes": 2193,
+                  "sourceWastedBytes": 1927,
+                  "source": "…@guardian+bridget@8.14.0/node_modules/@guardian/bridget/Discussion.js"
+                }
+              ]
+            },
+            "url": "https://assets.guim.co.uk/assets/8252.client.web.c5051a4227e53dd30949.js"
+          },
+          {
+            "wastedBytes": 35533,
+            "wastedPercent": 72.74845964488078,
+            "totalBytes": 48844,
+            "subItems": {
+              "items": [
+                {
+                  "source": "…htmlparser2@12.0.0/node_modules/htmlparser2/dist/Tokenizer.js",
+                  "sourceWastedBytes": 5204,
+                  "sourceBytes": 6237
+                },
+                {
+                  "source": "…sanitize-html@2.18.1/node_modules/sanitize-html/index.js",
+                  "sourceBytes": 5402,
+                  "sourceWastedBytes": 4077
+                },
+                {
+                  "sourceWastedBytes": 2579,
+                  "sourceBytes": 2620,
+                  "source": "…postcss@8.5.31/node_modules/postcss/lib/parser.js"
+                },
+                {
+                  "sourceWastedBytes": 2313,
+                  "source": "…postcss@8.5.31/node_modules/postcss/lib/lazy-result.js",
+                  "sourceBytes": 2520
+                },
+                {
+                  "sourceBytes": 3015,
+                  "source": "…htmlparser2@12.0.0/node_modules/htmlparser2/dist/Parser.js",
+                  "sourceWastedBytes": 2124
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://assets.guim.co.uk/assets/2667.client.web.1621764e85a2ca8fd0bb.js"
+          },
+          {
+            "wastedPercent": 88.9678524479146,
+            "url": "https://cdn.id5-sync.com/api/1.0/esp.js",
+            "totalBytes": 36441,
+            "wastedBytes": 32421
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "5.7 s",
+        "savingsMs": {
+          "TBT": 1600
+        },
+        "items": [
+          {
+            "duration": 2991.1307999999767,
+            "group": "scriptEvaluation",
+            "groupLabel": "Script Evaluation"
+          },
+          {
+            "group": "scriptParseCompile",
+            "duration": 947.9184,
+            "groupLabel": "Script Parsing & Compilation"
+          },
+          {
+            "duration": 726.5231999999836,
+            "group": "other",
+            "groupLabel": "Other"
+          },
+          {
+            "duration": 440.58359999999965,
+            "group": "styleLayout",
+            "groupLabel": "Style & Layout"
+          },
+          {
+            "group": "garbageCollection",
+            "duration": 270.7175999999999,
+            "groupLabel": "Garbage Collection"
+          },
+          {
+            "duration": 175.75080000000003,
+            "groupLabel": "Parse HTML & CSS",
+            "group": "parseHTML"
+          },
+          {
+            "duration": 151.76759999999982,
+            "groupLabel": "Rendering",
+            "group": "paintCompositeRender"
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "3.1 s",
+        "savingsMs": {
+          "TBT": 1450
+        },
+        "items": [
+          {
+            "scripting": 403.80359999999894,
+            "scriptParseCompile": 58.489200000000004,
+            "url": "https://cdn.confiant-integrations.net/gptprebidnative/202611091850/wrap.js",
+            "total": 711.5291999999988
+          },
+          {
+            "total": 703.8996000000002,
+            "url": "https://www.theguardian.com/international",
+            "scriptParseCompile": 8.151599999999998,
+            "scripting": 24.614399999999996
+          },
+          {
+            "url": "Unattributable",
+            "total": 585.116399999988,
+            "scriptParseCompile": 0,
+            "scripting": 40.728
+          },
+          {
+            "url": "https://cdn.permutive.app/d6691a17-6fdb-4d26-85d6-b3dd27f55f08-web.js",
+            "scripting": 365.10359999999747,
+            "total": 581.0447999999974,
+            "scriptParseCompile": 161.274
+          },
+          {
+            "scriptParseCompile": 121.65719999999999,
+            "scripting": 172.81439999999986,
+            "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611110201/pubads_impl.js?cb=122882263",
+            "total": 377.76119999999986
+          },
+          {
+            "scriptParseCompile": 15.3684,
+            "total": 283.32839999999936,
+            "url": "https://assets.guim.co.uk/assets/index.client.web.103b5bf4b6b86edec94f.js",
+            "scripting": 243.00959999999938
+          },
+          {
+            "total": 276.0108000000001,
+            "scripting": 224.7792000000001,
+            "scriptParseCompile": 46.7376,
+            "url": "https://assets.guim.co.uk/commercial/092a2d69028265fd2548/graun.455.commercial.js"
+          },
+          {
+            "scriptParseCompile": 34.848,
+            "url": "https://sourcepoint.theguardian.com/PrivacyManagerUS.9a6bf.js",
+            "scripting": 126.3768000000001,
+            "total": 214.9644000000001
+          },
+          {
+            "url": "https://c.amazon-adsystem.com/aax2/apstag.js",
+            "scriptParseCompile": 49.9896,
+            "scripting": 101.53439999999998,
+            "total": 158.27519999999998
+          },
+          {
+            "total": 156.10079999999994,
+            "scripting": 95.48999999999994,
+            "scriptParseCompile": 60.4296,
+            "url": "https://sourcepoint.theguardian.com/unified/4.41.0/usnat-gpp.1af7b0a971740919848e.bundle.js"
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 910 KiB",
+        "savingsMs": {
+          "LCP": 800,
+          "FCP": 450
+        },
+        "items": [
+          {
+            "wastedBytes": 494610.1875,
+            "totalBytes": 553410,
+            "url": "https://cdn.permutive.app/d6691a17-6fdb-4d26-85d6-b3dd27f55f08-web.js",
+            "cacheLifetimeMs": 900000
+          },
+          {
+            "cacheLifetimeMs": 3600000,
+            "wastedBytes": 79292,
+            "url": "https://sourcepoint.theguardian.com/PrivacyManagerUS.9a6bf.js",
+            "totalBytes": 99115
+          },
+          {
+            "wastedBytes": 75748,
+            "url": "https://c.amazon-adsystem.com/aax2/apstag.js",
+            "totalBytes": 94685,
+            "cacheLifetimeMs": 3600000
+          },
+          {
+            "cacheLifetimeMs": 900000,
+            "totalBytes": 59265,
+            "url": "https://cdn.confiant-integrations.net/7oDgiTsq88US4rrBG0_Nxpafkrg/gpt_and_prebid/config.js",
+            "wastedBytes": 52968.09375
+          },
+          {
+            "url": "https://sourcepoint.theguardian.com/unified/wrapperMessagingWithoutDetection.js",
+            "wastedBytes": 38172,
+            "cacheLifetimeMs": 3600000,
+            "totalBytes": 47715
+          },
+          {
+            "cacheLifetimeMs": 3600000,
+            "url": "https://cdn.id5-sync.com/api/1.0/esp.js",
+            "wastedBytes": 29679.2,
+            "totalBytes": 37099
+          },
+          {
+            "wastedBytes": 29513.600000000002,
+            "totalBytes": 36892,
+            "cacheLifetimeMs": 3600000,
+            "url": "https://cdn.id5-sync.com/api/1.0/id5-api.js"
+          },
+          {
+            "cacheLifetimeMs": 3600000,
+            "totalBytes": 31720,
+            "wastedBytes": 25376,
+            "url": "https://cdn.id5-sync.com/api/1.0/id5PrebidModule.js"
+          },
+          {
+            "totalBytes": 22339,
+            "url": "https://secure.cdn.fastclick.net/js/pubcid/latest/pubcid.min.js",
+            "wastedBytes": 19965.48125,
+            "cacheLifetimeMs": 900000
+          },
+          {
+            "url": "https://tag.durationmedia.net/pubs/1000298/dm.js",
+            "cacheLifetimeMs": 900000,
+            "totalBytes": 21342,
+            "wastedBytes": 19074.412500000002
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0,
+        "displayValue": "Est savings of 62 KiB",
+        "savingsMs": {
+          "LCP": 250,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 21111,
+            "url": "https://sourcepoint.theguardian.com/unified/wrapperMessagingWithoutDetection.js",
+            "subItems": {
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-classes",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "@babel/plugin-transform-spread",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.from",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.concat",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.filter",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.indexOf"
+                },
+                {
+                  "signal": "Array.prototype.join",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.map",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.slice"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.assign"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "wastedBytes": 15922,
+            "url": "https://secure.cdn.fastclick.net/js/pubcid/latest/pubcid.min.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-classes"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.concat"
+                },
+                {
+                  "signal": "Array.prototype.slice",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.assign"
+                },
+                {
+                  "signal": "Object.create",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Object.getPrototypeOf",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.keys"
+                },
+                {
+                  "signal": "Object.setPrototypeOf",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Reflect.construct",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "String.prototype.trim",
+                  "location": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://static.criteo.net/js/ld/publishertag.ids.js",
+            "subItems": {
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "Array.isArray"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.filter"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.indexOf"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 13356
+          },
+          {
+            "url": "https://tag.durationmedia.net/pubs/1000298/dm.js",
+            "subItems": {
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-regenerator",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Object.assign",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 8187
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-classes"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-regenerator"
+                },
+                {
+                  "signal": "@babel/plugin-transform-spread",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.sort"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.getPrototypeOf"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Reflect.construct"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Reflect.get"
+                }
+              ]
+            },
+            "wastedBytes": 4837,
+            "url": "https://sourcepoint.theguardian.com/unified/4.41.0/usnat-gpp.1af7b0a971740919848e.bundle.js"
+          }
+        ]
+      },
+      {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "source": "network",
+            "sourceLocation": {
+              "url": "https://ups.analytics.yahoo.com/ups/58813/fed?gpp=DBABLA~BVQqAAAAAgA.QA&gpp_sid=7&v=1&url=https%3A%2F%2Fwww.theguardian.com%2Finternational",
+              "type": "source-location",
+              "urlProvider": "network",
+              "column": 0,
+              "line": 0
+            },
+            "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+          }
+        ]
+      },
+      {
+        "id": "canonical",
+        "title": "Document does not have a valid `rel=canonical`",
+        "description": "Canonical links suggest which URL to show in search results. [Learn more about canonical links](https://developer.chrome.com/docs/lighthouse/seo/canonical/).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "forced-reflow-insight",
+        "title": "Forced reflow",
+        "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "headings": [
+              {
+                "label": "Source",
+                "key": "source",
+                "valueType": "source-location"
+              },
+              {
+                "label": "Total reflow time",
+                "valueType": "ms",
+                "granularity": 1,
+                "key": "reflowTime"
+              }
+            ],
+            "items": [
+              {
+                "reflowTime": 318.596,
+                "source": {
+                  "value": "[unattributed]",
+                  "type": "text"
+                }
+              }
+            ],
+            "type": "table"
+          }
+        ]
+      },
+      {
+        "id": "link-text",
+        "title": "Links do not have descriptive text",
+        "description": "Descriptive link text helps search engines understand your content. [Learn how to make links more accessible](https://developer.chrome.com/docs/lighthouse/seo/link-text/).",
+        "score": 0,
+        "displayValue": "1 link found",
+        "savingsMs": null,
+        "items": [
+          {
+            "text": "Learn more",
+            "textLang": "en",
+            "href": "https://www.theguardian.com/info/2024/feb/28/what-is-the-deeply-read-list"
+          }
+        ]
+      },
+      {
+        "id": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+        "score": 0,
+        "displayValue": "1 cookie found",
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=www.theguardian.com&gpp=DBABLA~BVQqAAAAAgA.QA&gpp_sid=7#{%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22theguardian.com%22,%22topUrl%22:%22www.theguardian.com%22,%22version%22:110440,%22origin%…",
+            "name": "uid"
+          }
+        ]
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "title": "LCP request discovery",
+        "description": "[Optimize LCP](https://developer.chrome.com/docs/performance/insights/lcp-discovery) by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "checklist",
+            "items": {
+              "requestDiscoverable": {
+                "value": true,
+                "label": "Request is discoverable in initial document"
+              },
+              "eagerlyLoaded": {
+                "value": true,
+                "label": "LCP resources shouldn’t use loading=lazy"
+              },
+              "priorityHinted": {
+                "label": "fetchpriority=high should be applied",
+                "value": false
+              }
+            }
+          },
+          {
+            "selector": "div.dcr-12rrx4o > div.dcr-14qnufr > picture.dcr-1b8y165 > img.dcr-11wzo8p",
+            "snippet": "<img alt=\"Aerial view of Rohingya refugees gathered densely at a rally in a refugee …\" src=\"https://i.guim.co.uk/img/media/c5d561832d1bf74db164791e4e9b6d4e167dfae9/0_…\" loading=\"eager\" data-chromatic=\"ignore\" class=\"dcr-11wzo8p\">",
+            "lhId": "page-0-IMG",
+            "boundingRect": {
+              "bottom": 1018,
+              "right": 402,
+              "left": 10,
+              "width": 392,
+              "height": 314,
+              "top": 704
+            },
+            "type": "node",
+            "path": "1,HTML,1,BODY,12,MAIN,2,SECTION,3,DIV,0,UL,0,LI,0,DIV,0,DIV,1,DIV,0,DIV,0,PICTURE,8,IMG",
+            "nodeLabel": "Aerial view of Rohingya refugees gathered densely at a rally in a refugee camp."
+          }
+        ]
+      },
+      {
+        "id": "list",
+        "title": "Lists do not contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
+        "description": "Screen readers have a specific way of announcing lists. Ensuring proper list structure aids screen reader output. [Learn more about proper list structure](https://dequeuniversity.com/rules/axe/4.14/list).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "div.dcr-1un8ko5 > gu-island > div.dcr-1c6gnzc > ul.dcr-4c0jzx",
+              "nodeLabel": "The Sunday read\nHow AI’s smartest man fell for the world’s oldest trick\nPolly H…",
+              "lhId": "1-15-UL",
+              "snippet": "<ul data-link-name=\"container-0 | highlights\" data-component=\"highlights\" data-container-name=\"scrollable/highlights\" data-heatphan-type=\"carousel\" class=\"dcr-4c0jzx\">",
+              "boundingRect": {
+                "left": 0,
+                "top": 60,
+                "width": 412,
+                "height": 210,
+                "right": 412,
+                "bottom": 270
+              },
+              "explanation": "Fix all of the following:\n  List element has direct children that are not allowed: [role=group]",
+              "type": "node",
+              "path": "1,HTML,1,BODY,11,DIV,1,HEADER,1,SECTION,0,DIV,0,GU-ISLAND,0,DIV,0,UL"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "value": {
+              "type": "network-tree",
+              "longestChain": {
+                "duration": 5166
+              },
+              "chains": {
+                "6513B67971DC7DF04EB113E994876546": {
+                  "navStartToEndTime": 394,
+                  "isLongest": true,
+                  "transferSize": 148662,
+                  "children": "[…]",
+                  "url": "https://www.theguardian.com/international"
+                }
+              }
+            },
+            "type": "list-section"
+          },
+          {
+            "type": "list-section",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "title": "Preconnected origins",
+            "value": {
+              "headings": [
+                {
+                  "label": "Origin",
+                  "key": "origin",
+                  "subItemsHeading": "[…]",
+                  "valueType": "text"
+                },
+                {
+                  "label": "Source",
+                  "valueType": "node",
+                  "key": "source"
+                }
+              ],
+              "items": [
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://assets.guim.co.uk/"
+                },
+                {
+                  "subItems": "[…]",
+                  "origin": "https://i.guim.co.uk/",
+                  "source": "[…]"
+                },
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://j.ophan.co.uk/"
+                },
+                {
+                  "origin": "https://ophan.theguardian.com/",
+                  "subItems": "[…]",
+                  "source": "[…]"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://sourcepoint.theguardian.com/",
+                  "subItems": "[…]"
+                },
+                {
+                  "origin": "https://i.guim.co.uk",
+                  "source": "[…]",
+                  "subItems": "[…]"
+                },
+                {
+                  "origin": "https://j.ophan.co.uk",
+                  "source": "[…]",
+                  "subItems": "[…]"
+                },
+                {
+                  "origin": "https://ophan.theguardian.com",
+                  "subItems": "[…]",
+                  "source": "[…]"
+                },
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://api.nextgen.guardianapps.co.uk"
+                },
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://hits-secure.theguardian.com"
+                }
+              ],
+              "type": "table"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "value": {
+              "headings": [
+                {
+                  "key": "origin",
+                  "label": "Origin",
+                  "valueType": "text"
+                },
+                {
+                  "key": "wastedMs",
+                  "label": "Est LCP savings",
+                  "valueType": "ms"
+                }
+              ],
+              "items": [
+                {
+                  "wastedMs": 314,
+                  "origin": "https://sourcepoint.theguardian.com"
+                },
+                {
+                  "origin": "https://ophan.theguardian.com",
+                  "wastedMs": 300
+                },
+                {
+                  "origin": "https://cdn.privacy-mgmt.com",
+                  "wastedMs": 300
+                }
+              ],
+              "type": "table"
+            },
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4"
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "title": "Touch targets do not have sufficient size or spacing.",
+        "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.14/target-size).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "boundingRect": {
+                "left": 18,
+                "bottom": 8140,
+                "right": 394,
+                "height": 18,
+                "top": 8122,
+                "width": 376
+              },
+              "lhId": "1-16-A",
+              "nodeLabel": "The RecapSign up for our free sport highlights newsletter",
+              "snippet": "<a href=\"/sport/2017/may/15/the-recap-sign-up-for-the-best-of-the-guardians-sport-c…\" class=\"dcr-1873riq\">",
+              "path": "1,HTML,1,BODY,12,MAIN,10,SECTION,4,DIV,0,UL,0,LI,0,DIV,0,DIV,2,DIV,0,SPAN,0,UL,0,LI,0,DIV,0,A",
+              "explanation": "Fix any of the following:\n  Target has insufficient size (376px by 18.2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.2px instead of at least 24px.",
+              "selector": "ul.sublinks > li.dcr-wbofqq > div.dcr-17bscxy > a.dcr-1873riq",
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-18-A",
+              "snippet": "<a href=\"/sport/2017/may/15/the-recap-sign-up-for-the-best-of-the-guardians-sport-c…\" class=\"dcr-1873riq\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size (392px by 18.2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18.2px instead of at least 24px.",
+              "nodeLabel": "The RecapSign up for our free sport highlights newsletter",
+              "selector": "ul.sublinks > li.dcr-wbofqq > div.dcr-17bscxy > a.dcr-1873riq",
+              "boundingRect": {
+                "right": 402,
+                "left": 10,
+                "height": 18,
+                "width": 392,
+                "top": 8961,
+                "bottom": 8979
+              },
+              "type": "node",
+              "path": "1,HTML,1,BODY,12,MAIN,10,SECTION,4,DIV,2,UL,0,LI,0,DIV,0,DIV,2,DIV,0,UL,0,LI,0,DIV,0,A"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "button-name",
+        "title": "Buttons do not have an accessible name",
+        "description": "When a button doesn't have an accessible name, screen readers announce it as \"button\", making it unusable for users who rely on screen readers. [Learn how to make buttons more accessible](https://dequeuniversity.com/rules/axe/4.14/button-name).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "snippet": "<button type=\"button\" class=\"play-pause-icon dcr-19641bk\" data-link-name=\"gu-video-loop-play-6a3918a9-bab5-4d53-861a-b8096a854cd5\" data-testid=\"play-icon\">",
+              "type": "node",
+              "selector": "div.dcr-l97w7y > div.dcr-179wty7 > div.controls-container > button.play-pause-icon",
+              "path": "1,HTML,1,BODY,12,MAIN,37,SECTION,4,DIV,0,UL,0,LI,0,DIV,0,DIV,1,DIV,0,DIV,0,GU-ISLAND,0,FIGURE,0,DIV,0,DIV,1,DIV,0,BUTTON",
+              "boundingRect": {
+                "left": 178,
+                "width": 56,
+                "height": 56,
+                "top": 20652,
+                "right": 234,
+                "bottom": 20708
+              },
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "lhId": "1-14-BUTTON",
+              "nodeLabel": "div.dcr-l97w7y > div.dcr-179wty7 > div.controls-container > button.play-pause-icon"
+            }
+          }
+        ]
+      },
+      {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "issueType": "Cookie",
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=www.theguardian.com&gpp=DBABLA~BVQqAAAAAgA.QA&gpp_sid=7#{%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22theguardian.com%22,%22topUrl%22:%22www.theguardian.com%22,%22version%22:110440,%22origin%…"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+        "description": "Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. [Learn more about roles and required children elements](https://dequeuniversity.com/rules/axe/4.14/aria-required-children).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "snippet": "<ul role=\"menubar\" data-testid=\"nav-menu-columns\" class=\"dcr-k9l4gc\">",
+              "selector": "div#header-expanded-menu > div.dcr-60ate2 > div.dcr-izfcjo > ul.dcr-k9l4gc",
+              "path": "1,HTML,1,BODY,11,DIV,1,HEADER,2,GU-ISLAND,0,NAV,6,DIV,0,DIV,0,DIV,0,DIV,0,UL",
+              "type": "node",
+              "nodeLabel": "News\nOpinion\nSport\nCulture\nLifestyle\nSearch input\ngoogle-search\nSearch\nSupport …",
+              "boundingRect": {
+                "top": 0,
+                "height": 1039,
+                "width": 384,
+                "bottom": 1039,
+                "right": -69,
+                "left": -453
+              },
+              "explanation": "Fix any of the following:\n  Element has children which are not allowed: input[aria-describedby], button[aria-label]",
+              "lhId": "1-11-UL"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+        "score": 0,
+        "displayValue": "2 warnings found",
+        "savingsMs": null,
+        "items": [
+          {
+            "value": "The Topics API is deprecated and will be removed in a future release.",
+            "source": {
+              "column": 1847,
+              "line": 5,
+              "type": "source-location",
+              "urlProvider": "network",
+              "url": "https://invstatic101.creativecdn.com/encrypted-signals/encrypted-tag-g.js"
+            }
+          },
+          {
+            "source": {
+              "url": "https://cdn.id5-sync.com/api/1.0/id5-api.js",
+              "line": 6,
+              "column": 122655,
+              "urlProvider": "network",
+              "type": "source-location"
+            },
+            "value": "Fenced Frame API is deprecated and scheduled for removal.",
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://chromestatus.com/feature/6366274495053824",
+                  "type": "link",
+                  "text": "Check the feature status page for more details."
+                },
+                {
+                  "text": "This change will go into effect with milestone 156.",
+                  "type": "link",
+                  "url": "https://chromiumdash.appspot.com/schedule"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "displayValue": "10.6 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.01,
+        "displayValue": "21.1 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.02,
+        "displayValue": "710 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.05,
+        "displayValue": "5.7 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.12,
+        "displayValue": "1,590 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.27,
+        "displayValue": "7.5 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 3,026 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://cdn.permutive.app/d6691a17-6fdb-4d26-85d6-b3dd27f55f08-web.js",
+            "totalBytes": 553410
+          },
+          {
+            "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611110201/pubads_impl.js?cb=122882263",
+            "totalBytes": 223911
+          },
+          {
+            "url": "https://www.theguardian.com/international",
+            "totalBytes": 148662
+          },
+          {
+            "url": "https://cdn.confiant-integrations.net/gptprebidnative/202611091850/wrap.js",
+            "totalBytes": 132670
+          },
+          {
+            "totalBytes": 129799,
+            "url": "https://assets.guim.co.uk/commercial/092a2d69028265fd2548/graun.455.commercial.js"
+          },
+          {
+            "url": "https://i.guim.co.uk/img/media/c688291392ebfaa491e16553c6a42ec3ff3c5b77/0_541_2400_1919/master/2400.jpg?width=465&dpr=2&s=none&crop=4%3A5",
+            "totalBytes": 111696
+          },
+          {
+            "totalBytes": 99115,
+            "url": "https://sourcepoint.theguardian.com/PrivacyManagerUS.9a6bf.js"
+          },
+          {
+            "totalBytes": 95244,
+            "url": "https://i.guim.co.uk/img/media/c5d561832d1bf74db164791e4e9b6d4e167dfae9/0_0_5000_4000/master/5000.jpg?width=465&dpr=2&s=none&crop=5%3A4"
+          },
+          {
+            "url": "https://c.amazon-adsystem.com/aax2/apstag.js",
+            "totalBytes": 94685
+          },
+          {
+            "url": "https://cdn.confiant-integrations.net/7oDgiTsq88US4rrBG0_Nxpafkrg/gpt_and_prebid/config.js",
+            "totalBytes": 59265
+          }
+        ]
+      },
+      {
+        "id": "duplicated-javascript-insight",
+        "title": "Duplicated JavaScript",
+        "description": "Remove large, [duplicate JavaScript modules](https://developer.chrome.com/docs/performance/insights/duplicated-javascript) from bundles to reduce unnecessary bytes consumed by network activity",
+        "score": 0.5,
+        "displayValue": "Est savings of 32 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "subItems": {
+              "items": [
+                {
+                  "sourceTransferBytes": "[…]",
+                  "url": "https://assets.guim.co.uk/assets/6743.client.web.1b5b1ef2a2e5ed50cca1.js"
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/index.client.web.103b5bf4b6b86edec94f.js",
+                  "sourceTransferBytes": 5634
+                },
+                {
+                  "sourceTransferBytes": 3076,
+                  "url": "https://assets.guim.co.uk/assets/1771.client.web.7419c5bd52ad30b561ce.js"
+                },
+                {
+                  "sourceTransferBytes": 2828,
+                  "url": "https://assets.guim.co.uk/assets/9447.client.web.559377ff2db9b0cf4338.js"
+                },
+                {
+                  "sourceTransferBytes": 2213,
+                  "url": "https://assets.guim.co.uk/assets/765.client.web.906aeba149e537e283a5.js"
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/5524.client.web.f7f310241c563e0193e1.js",
+                  "sourceTransferBytes": 2093
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/2972.client.web.008624c9e662cc91c0e0.js",
+                  "sourceTransferBytes": 2025
+                },
+                {
+                  "sourceTransferBytes": 1924,
+                  "url": "https://assets.guim.co.uk/assets/7903.client.web.4ccca125f069d72ad1f4.js"
+                },
+                {
+                  "sourceTransferBytes": 1880,
+                  "url": "https://assets.guim.co.uk/assets/8818.client.web.7ecd096ce57095456729.js"
+                },
+                {
+                  "sourceTransferBytes": 1798,
+                  "url": "https://assets.guim.co.uk/assets/EditionSwitcherBanner-island.client.web.ba41004d97fd8dcff21f.js"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 27621,
+            "source": "node_modules/@guardian/source"
+          },
+          {
+            "source": "node_modules/@guardian/consent-manager",
+            "wastedBytes": 15130,
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://assets.guim.co.uk/commercial/227ece22b5d26f61f926/graun.standalone.commercial.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "sourceTransferBytes": 8013,
+                  "url": "https://assets.guim.co.uk/commercial/70a1954232f8b23851f9/graun.41.commercial.js"
+                },
+                {
+                  "sourceTransferBytes": 7117,
+                  "url": "https://assets.guim.co.uk/assets/index.client.web.103b5bf4b6b86edec94f.js"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "source": "node_modules/@guardian/libs",
+            "wastedBytes": 6088,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "sourceTransferBytes": "[…]",
+                  "url": "https://assets.guim.co.uk/assets/index.client.web.103b5bf4b6b86edec94f.js"
+                },
+                {
+                  "sourceTransferBytes": 6088,
+                  "url": "https://assets.guim.co.uk/commercial/227ece22b5d26f61f926/graun.standalone.commercial.js"
+                }
+              ]
+            }
+          },
+          {
+            "source": "node_modules/@guardian/identity-auth",
+            "wastedBytes": 5533,
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://assets.guim.co.uk/commercial/70a1954232f8b23851f9/graun.41.commercial.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/index.client.web.103b5bf4b6b86edec94f.js",
+                  "sourceTransferBytes": 5533
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "source": "webpack://@guardian/dotcom-rendering/../ab-testing/config/abTests.ts",
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://assets.guim.co.uk/assets/SetABTests-island.client.web.c813e56f9fb7759f9c03.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/Metrics-island.client.web.8442511486b73854a9a2.js",
+                  "sourceTransferBytes": 2751
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 2751
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "sourceTransferBytes": "[…]",
+                  "url": "https://assets.guim.co.uk/assets/RelativeTime-island.client.web.0ec854170e9350314814.js"
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/9447.client.web.559377ff2db9b0cf4338.js",
+                  "sourceTransferBytes": 651
+                },
+                {
+                  "sourceTransferBytes": 593,
+                  "url": "https://assets.guim.co.uk/assets/8818.client.web.7ecd096ce57095456729.js"
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/2972.client.web.008624c9e662cc91c0e0.js",
+                  "sourceTransferBytes": 583
+                },
+                {
+                  "sourceTransferBytes": 535,
+                  "url": "https://assets.guim.co.uk/assets/6743.client.web.1b5b1ef2a2e5ed50cca1.js"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 2362,
+            "source": "node_modules/lodash.debounce"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://assets.guim.co.uk/assets/3588.client.web.0b586e4bafc5bdc6b7e2.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/6696.client.web.9dd652ba47da5cf08b47.js",
+                  "sourceTransferBytes": 971
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 971,
+            "source": "webpack://@guardian/dotcom-rendering/./src/lib/thrift/protocols.ts"
+          },
+          {
+            "wastedBytes": 960,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "url": "https://assets.guim.co.uk/assets/6696.client.web.9dd652ba47da5cf08b47.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/Titlepiece-island.client.web.a82e7eae7eddbb2cc4d8.js",
+                  "sourceTransferBytes": 960
+                }
+              ]
+            },
+            "source": "webpack://@guardian/dotcom-rendering/./src/grid.ts"
+          },
+          {
+            "wastedBytes": 895,
+            "subItems": {
+              "items": [
+                {
+                  "sourceTransferBytes": "[…]",
+                  "url": "https://assets.guim.co.uk/assets/5030.client.web.b26805339698f445f3e4.js"
+                },
+                {
+                  "url": "https://assets.guim.co.uk/assets/2726.client.web.c068ddae84ab64a4bded.js",
+                  "sourceTransferBytes": 895
+                }
+              ],
+              "type": "subitems"
+            },
+            "source": "webpack://@guardian/dotcom-rendering/./src/client/updateIframeHeight.tsx"
+          },
+          {
+            "wastedBytes": 589,
+            "source": "webpack://@guardian/dotcom-rendering/./src/lib/thrift/nativeConnection.ts",
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://assets.guim.co.uk/assets/3588.client.web.0b586e4bafc5bdc6b7e2.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "sourceTransferBytes": 589,
+                  "url": "https://assets.guim.co.uk/assets/6696.client.web.9dd652ba47da5cf08b47.js"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery).",
+        "score": 0.5,
+        "displayValue": "Est savings of 110 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://i.guim.co.uk/img/media/c688291392ebfaa491e16553c6a42ec3ff3c5b77/0_541_2400_1919/master/2400.jpg?width=465&dpr=2&s=none&crop=4%3A5",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 50478,
+                  "reason": "This image file is larger than it needs to be (930x1162) for its displayed dimensions (686x858). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "wastedBytes": 50478,
+            "totalBytes": 110779,
+            "node": {
+              "nodeLabel": "Illustration of Jensen Huang falling into a red and blue spiral, surrounded by …",
+              "boundingRect": {
+                "height": 490,
+                "right": 402,
+                "top": 3630,
+                "left": 10,
+                "bottom": 4120,
+                "width": 392
+              },
+              "path": "1,HTML,1,BODY,12,MAIN,4,SECTION,4,DIV,0,UL,0,LI,0,DIV,0,DIV,1,DIV,0,DIV,0,PICTURE,6,IMG",
+              "type": "node",
+              "lhId": "page-6-IMG",
+              "snippet": "<img alt=\"Illustration of Jensen Huang falling into a red and blue spiral, surrounde…\" src=\"https://i.guim.co.uk/img/media/c688291392ebfaa491e16553c6a42ec3ff3c5b77/0_…\" loading=\"lazy\" class=\"dcr-11wzo8p\">",
+              "selector": "div.dcr-7tspko > div.dcr-1p6zj45 > picture.dcr-1fmn09d > img.dcr-11wzo8p"
+            }
+          },
+          {
+            "wastedBytes": 43005,
+            "node": {
+              "lhId": "page-0-IMG",
+              "snippet": "<img alt=\"Aerial view of Rohingya refugees gathered densely at a rally in a refugee …\" src=\"https://i.guim.co.uk/img/media/c5d561832d1bf74db164791e4e9b6d4e167dfae9/0_…\" loading=\"eager\" data-chromatic=\"ignore\" class=\"dcr-11wzo8p\">",
+              "nodeLabel": "Aerial view of Rohingya refugees gathered densely at a rally in a refugee camp.",
+              "type": "node",
+              "boundingRect": {
+                "width": 392,
+                "left": 10,
+                "bottom": 1018,
+                "right": 402,
+                "height": 314,
+                "top": 704
+              },
+              "selector": "div.dcr-12rrx4o > div.dcr-14qnufr > picture.dcr-1b8y165 > img.dcr-11wzo8p",
+              "path": "1,HTML,1,BODY,12,MAIN,2,SECTION,3,DIV,0,UL,0,LI,0,DIV,0,DIV,1,DIV,0,DIV,0,PICTURE,8,IMG"
+            },
+            "totalBytes": 94329,
+            "url": "https://i.guim.co.uk/img/media/c5d561832d1bf74db164791e4e9b6d4e167dfae9/0_0_5000_4000/master/5000.jpg?width=465&dpr=2&s=none&crop=5%3A4",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (930x744) for its displayed dimensions (686x549). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 43005
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://i.guim.co.uk/img/media/9ede3d20aaf508b6c69fb5eec228ee9f20fa86e1/293_0_2915_2333/master/2915.jpg?width=465&dpr=2&s=none&crop=5%3A4",
+            "wastedBytes": 19508,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (930x744) for its displayed dimensions (686x549). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 19508
+                }
+              ]
+            },
+            "totalBytes": 42790,
+            "node": {
+              "lhId": "page-7-IMG",
+              "selector": "div.dcr-12rrx4o > div.dcr-19sq4do > picture.dcr-1b8y165 > img.dcr-11wzo8p",
+              "boundingRect": {
+                "left": 10,
+                "right": 402,
+                "height": 314,
+                "top": 2745,
+                "width": 392,
+                "bottom": 3059
+              },
+              "type": "node",
+              "path": "1,HTML,1,BODY,12,MAIN,2,SECTION,3,DIV,5,UL,0,LI,0,DIV,0,DIV,1,DIV,0,DIV,0,PICTURE,6,IMG",
+              "snippet": "<img alt=\"a crowd of people \" src=\"https://i.guim.co.uk/img/media/9ede3d20aaf508b6c69fb5eec228ee9f20fa86e1/29…\" loading=\"eager\" data-chromatic=\"ignore\" class=\"dcr-11wzo8p\">",
+              "nodeLabel": "a crowd of people "
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.theguardian.com/international",
+    "status": 200,
+    "htmlBytes": 1468037,
+    "headers": {
+      "contentType": "text/html; charset=UTF-8",
+      "cacheControl": "max-age=60, stale-while-revalidate=6, stale-if-error=864000, private",
+      "contentEncoding": "gzip",
+      "xRobotsTag": "bingbot: noarchive",
+      "server": null
+    },
+    "meta": {
+      "title": "Latest news, sport and opinion from the Guardian",
+      "description": "Latest international news, sport and comment from the Guardian",
+      "canonical": "https://www.theguardian.com",
+      "lang": "en",
+      "robots": "max-image-preview:large",
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "openGraph": {}
+    },
+    "headings": [
+      {
+        "level": 3,
+        "text": "The Sunday readHow AI’s smartest man fell for the world’s oldest trick"
+      },
+      {
+        "level": 3,
+        "text": "Polly Hudsondouble quotation markMy decision to date a 36-year-old at 17 looks very different now"
+      },
+      {
+        "level": 3,
+        "text": "GamesThe exclusive inside story of Grand Theft Auto VI"
+      },
+      {
+        "level": 3,
+        "text": "HomecomingMeera Sodha on her father’s return to Uganda"
+      },
+      {
+        "level": 3,
+        "text": "‘She was a monster’The real Patricia Highsmith, by the people who knew her"
+      },
+      {
+        "level": 2,
+        "text": "News"
+      },
+      {
+        "level": 3,
+        "text": "International court of justiceWorld’s top court to rule if Myanmar committed genocide against Rohingya"
+      },
+      {
+        "level": 3,
+        "text": "CzechiaHundreds of thousands of Czechs protest in Prague over media freedom"
+      },
+      {
+        "level": 3,
+        "text": "Press freedomPublic media freedom has been eroded across central Europe. Now Czechs are rallying to protect theirs"
+      },
+      {
+        "level": 3,
+        "text": "Age of consentRussell Brand accuser waives anonymity to call for consent law change"
+      },
+      {
+        "level": 3,
+        "text": "Russell BrandTwo courtrooms, one celebrity: how did the Russell Brand case compare with the rape trial next door?"
+      },
+      {
+        "level": 3,
+        "text": "Ukraine‘If you don’t shower, so what?’ The western diplomats staying put in under-attack Kyiv"
+      },
+      {
+        "level": 3,
+        "text": "UkraineZelenskyy accuses SpaceX of lying about Starshield – and says US floated Donbas-for-Nato deal"
+      },
+      {
+        "level": 3,
+        "text": "Ukraine war briefingUS proposes Kyiv cede land to Russia for Nato membership, Zelenskyy says"
+      },
+      {
+        "level": 3,
+        "text": "Extreme weather‘Risk multiplier’: super El Niño looms over Cop31 as climate pattern fuels global disasters"
+      },
+      {
+        "level": 3,
+        "text": "MetaItaly fines Meta $887m for accessing Android users’ photos and videos"
+      },
+      {
+        "level": 3,
+        "text": "USTwo planes collide on taxiway at Miami airport one day after national grounding"
+      },
+      {
+        "level": 3,
+        "text": "Rugby union liveScotland 15-12 Australia: Scotland hold off late Australia rally to earn narrow win at Murrayfield"
+      },
+      {
+        "level": 3,
+        "text": "Rugby unionHistory, euphoria and no more dreaming – are Wales back after win over All Blacks?"
+      },
+      {
+        "level": 3,
+        "text": "US midterm elections‘Were we too Maga or not Maga enough?’: Republicans reckon with Arizona wipeout"
+      },
+      {
+        "level": 3,
+        "text": "Trump administrationUS judge blocks president’s plan to renovate historic DC golf course"
+      },
+      {
+        "level": 3,
+        "text": "Robert F Kennedy JrTrump administration planning to reimburse doctors treating vaccine ‘injury’"
+      },
+      {
+        "level": 3,
+        "text": "US politicsBlack voters helped Democrats win in Georgia. Now they expect to be heard"
+      },
+      {
+        "level": 2,
+        "text": "The Sunday read"
+      },
+      {
+        "level": 3,
+        "text": "‘Jensen Huang lost his mind’: how AI’s smartest man fell for the world’s oldest trick"
+      },
+      {
+        "level": 2,
+        "text": "In focus"
+      },
+      {
+        "level": 3,
+        "text": "Papua New GuineaThe creeks are dry, the rain is contaminated and food is scarce. What lies ahead for the people of Ahus …"
+      },
+      {
+        "level": 3,
+        "text": "OaklandFBI raids and a recycling firm: how a promising US mayor wound up at the center of a bribery scandal"
+      },
+      {
+        "level": 3,
+        "text": "The age of extinctionSurgery by fairy lights and truckloads of fruit: the sanctuary saving Cameroon’s chimpanzees"
+      },
+      {
+        "level": 2,
+        "text": "Features"
+      },
+      {
+        "level": 3,
+        "text": "Health Gout is on the rise – and excruciating. Why are sufferers still judged for it?"
+      },
+      {
+        "level": 3,
+        "text": "GamesTen years, thousands of staff and a billion dollars: the exclusive inside story of Grand Theft Auto VI"
+      },
+      {
+        "level": 3,
+        "text": "Games‘Grand Theft Auto Flu’: is the whole world really taking the day off work to play GTA VI?"
+      },
+      {
+        "level": 2,
+        "text": "More features"
+      },
+      {
+        "level": 3,
+        "text": "Film‘No one wants us any more’: how Hollywood turned its back on trans actors"
+      },
+      {
+        "level": 3,
+        "text": "Books‘She was a monster’: the real Patricia Highsmith, by the people who knew her"
+      },
+      {
+        "level": 3,
+        "text": "Kindness of strangersdouble quotation markI was stranded, dressed as a flapper, on a freezing night. Then a cheerful tax…"
+      },
+      {
+        "level": 3,
+        "text": "MusicOcean Colour Scene review – no other band of their era can do it like this"
+      },
+      {
+        "level": 3,
+        "text": "Uganda‘Like many men of his generation, he tends to push his feelings down from his heart to his toes’: Meera Sodha on h…"
+      },
+      {
+        "level": 3,
+        "text": "The big ideaThe unexpected power of fleeting friendships"
+      }
+    ],
+    "h1Count": 0,
+    "images": {
+      "total": 106,
+      "missingAlt": 0,
+      "missingDimensions": 106,
+      "lazy": 88,
+      "firstImages": [
+        {
+          "src": "https://i.guim.co.uk/img/media/c688291392ebfaa491e16553c6a42ec3ff3c5b77/0_541_2400_1919/master/2400.jpg?width=98&dpr=1&s=none&crop=1%3A1",
+          "alt": "Illustration of Jensen Huang falling into a red and blue spiral, surrounded by watching eyes",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://i.guim.co.uk/img/uploads/2025/04/02/Polly_Hudson,_R.png?width=98&dpr=1&s=none&crop=1%3A1",
+          "alt": "Polly Hudson",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://i.guim.co.uk/img/media/bcaf21a5ea7f320d200cf89cb3e6d93d0bd16a0b/0_2377_7101_5677/master/7101.jpg?width=98&dpr=1&s=none&crop=1%3A1",
+          "alt": "A green sports car's rear wheel spins, billowing smoke, with palm trees and sunset skyline behind",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://i.guim.co.uk/img/media/0e0253d5468c82d15bca48ad6f89fd184349bd68/1725_1435_1955_1955/master/1955.jpg?width=98&dpr=1&s=none&crop=1%3A1",
+          "alt": "Adjumani District, Uganda |  Meera Sodha and her father, Vrajlal Sodha, walk towards the MV Laropi ferry to cross the Albert Nile into northern Uganda, retracing places connected to Vrajlal’s childhood. Born and raised in Uganda, Vrajlal left the country with his family in 1972 after Idi Amin’s government ordered Uganda’s Asian population to leave within 90 days. Nearly five decades later, he is returning for the first time, travelling with his daughter as they revisit places linked to his family, memories and sense of home.",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://i.guim.co.uk/img/media/3629c8cc3fb810d88d14476f6ea692dd19f18fdb/0_0_3540_2831/master/3540.jpg?width=98&dpr=1&s=none&crop=1%3A1",
+          "alt": "Writer Patricia Highsmith sits on a wire chair in front of a fountain",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://i.guim.co.uk/img/media/c5d561832d1bf74db164791e4e9b6d4e167dfae9/0_0_5000_4000/master/5000.jpg?width=465&dpr=1&s=none&crop=5%3A4",
+          "alt": "Aerial view of Rohingya refugees gathered densely at a rally in a refugee camp.",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://i.guim.co.uk/img/media/95975b1bec64815ceed42fb90d5215d3bbf2f3f8/543_0_5000_4000/master/5000.jpg?width=120&dpr=1&s=none&crop=5%3A4",
+          "alt": "Student wearing a homemade cardboard TV shape over his head",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://i.guim.co.uk/img/media/99673cecefcadd342a6c5da198a43dd4b1547f6b/537_755_2209_1766/master/2209.jpg?width=120&dpr=1&s=none&crop=5%3A4",
+          "alt": "Russell Brand, with long curly hair and a grey beard, looks to the side outdoors",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 0,
+      "blockingScripts": 0,
+      "preloads": [
+        {
+          "href": "https://assets.guim.co.uk/static/frontend/fonts/guardian-headline/noalts-not-hinted/GHGuardianHeadline-Bold.woff2",
+          "as": "font"
+        },
+        {
+          "href": "https://assets.guim.co.uk/static/frontend/fonts/guardian-textegyptian/noalts-not-hinted/GuardianTextEgyptian-Regular.woff2",
+          "as": "font"
+        }
+      ],
+      "preconnects": [
+        "https://assets.guim.co.uk/",
+        "https://i.guim.co.uk",
+        "https://j.ophan.co.uk",
+        "https://ophan.theguardian.com",
+        "https://sourcepoint.theguardian.com"
+      ]
+    },
+    "scripts": {
+      "total": 0,
+      "external": 4,
+      "thirdPartyHosts": [
+        "assets.guim.co.uk"
+      ]
+    },
+    "structuredData": {
+      "jsonLdBlocks": 0,
+      "types": [],
+      "invalidBlocks": 0,
+      "raw": []
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "allowed": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "Google-Extended"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "Skip to main contentSkip to navigationPrint subscriptions Sign in The Sunday readHow AI’s smartest man fell for the world’s oldest trickPolly HudsonMy decision to date a 36-year-old at 17 looks very different nowGamesThe exclusive inside story of Grand Theft Auto VIHomecomingMeera Sodha on her father’s return to Uganda‘She was a monster’The real Patricia Highsmith, by the people who knew herIntInternational editionUK editionUS editionAustralia editionEurope editionThe Guardian - Back to homeThe GuardianNewsOpinionSportCultureLifestyleShow moreHide expanded menuNewsView all NewsWorld newsUS politicsUK newsClimate crisisMiddle EastUkraineEnvironmentScienceGlobal developmentFootballTechBusinessObituariesOpinionView all OpinionThe Guardian viewColumnistsCartoonsOpinion videosLettersSportView all SportFootballCricketRugby unionTennisCyclingF1GolfUS sportsCultureView all CultureBooksMusicTV & radioArt & designFilmGamesClassicalStageLifestyleView all LifestyleFashionFoodRecipesLove & sexHealth & fitnessHome & gardenWomenMenFamilyTravelMoneySearch input google-search SearchSupport usPrint subscriptionsHolidaysDigital ArchiveGuardian LicensingLive eventsAbout UsThe Guardian appVideoPodcastsPicturesNewslettersToday's paperInside the GuardianGuardian WeeklyCrosswordsWordiplyCorrectionsTipsSearch input google-search SearchHolidaysDigital ArchiveGuardian LicensingLive eventsAbout UsWorldUS politicsUKClimate crisisMiddle EastUkraineEnvironmentScienceGlobal developmentFootballTechBusinessOb…"
+  }
+}

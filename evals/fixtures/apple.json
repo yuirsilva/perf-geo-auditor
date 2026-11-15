@@ -1,0 +1,1786 @@
+{
+  "name": "apple",
+  "url": "https://www.apple.com/",
+  "collectedAt": "2026-11-15T16:38:45.740Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-15T16:38:45.737Z",
+    "finalUrl": "https://www.apple.com/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 63,
+      "accessibility": 92,
+      "best-practices": 100,
+      "seo": 92
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 1659,
+        "category": "FAST"
+      },
+      "inpMs": {
+        "p75": 151,
+        "category": "FAST"
+      },
+      "cls": {
+        "p75": 0.01,
+        "category": "FAST"
+      },
+      "fcpMs": {
+        "p75": 1102,
+        "category": "FAST"
+      },
+      "ttfbMs": {
+        "p75": 548,
+        "category": "FAST"
+      },
+      "overall": "FAST"
+    },
+    "lab": {
+      "lcp": {
+        "value": 8851,
+        "display": "8.9 s"
+      },
+      "cls": {
+        "value": 0.16834907020454284,
+        "display": "0.168"
+      },
+      "tbt": {
+        "value": 91,
+        "display": "90 ms"
+      },
+      "fcp": {
+        "value": 2341,
+        "display": "2.3 s"
+      },
+      "speedIndex": {
+        "value": 4187.080009983744,
+        "display": "4.2 s"
+      },
+      "ttfb": {
+        "value": 6,
+        "display": "Root document took 10 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 2,982 KiB",
+        "savingsMs": {
+          "LCP": 6400,
+          "FCP": 1050
+        },
+        "items": [
+          {
+            "cacheLifetimeMs": 859000,
+            "wastedBytes": 519326.01875,
+            "totalBytes": 580140,
+            "url": "https://www.apple.com/105/media/us/homepage/2026/5c860636-9312-49bb-9597-d145f535822c/anim/hero-pink/small_2x.mp4"
+          },
+          {
+            "cacheLifetimeMs": 1965000,
+            "url": "https://www.apple.com/105/media/us/homepage/2026/dfe63e15-1d50-4ed5-bffc-c121fa0b8626/anim/hero/small_2x.mp4",
+            "wastedBytes": 448823.6848958334,
+            "totalBytes": 523855
+          },
+          {
+            "totalBytes": 436080,
+            "cacheLifetimeMs": 3336000,
+            "wastedBytes": 352861.4,
+            "url": "https://www.apple.com/105/media/us/homepage/2026/1bdb0ca8-e18e-4c40-a862-ba60aee14d53/anim/hero/small_2x.mp4"
+          },
+          {
+            "totalBytes": 235456,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_semibold.woff2",
+            "cacheLifetimeMs": 2753000,
+            "wastedBytes": 195289.49555555556
+          },
+          {
+            "cacheLifetimeMs": 2179000,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_light.woff2",
+            "totalBytes": 226328,
+            "wastedBytes": 192229.48638888888
+          },
+          {
+            "totalBytes": 233771,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_bold.woff2",
+            "cacheLifetimeMs": 3321000,
+            "wastedBytes": 189281.4565625
+          },
+          {
+            "totalBytes": 221732,
+            "cacheLifetimeMs": 2183000,
+            "wastedBytes": 188295.1223611111,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_regular.woff2"
+          },
+          {
+            "wastedBytes": 162570.89583333334,
+            "url": "https://www.apple.com/api-www/global-elements/global-header/v1/assets/globalheader.umd.js",
+            "cacheLifetimeMs": 210000,
+            "totalBytes": 167455
+          },
+          {
+            "totalBytes": 130663,
+            "cacheLifetimeMs": 2752000,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Display/v3/sf-pro-display_semibold.woff2",
+            "wastedBytes": 108377.69944444444
+          },
+          {
+            "totalBytes": 104669,
+            "wastedBytes": 103709.53416666666,
+            "cacheLifetimeMs": 66000,
+            "url": "https://www.apple.com/metrics/ac-analytics/2.30.0/scripts/ac-analytics.js"
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 2,020 ms",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 2000
+        },
+        "items": [
+          {
+            "wastedMs": 601,
+            "totalBytes": 16300,
+            "url": "https://www.apple.com/api-www/global-elements/global-header/v1/assets/globalheader.css"
+          },
+          {
+            "totalBytes": 8702,
+            "url": "https://www.apple.com/ac/localnav/9/styles/ac-localnav.built.css",
+            "wastedMs": 601
+          },
+          {
+            "wastedMs": 601,
+            "totalBytes": 5064,
+            "url": "https://www.apple.com/v/homepage/a/styles/homepage.built.css"
+          },
+          {
+            "url": "https://www.apple.com/homepage/styles/index_4x6ailol.built.css",
+            "wastedMs": 151,
+            "totalBytes": 1867
+          },
+          {
+            "totalBytes": 167455,
+            "wastedMs": 1351,
+            "url": "https://www.apple.com/api-www/global-elements/global-header/v1/assets/globalheader.umd.js"
+          },
+          {
+            "wastedMs": 601,
+            "url": "https://www.apple.com/autopush/us/fam-gallery/styles/home-gallery.built.css",
+            "totalBytes": 20526
+          },
+          {
+            "totalBytes": 2048,
+            "wastedMs": 451,
+            "url": "https://www.apple.com/wss/fonts?families=SF+Pro,v3|SF+Pro+Icons,v3"
+          },
+          {
+            "totalBytes": 1204,
+            "url": "https://www.apple.com/metrics/ac-analytics/2.30.0/scripts/auto-init.js"
+          },
+          {
+            "url": "https://www.apple.com/v/homepage/a/scripts/head.built.js",
+            "totalBytes": 4014,
+            "wastedMs": 151
+          },
+          {
+            "totalBytes": 7632,
+            "url": "https://www.apple.com/ac/globalfooter/8/en_US/styles/ac-globalfooter.built.css",
+            "wastedMs": 601
+          }
+        ]
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 117 KiB",
+        "savingsMs": {
+          "LCP": 450,
+          "FCP": 300
+        },
+        "items": [
+          {
+            "url": "https://www.apple.com/api-www/global-elements/global-header/v1/assets/globalheader.umd.js",
+            "totalBytes": 166301,
+            "wastedPercent": 34.78271327292079,
+            "wastedBytes": 57844
+          },
+          {
+            "url": "https://www.apple.com/metrics/ac-analytics/2.30.0/scripts/ac-analytics.js",
+            "wastedPercent": 40.14995084634438,
+            "totalBytes": 103465,
+            "wastedBytes": 41541
+          },
+          {
+            "wastedBytes": 20771,
+            "url": "https://www.apple.com/v/homepage/a/scripts/main.built.js",
+            "wastedPercent": 83.7592527317589,
+            "totalBytes": 24799
+          }
+        ]
+      },
+      {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0,
+        "displayValue": "Est savings of 39 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 300
+        },
+        "items": [
+          {
+            "totalBytes": 19320,
+            "wastedBytes": 15662,
+            "url": "https://www.apple.com/autopush/us/fam-gallery/styles/home-gallery.built.css",
+            "wastedPercent": 81.06750606537537
+          },
+          {
+            "wastedPercent": 84.54391147812503,
+            "url": "https://www.apple.com/api-www/global-elements/global-header/v1/assets/globalheader.css",
+            "totalBytes": 15015,
+            "wastedBytes": 12694
+          },
+          {
+            "wastedBytes": 12040,
+            "totalBytes": 13064,
+            "wastedPercent": 92.16265998403124,
+            "url": "https://www.apple.com/v/homepage/a/styles/main.built.css"
+          }
+        ]
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery).",
+        "score": 0,
+        "displayValue": "Est savings of 84 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "node": {
+              "lhId": "page-0-IMG",
+              "snippet": "<img src=\"https://www.apple.com/v/homepage/images/iphone-duo/a/hero_iphone_duo_anima…\" alt=\"iPhone Duo, held by two hands in landscape orientation, unfolded, interior…\">",
+              "path": "1,HTML,1,BODY,9,MAIN,0,SECTION,2,DIV,2,DIV,0,PICTURE,5,IMG",
+              "nodeLabel": "iPhone Duo, held by two hands in landscape orientation, unfolded, interior disp…",
+              "type": "node",
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "boundingRect": {
+                "bottom": 1707,
+                "height": 500,
+                "top": 1207,
+                "width": 734,
+                "left": -161,
+                "right": 573
+              }
+            },
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 25370,
+                  "reason": "This image file is larger than it needs to be (1468x1000) for its displayed dimensions (1285x875). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "totalBytes": 108247,
+            "wastedBytes": 25370,
+            "url": "https://www.apple.com/v/homepage/images/iphone-duo/a/hero_iphone_duo_animated__ggqp9olf1ii6_small_2x.jpg"
+          },
+          {
+            "node": {
+              "lhId": "page-1-IMG",
+              "nodeLabel": "Montage of Apple products, centered Apple logo gift wrapped in a white bow, in …",
+              "path": "1,HTML,1,BODY,9,MAIN,0,SECTION,1,DIV,2,DIV,0,PICTURE,5,IMG",
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "type": "node",
+              "boundingRect": {
+                "height": 500,
+                "top": 695,
+                "bottom": 1195,
+                "right": 573,
+                "left": -161,
+                "width": 734
+              },
+              "snippet": "<img src=\"https://www.apple.com/v/homepage/images/holiday-2026/a/hero_holiday_2026_p…\" alt=\"Montage of Apple products, centered Apple logo gift wrapped in a white bow…\">"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (1468x1000) for its displayed dimensions (1285x875). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 23842
+                }
+              ],
+              "type": "subitems"
+            },
+            "totalBytes": 101726,
+            "wastedBytes": 23842,
+            "url": "https://www.apple.com/v/homepage/images/holiday-2026/a/hero_holiday_2026_pink__bc2rstir59lu_small_2x.jpg"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (1468x1000) for its displayed dimensions (1285x875). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 21257
+                }
+              ],
+              "type": "subitems"
+            },
+            "totalBytes": 90696,
+            "node": {
+              "path": "0,DIV,0,PICTURE,5,IMG",
+              "selector": "div.inline-media-wrapper > div.video-wrapper > picture.start-frame > img",
+              "lhId": "page-2-IMG",
+              "nodeLabel": "div.inline-media-wrapper > div.video-wrapper > picture.start-frame > img",
+              "boundingRect": {
+                "right": 0,
+                "height": 0,
+                "top": 0,
+                "width": 0,
+                "bottom": 0,
+                "left": 0
+              },
+              "snippet": "<img src=\"https://www.apple.com/v/homepage/images/holiday-2026/a/hero_holiday_2026_p…\" alt=\"\">",
+              "type": "node"
+            },
+            "url": "https://www.apple.com/v/homepage/images/holiday-2026/a/hero_holiday_2026_pink_startframe__ca2xflouavci_small_2x.jpg",
+            "wastedBytes": 21257
+          },
+          {
+            "wastedBytes": 15694,
+            "url": "https://www.apple.com/v/homepage/images/apple-homeview/a/hero_apple_homeview_animated__feurji2rrnau_small_2x.jpg",
+            "totalBytes": 66963,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 15694,
+                  "reason": "This image file is larger than it needs to be (1468x1000) for its displayed dimensions (1285x875). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "node": {
+              "nodeLabel": "Multiple Apple HomeView devices, shown in an assortment of colors, highlighting…",
+              "lhId": "page-3-IMG",
+              "path": "1,HTML,1,BODY,9,MAIN,0,SECTION,0,DIV,2,DIV,0,PICTURE,5,IMG",
+              "boundingRect": {
+                "bottom": 683,
+                "left": -161,
+                "width": 734,
+                "top": 183,
+                "height": 500,
+                "right": 573
+              },
+              "type": "node",
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "snippet": "<img src=\"https://www.apple.com/v/homepage/images/apple-homeview/a/hero_apple_homevi…\" alt=\"Multiple Apple HomeView devices, shown in an assortment of colors, highlig…\">"
+            }
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0,
+        "displayValue": "Est savings of 18 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://www.apple.com/ac/localeswitcher/4/en_US/scripts/localeswitcher.built.js",
+            "subItems": {
+              "items": [
+                {
+                  "signal": "Array.isArray",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.filter",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.forEach",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.indexOf"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.slice"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 10948
+          },
+          {
+            "wastedBytes": 7825,
+            "url": "https://www.apple.com/metrics/ac-analytics/2.30.0/scripts/ac-analytics.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-classes"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-regenerator"
+                },
+                {
+                  "signal": "@babel/plugin-transform-spread",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.isArray"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.forEach"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "font-display-insight",
+        "title": "Font display",
+        "description": "Consider setting [`font-display`](https://developer.chrome.com/docs/performance/insights/font-display) to `swap` or `optional` to ensure text is consistently visible. `swap` can be further optimized to mitigate layout shifts with [font metric overrides](https://developer.chrome.com/blog/font-fallbacks).",
+        "score": 0,
+        "displayValue": "Est savings of 60 ms",
+        "savingsMs": {
+          "FCP": 50,
+          "INP": 0
+        },
+        "items": [
+          {
+            "wastedMs": 55,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_regular.woff2"
+          },
+          {
+            "wastedMs": 55,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_bold.woff2"
+          },
+          {
+            "wastedMs": 55,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_light.woff2"
+          },
+          {
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Icons/v3/sf-pro-icons_light.woff2",
+            "wastedMs": 45
+          },
+          {
+            "wastedMs": 30,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_semibold.woff2"
+          },
+          {
+            "wastedMs": 30,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Display/v3/sf-pro-display_semibold.woff2"
+          },
+          {
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Display/v3/sf-pro-display_regular.woff2",
+            "wastedMs": 20
+          }
+        ]
+      },
+      {
+        "id": "layout-shifts",
+        "title": "Avoid large layout shifts",
+        "description": "These are the largest layout shifts observed on the page. Each table item represents a single layout shift, and shows the element that shifted the most. Below each item are possible root causes that led to the layout shift. Some of these layout shifts may not be included in the CLS metric value due to [windowing](https://web.dev/articles/cls#what_is_cls). [Learn how to improve CLS](https://web.dev/articles/optimize-cls)",
+        "score": 0,
+        "displayValue": "3 layout shifts found",
+        "savingsMs": {
+          "CLS": 0.168
+        },
+        "items": [
+          {
+            "subItems": {
+              "items": [
+                {
+                  "extra": "[…]",
+                  "cause": "Media element lacking an explicit size"
+                }
+              ],
+              "type": "subitems"
+            },
+            "score": 0.1640340218712029,
+            "node": {
+              "nodeLabel": "Apple HomeView\n\nDesigned for life at home.\n\nLearn more\nBuy\nGifts they’ll love.\n…",
+              "snippet": "<section class=\"section section-hero\" data-analytics-region=\"hero\">",
+              "type": "node",
+              "selector": "body.ac-nav-overlap > main.main > section.section",
+              "path": "1,HTML,1,BODY,9,MAIN,0,SECTION",
+              "lhId": "page-7-SECTION",
+              "boundingRect": {
+                "width": 412,
+                "top": 183,
+                "bottom": 1707,
+                "height": 1524,
+                "right": 412,
+                "left": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "Apple HomeView\n\nDesigned for life at home.\n\nLearn more\nBuy",
+              "path": "1,HTML,1,BODY,9,MAIN,0,SECTION,0,DIV,1,DIV",
+              "lhId": "page-5-DIV",
+              "boundingRect": {
+                "width": 208,
+                "left": 102,
+                "right": 310,
+                "bottom": 640,
+                "top": 222,
+                "height": 418
+              },
+              "snippet": "<div class=\"tile-content\">",
+              "type": "node",
+              "selector": "main.main > section.section > div.tile-wrapper > div.tile-content"
+            },
+            "score": 0.004308530011307837
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "extra": "[…]",
+                  "cause": "Media element lacking an explicit size"
+                },
+                {
+                  "cause": "Web font loaded",
+                  "extra": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "score": 0.000006518322032113376
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+        "description": "Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. [Learn more about roles and required children elements](https://dequeuniversity.com/rules/axe/4.14/aria-required-children).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "boundingRect": {
+                "left": 62,
+                "height": 496,
+                "right": 350,
+                "bottom": 5376,
+                "top": 4880,
+                "width": 288
+              },
+              "explanation": "Fix any of the following:\n  Element has children which are not allowed: [role=tabpanel]",
+              "type": "node",
+              "snippet": "<ul class=\"media-gallery-item-container\" role=\"list\" style=\"transform: translate3d(0px, 0px, 0px);\">",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,2,DIV,0,UL",
+              "selector": "section.section-endless-entertainment-gallery > div.endless-entertainment > div#tv-media-gallery > ul.media-gallery-item-container",
+              "nodeLabel": "Stream now\n\nCrime\n12 months to plan. 12 hours to execute. 12 days to escape.\n\nS…",
+              "lhId": "1-2-UL"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "selector": "section.section-endless-entertainment-gallery > div.endless-entertainment > div#fam-media-gallery > ul.media-gallery-item-container",
+              "explanation": "Fix any of the following:\n  Element has children which are not allowed: [role=tabpanel]",
+              "boundingRect": {
+                "width": 201,
+                "left": 106,
+                "right": 307,
+                "bottom": 5643,
+                "height": 254,
+                "top": 5389
+              },
+              "lhId": "1-3-UL",
+              "snippet": "<ul class=\"media-gallery-item-container\" role=\"list\" style=\"transform: translate3d(0px, 0px, 0px);\">",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,3,DIV,0,UL",
+              "nodeLabel": "Play now\n\nHello Kitty Island Adventure\n\nListen now\n\nMiley: The Zane Lowe Interv…",
+              "type": "node"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cls-culprits-insight",
+        "title": "Layout shift culprits",
+        "description": "Layout shifts occur when elements move absent any user interaction. [Investigate the causes of layout shifts](https://developer.chrome.com/docs/performance/insights/cls-culprit), such as elements being added, removed, or their fonts changing as the page loads.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "CLS": 0
+        },
+        "items": [
+          {
+            "items": [
+              {
+                "node": {
+                  "type": "text",
+                  "value": "Total"
+                },
+                "score": 0.16834907020454284
+              },
+              {
+                "subItems": {
+                  "items": [
+                    "[…]"
+                  ],
+                  "type": "subitems"
+                },
+                "node": {
+                  "boundingRect": "[…]",
+                  "path": "1,HTML,1,BODY,9,MAIN,0,SECTION",
+                  "selector": "body.ac-nav-overlap > main.main > section.section",
+                  "lhId": "page-7-SECTION",
+                  "snippet": "<section class=\"section section-hero\" data-analytics-region=\"hero\">",
+                  "nodeLabel": "Apple HomeView\n\nDesigned for life at home.\n\nLearn more\nBuy\nGifts they’ll love.\n…",
+                  "type": "node"
+                },
+                "score": 0.1640340218712029
+              },
+              {
+                "node": {
+                  "selector": "main.main > section.section > div.tile-wrapper > div.tile-content",
+                  "type": "node",
+                  "snippet": "<div class=\"tile-content\">",
+                  "path": "1,HTML,1,BODY,9,MAIN,0,SECTION,0,DIV,1,DIV",
+                  "nodeLabel": "Apple HomeView\n\nDesigned for life at home.\n\nLearn more\nBuy",
+                  "boundingRect": "[…]",
+                  "lhId": "page-5-DIV"
+                },
+                "score": 0.004308530011307837
+              },
+              {
+                "subItems": {
+                  "type": "subitems",
+                  "items": [
+                    "[…]",
+                    "[…]"
+                  ]
+                },
+                "score": 0.000006518322032113376
+              }
+            ],
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "label": "Element",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "extra"
+                }
+              },
+              {
+                "key": "score",
+                "valueType": "numeric",
+                "subItemsHeading": {
+                  "key": "cause",
+                  "valueType": "text"
+                },
+                "label": "Layout shift score",
+                "granularity": 0.001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "chains": {
+                "27F3F1CB2DA51EB49D66CA126AE165C3": {
+                  "navStartToEndTime": 125,
+                  "isLongest": true,
+                  "url": "https://www.apple.com/",
+                  "children": "[…]",
+                  "transferSize": 44223
+                }
+              },
+              "type": "network-tree",
+              "longestChain": {
+                "duration": 1555
+              }
+            }
+          },
+          {
+            "title": "Preconnected origins",
+            "type": "list-section",
+            "value": {
+              "type": "text",
+              "value": "No origins were preconnected"
+            },
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to."
+          },
+          {
+            "title": "Preconnect candidates",
+            "type": "list-section",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      },
+      {
+        "id": "forced-reflow-insight",
+        "title": "Forced reflow",
+        "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "headings": [
+              {
+                "label": "Top function call",
+                "valueType": "source-location",
+                "key": "source"
+              },
+              {
+                "valueType": "ms",
+                "key": "reflowTime",
+                "granularity": 1,
+                "label": "Total reflow time"
+              }
+            ],
+            "type": "table",
+            "items": [
+              {
+                "reflowTime": 54.155,
+                "source": {
+                  "type": "source-location",
+                  "urlProvider": "network",
+                  "url": "https://www.apple.com/metrics/ac-analytics/2.30.0/scripts/ac-analytics.js",
+                  "column": 14978,
+                  "line": 237
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "items": [
+              {
+                "source": {
+                  "urlProvider": "network",
+                  "url": "https://www.apple.com/v/homepage/a/scripts/main.built.js",
+                  "type": "source-location",
+                  "column": 89400,
+                  "line": 0
+                },
+                "reflowTime": 36.912
+              },
+              {
+                "source": {
+                  "column": 2414,
+                  "line": 0,
+                  "url": "https://www.apple.com/v/homepage/a/scripts/main.built.js",
+                  "type": "source-location",
+                  "urlProvider": "network"
+                },
+                "reflowTime": 11.89
+              },
+              {
+                "reflowTime": 54.155,
+                "source": {
+                  "column": 19314,
+                  "line": 236,
+                  "urlProvider": "network",
+                  "type": "source-location",
+                  "url": "https://www.apple.com/metrics/ac-analytics/2.30.0/scripts/ac-analytics.js"
+                }
+              },
+              {
+                "reflowTime": 19.22,
+                "source": {
+                  "line": 170,
+                  "column": 1705,
+                  "urlProvider": "network",
+                  "url": "https://www.apple.com/metrics/ac-analytics/2.30.0/scripts/ac-analytics.js",
+                  "type": "source-location"
+                }
+              },
+              {
+                "reflowTime": 10.352,
+                "source": {
+                  "urlProvider": "network",
+                  "line": 0,
+                  "type": "source-location",
+                  "url": "https://www.apple.com/v/homepage/a/scripts/main.built.js",
+                  "column": 2477
+                }
+              },
+              {
+                "source": {
+                  "urlProvider": "network",
+                  "type": "source-location",
+                  "url": "https://www.apple.com/autopush/us/fam-gallery/scripts/endless-entertainment-gallery.built.js",
+                  "line": 0,
+                  "column": 134036
+                },
+                "reflowTime": 1.12
+              }
+            ],
+            "headings": [
+              {
+                "key": "source",
+                "label": "Source",
+                "valueType": "source-location"
+              },
+              {
+                "label": "Total reflow time",
+                "valueType": "ms",
+                "granularity": 1,
+                "key": "reflowTime"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.14/color-contrast).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">",
+              "selector": "a#media-gallery-item-2-link > div.media-gallery-contents > div.media-gallery-bottom-content > div.button",
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "boundingRect": {
+                "bottom": 5346,
+                "width": 108,
+                "height": 36,
+                "left": 440,
+                "right": 548,
+                "top": 5310
+              },
+              "lhId": "1-4-DIV",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,2,DIV,0,UL,1,LI,0,A,1,DIV,1,DIV,0,DIV",
+              "nodeLabel": "Stream now"
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-5-DIV",
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,2,DIV,0,UL,2,LI,0,A,1,DIV,1,DIV,0,DIV",
+              "boundingRect": {
+                "height": 36,
+                "bottom": 5346,
+                "right": 846,
+                "width": 129,
+                "left": 718,
+                "top": 5310
+              },
+              "nodeLabel": "F1 on Apple TV",
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "selector": "a#media-gallery-item-3-link > div.media-gallery-contents > div.media-gallery-bottom-content > div.button"
+            }
+          },
+          {
+            "node": {
+              "selector": "a#media-gallery-item-4-link > div.media-gallery-contents > div.media-gallery-bottom-content > div.button",
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">",
+              "type": "node",
+              "nodeLabel": "Stream now",
+              "lhId": "1-6-DIV",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "boundingRect": {
+                "top": 5310,
+                "height": 36,
+                "right": 1124,
+                "left": 1016,
+                "bottom": 5346,
+                "width": 108
+              },
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,2,DIV,0,UL,3,LI,0,A,1,DIV,1,DIV,0,DIV"
+            }
+          },
+          {
+            "node": {
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "nodeLabel": "MLS on Apple TV",
+              "type": "node",
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,2,DIV,0,UL,4,LI,0,A,1,DIV,1,DIV,0,DIV",
+              "selector": "a#media-gallery-item-5-link > div.media-gallery-contents > div.media-gallery-bottom-content > div.button",
+              "boundingRect": {
+                "height": 36,
+                "bottom": 5346,
+                "width": 143,
+                "top": 5310,
+                "left": 1287,
+                "right": 1429
+              },
+              "lhId": "1-7-DIV"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "left": 1592,
+                "width": 108,
+                "top": 5310,
+                "height": 36,
+                "right": 1700,
+                "bottom": 5346
+              },
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">",
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "lhId": "1-8-DIV",
+              "selector": "a#media-gallery-item-6-link > div.media-gallery-contents > div.media-gallery-bottom-content > div.button",
+              "nodeLabel": "Stream now",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,2,DIV,0,UL,5,LI,0,A,1,DIV,1,DIV,0,DIV"
+            }
+          },
+          {
+            "node": {
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "boundingRect": {
+                "bottom": 5346,
+                "height": 36,
+                "width": 108,
+                "top": 5310,
+                "right": 1988,
+                "left": 1880
+              },
+              "selector": "a#media-gallery-item-7-link > div.media-gallery-contents > div.media-gallery-bottom-content > div.button",
+              "nodeLabel": "Stream now",
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">",
+              "type": "node",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,2,DIV,0,UL,6,LI,0,A,1,DIV,1,DIV,0,DIV",
+              "lhId": "1-9-DIV"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "lhId": "1-10-DIV",
+              "selector": "a#media-gallery-item-8-link > div.media-gallery-contents > div.media-gallery-bottom-content > div.button",
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,2,DIV,0,UL,7,LI,0,A,1,DIV,1,DIV,0,DIV",
+              "nodeLabel": "Stream now",
+              "boundingRect": {
+                "top": 5310,
+                "right": 2276,
+                "left": 2168,
+                "height": 36,
+                "width": 108,
+                "bottom": 5346
+              }
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-11-DIV",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "selector": "a#media-gallery-item-2 > div.media-gallery-contents > div.media-gallery-bottom-content > div.button",
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">",
+              "nodeLabel": "Listen now",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,3,DIV,0,UL,1,LI,0,A,1,DIV,1,DIV,0,DIV",
+              "boundingRect": {
+                "top": 5604,
+                "bottom": 5628,
+                "height": 24,
+                "width": 81,
+                "left": 367,
+                "right": 447
+              },
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-12-DIV",
+              "boundingRect": {
+                "height": 24,
+                "top": 5604,
+                "right": 649,
+                "bottom": 5628,
+                "left": 567,
+                "width": 83
+              },
+              "selector": "a#media-gallery-item-3 > div.media-gallery-contents > div.media-gallery-bottom-content > div.button",
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,3,DIV,0,UL,2,LI,0,A,1,DIV,1,DIV,0,DIV",
+              "nodeLabel": "Watch now",
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.05 (foreground color: #475c73, background color: #6f8fb4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "boundingRect": {
+                "bottom": 5628,
+                "left": 773,
+                "width": 72,
+                "top": 5604,
+                "height": 24,
+                "right": 845
+              },
+              "selector": "a#media-gallery-item-4 > div.media-gallery-contents > div.media-gallery-bottom-content > div.button",
+              "lhId": "1-13-DIV",
+              "nodeLabel": "Play now",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.39 (foreground color: #7a8a9d, background color: #bed7f5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,3,DIV,0,UL,3,LI,0,A,1,DIV,1,DIV,0,DIV",
+              "snippet": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">"
+            }
+          }
+        ]
+      },
+      {
+        "id": "link-text",
+        "title": "Links do not have descriptive text",
+        "description": "Descriptive link text helps search engines understand your content. [Learn how to make links more accessible](https://developer.chrome.com/docs/lighthouse/seo/link-text/).",
+        "score": 0,
+        "displayValue": "8 links found",
+        "savingsMs": null,
+        "items": [
+          {
+            "href": "https://www.apple.com/apple-homeview/",
+            "textLang": "en-US",
+            "text": "Learn more"
+          },
+          {
+            "textLang": "en-US",
+            "text": "Learn more",
+            "href": "https://www.apple.com/iphone-duo/"
+          },
+          {
+            "text": "Learn more",
+            "href": "https://www.apple.com/iphone-18-pro/",
+            "textLang": "en-US"
+          },
+          {
+            "href": "https://www.apple.com/apple-tv-4k/",
+            "textLang": "en-US",
+            "text": "Learn more"
+          },
+          {
+            "text": "Learn more",
+            "href": "https://www.apple.com/apple-watch-series-12/",
+            "textLang": "en-US"
+          },
+          {
+            "text": "Learn more",
+            "textLang": "en-US",
+            "href": "https://www.apple.com/ipad-11/"
+          },
+          {
+            "textLang": "en-US",
+            "text": "Learn more",
+            "href": "https://www.apple.com/us/shop/goto/apple_upgrade"
+          },
+          {
+            "text": "Learn more",
+            "textLang": "en-US",
+            "href": "https://www.apple.com/apple-card/"
+          }
+        ]
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "title": "LCP request discovery",
+        "description": "[Optimize LCP](https://developer.chrome.com/docs/performance/insights/lcp-discovery) by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "checklist",
+            "items": {
+              "eagerlyLoaded": {
+                "label": "LCP resources shouldn’t use loading=lazy",
+                "value": true
+              },
+              "requestDiscoverable": {
+                "value": true,
+                "label": "Request is discoverable in initial document"
+              },
+              "priorityHinted": {
+                "label": "fetchpriority=high should be applied",
+                "value": false
+              }
+            }
+          },
+          {
+            "selector": "div.inline-media-wrapper > div.video-wrapper > picture.start-frame > img",
+            "type": "node",
+            "nodeLabel": "div.inline-media-wrapper > div.video-wrapper > picture.start-frame > img",
+            "path": "0,DIV,0,PICTURE,5,IMG",
+            "snippet": "<img src=\"https://www.apple.com/v/homepage/images/apple-homeview/a/hero_apple_homevi…\" alt=\"\">",
+            "boundingRect": {
+              "height": 0,
+              "top": 0,
+              "bottom": 0,
+              "right": 0,
+              "left": 0,
+              "width": 0
+            },
+            "lhId": "page-4-IMG"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,3,DIV,1,NAV,0,DIV,1,UL,3,LI,0,DIV,0,A",
+              "nodeLabel": "0\n+",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "snippet": "<a id=\"globalnav-menubutton-link-bag\" href=\"/us/shop/goto/bag\" aria-label=\"Shopping Bag\" aria-expanded=\"false\" aria-controls=\"globalnav-submenu-bag\" data-globalnav-item-name=\"bag\" role=\"button\" data-topnav-flyout-trigger-regular=\"true\" data-topnav-flyout-trigger-compact=\"true\" data-analytics-title=\"…",
+              "lhId": "1-17-A",
+              "selector": "ul#globalnav-list > li#globalnav-bag > div.globalnav-bag-wrapper > a#globalnav-menubutton-link-bag",
+              "boundingRect": {
+                "right": 364,
+                "height": 48,
+                "bottom": 183,
+                "left": 316,
+                "width": 48,
+                "top": 135
+              },
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "Stream now\n\nCrime\n12 months to plan. 12 hours to execute. 12 days to escape.",
+              "path": "1,HTML,1,BODY,9,MAIN,2,SECTION,0,DIV,2,DIV,0,UL,0,LI,0,A",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "lhId": "1-18-A",
+              "boundingRect": {
+                "right": 344,
+                "top": 4880,
+                "height": 496,
+                "width": 275,
+                "left": 69,
+                "bottom": 5376
+              },
+              "snippet": "<a id=\"media-gallery-item-1-link\" class=\"media-gallery-wrapper-link fam-media-gallery-wrapper-link\" href=\"https://tv.apple.com/us/show/12-12-12/umc.cmc.2xeasogpeiwbaegczytrdg1uh?l=…\" data-analytics-title=\"stream now\" data-rid-relay=\"{&quot;289&quot;:&quot;itsct&quot;}\" data-analytics-exit-link=\"\" da…",
+              "type": "node",
+              "selector": "div#tv-media-gallery > ul.media-gallery-item-container > li#endless-entertainment-gallery-item-1 > a#media-gallery-item-1-link"
+            }
+          }
+        ]
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.01,
+        "displayValue": "8.9 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.35,
+        "displayValue": "8.9 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "displayValue": null,
+        "savingsMs": {
+          "CLS": 0
+        },
+        "items": [
+          {
+            "node": {
+              "snippet": "<img src=\"https://www.apple.com/v/homepage/images/apple-homeview/a/hero_apple_homevi…\" alt=\"Multiple Apple HomeView devices, shown in an assortment of colors, highlig…\">",
+              "boundingRect": {
+                "height": 500,
+                "width": 734,
+                "bottom": 683,
+                "right": 573,
+                "top": 183,
+                "left": -161
+              },
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "lhId": "1-389-IMG",
+              "path": "1,HTML,1,BODY,9,MAIN,0,SECTION,0,DIV,2,DIV,0,PICTURE,5,IMG",
+              "nodeLabel": "Multiple Apple HomeView devices, shown in an assortment of colors, highlighting…",
+              "type": "node"
+            },
+            "url": "https://www.apple.com/v/homepage/images/apple-homeview/a/hero_apple_homeview_animated__feurji2rrnau_small_2x.jpg"
+          },
+          {
+            "node": {
+              "lhId": "1-390-IMG",
+              "nodeLabel": "Montage of Apple products, centered Apple logo gift wrapped in a white bow, in …",
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "path": "1,HTML,1,BODY,9,MAIN,0,SECTION,1,DIV,2,DIV,0,PICTURE,5,IMG",
+              "boundingRect": {
+                "width": 734,
+                "left": -161,
+                "height": 500,
+                "top": 695,
+                "right": 573,
+                "bottom": 1195
+              },
+              "type": "node",
+              "snippet": "<img src=\"https://www.apple.com/v/homepage/images/holiday-2026/a/hero_holiday_2026_p…\" alt=\"Montage of Apple products, centered Apple logo gift wrapped in a white bow…\">"
+            },
+            "url": "https://www.apple.com/v/homepage/images/holiday-2026/a/hero_holiday_2026_pink__bc2rstir59lu_small_2x.jpg"
+          },
+          {
+            "url": "https://www.apple.com/v/homepage/images/iphone-duo/a/hero_iphone_duo_animated__ggqp9olf1ii6_small_2x.jpg",
+            "node": {
+              "nodeLabel": "iPhone Duo, held by two hands in landscape orientation, unfolded, interior disp…",
+              "path": "1,HTML,1,BODY,9,MAIN,0,SECTION,2,DIV,2,DIV,0,PICTURE,5,IMG",
+              "lhId": "1-391-IMG",
+              "snippet": "<img src=\"https://www.apple.com/v/homepage/images/iphone-duo/a/hero_iphone_duo_anima…\" alt=\"iPhone Duo, held by two hands in landscape orientation, unfolded, interior…\">",
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "boundingRect": {
+                "right": 573,
+                "top": 1207,
+                "left": -161,
+                "width": 734,
+                "height": 500,
+                "bottom": 1707
+              },
+              "type": "node"
+            }
+          },
+          {
+            "url": "data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",
+            "node": {
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "path": "1,HTML,1,BODY,9,MAIN,1,SECTION,0,DIV,2,DIV,0,PICTURE,1,IMG",
+              "lhId": "1-392-IMG",
+              "boundingRect": {
+                "top": 1719,
+                "width": 500,
+                "left": -44,
+                "bottom": 2219,
+                "height": 500,
+                "right": 456
+              },
+              "snippet": "<img src=\"data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"iPhone 18 Pro, burgundy color (dark red), back exterior, Pro Fusion camera…\">",
+              "type": "node",
+              "nodeLabel": "iPhone 18 Pro, burgundy color (dark red), back exterior, Pro Fusion camera syst…"
+            }
+          },
+          {
+            "url": "data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",
+            "node": {
+              "nodeLabel": "Apple TV 4K, front exterior, black color, square shape, Apple logo on top, roun…",
+              "type": "node",
+              "snippet": "<img src=\"data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"Apple TV 4K, front exterior, black color, square shape, Apple logo on top,…\">",
+              "path": "1,HTML,1,BODY,9,MAIN,1,SECTION,1,DIV,2,DIV,0,PICTURE,1,IMG",
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "boundingRect": {
+                "left": -44,
+                "right": 456,
+                "height": 500,
+                "top": 2231,
+                "bottom": 2731,
+                "width": 500
+              },
+              "lhId": "1-394-IMG"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "boundingRect": {
+                "width": 500,
+                "top": 2743,
+                "bottom": 3243,
+                "height": 500,
+                "right": 456,
+                "left": -44
+              },
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "lhId": "1-396-IMG",
+              "nodeLabel": "Two Apple Watch Series 12 devices, aluminum case, dark bronze color, olive Spor…",
+              "snippet": "<img src=\"data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"Two Apple Watch Series 12 devices, aluminum case, dark bronze color, olive…\">",
+              "path": "1,HTML,1,BODY,9,MAIN,1,SECTION,2,DIV,2,DIV,0,PICTURE,1,IMG"
+            },
+            "url": "data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          },
+          {
+            "node": {
+              "type": "node",
+              "snippet": "<img src=\"data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"iPad with Apple Pencil and Magic Keyboard, displaying a colorful app inter…\">",
+              "boundingRect": {
+                "right": 456,
+                "top": 3255,
+                "height": 500,
+                "width": 500,
+                "left": -44,
+                "bottom": 3755
+              },
+              "path": "1,HTML,1,BODY,9,MAIN,1,SECTION,3,DIV,2,DIV,0,PICTURE,1,IMG",
+              "nodeLabel": "iPad with Apple Pencil and Magic Keyboard, displaying a colorful app interface,…",
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "lhId": "1-397-IMG"
+            },
+            "url": "data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          },
+          {
+            "node": {
+              "type": "node",
+              "selector": "div.inline-media-wrapper > div.video-wrapper > picture.start-frame > img",
+              "snippet": "<img src=\"data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"\">",
+              "nodeLabel": "div.inline-media-wrapper > div.video-wrapper > picture.start-frame > img",
+              "lhId": "1-399-IMG",
+              "boundingRect": {
+                "left": -44,
+                "height": 500,
+                "right": 456,
+                "top": 3767,
+                "bottom": 4267,
+                "width": 500
+              },
+              "path": "1,HTML,1,BODY,9,MAIN,1,SECTION,4,DIV,2,DIV,0,DIV,0,DIV,0,PICTURE,1,IMG"
+            },
+            "url": "data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          },
+          {
+            "node": {
+              "selector": "div.tile-wrapper > div.tile-image-wrapper > picture.static > img",
+              "snippet": "<img src=\"data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"Apple Card, front, Apple logo in top left, cardholder name in middle left …\">",
+              "boundingRect": {
+                "width": 500,
+                "left": -44,
+                "height": 500,
+                "right": 456,
+                "bottom": 4779,
+                "top": 4279
+              },
+              "nodeLabel": "Apple Card, front, Apple logo in top left, cardholder name in middle left Maris…",
+              "type": "node",
+              "path": "1,HTML,1,BODY,9,MAIN,1,SECTION,5,DIV,2,DIV,0,PICTURE,1,IMG",
+              "lhId": "1-402-IMG"
+            },
+            "url": "data:image/gif;base64,R0lGODlhAQABAHAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          },
+          {
+            "url": "https://www.apple.com/v/homepage/images/logos/apple-homeview/a/hero_logo_apple_homeview__supys4dqs92y_small_2x.png",
+            "node": {
+              "selector": "div.tile-copy-wrapper > h2.tile-headline > picture.headline > img",
+              "boundingRect": {
+                "height": 41,
+                "right": 291,
+                "bottom": 267,
+                "width": 169,
+                "left": 122,
+                "top": 226
+              },
+              "snippet": "<img src=\"https://www.apple.com/v/homepage/images/logos/apple-homeview/a/hero_logo_a…\" alt=\"\">",
+              "type": "node",
+              "nodeLabel": "div.tile-copy-wrapper > h2.tile-headline > picture.headline > img",
+              "path": "1,HTML,1,BODY,9,MAIN,0,SECTION,0,DIV,1,DIV,0,DIV,0,H2,0,PICTURE,3,IMG",
+              "lhId": "1-388-IMG"
+            }
+          }
+        ]
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 3,709 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "totalBytes": 580140,
+            "url": "https://www.apple.com/105/media/us/homepage/2026/5c860636-9312-49bb-9597-d145f535822c/anim/hero-pink/small_2x.mp4"
+          },
+          {
+            "totalBytes": 523855,
+            "url": "https://www.apple.com/105/media/us/homepage/2026/dfe63e15-1d50-4ed5-bffc-c121fa0b8626/anim/hero/small_2x.mp4"
+          },
+          {
+            "url": "https://www.apple.com/105/media/us/homepage/2026/1bdb0ca8-e18e-4c40-a862-ba60aee14d53/anim/hero/small_2x.mp4",
+            "totalBytes": 436080
+          },
+          {
+            "totalBytes": 235456,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_semibold.woff2"
+          },
+          {
+            "totalBytes": 233771,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_bold.woff2"
+          },
+          {
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_light.woff2",
+            "totalBytes": 226328
+          },
+          {
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Text/v3/sf-pro-text_regular.woff2",
+            "totalBytes": 221732
+          },
+          {
+            "url": "https://www.apple.com/api-www/global-elements/global-header/v1/assets/globalheader.umd.js",
+            "totalBytes": 167455
+          },
+          {
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Display/v3/sf-pro-display_semibold.woff2",
+            "totalBytes": 130663
+          },
+          {
+            "totalBytes": 118235,
+            "url": "https://www.apple.com/wss/fonts/SF-Pro-Display/v3/sf-pro-display_regular.woff2"
+          }
+        ]
+      },
+      {
+        "id": "cumulative-layout-shift",
+        "title": "Cumulative Layout Shift",
+        "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
+        "score": 0.7,
+        "displayValue": "0.168",
+        "savingsMs": null,
+        "items": [
+          {
+            "newEngineResult": {
+              "cumulativeLayoutShiftMainFrame": 0.16834907020454284,
+              "cumulativeLayoutShift": 0.16834907020454284
+            },
+            "newEngineResultDiffered": false,
+            "cumulativeLayoutShiftMainFrame": 0.16834907020454284
+          }
+        ]
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.73,
+        "displayValue": "2.3 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.78,
+        "displayValue": "4.2 s",
+        "savingsMs": null,
+        "items": []
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.apple.com/",
+    "status": 200,
+    "htmlBytes": 260629,
+    "headers": {
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "max-age=0",
+      "contentEncoding": "gzip",
+      "xRobotsTag": null,
+      "server": "Apple"
+    },
+    "meta": {
+      "title": "Apple",
+      "description": null,
+      "canonical": "https://www.apple.com/",
+      "lang": "en-US",
+      "robots": null,
+      "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+      "openGraph": {
+        "og:image": "https://www.apple.com/ac/structured-data/images/open_graph_logo.png?202610011401",
+        "og:title": "Apple",
+        "og:description": "Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device support.",
+        "og:url": "https://www.apple.com/",
+        "og:locale": "en_US",
+        "og:site_name": "Apple",
+        "og:type": "website"
+      }
+    },
+    "headings": [
+      {
+        "level": 1,
+        "text": "Apple"
+      },
+      {
+        "level": 2,
+        "text": "Apple HomeView"
+      },
+      {
+        "level": 2,
+        "text": "Gifts they’ll love."
+      },
+      {
+        "level": 2,
+        "text": "iPhone Duo"
+      },
+      {
+        "level": 3,
+        "text": "iPhone 18 Pro"
+      },
+      {
+        "level": 3,
+        "text": "<picture class=\"headline\" aria-hidden=\"true\">\n\t\t\t\t\t\t\t\t\t\t<source srcset=\"/v/homepage/images/logos/apple-tv-4k/a/promo_log…"
+      },
+      {
+        "level": 3,
+        "text": "<picture class=\"headline\" aria-hidden=\"true\">\n\t\t\t\t\t\t\t\t\t\t\t<source srcset=\"/v/homepage/images/logos/apple-watch-series-12/…"
+      },
+      {
+        "level": 3,
+        "text": "iPad"
+      },
+      {
+        "level": 3,
+        "text": "<picture class=\"headline\" aria-hidden=\"true\">\n\t\t\t\t\t\t\t\t\t\t<source srcset=\"/v/homepage/images/logos/apple-upgrade/a/promo_l…"
+      },
+      {
+        "level": 3,
+        "text": "<picture class=\"headline\" aria-hidden=\"true\">\n\t\t\t\t\t\t\t\t\t\t<source srcset=\"/v/homepage/images/logos/apple-card/a/promo_logo…"
+      },
+      {
+        "level": 2,
+        "text": "Endless entertainment."
+      },
+      {
+        "level": 2,
+        "text": "Apple Footer"
+      },
+      {
+        "level": 3,
+        "text": "Shop and Learn\n\t\t\t\t\t\n\t\t\t\t\t\tShop and Learn"
+      },
+      {
+        "level": 3,
+        "text": "Apple Wallet\n\t\t\t\t\t\n\t\t\t\t\t\tApple Wallet"
+      },
+      {
+        "level": 3,
+        "text": "Account\n\t\t\t\t\t\n\t\t\t\t\t\tAccount"
+      },
+      {
+        "level": 3,
+        "text": "Entertainment\n\t\t\t\t\t\n\t\t\t\t\t\tEntertainment"
+      },
+      {
+        "level": 3,
+        "text": "Apple Store\n\t\t\t\t\t\n\t\t\t\t\t\tApple Store"
+      },
+      {
+        "level": 3,
+        "text": "For Business\n\t\t\t\t\t\n\t\t\t\t\t\tFor Business"
+      },
+      {
+        "level": 3,
+        "text": "For Education\n\t\t\t\t\t\n\t\t\t\t\t\tFor Education"
+      },
+      {
+        "level": 3,
+        "text": "For Healthcare\n\t\t\t\t\t\n\t\t\t\t\t\tFor Healthcare"
+      },
+      {
+        "level": 3,
+        "text": "For Government\n\t\t\t\t\t\n\t\t\t\t\t\tFor Government"
+      },
+      {
+        "level": 3,
+        "text": "Apple Values\n\t\t\t\t\t\n\t\t\t\t\t\tApple Values"
+      },
+      {
+        "level": 3,
+        "text": "About Apple\n\t\t\t\t\t\n\t\t\t\t\t\tAbout Apple"
+      }
+    ],
+    "h1Count": 1,
+    "images": {
+      "total": 52,
+      "missingAlt": 0,
+      "missingDimensions": 52,
+      "lazy": 0,
+      "firstImages": [
+        {
+          "src": "/v/homepage/images/logos/apple-homeview/a/hero_logo_apple_homeview__supys4dqs92y_large.png",
+          "alt": "",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "/v/homepage/images/apple-homeview/a/hero_apple_homeview_animated_startframe__e4vj1ccwxkmu_large.jpg",
+          "alt": "",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "/v/homepage/images/apple-homeview/a/hero_apple_homeview_animated__feurji2rrnau_large.jpg",
+          "alt": "Multiple Apple HomeView devices, shown in an assortment of colors, highlighting a variety of colorful screens",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "/v/homepage/images/iphone-duo/a/hero_iphone_duo_animated_startframe__blm9gj3ulmc2_large.jpg",
+          "alt": "",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "/v/homepage/images/iphone-duo/a/hero_iphone_duo_animated__ggqp9olf1ii6_large.jpg",
+          "alt": "iPhone Duo, held by two hands in landscape orientation, unfolded, interior display features Home Screen.",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "/v/homepage/images/iphone-18-pro/a/promo_iphone_18_pro__9nn5m4mt2bmy_large.jpg",
+          "alt": "iPhone 18 Pro, burgundy color (dark red), back exterior, Pro Fusion camera system at top, Apple logo in center, Side exterior, Side button, Camera Control, the word Pro written in large silver colored text and glowing with a blue and pink neon effect",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "/v/homepage/images/logos/apple-tv-4k/a/promo_logo_apple_tv_4k__dmr11vmopro2_large.png",
+          "alt": "",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "/v/homepage/images/apple-tv-4k/a/promo_apple_tv_4k__bnho6winkiya_large.jpg",
+          "alt": "Apple TV 4K, front exterior, black color, square shape, Apple logo on top, rounded corners. Siri Remote, front exterior, circular touch-enabled clickpad, raised buttons",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 9,
+      "blockingScripts": 0,
+      "preloads": [],
+      "preconnects": []
+    },
+    "scripts": {
+      "total": 0,
+      "external": 14,
+      "thirdPartyHosts": []
+    },
+    "structuredData": {
+      "jsonLdBlocks": 3,
+      "types": [
+        "Organization",
+        "WebSite",
+        "WebPage"
+      ],
+      "invalidBlocks": 0,
+      "raw": [
+        "\n\t{\n\t\t\"@context\": \"http://schema.org\",\n\t\t\"@id\": \"https://www.apple.com/#organization\",\n\t\t\"@type\": \"Organization\",\n\t\t\"name\": \"Apple\",\n\t\t\"url\": \"https://www.apple.com/\",\n\t\t\"logo\": \"https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png?202610011401\",\n\t\t\"subOrganization\": {\n\t\t\t\"@type\": \"Organization\",\n\t\t\t\"name\": \"Apple Support\",\n\t\t\t\"url\": \"https://support.apple.com\",\n\t    \"@id\": \"https://support.apple.com/#organization\"\n\t\t},\n\t\t\"contactPoint\": [\n\t\t\t{\n\t\t\t\t\"@type\": \"ContactPoint\",\n\t\t\t\t\"telephone\": \"+1-800-692-7753\",\n\t\t\t\t\"contactType\": \"sales\",\n\t\t\t\t\"areaServed\": \"US\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"@type\": \"ContactPoint\",\n\t\t\t\t\"telephone\": \"+1-800-275-2273\",\n\t\t\t\t\"contactType\": \"technical support\",\n\t\t\t\t\"areaServed\": \"US\",\n\t\t\t\t\"availableLanguage\": [\"EN\", \"ES\"]\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"@type\": \"ContactPoint\",\n\t\t\t\t\"telephone\": \"+1-800-275-2273\",\n\t\t\t\t\"contactType\": \"customer support\",\n\t\t\t\t\"areaServed\": \"US\",\n\t\t\t\t\"availableLanguage\": [\"EN\", \"ES\"]\n\t\t\t}\n\t\t],\n\t\t\"sameAs\": [\n\t\t\t\"http://www.wikidata.org/entity/Q312\",\n\t\t\t\"https://www.youtube.com/user/Apple\",\n\t\t\t\"https://www.linkedin.com/company/apple\",\n\t\t\t\"https://www.facebook.com/Apple\",\n\t\t\t\"https://www.twitter.com/Apple\"\n\t\t]\n\t}\n",
+        "\n\t{\n\t\t\"@context\": \"http://schema.org\",\n\t\t\"@id\": \"https://www.apple.com/#website\",\n\t\t\"@type\": \"WebSite\",\n\t\t\"url\": \"https://www.apple.com/\",\n\t\t\"name\": \"Apple\",\n\t\t\"potentialAction\": {\n\t\t\t\"@type\": \"SearchAction\",\n\t\t\t\"target\": \"https://www.apple.com/us/search/{search_term_string}?src=mc_google\",\n\t\t\t\"query-input\": \"required name=search_term_string\"\n\t\t}\n\t}\n",
+        "\n\t{\n\t\t\"@context\": \"http://schema.org\",\n\t\t\"@id\": \"https://www.apple.com/#webpage\",\n\t\t\"@type\": \"WebPage\",\n\t\t\"url\": \"https://www.apple.com/\",\n\t\t\"name\": \"Apple\"\n\t}\n"
+      ]
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [],
+      "allowed": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "Apple AppleStoreMaciPadiPhoneWatch VisionAirPodsHomeEntertainmentAccessoriesSupport 0+ Apple HomeView Designed for life at home. Learn more Buy Gifts they’ll love. Find their perfect match this holiday. Shop gifts iPhone Duo Hello, hello.Hello, Hello. hello. Learn more Buy iPhone 18 Pro Pro further. Learn more Buy Apple TV 4k Stunning picture. Stunningly simple. Learn more Buy Apple Watch Series 12 The most accurate heart rate sensing in a wearable.1 Learn more Buy iPad Now with the speed of the A16 chip and double the starting storage. Learn more Buy Apple Upgrade Love it. Lease it. Upgrade it.2 Learn more Apple Card Get up to 3% Daily Cash back with every purchase. Learn more Apply now Endless entertainment. Item 1 Item 2 Item 3 Item 4 Item 5 Item 6 Item 7 Item 8 Item 9 Stream now Crime12 months to plan. 12 hours to execute. 12 days to escape. Stream now DramaScrappy and defiant, Judy Heumann turns her outrage into a revolution. F1 on Apple TV Every Grand Prix™, live and on demand—all in one place, all year long. Stream now ComedyNew season. MLS on Apple TV Watch every club, every match, live—all season long. Stream now CrimeThe only way to save a villain’s missing victim is to get close enough to risk becoming one. Stream now DocumentaryAwkwafina sets off on a culinary road trip to revive her family’s restaurant. Stream now ThrillerMI5’s most unruly spies are back and under attack. Stream now ComedyThe hit comedy is back and Tedder than ever. Play now Hello Kitty Island Ad…"
+  }
+}

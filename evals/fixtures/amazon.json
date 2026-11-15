@@ -1,0 +1,1828 @@
+{
+  "name": "amazon",
+  "url": "https://www.amazon.com.br/",
+  "collectedAt": "2026-11-15T16:40:02.120Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-15T16:40:02.118Z",
+    "finalUrl": "https://www.amazon.com.br/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 60,
+      "accessibility": 92,
+      "best-practices": 73,
+      "seo": 92
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 1854,
+        "category": "FAST"
+      },
+      "inpMs": {
+        "p75": 231,
+        "category": "AVERAGE"
+      },
+      "cls": {
+        "p75": 0,
+        "category": "FAST"
+      },
+      "fcpMs": {
+        "p75": 1469,
+        "category": "FAST"
+      },
+      "ttfbMs": {
+        "p75": 873,
+        "category": "AVERAGE"
+      },
+      "overall": "AVERAGE"
+    },
+    "lab": {
+      "lcp": {
+        "value": 6215.862027271554,
+        "display": "6.2 s"
+      },
+      "cls": {
+        "value": 0.03379893670579585,
+        "display": "0.034"
+      },
+      "tbt": {
+        "value": 137.5,
+        "display": "140 ms"
+      },
+      "fcp": {
+        "value": 4729.868522603567,
+        "display": "4.7 s"
+      },
+      "speedIndex": {
+        "value": 7692.513383723157,
+        "display": "7.7 s"
+      },
+      "ttfb": {
+        "value": 453,
+        "display": "Root document took 450 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 1,450 ms",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 1450
+        },
+        "items": [
+          {
+            "wastedMs": 451,
+            "totalBytes": 3717,
+            "url": "https://m.media-amazon.com/images/I/21Yni+jKzkL.js?AUIClients/GWMMetricsJS#isWindowDisplay-true"
+          },
+          {
+            "totalBytes": 8993,
+            "wastedMs": 1051,
+            "url": "https://m.media-amazon.com/images/I/21YIMhqgtSL._RC%7C51jIxuH7nML.css_.css?AUIClients/AmazonUI#mobile"
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/01Zm8WWLelL.css?AUIClients/GlowToasterAssets#mobile.1253326-T1",
+            "wastedMs": 751,
+            "totalBytes": 1250
+          },
+          {
+            "totalBytes": 6770,
+            "url": "https://m.media-amazon.com/images/I/41ZHNktsa5L.css?AUIClients/GWMWebAssets#mobile.1445595-T1",
+            "wastedMs": 1051
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/41NJYgJ4YmL._RC%7C51waPb-h-9L.css,512RA0h6tdL.css_.css?AUIClients/NavMobileAssets-all#778344-T1",
+            "totalBytes": 13794,
+            "wastedMs": 1201
+          },
+          {
+            "totalBytes": 35015,
+            "url": "https://m.media-amazon.com/images/I/11+b+kSimqL._RC%7C01GaLSH4siL.css,51E+-hF-pHL.css,319AfbO72JL.css,01dpRn7s1DL.css,21P+RTdWkDL.css,01Gy5vQ0QmL.css,01oplyhwgTL.css,31VtExXv3+L.css,11F5ACe4x7L.css,01xgFoPPxUL.css,11wud0XLTHL.css,11ot-D-ufkL.css,01IdKcBuAdL.css,01hTMdPgumL.css,01wLsDqViEL.css,21Wrwl…",
+            "wastedMs": 1501
+          },
+          {
+            "totalBytes": 15580,
+            "url": "https://m.media-amazon.com/images/I/61zer--1LNL._RC%7C41hsDkZS7QL.css,01FcI3FsaiL.css,31NNhOYo8RL.css_.css?AUIClients/RetailSearchAutocompleteAssets#mobile",
+            "wastedMs": 1351
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/01CA4AP1aDL.css?AUIClients/AmazonHomepageWindowDisplayAssets#mobile",
+            "totalBytes": 1144,
+            "wastedMs": 751
+          },
+          {
+            "totalBytes": 1224,
+            "url": "https://m.media-amazon.com/images/I/01kDZ3+X5ML.css?AUIClients/AmazonEmberModernFontAssets",
+            "wastedMs": 751
+          },
+          {
+            "totalBytes": 4685,
+            "wastedMs": 901,
+            "url": "https://m.media-amazon.com/images/I/41hT04EZFML.css?AUIClients/InternationalCustomerPreferencesNavMobileAssets"
+          }
+        ]
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery).",
+        "score": 0,
+        "displayValue": "Est savings of 206 KiB",
+        "savingsMs": {
+          "LCP": 300,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "node": {
+              "lhId": "page-0-IMG",
+              "nodeLabel": "Tudo pro natal a partir de R$19,90",
+              "selector": "div._single-creative-card_style_windowDisplayContainer__18uaW > a.a-link-normal > picture > img.a-amazon-image",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,0,DIV,0,DIV,1,UL,7,LI,0,DIV,2,DIV,0,DIV,0,A,1,PICTURE,2,IMG",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 751,
+                "top": 244,
+                "right": 1014,
+                "width": 317,
+                "height": 507,
+                "left": 698
+              },
+              "snippet": "<img loading=\"eager\" src=\"https://m.media-amazon.com/images/I/7143oUfYBEL._AC_AIweblab1431263,T1_FMa…\" srcset=\"https://m.media-amazon.com/images/I/7143oUfYBEL._AC_AIweblab1431263,T1_SF1…\" alt=\"Tudo pro natal a partir de R$19,90\" class=\"a-amazon-image _single-creative-card_style_image__kEmO2\">"
+            },
+            "wastedBytes": 53478,
+            "url": "https://m.media-amazon.com/images/I/7143oUfYBEL._AC_AIweblab1431263,T1_FMavif_SF1710,2736_QL54_.jpg?aicid=homepage-single-creative-card",
+            "totalBytes": 92216,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (855x1368) for its displayed dimensions (554x887). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 53478
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/71qt0CMgmuL._AC_AIweblab1431263,T1_FMavif_SF1710,2736_QL54_.jpg?aicid=homepage-single-creative-card",
+            "totalBytes": 61565,
+            "node": {
+              "lhId": "page-1-IMG",
+              "type": "node",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,0,DIV,0,DIV,1,UL,0,LI,0,SPAN,0,DIV,2,DIV,0,DIV,0,A,1,PICTURE,2,IMG",
+              "snippet": "<img loading=\"eager\" src=\"https://m.media-amazon.com/images/I/71qt0CMgmuL._AC_AIweblab1431263,T1_FMa…\" srcset=\"https://m.media-amazon.com/images/I/71qt0CMgmuL._AC_AIweblab1431263,T1_SF1…\" alt=\"Cupom R$20 OFF\" class=\"a-amazon-image _single-creative-card_style_image__kEmO2\">",
+              "selector": "div._single-creative-card_style_windowDisplayContainer__18uaW > a.a-link-normal > picture > img.a-amazon-image",
+              "boundingRect": {
+                "left": -1575,
+                "right": -1258,
+                "height": 507,
+                "bottom": 751,
+                "width": 317,
+                "top": 244
+              },
+              "nodeLabel": "Cupom R$20 OFF"
+            },
+            "wastedBytes": 35703,
+            "subItems": {
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (855x1368) for its displayed dimensions (554x887). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 35703
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "totalBytes": 55603,
+            "node": {
+              "lhId": "page-2-IMG",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,0,DIV,0,DIV,1,UL,2,LI,0,SPAN,0,DIV,1,DIV,0,DIV,0,A,1,PICTURE,2,IMG",
+              "snippet": "<img loading=\"eager\" src=\"https://m.media-amazon.com/images/I/719viVsUh4L._AC_AIweblab1431263,T1_FMa…\" srcset=\"https://m.media-amazon.com/images/I/719viVsUh4L._AC_AIweblab1431263,T1_SF1…\" alt=\"20% off em Moda Feminina\" class=\"a-amazon-image _single-creative-card_style_image__kEmO2\">",
+              "type": "node",
+              "nodeLabel": "20% off em Moda Feminina",
+              "boundingRect": {
+                "top": 244,
+                "left": -926,
+                "height": 507,
+                "right": -609,
+                "bottom": 751,
+                "width": 317
+              },
+              "selector": "div._single-creative-card_style_windowDisplayContainer__18uaW > a.a-link-normal > picture > img.a-amazon-image"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 32246,
+                  "reason": "This image file is larger than it needs to be (855x1368) for its displayed dimensions (554x887). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "wastedBytes": 32246,
+            "url": "https://m.media-amazon.com/images/I/719viVsUh4L._AC_AIweblab1431263,T1_FMavif_SF1710,2736_QL54_.jpg?aicid=homepage-single-creative-card"
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 31423,
+                  "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image’s download size"
+                }
+              ]
+            },
+            "totalBytes": 40961,
+            "wastedBytes": 31423,
+            "node": {
+              "snippet": "<span class=\"icp-flag-3 icp-flag-3-br\">",
+              "selector": "div#nav-ftr > div.icp-container-mobile > a#icp-touch-link-country > span.icp-flag-3",
+              "boundingRect": {
+                "width": 18,
+                "right": 197,
+                "height": 12,
+                "left": 179,
+                "top": 2429,
+                "bottom": 2441
+              },
+              "nodeLabel": "div#nav-ftr > div.icp-container-mobile > a#icp-touch-link-country > span.icp-flag-3",
+              "lhId": "page-3-SPAN",
+              "type": "node",
+              "path": "1,HTML,4,BODY,0,DIV,53,FOOTER,0,DIV,2,DIV,1,A,0,SPAN"
+            },
+            "url": "https://m.media-amazon.com/images/S/sash/lS7Dfi6bKlLiBST.png"
+          },
+          {
+            "totalBytes": 20215,
+            "url": "https://m.media-amazon.com/images/G/32/A2I-Convert/mobile/IconFarm/Offer.png",
+            "subItems": {
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (1024x1024) for its displayed dimensions (60x60). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 20147
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "type": "node",
+              "path": "1,HTML,4,BODY,8,DIV,0,DIV,0,DIV,1,IMG",
+              "snippet": "<img class=\"sparkle-image\" alt=\"Fazer login\" src=\"https://m.media-amazon.com/images/G/32/A2I-Convert/mobile/IconFarm/Offer.p…\">",
+              "lhId": "page-4-IMG",
+              "nodeLabel": "Fazer login",
+              "boundingRect": {
+                "height": 34,
+                "top": 757,
+                "right": 52,
+                "bottom": 791,
+                "left": 18,
+                "width": 34
+              },
+              "selector": "div.sparkle-container > div.sparkle-content > div.sparkle-image-container > img.sparkle-image"
+            },
+            "wastedBytes": 20147
+          },
+          {
+            "node": {
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,0,DIV,0,DIV,1,UL,1,LI,0,SPAN,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,A,0,DIV,0,PICTURE,2,IMG",
+              "type": "node",
+              "boundingRect": {
+                "width": 126,
+                "top": 553,
+                "right": -1104,
+                "bottom": 731,
+                "height": 178,
+                "left": -1230
+              },
+              "nodeLabel": "Copo de Papel, Art Lille, Xadrez, Azul, 240 ml, Pacote com 8",
+              "lhId": "page-5-IMG",
+              "snippet": "<img loading=\"eager\" src=\"https://m.media-amazon.com/images/I/61fSYvAy+QL._AC_AIweblab1374086,T2_FMa…\" srcset=\"https://m.media-amazon.com/images/I/61fSYvAy+QL._AC_AIweblab1374086,T2_SF2…\" alt=\"Copo de Papel, Art Lille, Xadrez, Azul, 240 ml, Pacote com 8\" class=\"a-amazon-image _bnBhY_asin-image_2BYur…",
+              "selector": "a.a-spacing-none > div.a-section > picture > img.a-amazon-image"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 8542,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 8542,
+            "totalBytes": 27102,
+            "url": "https://m.media-amazon.com/images/I/61fSYvAy+QL._AC_AIweblab1374086,T2_FMavif_SF290,580_QL54_.jpg?aicid=homepage-faceout"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (1281x135) for its displayed dimensions (747x79). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 8513
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 8513,
+            "totalBytes": 12904,
+            "url": "https://m.media-amazon.com/images/I/41U9LKQ9NTL._SR1281,135_.jpg",
+            "node": {
+              "boundingRect": {
+                "height": 45,
+                "bottom": 809,
+                "left": -7,
+                "width": 427,
+                "top": 764,
+                "right": 420
+              },
+              "selector": "div.gwm-Card > a.a-link-normal > div._billboard-card_regularStyle_gwm-BillboardCard--cropped__g2nZu > img",
+              "lhId": "page-6-IMG",
+              "nodeLabel": "R$ 20 off e frete GRÁTIS na sua primeira compra!",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,1,DIV,0,DIV,2,DIV,0,DIV,0,A,0,DIV,0,IMG",
+              "snippet": "<img alt=\"R$ 20 off e frete GRÁTIS na sua primeira compra!\" src=\"https://m.media-amazon.com/images/I/41U9LKQ9NTL._SR1281,135_.jpg\" data-a-hires=\"https://m.media-amazon.com/images/I/41U9LKQ9NTL._SR1281,135_.jpg\">",
+              "type": "node"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image’s download size",
+                  "wastedBytes": 5939
+                }
+              ]
+            },
+            "wastedBytes": 5939,
+            "node": {
+              "snippet": "<img loading=\"eager\" src=\"https://m.media-amazon.com/images/I/21dHXCZdHcL._AIweblab1431263,T1_FMavif…\" srcset=\"https://m.media-amazon.com/images/I/21dHXCZdHcL._AIweblab1431263,T1_SF450,…\" alt=\"Frete Grátis Prime\" class=\"a-amazon-image _single-creative-card_style_logo__2ZQ-N _single-creative-ca…\">",
+              "selector": "div > div.a-section > picture > img.a-amazon-image",
+              "boundingRect": {
+                "width": 112,
+                "bottom": 410,
+                "right": 821,
+                "height": 33,
+                "left": 710,
+                "top": 377
+              },
+              "nodeLabel": "Frete Grátis Prime",
+              "lhId": "page-7-IMG",
+              "type": "node",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,0,DIV,0,DIV,1,UL,7,LI,0,DIV,2,DIV,0,DIV,0,A,0,DIV,0,DIV,1,DIV,0,PICTURE,2,IMG"
+            },
+            "totalBytes": 10952,
+            "url": "https://m.media-amazon.com/images/I/21dHXCZdHcL._AIweblab1431263,T1_FMavif_SF600,176_QL54_._FMpng_.png?aicid=homepage-card-logo"
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "top": 0,
+                "right": 0,
+                "left": 0,
+                "width": 0,
+                "bottom": 0,
+                "height": 0
+              },
+              "snippet": "<div class=\"vjs-poster\" tabindex=\"-1\" aria-disabled=\"false\" style=\"background-image: url(&quot;https://m.media-amazon.com/images/I/719gH-5kwLL._SR…&quot;);\">",
+              "lhId": "page-8-DIV",
+              "selector": "div._single-video-card_style_overlay__3Sx3u > div._single-video-card_style_video-container__1hKS1 > div#singleVideoCard-b6f5b63b-91eb-4444-a7d9-8ca1eb30218b > div.vjs-poster",
+              "nodeLabel": "div._single-video-card_style_overlay__3Sx3u > div._single-video-card_style_video-container__1hKS1 > div#singleVideoCard-b6f5b63b-91eb-4444-a7d9-8ca1eb30218b > div.vjs-poster",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,0,DIV,0,DIV,1,UL,5,LI,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,1,DIV",
+              "type": "node"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image’s download size",
+                  "wastedBytes": 5453
+                }
+              ]
+            },
+            "url": "https://m.media-amazon.com/images/I/719gH-5kwLL._SR285,456_.jpg",
+            "wastedBytes": 5453,
+            "totalBytes": 27113
+          },
+          {
+            "totalBytes": 14322,
+            "node": {
+              "lhId": "page-9-IMG",
+              "type": "node",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,1,DIV,17,DIV,2,DIV,0,DIV,1,DIV,0,DIV,0,UL,2,LI,0,DIV,0,A,0,DIV,0,IMG",
+              "nodeLabel": "div.a-cardui > a.a-color-base > div.a-cardui-body > img.a-dynamic-image",
+              "snippet": "<img alt=\"\" src=\"https://m.media-amazon.com/images/G/32/br-events/2026/BlackFriday/LUWU/HP/…\" class=\"a-dynamic-image dcl-dynamic-image\" height=\"88px\" width=\"145px\" data-a-dynamic-image=\"{&quot;https://m.media-amazon.com/images/G/32/br-events/2026/BlackFriday/LUWU/H…\">",
+              "selector": "div.a-cardui > a.a-color-base > div.a-cardui-body > img.a-dynamic-image",
+              "boundingRect": {
+                "right": 493,
+                "left": 339,
+                "width": 154,
+                "top": 1201,
+                "bottom": 1303,
+                "height": 102
+              }
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 5023,
+                  "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image’s download size"
+                }
+              ]
+            },
+            "url": "https://m.media-amazon.com/images/G/32/br-events/2026/BlackFriday/LUWU/HP/DossierVisualNav/VD102_BF26_WU_DossierVisualNav_Cupons_540x432._CB765988049_UC290,176_.jpg",
+            "wastedBytes": 5023
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "2.2 s",
+        "savingsMs": {
+          "TBT": 200
+        },
+        "items": [
+          {
+            "scripting": 478.7171999999988,
+            "total": 1688.7804000000083,
+            "scriptParseCompile": 84.88680000000002,
+            "url": "https://www.amazon.com.br/"
+          },
+          {
+            "scriptParseCompile": 0,
+            "url": "Unattributable",
+            "total": 1104.7007999999921,
+            "scripting": 588.4391999999996
+          },
+          {
+            "scripting": 288.7139999999996,
+            "url": "https://m.media-amazon.com/images/I/11I0WXrZVoL._RC%7C11Y+5x+kkTL.js,51IrWwn6GEL.js,115zbyk371L.js,11GgN1+C7hL.js,313nCSj5srL.js,01Aie6L4uGL.js,21NadQlXUWL.js,01E8f3KV-NL.js,31on-La90vL.js,11a7qqY8xXL.js,11PZSUl3FLL.js,51C4kaFbiAL.js,11J9B4cvO1L.js,11wb9K3sw0L.js,11BrgrMAHUL.js,11dKU9zhD1L.js,21F6z4…",
+            "total": 447.3467999999996,
+            "scriptParseCompile": 32.529599999999995
+          },
+          {
+            "scripting": 143.19000000000005,
+            "scriptParseCompile": 7.434,
+            "url": "https://m.media-amazon.com/images/I/51zg95DqZnL._RC%7C1108Y3EAdRL.js,11NBZ7Qe33L.js_.js?AUIClients/GWMWebAssets",
+            "total": 286.82160000000005
+          },
+          {
+            "scriptParseCompile": 62.6724,
+            "total": 207.73200000000006,
+            "url": "https://m.media-amazon.com/images/I/91zGxJGnQQL.js?AUIClients/VideoJsCardsBuzz",
+            "scripting": 133.86120000000005
+          },
+          {
+            "scripting": 107.98080000000004,
+            "scriptParseCompile": 28.146,
+            "total": 142.11960000000008,
+            "url": "https://m.media-amazon.com/images/I/81xAPm3uFgL._RC%7C41ugA3twpXL.js_.js?AUIClients/InContextAuthBaseAssets"
+          },
+          {
+            "url": "https://d2lbyuknrhysf9.cloudfront.net/SFXInjectableScript.js",
+            "total": 102.3048,
+            "scriptParseCompile": 36.909600000000005,
+            "scripting": 64.83840000000001
+          },
+          {
+            "total": 101.23799999999996,
+            "scripting": 66.16679999999995,
+            "scriptParseCompile": 25.2948,
+            "url": "https://m.media-amazon.com/images/I/81mmh+ozMZL._RC%7C31CTYxZkyiL.js,01wcltxKR5L.js,41+VE2HN0RL.js_.js?AUIClients/QTipsMobileWebAssets"
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/019AaNzy9HL._RC%7C01XcCf7ijWL.js,81Lr3zuIrsL.js_.js?AUIClients/RetailSearchAutocompleteAssets",
+            "scripting": 33.938399999999994,
+            "total": 69.6936,
+            "scriptParseCompile": 35.4384
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "4.6 s",
+        "savingsMs": {
+          "TBT": 150
+        },
+        "items": [
+          {
+            "groupLabel": "Script Evaluation",
+            "duration": 2134.6223999999906,
+            "group": "scriptEvaluation"
+          },
+          {
+            "group": "other",
+            "duration": 1022.7215999999855,
+            "groupLabel": "Other"
+          },
+          {
+            "group": "styleLayout",
+            "groupLabel": "Style & Layout",
+            "duration": 462.3408000000004
+          },
+          {
+            "groupLabel": "Script Parsing & Compilation",
+            "duration": 407.9675999999998,
+            "group": "scriptParseCompile"
+          },
+          {
+            "duration": 333.9792000000121,
+            "groupLabel": "Rendering",
+            "group": "paintCompositeRender"
+          },
+          {
+            "groupLabel": "Parse HTML & CSS",
+            "group": "parseHTML",
+            "duration": 169.01999999999995
+          },
+          {
+            "group": "garbageCollection",
+            "duration": 47.6868000000001,
+            "groupLabel": "Garbage Collection"
+          }
+        ]
+      },
+      {
+        "id": "font-display-insight",
+        "title": "Font display",
+        "description": "Consider setting [`font-display`](https://developer.chrome.com/docs/performance/insights/font-display) to `swap` or `optional` to ensure text is consistently visible. `swap` can be further optimized to mitigate layout shifts with [font metric overrides](https://developer.chrome.com/blog/font-fallbacks).",
+        "score": 0,
+        "displayValue": "Est savings of 60 ms",
+        "savingsMs": {
+          "FCP": 50,
+          "INP": 0
+        },
+        "items": [
+          {
+            "url": "https://m.media-amazon.com/images/S/sash/b5FkjWk5HySaTtF.woff2",
+            "wastedMs": 55
+          },
+          {
+            "url": "https://m.media-amazon.com/images/S/sash/F4Sq9nVgk8-jp1y.woff2",
+            "wastedMs": 55
+          },
+          {
+            "url": "https://m.media-amazon.com/images/S/sash/VjTR4RqBzY0mUYx.woff2",
+            "wastedMs": 20
+          },
+          {
+            "url": "https://m.media-amazon.com/images/S/sash/WOnTLzkiaEccV7F.woff2",
+            "wastedMs": 20
+          },
+          {
+            "wastedMs": 20,
+            "url": "https://m.media-amazon.com/images/S/sash/1XLSF2CK2hl0Y4H.woff2"
+          },
+          {
+            "wastedMs": 20,
+            "url": "https://m.media-amazon.com/images/S/sash/NVGNpLpMpHqufE8.woff2"
+          },
+          {
+            "url": "https://m.media-amazon.com/images/S/sash/YixBCot3QJnxh4p.woff2",
+            "wastedMs": 20
+          },
+          {
+            "url": "https://m.media-amazon.com/images/S/sash/KFPk-9IF4FqAqY-.woff2",
+            "wastedMs": 15
+          },
+          {
+            "wastedMs": 15,
+            "url": "https://m.media-amazon.com/images/S/sash/kIK54mwNKcOchue.woff2"
+          },
+          {
+            "wastedMs": 15,
+            "url": "https://m.media-amazon.com/images/S/sash/pDxWAF1pBB0dzGB.woff2"
+          }
+        ]
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "title": "LCP request discovery",
+        "description": "[Optimize LCP](https://developer.chrome.com/docs/performance/insights/lcp-discovery) by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "checklist",
+            "items": {
+              "priorityHinted": {
+                "label": "fetchpriority=high should be applied",
+                "value": false
+              },
+              "requestDiscoverable": {
+                "label": "Request is discoverable in initial document",
+                "value": true
+              },
+              "eagerlyLoaded": {
+                "label": "LCP resources shouldn’t use loading=lazy",
+                "value": true
+              }
+            }
+          },
+          {
+            "selector": "div._single-creative-card_style_windowDisplayContainer__18uaW > a.a-link-normal > picture > img.a-amazon-image",
+            "nodeLabel": "Cupom R$20 OFF",
+            "boundingRect": {
+              "left": -1575,
+              "height": 507,
+              "bottom": 751,
+              "right": -1258,
+              "width": 317,
+              "top": 244
+            },
+            "snippet": "<img loading=\"eager\" src=\"https://m.media-amazon.com/images/I/71qt0CMgmuL._AC_AIweblab1431263,T1_FMa…\" srcset=\"https://m.media-amazon.com/images/I/71qt0CMgmuL._AC_AIweblab1431263,T1_SF1…\" alt=\"Cupom R$20 OFF\" class=\"a-amazon-image _single-creative-card_style_image__kEmO2\">",
+            "lhId": "page-1-IMG",
+            "type": "node",
+            "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,0,DIV,0,DIV,1,UL,0,LI,0,SPAN,0,DIV,2,DIV,0,DIV,0,A,1,PICTURE,2,IMG"
+          }
+        ]
+      },
+      {
+        "id": "crawlable-anchors",
+        "title": "Links are not crawlable",
+        "description": "Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn how to make links crawlable](https://support.google.com/webmasters/answer/9112205)",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "body.a-m-br > div#hmenu-container > div#hmenu-canvas > a#hmenu-back-to-top",
+              "snippet": "<a id=\"hmenu-back-to-top\" class=\"hmenu-hidden-link nav-side-menu-back-to-top\" href=\"javascript:void(0)\" aria-hidden=\"true\">",
+              "nodeLabel": "body.a-m-br > div#hmenu-container > div#hmenu-canvas > a#hmenu-back-to-top",
+              "boundingRect": {
+                "top": 0,
+                "height": 1,
+                "bottom": 1,
+                "left": -10330,
+                "right": -10329,
+                "width": 1
+              },
+              "lhId": "1-157-A",
+              "type": "node",
+              "path": "1,HTML,4,BODY,5,DIV,1,DIV,1,A"
+            }
+          }
+        ]
+      },
+      {
+        "id": "image-aspect-ratio",
+        "title": "Displays images with incorrect aspect ratio",
+        "description": "Image display dimensions should match natural aspect ratio. [Learn more about image aspect ratio](https://developer.chrome.com/docs/lighthouse/best-practices/image-aspect-ratio/).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://m.media-amazon.com/images/I/41Op0tJm7vL._SR180,67_.jpg",
+            "doRatiosMatch": false,
+            "actualAspectRatio": "180 x 67\n        (2.69)",
+            "node": {
+              "lhId": "1-234-IMG",
+              "boundingRect": {
+                "bottom": 0,
+                "height": 0,
+                "top": 0,
+                "width": 0,
+                "left": 0,
+                "right": 0
+              },
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,1,DIV,21,DIV,2,DIV,1,DIV,0,DIV,0,DIV,0,A,0,IMG",
+              "type": "node",
+              "selector": "div._interactive-footer-card_style_container__3GKmA > div > a.a-link-normal > img._interactive-footer-card_image_round-corners__22iOW",
+              "snippet": "<img alt=\"Eletrônicos\" src=\"https://m.media-amazon.com/images/I/41Op0tJm7vL._SR180,67_.jpg\" class=\"_interactive-footer-card_image_round-corners__22iOW _interactive-footer-ca…\" width=\"100%\" data-a-hires=\"https://m.media-amazon.com/images/I/41Op0tJm7vL._SR540,200_.jpg\">",
+              "nodeLabel": "Eletrônicos"
+            },
+            "displayedAspectRatio": "100 x 67\n        (1.49)"
+          },
+          {
+            "node": {
+              "selector": "div._interactive-footer-card_style_container__3GKmA > div > a.a-link-normal > img._interactive-footer-card_image_round-corners__22iOW",
+              "nodeLabel": "Video Games",
+              "boundingRect": {
+                "width": 0,
+                "bottom": 0,
+                "height": 0,
+                "right": 0,
+                "left": 0,
+                "top": 0
+              },
+              "snippet": "<img alt=\"Video Games\" src=\"https://m.media-amazon.com/images/I/41JM9gYaUjL._SR180,67_.jpg\" class=\"_interactive-footer-card_image_round-corners__22iOW _interactive-footer-ca…\" width=\"100%\" data-a-hires=\"https://m.media-amazon.com/images/I/41JM9gYaUjL._SR540,200_.jpg\">",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,1,DIV,21,DIV,2,DIV,1,DIV,0,DIV,1,DIV,0,A,0,IMG",
+              "type": "node",
+              "lhId": "1-235-IMG"
+            },
+            "doRatiosMatch": false,
+            "url": "https://m.media-amazon.com/images/I/41JM9gYaUjL._SR180,67_.jpg",
+            "actualAspectRatio": "180 x 67\n        (2.69)",
+            "displayedAspectRatio": "100 x 67\n        (1.49)"
+          },
+          {
+            "displayedAspectRatio": "100 x 67\n        (1.49)",
+            "url": "https://m.media-amazon.com/images/I/41im2lJMlWL._SR180,67_.jpg",
+            "doRatiosMatch": false,
+            "node": {
+              "nodeLabel": "Livros",
+              "selector": "div._interactive-footer-card_style_container__3GKmA > div > a.a-link-normal > img._interactive-footer-card_image_round-corners__22iOW",
+              "boundingRect": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "height": 0,
+                "bottom": 0,
+                "width": 0
+              },
+              "lhId": "1-236-IMG",
+              "type": "node",
+              "snippet": "<img alt=\"Livros\" src=\"https://m.media-amazon.com/images/I/41im2lJMlWL._SR180,67_.jpg\" class=\"_interactive-footer-card_image_round-corners__22iOW _interactive-footer-ca…\" width=\"100%\" data-a-hires=\"https://m.media-amazon.com/images/I/41im2lJMlWL._SR540,200_.jpg\">",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,1,DIV,21,DIV,2,DIV,1,DIV,0,DIV,2,DIV,0,A,0,IMG"
+            },
+            "actualAspectRatio": "180 x 67\n        (2.69)"
+          },
+          {
+            "displayedAspectRatio": "100 x 67\n        (1.49)",
+            "actualAspectRatio": "180 x 67\n        (2.69)",
+            "doRatiosMatch": false,
+            "url": "https://m.media-amazon.com/images/I/41V+mBGrjAL._SR180,67_.jpg",
+            "node": {
+              "lhId": "1-237-IMG",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,1,DIV,21,DIV,2,DIV,1,DIV,0,DIV,3,DIV,0,A,0,IMG",
+              "type": "node",
+              "snippet": "<img alt=\"eBooks\" src=\"https://m.media-amazon.com/images/I/41V+mBGrjAL._SR180,67_.jpg\" class=\"_interactive-footer-card_image_round-corners__22iOW _interactive-footer-ca…\" width=\"100%\" data-a-hires=\"https://m.media-amazon.com/images/I/41V+mBGrjAL._SR540,200_.jpg\">",
+              "boundingRect": {
+                "bottom": 0,
+                "right": 0,
+                "left": 0,
+                "width": 0,
+                "height": 0,
+                "top": 0
+              },
+              "selector": "div._interactive-footer-card_style_container__3GKmA > div > a.a-link-normal > img._interactive-footer-card_image_round-corners__22iOW",
+              "nodeLabel": "eBooks"
+            }
+          },
+          {
+            "displayedAspectRatio": "100 x 67\n        (1.49)",
+            "url": "https://m.media-amazon.com/images/I/51YQ0YucIML._SR180,67_.jpg",
+            "doRatiosMatch": false,
+            "actualAspectRatio": "180 x 67\n        (2.69)",
+            "node": {
+              "snippet": "<img alt=\"Kindle\" src=\"https://m.media-amazon.com/images/I/51YQ0YucIML._SR180,67_.jpg\" class=\"_interactive-footer-card_image_round-corners__22iOW _interactive-footer-ca…\" width=\"100%\" data-a-hires=\"https://m.media-amazon.com/images/I/51YQ0YucIML._SR540,200_.jpg\">",
+              "nodeLabel": "Kindle",
+              "selector": "div._interactive-footer-card_style_container__3GKmA > div > a.a-link-normal > img._interactive-footer-card_image_round-corners__22iOW",
+              "boundingRect": {
+                "width": 0,
+                "left": 0,
+                "height": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0
+              },
+              "lhId": "1-238-IMG",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,1,DIV,21,DIV,2,DIV,1,DIV,0,DIV,4,DIV,0,A,0,IMG",
+              "type": "node"
+            }
+          },
+          {
+            "displayedAspectRatio": "100 x 67\n        (1.49)",
+            "node": {
+              "snippet": "<img alt=\"Fire TV Stick\" src=\"https://m.media-amazon.com/images/I/51iZvEfi+9L._SR180,67_.jpg\" class=\"_interactive-footer-card_image_round-corners__22iOW _interactive-footer-ca…\" width=\"100%\" data-a-hires=\"https://m.media-amazon.com/images/I/51iZvEfi+9L._SR540,200_.jpg\">",
+              "lhId": "1-239-IMG",
+              "boundingRect": {
+                "top": 0,
+                "width": 0,
+                "left": 0,
+                "right": 0,
+                "bottom": 0,
+                "height": 0
+              },
+              "type": "node",
+              "nodeLabel": "Fire TV Stick",
+              "selector": "div._interactive-footer-card_style_container__3GKmA > div > a.a-link-normal > img._interactive-footer-card_image_round-corners__22iOW",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,1,DIV,21,DIV,2,DIV,1,DIV,0,DIV,5,DIV,0,A,0,IMG"
+            },
+            "url": "https://m.media-amazon.com/images/I/51iZvEfi+9L._SR180,67_.jpg",
+            "actualAspectRatio": "180 x 67\n        (2.69)",
+            "doRatiosMatch": false
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "longestChain": {
+                "duration": 2060
+              },
+              "chains": {
+                "AE856C75024C4735D8BAE96A797C1DD3": {
+                  "isLongest": true,
+                  "transferSize": 553060,
+                  "url": "https://www.amazon.com.br/",
+                  "children": "[…]",
+                  "navStartToEndTime": 712
+                }
+              },
+              "type": "network-tree"
+            }
+          },
+          {
+            "value": {
+              "headings": [
+                {
+                  "label": "Origin",
+                  "subItemsHeading": "[…]",
+                  "valueType": "text",
+                  "key": "origin"
+                },
+                {
+                  "label": "Source",
+                  "key": "source",
+                  "valueType": "node"
+                }
+              ],
+              "items": [
+                {
+                  "source": "[…]",
+                  "subItems": "[…]",
+                  "origin": "https://images-na.ssl-images-amazon.com/"
+                },
+                {
+                  "source": "[…]",
+                  "subItems": "[…]",
+                  "origin": "https://m.media-amazon.com/"
+                }
+              ],
+              "type": "table"
+            },
+            "title": "Preconnected origins",
+            "type": "list-section",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to."
+          },
+          {
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            },
+            "title": "Preconnect candidates",
+            "type": "list-section"
+          }
+        ]
+      },
+      {
+        "id": "forced-reflow-insight",
+        "title": "Forced reflow",
+        "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "headings": [
+              {
+                "label": "Top function call",
+                "key": "source",
+                "valueType": "source-location"
+              },
+              {
+                "valueType": "ms",
+                "granularity": 1,
+                "key": "reflowTime",
+                "label": "Total reflow time"
+              }
+            ],
+            "items": [
+              {
+                "source": {
+                  "urlProvider": "network",
+                  "column": 171,
+                  "type": "source-location",
+                  "url": "https://m.media-amazon.com/images/I/11I0WXrZVoL._RC%7C11Y+5x+kkTL.js,51IrWwn6GEL.js,115zbyk371L.js,11GgN1+C7hL.js,313nCSj5srL.js,01Aie6L4uGL.js,21NadQlXUWL.js,01E8f3KV-NL.js,31on-La90vL.js,11a7qqY8xXL.js,11PZSUl3FLL.js,51C4kaFbiAL.js,11J9B4cvO1L.js,11wb9K3sw0L.js,11BrgrMAHUL.js,11dKU9zhD1L.js,21F6z4…",
+                  "line": 70
+                },
+                "reflowTime": 65.184
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "items": [
+              {
+                "source": {
+                  "value": "[unattributed]",
+                  "type": "text"
+                },
+                "reflowTime": 82.485
+              },
+              {
+                "source": {
+                  "type": "source-location",
+                  "urlProvider": "network",
+                  "column": 335,
+                  "line": 6,
+                  "url": "https://m.media-amazon.com/images/I/21Yni+jKzkL.js?AUIClients/GWMMetricsJS"
+                },
+                "reflowTime": 8.181
+              },
+              {
+                "source": {
+                  "line": 3,
+                  "type": "source-location",
+                  "column": 207,
+                  "urlProvider": "network",
+                  "url": "https://m.media-amazon.com/images/I/21Yni+jKzkL.js?AUIClients/GWMMetricsJS"
+                },
+                "reflowTime": 8.677
+              },
+              {
+                "source": {
+                  "urlProvider": "network",
+                  "type": "source-location",
+                  "column": 391,
+                  "url": "https://www.amazon.com.br/",
+                  "line": 1562
+                },
+                "reflowTime": 8.336
+              },
+              {
+                "source": {
+                  "column": 5054,
+                  "line": 1642,
+                  "url": "https://www.amazon.com.br/",
+                  "type": "source-location",
+                  "urlProvider": "network"
+                },
+                "reflowTime": 13.368
+              },
+              {
+                "source": {
+                  "urlProvider": "network",
+                  "column": 91,
+                  "line": 207,
+                  "url": "https://m.media-amazon.com/images/I/11I0WXrZVoL._RC%7C11Y+5x+kkTL.js,51IrWwn6GEL.js,115zbyk371L.js,11GgN1+C7hL.js,313nCSj5srL.js,01Aie6L4uGL.js,21NadQlXUWL.js,01E8f3KV-NL.js,31on-La90vL.js,11a7qqY8xXL.js,11PZSUl3FLL.js,51C4kaFbiAL.js,11J9B4cvO1L.js,11wb9K3sw0L.js,11BrgrMAHUL.js,11dKU9zhD1L.js,21F6z4…",
+                  "type": "source-location"
+                },
+                "reflowTime": 1.251
+              },
+              {
+                "source": {
+                  "urlProvider": "network",
+                  "type": "source-location",
+                  "url": "https://m.media-amazon.com/images/I/61xJcNKKLXL.js?AUIClients/AmazonUIjQuery",
+                  "line": 157,
+                  "column": 2
+                },
+                "reflowTime": 2.117
+              },
+              {
+                "source": {
+                  "url": "https://m.media-amazon.com/images/I/61xJcNKKLXL.js?AUIClients/AmazonUIjQuery",
+                  "column": 2,
+                  "line": 155,
+                  "urlProvider": "network",
+                  "type": "source-location"
+                },
+                "reflowTime": 37.996
+              },
+              {
+                "reflowTime": 33.652,
+                "source": {
+                  "type": "source-location",
+                  "url": "https://www.amazon.com.br/",
+                  "column": 19686,
+                  "line": 1642,
+                  "urlProvider": "network"
+                }
+              },
+              {
+                "reflowTime": 13.295,
+                "source": {
+                  "column": 241,
+                  "url": "https://m.media-amazon.com/images/I/61xJcNKKLXL.js?AUIClients/AmazonUIjQuery",
+                  "type": "source-location",
+                  "line": 190,
+                  "urlProvider": "network"
+                }
+              }
+            ],
+            "type": "table",
+            "headings": [
+              {
+                "label": "Source",
+                "valueType": "source-location",
+                "key": "source"
+              },
+              {
+                "granularity": 1,
+                "label": "Total reflow time",
+                "valueType": "ms",
+                "key": "reflowTime"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "description": "Error logged with the Track&Report JS errors API(http://tiny/1covqr6l8/wamazindeClieUserJava): {\"m\":\"Late loading module @m/mash\",\"csm\":\"v5 ueLogError callee\",\"logLevel\":\"WARN\",\"attribution\":\"MIX\",\"pageURL\":\"https://www.amazon.com.br/\",\"s\":[],\"t\":4295} [object Object]",
+            "source": "console.error",
+            "sourceLocation": {
+              "column": 388,
+              "urlProvider": "network",
+              "line": 3,
+              "type": "source-location",
+              "url": "https://images-na.ssl-images-amazon.com/images/I/31LYmZEs45L.js"
+            }
+          },
+          {
+            "source": "network",
+            "description": "Failed to load resource: net::ERR_CONNECTION_FAILED",
+            "sourceLocation": {
+              "url": "https://odr.mookie1.com/t/v2?tagid=V2_393725&AMAZON_REGION_SPECIFIC_ENDPOINT=s.amazon-adsystem.com&src.visitorID=22xXtJw3RuS13oDEhNAwwQ",
+              "type": "source-location",
+              "urlProvider": "network",
+              "line": 0,
+              "column": 0
+            }
+          },
+          {
+            "sourceLocation": {
+              "column": 0,
+              "type": "source-location",
+              "url": "https://spl.zeotap.com/?zdid=1353&zurl=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dzeotap%26id%3D%7BZCOOKIE%7D",
+              "urlProvider": "network",
+              "line": 0
+            },
+            "description": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+            "source": "network"
+          },
+          {
+            "source": "network",
+            "sourceLocation": {
+              "column": 0,
+              "line": 0,
+              "url": "https://ads.samba.tv/cookie_sync?https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dsamba.tv%26id%3D",
+              "type": "source-location",
+              "urlProvider": "network"
+            },
+            "description": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          },
+          {
+            "sourceLocation": {
+              "line": 0,
+              "url": "https://id5-sync.com/k/2007.gif?puid=xFsPTC2HQGW3svI-JbQH0w&gdpr_consent=&gdpr=0",
+              "urlProvider": "network",
+              "column": 0,
+              "type": "source-location"
+            },
+            "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "source": "network"
+          }
+        ]
+      },
+      {
+        "id": "aria-roles",
+        "title": "`[role]` values are not valid",
+        "description": "ARIA roles must have valid values in order to perform their intended accessibility functions. [Learn more about valid ARIA roles](https://dequeuniversity.com/rules/axe/4.14/aria-roles).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "lhId": "1-2-I",
+              "nodeLabel": "div#nav-app-banner-container > div.nav-app-banner-elements > div.nav-app-banner-left-section > i#nav-app-banner-close-button",
+              "path": "1,HTML,4,BODY,0,DIV,33,HEADER,1,DIV,0,DIV,0,DIV,0,I",
+              "explanation": "Fix all of the following:\n  Role must be one of the valid ARIA roles: close",
+              "type": "node",
+              "snippet": "<i class=\"a-icon a-icon-close a-icon-small nav-app-banner-close\" id=\"nav-app-banner-close-button\" role=\"close\">",
+              "boundingRect": {
+                "top": 21,
+                "width": 7,
+                "left": 7,
+                "bottom": 28,
+                "height": 7,
+                "right": 15
+              },
+              "selector": "div#nav-app-banner-container > div.nav-app-banner-elements > div.nav-app-banner-left-section > i#nav-app-banner-close-button"
+            }
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "path": "1,HTML,4,BODY,0,DIV,33,HEADER,4,DIV,0,DIV,1,DIV,2,A",
+              "type": "node",
+              "selector": "div#navbar > div#nav-logobar > div.nav-right > a#nav-button-cart",
+              "boundingRect": {
+                "width": 62,
+                "right": 412,
+                "top": 49,
+                "bottom": 97,
+                "left": 350,
+                "height": 48
+              },
+              "lhId": "1-3-A",
+              "snippet": "<a href=\"/gp/aw/c?ref_=navm_hdr_cart\" aria-label=\"Cart\" class=\"nav-a\" id=\"nav-button-cart\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "nodeLabel": "0"
+            }
+          }
+        ]
+      },
+      {
+        "id": "aria-allowed-attr",
+        "title": "`[aria-*]` attributes do not match their roles",
+        "description": "Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn how to match ARIA attributes to their roles](https://dequeuniversity.com/rules/axe/4.14/aria-allowed-attr).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "nodeLabel": "Pesquisar Amazon.com.br",
+              "path": "1,HTML,4,BODY,0,DIV,33,HEADER,4,DIV,4,DIV,0,FORM,0,DIV,0,DIV,1,INPUT",
+              "type": "node",
+              "lhId": "1-0-INPUT",
+              "snippet": "<input type=\"text\" class=\"nav-input nav-progressive-attribute\" placeholder=\"Pesquisar Amazon.com.br\" data-aria-clear-label=\"Limpar palavras-chave da pesquisa\" aria-label=\"Pesquisar Amazon.com.br\" name=\"k\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" dir=\"auto\" value=\"\" id=\"nav-search-ke…",
+              "boundingRect": {
+                "right": 402,
+                "left": 10,
+                "width": 392,
+                "top": 99,
+                "bottom": 143,
+                "height": 44
+              },
+              "selector": "form#nav-search-form > div.nav-fill > div.nav-search-field > input#nav-search-keywords",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "ㅤ\nㅤ\nDescobertas em Casa e Cozinha\nBlack dos Sonhos\n20% off em Moda Feminina\nBla…",
+              "lhId": "1-1-UL",
+              "type": "node",
+              "boundingRect": {
+                "width": 4569,
+                "right": 3627,
+                "height": 507,
+                "left": -942,
+                "top": 244,
+                "bottom": 751
+              },
+              "snippet": "<ul id=\"gwm-window\" class=\"a-unordered-list a-nostyle a-horizontal gwm-window-wrapper\" aria-setsize=\"14\">",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,0,DIV,0,DIV,1,UL",
+              "selector": "div#gwm-Deck-cf > div#gwm-window-layout > div#gwm-window-container > ul#gwm-window",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-setsize=\"14\""
+            }
+          }
+        ]
+      },
+      {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+        "score": 0,
+        "displayValue": "1 warning found",
+        "savingsMs": null,
+        "items": [
+          {
+            "source": {
+              "type": "source-location",
+              "column": 2048,
+              "url": "https://www.amazon.com.br/",
+              "urlProvider": "network",
+              "line": 1661
+            },
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://chromestatus.com/feature/6366274495053824",
+                  "text": "Check the feature status page for more details.",
+                  "type": "link"
+                },
+                {
+                  "url": "https://chromiumdash.appspot.com/schedule",
+                  "text": "This change will go into effect with milestone 156.",
+                  "type": "link"
+                }
+              ],
+              "type": "subitems"
+            },
+            "value": "Fenced Frame API is deprecated and scheduled for removal."
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.03,
+        "displayValue": "18.3 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.11,
+        "displayValue": "6.2 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.12,
+        "displayValue": "4.7 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.25,
+        "displayValue": "7.7 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 9,791 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://m.media-amazon.com/images/I/B1arMhXud3L.mp4",
+            "totalBytes": 3346382
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/B1arMhXud3L.mp4",
+            "totalBytes": 3346382
+          },
+          {
+            "url": "https://www.amazon.com.br/",
+            "totalBytes": 553060
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/91zGxJGnQQL.js?AUIClients/VideoJsCardsBuzz",
+            "totalBytes": 145837
+          },
+          {
+            "totalBytes": 142459,
+            "url": "https://www.amazon.com.br/dram/renderLazyLoadedStreaming?rshVal=1794760770880"
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/11I0WXrZVoL._RC%7C11Y+5x+kkTL.js,51IrWwn6GEL.js,115zbyk371L.js,11GgN1+C7hL.js,313nCSj5srL.js,01Aie6L4uGL.js,21NadQlXUWL.js,01E8f3KV-NL.js,31on-La90vL.js,11a7qqY8xXL.js,11PZSUl3FLL.js,51C4kaFbiAL.js,11J9B4cvO1L.js,11wb9K3sw0L.js,11BrgrMAHUL.js,11dKU9zhD1L.js,21F6z4…",
+            "totalBytes": 101159
+          },
+          {
+            "url": "https://m.media-amazon.com/images/S/sash/YixBCot3QJnxh4p.woff2",
+            "totalBytes": 95005
+          },
+          {
+            "totalBytes": 93290,
+            "url": "https://m.media-amazon.com/images/I/7143oUfYBEL._AC_AIweblab1431263,T1_FMavif_SF1710,2736_QL54_.jpg?aicid=homepage-single-creative-card"
+          },
+          {
+            "totalBytes": 67297,
+            "url": "https://m.media-amazon.com/images/I/81xAPm3uFgL._RC%7C41ugA3twpXL.js_.js?AUIClients/InContextAuthBaseAssets"
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/81mmh+ozMZL._RC%7C31CTYxZkyiL.js,01wcltxKR5L.js,41+VE2HN0RL.js_.js?AUIClients/QTipsMobileWebAssets",
+            "totalBytes": 66683
+          }
+        ]
+      },
+      {
+        "id": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "displayValue": null,
+        "savingsMs": {
+          "CLS": 0
+        },
+        "items": [
+          {
+            "url": "https://m.media-amazon.com/images/I/719gH-5kwLL._SR855,1368_.jpg",
+            "node": {
+              "snippet": "<img alt=\"Black dos Sonhos\nConcorra a um prêmio de R$ 1.000.000 e a prêmios semanais\" src=\"https://m.media-amazon.com/images/I/719gH-5kwLL._SR855,1368_.jpg\" class=\"_single-video-card_style_poster-image__1W0yA\" data-a-hires=\"https://m.media-amazon.com/images/I/719gH-5kwLL._SR855,1368_.jpg\">",
+              "lhId": "1-195-IMG",
+              "type": "node",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,0,DIV,0,DIV,1,UL,5,LI,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,A,1,IMG",
+              "selector": "div._single-video-card_style_lazy-loaded-video__3m5dG > div._single-video-card_style_overlay__3Sx3u > a.a-link-normal > img._single-video-card_style_poster-image__1W0yA",
+              "boundingRect": {
+                "right": 689,
+                "left": 372,
+                "top": 244,
+                "width": 317,
+                "bottom": 751,
+                "height": 507
+              },
+              "nodeLabel": "Black dos Sonhos\nConcorra a um prêmio de R$ 1.000.000 e a prêmios semanais"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "bottom": 809,
+                "top": 764,
+                "height": 45,
+                "left": -7,
+                "width": 427,
+                "right": 420
+              },
+              "lhId": "1-212-IMG",
+              "snippet": "<img alt=\"R$ 20 off e frete GRÁTIS na sua primeira compra!\" src=\"https://m.media-amazon.com/images/I/41U9LKQ9NTL._SR1281,135_.jpg\" data-a-hires=\"https://m.media-amazon.com/images/I/41U9LKQ9NTL._SR1281,135_.jpg\">",
+              "type": "node",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,0,DIV,1,DIV,0,DIV,2,DIV,0,DIV,0,A,0,DIV,0,IMG",
+              "nodeLabel": "R$ 20 off e frete GRÁTIS na sua primeira compra!",
+              "selector": "div.gwm-Card > a.a-link-normal > div._billboard-card_regularStyle_gwm-BillboardCard--cropped__g2nZu > img"
+            },
+            "url": "https://m.media-amazon.com/images/I/41U9LKQ9NTL._SR1281,135_.jpg"
+          },
+          {
+            "url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAUFBQkGCQkJCQwTDg4MDg4ZEg4SEBcOEBAXEBcXEBQX…",
+            "node": {
+              "lhId": "1-213-IMG",
+              "path": "1,HTML,4,BODY,0,DIV,43,DIV,1,DIV,2,DIV,1,DIV,0,DIV,0,A,0,DIV,0,IMG",
+              "nodeLabel": "Aproveite ofertas exclusivas para quem é Prime",
+              "type": "node",
+              "selector": "div.gwm-Card > a.a-link-normal > div._billboard-card_regularStyle_gwm-BillboardCard--cropped__g2nZu > img",
+              "boundingRect": {
+                "right": 413,
+                "left": -1,
+                "width": 414,
+                "bottom": 1128,
+                "top": 978,
+                "height": 150
+              },
+              "snippet": "<img alt=\"Aproveite ofertas exclusivas para quem é Prime\" src=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAUFBQkGCQkJCQwTDg4…\" data-a-hires=\"https://m.media-amazon.com/images/I/81tVNO7av+L._SR1242,450_.png\">"
+            }
+          }
+        ]
+      },
+      {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 304 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://m.media-amazon.com/images/I/11+b+kSimqL._RC%7C01GaLSH4siL.css,51E+-hF-pHL.css,319AfbO72JL.css,01dpRn7s1DL.css,21P+RTdWkDL.css,01Gy5vQ0QmL.css,01oplyhwgTL.css,31VtExXv3+L.css,11F5ACe4x7L.css,01xgFoPPxUL.css,11wud0XLTHL.css,11ot-D-ufkL.css,01IdKcBuAdL.css,01hTMdPgumL.css,01wLsDqViEL.css,21Wrwl…",
+            "wastedPercent": 95.839372002501,
+            "totalBytes": 55338,
+            "wastedBytes": 53036
+          },
+          {
+            "totalBytes": 39061,
+            "wastedPercent": 98.57276395887007,
+            "wastedBytes": 38504,
+            "url": "._billboard-card_style_carouselContainer__3N7M1{-webkit-overflow-scrolling:touch; … } …"
+          },
+          {
+            "wastedPercent": 95.14178505012269,
+            "url": "._bnBhY_thresholdProgressBlock_AdcTN{box-sizing:border-box;height:auto;margin:16px;min-height:20px; … } …",
+            "totalBytes": 40466,
+            "wastedBytes": 38500
+          },
+          {
+            "wastedPercent": 95.49700654599668,
+            "totalBytes": 38229,
+            "wastedBytes": 36508,
+            "url": "._single-creative-card_style_carouselContainer__3N7M1{-webkit-overflow-scrolling:touch; … } …"
+          },
+          {
+            "totalBytes": 35734,
+            "wastedBytes": 35680,
+            "wastedPercent": 99.84922306264097,
+            "url": "._interactive-footer-card_style_container__3GKmA{grid-gap:8px;display:grid;gap:8px; … } …"
+          },
+          {
+            "wastedPercent": 99.73910888924516,
+            "wastedBytes": 30471,
+            "totalBytes": 30551,
+            "url": "._sign-in-v2_style_heading__1mnEu{font-size:20px} …"
+          },
+          {
+            "wastedBytes": 22681,
+            "totalBytes": 22888,
+            "wastedPercent": 99.09470630385012,
+            "url": "https://m.media-amazon.com/images/I/61zer--1LNL._RC%7C41hsDkZS7QL.css,01FcI3FsaiL.css,31NNhOYo8RL.css_.css?AUIClients/RetailSearchAutocompleteAssets#mobile"
+          },
+          {
+            "totalBytes": 16332,
+            "wastedBytes": 15353,
+            "wastedPercent": 94.00793553601606,
+            "url": "._single-video-card_style_carouselContainer__3N7M1{-webkit-overflow-scrolling:touch; … } …"
+          },
+          {
+            "wastedBytes": 15249,
+            "totalBytes": 16040,
+            "wastedPercent": 95.0697024863463,
+            "url": "._cXVhZ_qmac-card_m9HR-{gap:8px} …"
+          },
+          {
+            "wastedBytes": 14959,
+            "wastedPercent": 70.3314683341953,
+            "totalBytes": 21269,
+            "url": "https://m.media-amazon.com/images/I/41NJYgJ4YmL._RC%7C51waPb-h-9L.css,512RA0h6tdL.css_.css?AUIClients/NavMobileAssets-all#778344-T1"
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0.5,
+        "displayValue": "Est savings of 77 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://d2lbyuknrhysf9.cloudfront.net/SFXInjectableScript.js",
+            "wastedBytes": 51590,
+            "totalBytes": 51590,
+            "cacheLifetimeMs": 0
+          },
+          {
+            "cacheLifetimeMs": 3600000,
+            "wastedBytes": 13150.400000000001,
+            "totalBytes": 16438,
+            "url": "https://images-na.ssl-images-amazon.com/images/G/01/payments-portal/r1/loading-4x._CB338200758_.gif"
+          },
+          {
+            "wastedBytes": 8353.6,
+            "cacheLifetimeMs": 86400000,
+            "totalBytes": 20884,
+            "url": "https://m.media-amazon.com/images/G/32/A2I-Convert/mobile/IconFarm/Offer.png"
+          },
+          {
+            "wastedBytes": 2544.4,
+            "totalBytes": 6361,
+            "url": "https://m.media-amazon.com/images/G/01/logo/Amazon_app_icon.png",
+            "cacheLifetimeMs": 86400000
+          },
+          {
+            "wastedBytes": 750,
+            "totalBytes": 750,
+            "cacheLifetimeMs": 0,
+            "url": "https://www.amazon.com.br/rd/uedata?rid=TGWV6QVMSAQKHDPG99H7&sid=141-2393253-1169418&rx=tRJ5IdwEQ67K2u2Gn55sEA"
+          },
+          {
+            "cacheLifetimeMs": 0,
+            "totalBytes": 554,
+            "url": "https://www.amazon.com.br/rd/uedata?rid=TGWV6QVMSAQKHDPG99H7&sid=141-2393253-1169418&rx=3/H9uJDKvm3/PAW31P24o1nvTR6X/2r9oRFYVGqBIxo",
+            "wastedBytes": 554
+          },
+          {
+            "cacheLifetimeMs": 0,
+            "totalBytes": 411,
+            "url": "https://public-prod-dspcookiematching.dmxleo.com/dspreply?dspId=1868&dspUserId=kztyv_5FQpaIaNI0KeJQiA&redir=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3DdailymotionHMT2&id=&gdpr_consent=&gdpr=0",
+            "wastedBytes": 411
+          },
+          {
+            "totalBytes": 195,
+            "url": "https://fls-na.amazon.com.br/1/batch/1/OP/A2Q3Y263D00KWC:141-2393253-1169418:TGWV6QVMSAQKHDPG99H7$uedata=s:%2Frd%2Fuedata%3Fstaticb%26id%3DTGWV6QVMSAQKHDPG99H7:0",
+            "wastedBytes": 195,
+            "cacheLifetimeMs": 0
+          },
+          {
+            "totalBytes": 195,
+            "url": "https://fls-na.amazon.com.br/1/batch/1/OP/A2Q3Y263D00KWC:141-2393253-1169418:TGWV6QVMSAQKHDPG99H7$uedata=s:%2Frd%2Fuedata%3Fld%26v%3D0.368232.0%26id%3DTGWV6QVMSAQKHDPG99H7%26sw%3D412%26sh%3D823%26vw%3D412%26vh%3D823%26m%3D1%26sc%3DTGWV6QVMSAQKHDPG99H7%26ue%3D5%26bb%3D87%26ns%3D114%26ne%3D168%26cf%3D…",
+            "wastedBytes": 195,
+            "cacheLifetimeMs": 0
+          },
+          {
+            "wastedBytes": 195,
+            "totalBytes": 195,
+            "cacheLifetimeMs": 0,
+            "url": "https://fls-na.amazon.com.br/1/batch/1/OP/A2Q3Y263D00KWC:141-2393253-1169418:TGWV6QVMSAQKHDPG99H7$uedata=s:%2Frd%2Fuedata%3Fat%26v%3D0.368232.0%26id%3DTGWV6QVMSAQKHDPG99H7%26m%3D1%26sc%3Dcsa%3Alcp%26lcp%3D281%26pc%3D1392%26at%3D1392%26t%3D1794760767036%26csmtags%3Daui%3Asw%3Abrowser%3Aregister%3Asup…"
+          }
+        ]
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 347 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "totalBytes": 144828,
+            "wastedPercent": 70.71531585375361,
+            "wastedBytes": 102415,
+            "url": "https://m.media-amazon.com/images/I/91zGxJGnQQL.js?AUIClients/VideoJsCardsBuzz"
+          },
+          {
+            "totalBytes": 100031,
+            "url": "https://m.media-amazon.com/images/I/11I0WXrZVoL._RC%7C11Y+5x+kkTL.js,51IrWwn6GEL.js,115zbyk371L.js,11GgN1+C7hL.js,313nCSj5srL.js,01Aie6L4uGL.js,21NadQlXUWL.js,01E8f3KV-NL.js,31on-La90vL.js,11a7qqY8xXL.js,11PZSUl3FLL.js,51C4kaFbiAL.js,11J9B4cvO1L.js,11wb9K3sw0L.js,11BrgrMAHUL.js,11dKU9zhD1L.js,21F6z4…",
+            "wastedBytes": 69019,
+            "wastedPercent": 68.99737291952852
+          },
+          {
+            "wastedPercent": 65.93544390584216,
+            "totalBytes": 61909,
+            "wastedBytes": 40820,
+            "url": "https://m.media-amazon.com/images/I/019AaNzy9HL._RC%7C01XcCf7ijWL.js,81Lr3zuIrsL.js_.js?AUIClients/RetailSearchAutocompleteAssets"
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/81mmh+ozMZL._RC%7C31CTYxZkyiL.js,01wcltxKR5L.js,41+VE2HN0RL.js_.js?AUIClients/QTipsMobileWebAssets",
+            "totalBytes": 65557,
+            "wastedPercent": 53.33654465721202,
+            "wastedBytes": 34966
+          },
+          {
+            "wastedPercent": 61.38569614100011,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "sourceWastedBytes": 27800,
+                  "sourceBytes": 44866,
+                  "source": "…./node_modules/@amzn/sfx-assembler/dist/SFXAssembler.js"
+                },
+                {
+                  "sourceWastedBytes": 919,
+                  "source": "…./src/Orchestrator.ts",
+                  "sourceBytes": 1028
+                },
+                {
+                  "source": "…./src/frame/SFXFrame.ts",
+                  "sourceBytes": 668,
+                  "sourceWastedBytes": 609
+                },
+                {
+                  "source": "…./src/API/APIManager.ts",
+                  "sourceBytes": 673,
+                  "sourceWastedBytes": 517
+                }
+              ]
+            },
+            "totalBytes": 50878,
+            "wastedBytes": 31232,
+            "url": "https://d2lbyuknrhysf9.cloudfront.net/SFXInjectableScript.js"
+          },
+          {
+            "url": "https://m.media-amazon.com/images/I/21a0PVQUMWL._RC%7C21o0qBpOveL.js,31CgUYmzlLL.js,31tRmA3B8mL.js,41ZM0HZrh1L.js,41tyN-4WE3L.js,51QqyZM2ovL.js_.js?xcp",
+            "wastedBytes": 28312,
+            "wastedPercent": 89.87108355091384,
+            "totalBytes": 31503
+          },
+          {
+            "totalBytes": 66387,
+            "url": "https://m.media-amazon.com/images/I/81xAPm3uFgL._RC%7C41ugA3twpXL.js_.js?AUIClients/InContextAuthBaseAssets",
+            "wastedPercent": 41.87316963280018,
+            "wastedBytes": 27798
+          },
+          {
+            "totalBytes": 23937,
+            "url": "https://m.media-amazon.com/images/I/214sp2RIBKL._RC%7C21lpPDlBVoL.js,31Xo+J-qaXL.js,31r6NUwUk7L.js,41Z4yUfjMpL.js,51Ec+Zx9W4L.js_.js?xcp",
+            "wastedPercent": 88.22646438720324,
+            "wastedBytes": 21119
+          }
+        ]
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.86,
+        "displayValue": "140 ms",
+        "savingsMs": null,
+        "items": []
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.amazon.com.br/",
+    "status": 200,
+    "htmlBytes": 835395,
+    "headers": {
+      "contentType": "text/html;charset=UTF-8",
+      "cacheControl": "no-cache",
+      "contentEncoding": "gzip",
+      "xRobotsTag": null,
+      "server": "Server"
+    },
+    "meta": {
+      "title": "Amazon.com.br | Tudo pra você, de A a Z.",
+      "description": "Encontre o que precisa na Amazon. Ofertas em Livros, Kindle, Echo com Alexa, Fire TV, Eletrônicos, Bebidas, Casa, Beleza e mais. Frete GRÁTIS com Amazon Prime.",
+      "canonical": "https://www.amazon.com.br/",
+      "lang": "pt-br",
+      "robots": null,
+      "viewport": null,
+      "openGraph": {
+        "og:description": "Encontre o que precisa na Amazon. Ofertas em Livros, Kindle, Echo com Alexa, Fire TV, Eletrônicos, Bebidas, Casa, Beleza e mais. Frete GRÁTIS com Amazon Prime."
+      }
+    },
+    "headings": [
+      {
+        "level": 2,
+        "text": "Ir para"
+      },
+      {
+        "level": 2,
+        "text": "Atalhos do teclado"
+      },
+      {
+        "level": 3,
+        "text": "ㅤ"
+      },
+      {
+        "level": 3,
+        "text": "Até 60% off em Cozinha"
+      },
+      {
+        "level": 3,
+        "text": "10% off em Panelas"
+      },
+      {
+        "level": 3,
+        "text": "Oferta no\nFire TV HD"
+      },
+      {
+        "level": 3,
+        "text": "Até 60% off em Beleza"
+      },
+      {
+        "level": 3,
+        "text": "‎"
+      },
+      {
+        "level": 3,
+        "text": "Até 60% off em Limpeza"
+      }
+    ],
+    "h1Count": 0,
+    "images": {
+      "total": 13,
+      "missingAlt": 1,
+      "missingDimensions": 13,
+      "lazy": 0,
+      "firstImages": [
+        {
+          "src": "https://m.media-amazon.com/images/G/32/social_share/amazon_logo._CB633267191_.png",
+          "alt": "",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://m.media-amazon.com/images/G/32/gno/sprites/nav-sprite-global-1x-reorg-privacy._CB546817485_.png",
+          "alt": "",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/71qt0CMgmuL._AC_AIweblab1431263,T1_SF1282.5,2052_QL80_.jpg?aicid=homepage-single-creative-card",
+          "alt": "Cupom R$20 OFF",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/31Di4HYHT0L._AIweblab1431263,T1_SF960,118.5_QL80_._FMpng_.png?aicid=homepage-card-logo",
+          "alt": "Frete GRÁTIS. Até 21x",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/61o9IoXjO3L._AC_AIweblab1431263,T1_SF1282.5,2052_QL80_.jpg?aicid=homepage-single-creative-card",
+          "alt": "Até 60% off em Cozinha",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/71nyIoHf7UL._AC_AIweblab1431263,T1_SF1282.5,2052_QL80_.jpg?aicid=homepage-single-creative-card",
+          "alt": "10% off em Panelas",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51bSCnRxHsL._AC_AIweblab1431263,T1_SF1282.5,2052_QL80_.jpg?aicid=homepage-single-creative-card",
+          "alt": "Fire TV HD, dispositivo em formato de barra com conector HDMI, em frente a um controle remoto preto com anel de navegação, botão Alexa azul e botões de volume, sobre fundo laranja e azul-escuro.",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/21dHXCZdHcL._AIweblab1431263,T1_SF450,132_QL80_._FMpng_.png?aicid=homepage-card-logo",
+          "alt": "Frete GRÁTIS",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 6,
+      "blockingScripts": 0,
+      "preloads": [],
+      "preconnects": [
+        "https://images-na.ssl-images-amazon.com",
+        "https://m.media-amazon.com"
+      ]
+    },
+    "scripts": {
+      "total": 0,
+      "external": 1,
+      "thirdPartyHosts": [
+        "m.media-amazon.com"
+      ]
+    },
+    "structuredData": {
+      "jsonLdBlocks": 0,
+      "types": [],
+      "invalidBlocks": 0,
+      "raw": []
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "CCBot"
+      ],
+      "allowed": [
+        "Applebot-Extended"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "Ir para Conteúdo principal Atalhos do teclado Pesquisar alt + / Carrinho shift + alt + C Página inicial shift + alt + H Seus Pedidos shift + alt + O Mostrar/ocultar atalhos shift + alt + Z Para se mover entre os produtos, use as setas para cima ou para baixo do teclado. .com.br A entrega será feita em Bela Vista 01319 Atualizar CEP Todos Selecione o departamento que deseja pesquisar no Todos os departamentos Alexa Skills Alimentos e Bebidas Amazon Mercado Amazon Now Amazon Quase Novo Apps e Jogos Audiolivros Audible Automotivo Bebês Beleza Beleza de luxo Bolsas, Malas e Mochilas Brinquedos e Jogos Casa CD e Vinil Computadores e Informática Cozinha Dispositivos Amazon DVD e Blu-Ray Eletrodomésticos Eletrônicos Esportes e Aventura Ferramentas e Materiais de Construção Games Industrial Instrumentos Musicais Jardim e Piscina Livros Loja Kindle Material para Escritório e Papelaria Móveis e Decoração Pet Shop Prime Video Programe e Poupe Roupas, Calçados e Joias Roupas, sapatos e joias femininas Roupas, sapatos e joias masculinas Roupas, sapatos e joias para meninas Roupas, sapatos e joias para meninos Roupas, sapatos e joias para bebês Saúde e Cuidados Pessoais Pesquisar Amazon.com.br Olá, faça seu login Contas e Listas Devoluções e Pedidos Carrinho Todos Black da Amazon Prime Chega em 15 min Mais Vendidos Livros eBooks Kindle Games Mercado Casa Novidades na Amazon Beleza Brinquedos e Jogos Bebês Atendimento ao Cliente Compras Internacionais Pet Shop Automotivos Eletrônicos Música…"
+  }
+}

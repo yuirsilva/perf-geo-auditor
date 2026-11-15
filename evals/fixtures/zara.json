@@ -1,0 +1,936 @@
+{
+  "name": "zara",
+  "url": "https://www.zara.com/",
+  "collectedAt": "2026-11-15T17:02:02.141Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-15T17:02:02.138Z",
+    "finalUrl": "https://www.zara.com/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 30,
+      "accessibility": 100,
+      "best-practices": 81,
+      "seo": 92
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 3892,
+        "category": "AVERAGE"
+      },
+      "inpMs": {
+        "p75": 203,
+        "category": "AVERAGE"
+      },
+      "cls": {
+        "p75": 0.01,
+        "category": "FAST"
+      },
+      "fcpMs": {
+        "p75": 3718,
+        "category": "SLOW"
+      },
+      "ttfbMs": {
+        "p75": 418,
+        "category": "FAST"
+      },
+      "overall": "SLOW"
+    },
+    "lab": {
+      "lcp": {
+        "value": 18612.07039966376,
+        "display": "18.6 s"
+      },
+      "cls": {
+        "value": 0,
+        "display": "0"
+      },
+      "tbt": {
+        "value": 1608.4999999999982,
+        "display": "1,610 ms"
+      },
+      "fcp": {
+        "value": 5523.001222983165,
+        "display": "5.5 s"
+      },
+      "speedIndex": {
+        "value": 10525.60493789424,
+        "display": "10.5 s"
+      },
+      "ttfb": {
+        "value": 56,
+        "display": "Root document took 60 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 7,860 ms",
+        "savingsMs": {
+          "LCP": 7850,
+          "FCP": 7850
+        },
+        "items": [
+          {
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/bundles/29674.js",
+            "wastedMs": 1057,
+            "totalBytes": 13930
+          },
+          {
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/bundles/62577.js",
+            "totalBytes": 22476,
+            "wastedMs": 1507
+          },
+          {
+            "wastedMs": 757,
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/catalog-worldwide-bundle.css",
+            "totalBytes": 2392
+          },
+          {
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/bundles/84950.js",
+            "wastedMs": 1507,
+            "totalBytes": 22359
+          },
+          {
+            "url": "https://www.zara.com/dorphTKSlR39k/qkHuZr/6e68kBjw/ErS5Vt1aiEiO3b7h/aG0yU3FHKA/XDx/ReWZzGhw",
+            "wastedMs": 4017,
+            "totalBytes": 213556
+          },
+          {
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/vendor.css",
+            "wastedMs": 1807,
+            "totalBytes": 21999
+          },
+          {
+            "wastedMs": 7169,
+            "totalBytes": 393223,
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/vendor.js"
+          },
+          {
+            "wastedMs": 3869,
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/common.js",
+            "totalBytes": 77689
+          },
+          {
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/bundles/12217.js",
+            "totalBytes": 145394,
+            "wastedMs": 4507
+          },
+          {
+            "wastedMs": 607,
+            "totalBytes": 4108,
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/bundles/catalog-worldwide-bundle.js"
+          }
+        ]
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 1,357 KiB",
+        "savingsMs": {
+          "LCP": 4250,
+          "FCP": 1500
+        },
+        "items": [
+          {
+            "totalBytes": 686014,
+            "url": "https://www.zara.com/stdstatic-recoms/recom-chat-alma-0.17.0/za/web/recom-chat-alma.js",
+            "wastedPercent": 72.98539815049209,
+            "wastedBytes": 500690
+          },
+          {
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/vendor.js",
+            "wastedPercent": 65.93306787989903,
+            "wastedBytes": 258040,
+            "totalBytes": 391367
+          },
+          {
+            "wastedBytes": 85216,
+            "totalBytes": 169291,
+            "wastedPercent": 50.33684076073178,
+            "url": "https://www.googletagmanager.com/gtm.js?id=GTM-5CVGN7D&l=analyticsDataLayer"
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-NOTFORGA4TRACKING&cx=c&gtm=4e6bc0h2",
+            "wastedBytes": 77863,
+            "totalBytes": 153684,
+            "wastedPercent": 50.664282179331444
+          },
+          {
+            "url": "https://cdn.cookielaw.org/scripttemplates/202606.1.0/otBannerSdk.js",
+            "wastedBytes": 74908,
+            "totalBytes": 139493,
+            "wastedPercent": 53.70042437260963
+          },
+          {
+            "wastedBytes": 69214,
+            "url": "https://www.googletagmanager.com/gtag/js?id=AW-983274422&cx=c&gtm=4e6bc0h2",
+            "wastedPercent": 42.093557939548056,
+            "totalBytes": 164430
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtm.js?id=GTM-NK4BSSL",
+            "wastedBytes": 68346,
+            "totalBytes": 183834,
+            "wastedPercent": 37.178362820621345
+          },
+          {
+            "wastedBytes": 68068,
+            "url": "https://www.googletagmanager.com/gtag/js?id=AW-false&cx=c&gtm=4e6bc0h2",
+            "wastedPercent": 45.40713714032798,
+            "totalBytes": 149906
+          },
+          {
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/app.js",
+            "wastedPercent": 40.06771847293615,
+            "totalBytes": 116119,
+            "wastedBytes": 46526
+          },
+          {
+            "wastedBytes": 40558,
+            "totalBytes": 212046,
+            "url": "https://www.zara.com/dorphTKSlR39k/qkHuZr/6e68kBjw/ErS5Vt1aiEiO3b7h/aG0yU3FHKA/XDx/ReWZzGhw",
+            "wastedPercent": 19.126801715875573
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 262 KiB",
+        "savingsMs": {
+          "LCP": 1200,
+          "FCP": 600
+        },
+        "items": [
+          {
+            "totalBytes": 213556,
+            "cacheLifetimeMs": 21600000,
+            "url": "https://www.zara.com/dorphTKSlR39k/qkHuZr/6e68kBjw/ErS5Vt1aiEiO3b7h/aG0yU3FHKA/XDx/ReWZzGhw",
+            "wastedBytes": 136675.84
+          },
+          {
+            "cacheLifetimeMs": 86400000,
+            "url": "https://cdn.cookielaw.org/scripttemplates/202606.1.0/otBannerSdk.js",
+            "totalBytes": 140509,
+            "wastedBytes": 56203.600000000006
+          },
+          {
+            "cacheLifetimeMs": 300000,
+            "totalBytes": 22261,
+            "url": "https://beacon.riskified.com/?shop=www.zara.com&sid=0f1abd27-4602-46b7-94fc-5738b9031b6f",
+            "wastedBytes": 21333.458333333336
+          },
+          {
+            "wastedBytes": 14997.150000000001,
+            "totalBytes": 17388,
+            "url": "https://applepay.cdn-apple.com/jsapi/1.latest/apple-pay-sdk.js",
+            "cacheLifetimeMs": 1800000
+          },
+          {
+            "wastedBytes": 14796.1875,
+            "cacheLifetimeMs": 1800000,
+            "url": "https://applepay.cdn-apple.com/jsapi/1.latest/apple-pay-button.js",
+            "totalBytes": 17155
+          },
+          {
+            "cacheLifetimeMs": 1800000,
+            "url": "https://applepay.cdn-apple.com/jsapi/1.latest/apple-wallet-sdk.js",
+            "wastedBytes": 9781.612500000001,
+            "totalBytes": 11341
+          },
+          {
+            "url": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+            "cacheLifetimeMs": 86400000,
+            "totalBytes": 14877,
+            "wastedBytes": 5950.8
+          },
+          {
+            "url": "https://cdn.cookielaw.org/logos/5435e8e3-1f77-4efd-bb7e-591b5a6e876e/298703fa-dd29-446e-92d2-0db031217855/86be63b9-ce1e-4e5c-baf5-ec9e3665118e/Standard.png",
+            "cacheLifetimeMs": 86400000,
+            "totalBytes": 12857,
+            "wastedBytes": 5142.8
+          },
+          {
+            "cacheLifetimeMs": 86400000,
+            "url": "https://cdn.cookielaw.org/logos/static/powered_by_logo.svg",
+            "wastedBytes": 1311.2,
+            "totalBytes": 3278
+          },
+          {
+            "wastedBytes": 457.20000000000005,
+            "totalBytes": 1143,
+            "url": "https://cdn.cookielaw.org/logos/static/ot_close.svg",
+            "cacheLifetimeMs": 86400000
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "5.0 s",
+        "savingsMs": {
+          "TBT": 1600
+        },
+        "items": [
+          {
+            "groupLabel": "Script Evaluation",
+            "duration": 3089.0783999999485,
+            "group": "scriptEvaluation"
+          },
+          {
+            "groupLabel": "Script Parsing & Compilation",
+            "duration": 982.2576000000001,
+            "group": "scriptParseCompile"
+          },
+          {
+            "groupLabel": "Other",
+            "duration": 376.88279999999463,
+            "group": "other"
+          },
+          {
+            "group": "styleLayout",
+            "groupLabel": "Style & Layout",
+            "duration": 218.6591999999999
+          },
+          {
+            "groupLabel": "Garbage Collection",
+            "group": "garbageCollection",
+            "duration": 213.17520000000002
+          },
+          {
+            "groupLabel": "Parse HTML & CSS",
+            "group": "parseHTML",
+            "duration": 68.04239999999999
+          },
+          {
+            "duration": 22.71479999999998,
+            "groupLabel": "Rendering",
+            "group": "paintCompositeRender"
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "3.9 s",
+        "savingsMs": {
+          "TBT": 1550
+        },
+        "items": [
+          {
+            "total": 769.6343999999982,
+            "scriptParseCompile": 69.5664,
+            "url": "https://www.zara.com/dorphTKSlR39k/qkHuZr/6e68kBjw/ErS5Vt1aiEiO3b7h/aG0yU3FHKA/XDx/ReWZzGhw",
+            "scripting": 616.6415999999981
+          },
+          {
+            "total": 615.0275999999967,
+            "scripting": 366.76319999999663,
+            "scriptParseCompile": 125.766,
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/vendor.js"
+          },
+          {
+            "total": 549.6635999999976,
+            "scriptParseCompile": 0,
+            "scripting": 329.33639999999997,
+            "url": "Unattributable"
+          },
+          {
+            "url": "https://www.zara.com/stdstatic-recoms/recom-chat-alma-0.17.0/za/web/recom-chat-alma.js",
+            "total": 534.7451999999987,
+            "scripting": 336.2567999999987,
+            "scriptParseCompile": 195.98760000000001
+          },
+          {
+            "scripting": 406.5743999999998,
+            "url": "https://www.googletagmanager.com/gtm.js?id=GTM-NK4BSSL",
+            "scriptParseCompile": 62.742000000000004,
+            "total": 500.89559999999983
+          },
+          {
+            "url": "https://www.zara.com/",
+            "scriptParseCompile": 57.3096,
+            "scripting": 9.188399999999987,
+            "total": 339.0995999999999
+          },
+          {
+            "scriptParseCompile": 53.1984,
+            "scripting": 194.7060000000001,
+            "total": 263.29200000000003,
+            "url": "https://bdyoomvaq5bp.eu.wpi.jscrambler.com/8j3lcd6j46o2/1588655105.js"
+          },
+          {
+            "scripting": 175.42440000000005,
+            "total": 212.92920000000004,
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/app.js",
+            "scriptParseCompile": 33.4128
+          },
+          {
+            "total": 199.4796000000004,
+            "url": "https://www.googletagmanager.com/gtag/js?id=AW-983274422&cx=c&gtm=4e6bc0h2",
+            "scriptParseCompile": 63.3024,
+            "scripting": 135.6312000000004
+          },
+          {
+            "scriptParseCompile": 43.3512,
+            "scripting": 92.9652,
+            "total": 172.63439999999997,
+            "url": "https://cdn.cookielaw.org/scripttemplates/202606.1.0/otBannerSdk.js"
+          }
+        ]
+      },
+      {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0,
+        "displayValue": "Est savings of 69 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 300
+        },
+        "items": [
+          {
+            "wastedBytes": 31453,
+            "totalBytes": 35554,
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/app.css",
+            "wastedPercent": 88.4653937947494
+          },
+          {
+            "wastedPercent": 88.76568497790393,
+            "url": "#onetrust-banner-sdk .onetrust-vendors-list-handler{cursor:pointer;color:#1f96db;font-size:inherit; … } …",
+            "wastedBytes": 22015,
+            "totalBytes": 24801
+          },
+          {
+            "wastedPercent": 83.70302474793768,
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/vendor.css",
+            "wastedBytes": 17667,
+            "totalBytes": 21107
+          }
+        ]
+      },
+      {
+        "id": "meta-description",
+        "title": "Document does not have a meta description",
+        "description": "Meta descriptions may be included in search results to concisely summarize page content. [Learn more about the meta description](https://developer.chrome.com/docs/lighthouse/seo/meta-description/).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "chains": {
+                "D5296065767DEC44B2968C5CFC0F2F4E": {
+                  "isLongest": true,
+                  "children": "[…]",
+                  "transferSize": 124327,
+                  "navStartToEndTime": 328,
+                  "url": "https://www.zara.com/"
+                }
+              },
+              "type": "network-tree",
+              "longestChain": {
+                "duration": 3952
+              }
+            }
+          },
+          {
+            "title": "Preconnected origins",
+            "type": "list-section",
+            "value": {
+              "items": [
+                {
+                  "source": "[…]",
+                  "subItems": "[…]",
+                  "origin": "https://cdn.cookielaw.org/"
+                }
+              ],
+              "type": "table",
+              "headings": [
+                {
+                  "valueType": "text",
+                  "subItemsHeading": "[…]",
+                  "label": "Origin",
+                  "key": "origin"
+                },
+                {
+                  "key": "source",
+                  "valueType": "node",
+                  "label": "Source"
+                }
+              ]
+            },
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to."
+          },
+          {
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "value": {
+              "headings": [
+                {
+                  "label": "Origin",
+                  "valueType": "text",
+                  "key": "origin"
+                },
+                {
+                  "key": "wastedMs",
+                  "label": "Est LCP savings",
+                  "valueType": "ms"
+                }
+              ],
+              "items": [
+                {
+                  "origin": "https://beacon.riskified.com",
+                  "wastedMs": 316
+                },
+                {
+                  "wastedMs": 314,
+                  "origin": "https://applepay.cdn-apple.com"
+                },
+                {
+                  "origin": "https://static.zara.net",
+                  "wastedMs": 300
+                },
+                {
+                  "wastedMs": 300,
+                  "origin": "https://event-tracker.inditex.com"
+                }
+              ],
+              "type": "table"
+            },
+            "title": "Preconnect candidates",
+            "type": "list-section"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "nodeLabel": "Privacy Policy",
+              "lhId": "1-0-A",
+              "boundingRect": {
+                "height": 17,
+                "bottom": 690,
+                "width": 78,
+                "right": 327,
+                "left": 249,
+                "top": 673
+              },
+              "selector": "div#onetrust-group-container > div#onetrust-policy > div#onetrust-policy-text > a.ot-cookie-policy-link",
+              "snippet": "<a class=\"ot-cookie-policy-link\" href=\"https://static.zara.net/static/pdfs/ZARA/cookies-policy/cookies_policy_en_…\" aria-label=\"More information about your privacy, opens in a new tab\" rel=\"noopener noreferrer\" target=\"_blank\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "type": "node",
+              "path": "1,HTML,1,BODY,32,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,A"
+            }
+          }
+        ]
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "displayValue": "18.6 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "valid-source-maps",
+        "title": "Missing source maps for large first-party JavaScript",
+        "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "scriptUrl": "https://www.zara.com/stdstatic-recoms/recom-chat-alma-0.17.0/za/web/recom-chat-alma.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                }
+              ]
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                }
+              ]
+            },
+            "scriptUrl": "https://www.zara.com/dorphTKSlR39k/qkHuZr/6e68kBjw/ErS5Vt1aiEiO3b7h/aG0yU3FHKA/XDx/ReWZzGhw"
+          },
+          {
+            "scriptUrl": "https://www.zara.com/",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                }
+              ]
+            }
+          },
+          {
+            "sourceMapUrl": "https://beacon.riskified.com/sm/d3d3LnphcmEuY29t/ZGQyOGY5MTMtMTk4My00ZmU3LTk0MjctNDg1MzQ3MWEzZDRh",
+            "scriptUrl": "https://beacon.riskified.com/?shop=www.zara.com&sid=0f1abd27-4602-46b7-94fc-5738b9031b6f",
+            "subItems": {
+              "items": [
+                {
+                  "error": "Warning: missing 1 item in `.sourcesContent`"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "lcp-breakdown-insight",
+        "title": "LCP breakdown",
+        "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "items": [
+              {
+                "subpart": "timeToFirstByte",
+                "duration": 56.166,
+                "label": "Time to first byte"
+              },
+              {
+                "label": "Element render delay",
+                "duration": 3714.403,
+                "subpart": "elementRenderDelay"
+              }
+            ],
+            "headings": [
+              {
+                "key": "label",
+                "valueType": "text",
+                "label": "Subpart"
+              },
+              {
+                "label": "Duration",
+                "key": "duration",
+                "valueType": "ms"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "boundingRect": {
+              "bottom": 691,
+              "width": 338,
+              "right": 379,
+              "top": 619,
+              "height": 72,
+              "left": 41
+            },
+            "snippet": "<div id=\"onetrust-policy-text\">",
+            "type": "node",
+            "path": "1,HTML,1,BODY,32,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV",
+            "selector": "div.ot-sdk-row > div#onetrust-group-container > div#onetrust-policy > div#onetrust-policy-text",
+            "lhId": "page-0-DIV",
+            "nodeLabel": "We use first-party and third-party cookies for analytical purposes and to show …"
+          }
+        ]
+      },
+      {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+        "score": 0,
+        "displayValue": "1 warning found",
+        "savingsMs": null,
+        "items": [
+          {
+            "value": "Fenced Frame API is deprecated and scheduled for removal.",
+            "subItems": {
+              "items": [
+                {
+                  "text": "Check the feature status page for more details.",
+                  "type": "link",
+                  "url": "https://chromestatus.com/feature/6366274495053824"
+                },
+                {
+                  "text": "This change will go into effect with milestone 156.",
+                  "type": "link",
+                  "url": "https://chromiumdash.appspot.com/schedule"
+                }
+              ],
+              "type": "subitems"
+            },
+            "source": {
+              "url": "https://bdyoomvaq5bp.eu.wpi.jscrambler.com/8j3lcd6j46o2/1588655105.js",
+              "type": "source-location",
+              "urlProvider": "network",
+              "column": 291460,
+              "line": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.01,
+        "displayValue": "22.4 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.06,
+        "displayValue": "5.5 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.07,
+        "displayValue": "10.5 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.12,
+        "displayValue": "1,610 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.46,
+        "displayValue": "260 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 3,758 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "totalBytes": 694063,
+            "url": "https://www.zara.com/stdstatic-recoms/recom-chat-alma-0.17.0/za/web/recom-chat-alma.js"
+          },
+          {
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/vendor.js",
+            "totalBytes": 393223
+          },
+          {
+            "url": "https://www.zara.com/dorphTKSlR39k/qkHuZr/6e68kBjw/ErS5Vt1aiEiO3b7h/aG0yU3FHKA/XDx/ReWZzGhw",
+            "totalBytes": 213556
+          },
+          {
+            "totalBytes": 184566,
+            "url": "https://www.googletagmanager.com/gtm.js?id=GTM-NK4BSSL"
+          },
+          {
+            "totalBytes": 170020,
+            "url": "https://www.googletagmanager.com/gtm.js?id=GTM-5CVGN7D&l=analyticsDataLayer"
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=AW-983274422&cx=c&gtm=4e6bc0h2",
+            "totalBytes": 165116
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-NOTFORGA4TRACKING&cx=c&gtm=4e6bc0h2",
+            "totalBytes": 154369
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=AW-false&cx=c&gtm=4e6bc0h2",
+            "totalBytes": 150591
+          },
+          {
+            "url": "https://static.zara.net/stdstatic/10.20.0/js/v2/bundles/12217.js",
+            "totalBytes": 145394
+          },
+          {
+            "totalBytes": 140509,
+            "url": "https://cdn.cookielaw.org/scripttemplates/202606.1.0/otBannerSdk.js"
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0.5,
+        "displayValue": "Est savings of 17 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 8928,
+            "url": "https://cdn.cookielaw.org/scripttemplates/202606.1.0/otBannerSdk.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.prototype.fill",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.assign"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.endsWith"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.includes"
+                }
+              ]
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-classes"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.create"
+                }
+              ]
+            },
+            "wastedBytes": 8496,
+            "url": "https://www.zara.com/stdstatic-recoms/recom-chat-alma-0.17.0/za/web/recom-chat-alma.js"
+          }
+        ]
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.zara.com/",
+    "status": 403,
+    "htmlBytes": 366,
+    "headers": {
+      "contentType": "text/html",
+      "cacheControl": null,
+      "contentEncoding": null,
+      "xRobotsTag": null,
+      "server": null
+    },
+    "meta": {
+      "title": "Access Denied",
+      "description": null,
+      "canonical": null,
+      "lang": null,
+      "robots": null,
+      "viewport": null,
+      "openGraph": {}
+    },
+    "headings": [
+      {
+        "level": 1,
+        "text": "Access Denied"
+      }
+    ],
+    "h1Count": 1,
+    "images": {
+      "total": 0,
+      "missingAlt": 0,
+      "missingDimensions": 0,
+      "lazy": 0,
+      "firstImages": []
+    },
+    "head": {
+      "blockingStylesheets": 0,
+      "blockingScripts": 0,
+      "preloads": [],
+      "preconnects": []
+    },
+    "scripts": {
+      "total": 0,
+      "external": 0,
+      "thirdPartyHosts": []
+    },
+    "structuredData": {
+      "jsonLdBlocks": 0,
+      "types": [],
+      "invalidBlocks": 0,
+      "raw": []
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": false,
+      "blocked": [],
+      "allowed": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "Access Denied You don't have permission to access \"http://www.zara.com/\" on this server. Reference #18.d1091302.1794762067.1b9d2e01 https://errors.edgesuite.net/18.d1091302.1794762067.1b9d2e01"
+  }
+}

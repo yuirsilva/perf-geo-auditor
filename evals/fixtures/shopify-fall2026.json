@@ -1,0 +1,598 @@
+{
+  "name": "shopify-fall2026",
+  "url": "https://www.shopify.com/editions/fall2026",
+  "collectedAt": "2026-11-15T16:37:35.091Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-15T16:37:35.089Z",
+    "finalUrl": "https://www.shopify.com/editions/fall2026",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 91,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 92
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 2881,
+        "category": "AVERAGE"
+      },
+      "inpMs": {
+        "p75": 264,
+        "category": "AVERAGE"
+      },
+      "cls": {
+        "p75": 0,
+        "category": "FAST"
+      },
+      "fcpMs": {
+        "p75": 2767,
+        "category": "AVERAGE"
+      },
+      "ttfbMs": {
+        "p75": 1797,
+        "category": "AVERAGE"
+      },
+      "overall": "AVERAGE"
+    },
+    "lab": {
+      "lcp": {
+        "value": 2255.5032596981446,
+        "display": "2.3 s"
+      },
+      "cls": {
+        "value": 0,
+        "display": "0"
+      },
+      "tbt": {
+        "value": 155.5,
+        "display": "160 ms"
+      },
+      "fcp": {
+        "value": 2255.5032596981446,
+        "display": "2.3 s"
+      },
+      "speedIndex": {
+        "value": 4680.955485433087,
+        "display": "4.7 s"
+      },
+      "ttfb": {
+        "value": 29,
+        "display": "Root document took 30 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 850 ms",
+        "savingsMs": {
+          "LCP": 850,
+          "FCP": 850
+        },
+        "items": [
+          {
+            "totalBytes": 30280,
+            "wastedMs": 901,
+            "url": "https://cdn.shopify.com/oxygen-v2/58886/167724/342939/5060052/assets/tailwind-CUS-gXuJ.css"
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "1.8 s",
+        "savingsMs": {
+          "TBT": 150
+        },
+        "items": [
+          {
+            "scriptParseCompile": 0.12359999999999999,
+            "total": 2401.473599999998,
+            "scripting": 1259.8031999999987,
+            "url": "https://cdn.shopify.com/oxygen-v2/58886/167724/342939/5060052/assets/frameLoop-CeLX9Qef.js"
+          },
+          {
+            "url": "https://www.shopify.com/editions/fall2026",
+            "scriptParseCompile": 1.008,
+            "total": 576.3888000000002,
+            "scripting": 159.53520000000012
+          },
+          {
+            "total": 292.4760000000001,
+            "scriptParseCompile": 1.524,
+            "scripting": 65.26080000000007,
+            "url": "https://cdn.shopify.com/oxygen-v2/58886/167724/342939/5060052/assets/HeroGraph-CTvbnUd4.js"
+          },
+          {
+            "scriptParseCompile": 0.1608,
+            "scripting": 174.899999999997,
+            "total": 205.006799999997,
+            "url": "https://cdn.shopify.com/oxygen-v2/58886/167724/342939/5060052/assets/ref-mixin-CjSUHy7O.js"
+          },
+          {
+            "scriptParseCompile": 2.67,
+            "scripting": 170.84159999999974,
+            "url": "https://cdn.shopify.com/oxygen-v2/58886/167724/342939/5060052/assets/frame-koXRApmk.js",
+            "total": 194.23799999999974
+          },
+          {
+            "total": 175.81439999999836,
+            "scripting": 8.369999999999992,
+            "url": "Unattributable",
+            "scriptParseCompile": 0
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "4.0 s",
+        "savingsMs": {
+          "TBT": 150
+        },
+        "items": [
+          {
+            "groupLabel": "Script Evaluation",
+            "group": "scriptEvaluation",
+            "duration": 1906.3535999999813
+          },
+          {
+            "group": "other",
+            "duration": 1532.9951999999903,
+            "groupLabel": "Other"
+          },
+          {
+            "group": "styleLayout",
+            "duration": 341.3088000000001,
+            "groupLabel": "Style & Layout"
+          },
+          {
+            "group": "garbageCollection",
+            "duration": 109.06200000000005,
+            "groupLabel": "Garbage Collection"
+          },
+          {
+            "group": "paintCompositeRender",
+            "groupLabel": "Rendering",
+            "duration": 63.08639999999999
+          },
+          {
+            "groupLabel": "Script Parsing & Compilation",
+            "group": "scriptParseCompile",
+            "duration": 45.552
+          },
+          {
+            "group": "parseHTML",
+            "duration": 37.98959999999999,
+            "groupLabel": "Parse HTML & CSS"
+          }
+        ]
+      },
+      {
+        "id": "link-text",
+        "title": "Links do not have descriptive text",
+        "description": "Descriptive link text helps search engines understand your content. [Learn how to make links more accessible](https://developer.chrome.com/docs/lighthouse/seo/link-text/).",
+        "score": 0,
+        "displayValue": "2 links found",
+        "savingsMs": null,
+        "items": [
+          {
+            "text": "Learn more",
+            "href": "https://shopify.dev/changelog/filter-catalog-search-results-by-media-type?utm_source=f26-editions-website&utm_medium=product-cta&utm_campaign=fall26edition",
+            "textLang": "en-US"
+          },
+          {
+            "text": "Learn more",
+            "href": "https://shopify.dev/changelog/blog/build-more-secure-apps-with-shopify-s-ai-toolkit-security-check?utm_source=f26-editions-website&utm_medium=product-cta&utm_campaign=fall26edition",
+            "textLang": "en-US"
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "value": {
+              "chains": {
+                "FC81A4F9343D8CD6DF211C0AD3F545D1": {
+                  "isLongest": true,
+                  "transferSize": 134211,
+                  "url": "https://www.shopify.com/editions/fall2026",
+                  "children": "[…]",
+                  "navStartToEndTime": 1170
+                }
+              },
+              "longestChain": {
+                "duration": 2311
+              },
+              "type": "network-tree"
+            },
+            "type": "list-section"
+          },
+          {
+            "type": "list-section",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "title": "Preconnected origins",
+            "value": {
+              "type": "text",
+              "value": "No origins were preconnected"
+            }
+          },
+          {
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "type": "list-section",
+            "value": {
+              "value": "No additional origins are good candidates for preconnecting",
+              "type": "text"
+            },
+            "title": "Preconnect candidates"
+          }
+        ]
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.69,
+        "displayValue": "4.7 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.7,
+        "displayValue": "5.6 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.76,
+        "displayValue": "2.3 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.81,
+        "displayValue": "160 ms",
+        "savingsMs": null,
+        "items": []
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.shopify.com/editions/fall2026",
+    "status": 200,
+    "htmlBytes": 1173468,
+    "headers": {
+      "contentType": "text/html; charset=UTF-8",
+      "cacheControl": "no-store, s-maxage=0",
+      "contentEncoding": "br",
+      "xRobotsTag": null,
+      "server": "cloudflare"
+    },
+    "meta": {
+      "title": "Shopify Editions | Fall '26",
+      "description": "Fast-track growth with the platform trusted by shoppers, connected to the newest AI channels, and picked by businesses to get ahead. 150+ updates. Next-level network effects.",
+      "canonical": "https://www.shopify.com/editions/fall2026",
+      "lang": "en-US",
+      "robots": "max-image-preview:large",
+      "viewport": "width=device-width, initial-scale=1",
+      "openGraph": {
+        "og:title": "Shopify Editions | Fall '26",
+        "og:description": "Fast-track growth with the platform trusted by shoppers, connected to the newest AI channels, and picked by businesses to get ahead. 150+ updates. Next-level network effects.",
+        "og:site_name": "Shopify",
+        "og:type": "website",
+        "og:image": "https://cdn.shopify.com/s/files/1/0762/1885/9705/files/Social_Share-Card_Final_1200x630_1x_85902a32-9449-4be8-8084-264d1528dce8.webp?v=1792099430"
+      }
+    },
+    "headings": [
+      {
+        "level": 1,
+        "text": "Shopify EditionsFall ’26"
+      },
+      {
+        "level": 1,
+        "text": "Shopify EditionsFall ’26"
+      },
+      {
+        "level": 1,
+        "text": ""
+      },
+      {
+        "level": 2,
+        "text": "Agentic"
+      },
+      {
+        "level": 3,
+        "text": "Shop skill for any agent"
+      },
+      {
+        "level": 3,
+        "text": "With Shop PayLearn more, shoppers can buy from any brand on or off ShopifyRead help doc through Claude Duet, Grok Bot, a…"
+      },
+      {
+        "level": 3,
+        "text": "Sell in Google Search, including AI Mode, and the Gemini appRead help doc with checkout powered by Shopify. Shoppers buy…"
+      },
+      {
+        "level": 3,
+        "text": "Give AI shopping agents your compare-at priceRead help doc using Shopify CatalogLearn more to show when products are mar…"
+      },
+      {
+        "level": 3,
+        "text": "See whether your store is eligible for Shopify CatalogRead help doc, and find out what to change in order to qualify."
+      },
+      {
+        "level": 3,
+        "text": "Shop Pay in more agents"
+      },
+      {
+        "level": 3,
+        "text": "Store preview in agents"
+      },
+      {
+        "level": 3,
+        "text": "Digital products in agents"
+      },
+      {
+        "level": 3,
+        "text": "Product sourcing in agents"
+      },
+      {
+        "level": 3,
+        "text": "Create a store or connect one to GrokRead help doc, and manage it without leaving the chat. Use Grok BotRead help doc to…"
+      },
+      {
+        "level": 3,
+        "text": "Connect your store to Google GeminiRead help doc, and manage products, orders, and inventory from the AI assistant you a…"
+      },
+      {
+        "level": 3,
+        "text": "Connect your store to Meta’s personal AI agent MuseRead help doc, and manage products, inventory, and discounts in the a…"
+      },
+      {
+        "level": 3,
+        "text": "Connect your store to Microsoft CopilotRead help doc, and manage your business alongside your Microsoft 365 Outlook, Wor…"
+      },
+      {
+        "level": 3,
+        "text": "Design stores with CanvasLearn more in AI agentsRead help doc like ChatGPT, Claude, and more."
+      },
+      {
+        "level": 3,
+        "text": "Pin Shopify to the ChatGPT sidebarRead help doc. Open a home page to see sales, sessions, conversion rate, and add or se…"
+      },
+      {
+        "level": 3,
+        "text": "Your business details in AI channels"
+      },
+      {
+        "level": 2,
+        "text": "Sidekick"
+      },
+      {
+        "level": 3,
+        "text": "More technical tasks with Sidekick"
+      },
+      {
+        "level": 3,
+        "text": "Recommendations tested by Sidekick"
+      },
+      {
+        "level": 3,
+        "text": "Guidance from Sidekick on more of your store"
+      },
+      {
+        "level": 3,
+        "text": "Make a plan, approve once, and watch Sidekick apply multiple changesRead help doc at a time like editing descriptions ac…"
+      },
+      {
+        "level": 3,
+        "text": "Chat with Sidekick from a floating prompt surface across the redesigned adminRead article, and get help in context of yo…"
+      },
+      {
+        "level": 3,
+        "text": "When you open the admin, your personalized recommendationsTry it from Sidekick and next steps are organized for action."
+      },
+      {
+        "level": 3,
+        "text": "Ask Sidekick to create or edit draft ordersRead help doc, then review highlighted changes before you save or discard the…"
+      },
+      {
+        "level": 3,
+        "text": "Upload or generate a design with Sidekick, preview it on a product, then publish the final product on your store as prin…"
+      },
+      {
+        "level": 3,
+        "text": "Ask Sidekick a pricing questionRead help doc, and get product-level recommendations powered by models from Shopify Smart…"
+      },
+      {
+        "level": 3,
+        "text": "Ask Sidekick why a payoutRead help doc came in lower, what’s driving chargebacks, or how to verify your business in Shop…"
+      },
+      {
+        "level": 3,
+        "text": "Build and optimize customizations in the checkout and accounts editorRead help doc and Checkout BlocksGet app app with S…"
+      },
+      {
+        "level": 3,
+        "text": "Markdown filesRead dev docs teach Sidekick how your theme is built and save your design preferences, so they get applied…"
+      },
+      {
+        "level": 2,
+        "text": "Online"
+      },
+      {
+        "level": 3,
+        "text": "Your whole store edited in one view"
+      },
+      {
+        "level": 3,
+        "text": "A smarter storefront agent"
+      },
+      {
+        "level": 3,
+        "text": "Manage your themes, update your domain, and launch your store from the redesigned online store pageRead help doc."
+      },
+      {
+        "level": 3,
+        "text": "Businesses not on Shopify can add ShopLearn more sign-in to any storeRead dev docs, so new and returning customers get p…"
+      },
+      {
+        "level": 3,
+        "text": "Connect ShopLearn more sign-in to your lead captureRead dev docs form using Shopify FormsGet app or KlaviyoGet app to id…"
+      },
+      {
+        "level": 3,
+        "text": "Coming soon, request additional information from customers after they first sign in by redirecting them to a custom form…"
+      }
+    ],
+    "h1Count": 3,
+    "images": {
+      "total": 81,
+      "missingAlt": 0,
+      "missingDimensions": 25,
+      "lazy": 79,
+      "firstImages": [
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/6d65c49783ba5b195dff711092e418c3.png",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "24",
+          "height": "24"
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0647/5176/3550/files/fav-180.png?v=1780498479",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "24",
+          "height": "24"
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0951/3130/4218/files/favicon_256.png?v=1760634627",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "24",
+          "height": "24"
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0921/8919/6588/files/Summer2025.svg?v=1760667315",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "24",
+          "height": "24"
+        },
+        {
+          "src": "https://cdn.shopify.com/b/shopify-brochure2-assets/6d65c49783ba5b195dff711092e418c3.png",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "24",
+          "height": "24"
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0647/5176/3550/files/fav-180.png?v=1780498479",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "24",
+          "height": "24"
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0951/3130/4218/files/favicon_256.png?v=1760634627",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "24",
+          "height": "24"
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0921/8919/6588/files/Summer2025.svg?v=1760667315",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "24",
+          "height": "24"
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 1,
+      "blockingScripts": 0,
+      "preloads": [
+        {
+          "href": "/editions/fall2026/graph-data",
+          "as": "fetch"
+        },
+        {
+          "href": "https://cdn.shopify.com/b/shopify-brochure2-assets/96a3645cf773f260424f4718b638f9fe.woff2",
+          "as": "font"
+        },
+        {
+          "href": "https://cdn.shopify.com/b/shopify-brochure2-assets/b2ba26f35a9189c443bbbd74242e6b0e.woff2",
+          "as": "font"
+        }
+      ],
+      "preconnects": []
+    },
+    "scripts": {
+      "total": 0,
+      "external": 1,
+      "thirdPartyHosts": [
+        "cdn.shopify.com"
+      ]
+    },
+    "structuredData": {
+      "jsonLdBlocks": 0,
+      "types": [],
+      "invalidBlocks": 0,
+      "raw": []
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [],
+      "allowed": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "llmsTxtFound": true
+    },
+    "textSample": "Skip to main contentShopify EditionsFall ’26EditionsDismissFall ’26ExponentialSpring ’26EverywhereWinter ’26RenaissanceSummer ’25HorizonsView all EditionsDismissSearchClearSearchShopify.comStart for freeShopify EditionsFall ’26Start for freeAgenticSidekickOnlineMerchandisingRetailPaymentsOperationsShopMarketingFulfillmentDeveloperEditionsDismissFall ’26ExponentialSpring ’26EverywhereWinter ’26RenaissanceSummer ’25HorizonsView all EditionsDismissSearchClearSearchShopify.comAgenticSidekickOnlineMerchandisingRetailPaymentsOperationsShopMarketingFulfillmentDeveloperEverything new for non-linear growthAgentic01Sidekick02Online03Merchandising04Retail05Payments06Operations07Shop08Marketing09Fulfillment10Developer111B+ products in our catalog can get discovered across AI channels400M+ shoppers with Shop Pay accounts*Shopify Payments prevents 12K+ high-risk payments each minuteAgenticShop skill for any agentGive ChatGPT, Claude, or other agents shop.mdLearn more to discover products, get personalized recommendations, and check out with Shop PayLearn more. Anyone can customize the skill to fit their style.Copy promptNotes[1]All the tools we used to create this skill are available at shop.dev.[2]Shop Pay is also available for checkout in Muse, Instinct, and Claude Duet.With Shop PayLearn more, shoppers can buy from any brand on or off ShopifyRead help doc through Claude Duet, Grok Bot, and Instinct. Purchases are secure and supported by Mastercard, Visa, and soon Amex.Sell in Google Sea…"
+  }
+}

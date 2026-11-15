@@ -1,0 +1,2630 @@
+{
+  "name": "nike",
+  "url": "https://www.nike.com/",
+  "collectedAt": "2026-11-15T16:55:33.955Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-15T16:55:33.952Z",
+    "finalUrl": "https://www.nike.com/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 29,
+      "accessibility": 83,
+      "best-practices": 96,
+      "seo": 85
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 3871,
+        "category": "AVERAGE"
+      },
+      "inpMs": {
+        "p75": 190,
+        "category": "FAST"
+      },
+      "cls": {
+        "p75": 0.02,
+        "category": "FAST"
+      },
+      "fcpMs": {
+        "p75": 2311,
+        "category": "AVERAGE"
+      },
+      "ttfbMs": {
+        "p75": 1175,
+        "category": "AVERAGE"
+      },
+      "overall": "AVERAGE"
+    },
+    "lab": {
+      "lcp": {
+        "value": 16802,
+        "display": "16.8 s"
+      },
+      "cls": {
+        "value": 0.030867996630955626,
+        "display": "0.031"
+      },
+      "tbt": {
+        "value": 2395.969156895205,
+        "display": "2,400 ms"
+      },
+      "fcp": {
+        "value": 4740.04467428332,
+        "display": "4.7 s"
+      },
+      "speedIndex": {
+        "value": 10076.916580742422,
+        "display": "10.1 s"
+      },
+      "ttfb": {
+        "value": 49,
+        "display": "Root document took 50 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 3,290 ms",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 3300
+        },
+        "items": [
+          {
+            "totalBytes": 63974,
+            "wastedMs": 2550,
+            "url": "https://api.nike.com/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/p.js"
+          },
+          {
+            "wastedMs": 3327,
+            "url": "https://static-assets.nike.com/video-player/2.2.0/nike-one-video-player.min.js",
+            "totalBytes": 195741
+          },
+          {
+            "wastedMs": 1405,
+            "url": "https://static-assets.nike.com/video-player/2.2.0/nike-one-video-player.min.css",
+            "totalBytes": 17115
+          },
+          {
+            "totalBytes": 11273,
+            "wastedMs": 601,
+            "url": "https://www.nike.com/static/uxf/web-shell-client/v1/bundle.umd.js"
+          },
+          {
+            "wastedMs": 1501,
+            "totalBytes": 44052,
+            "url": "https://www.nike.com/assets/vendor/react-dom/18.3.1/react-dom.production.min.js"
+          },
+          {
+            "wastedMs": 301,
+            "totalBytes": 5336,
+            "url": "https://www.nike.com/assets/vendor/react/18.3.1/react.production.min.js"
+          },
+          {
+            "wastedMs": 901,
+            "totalBytes": 14175,
+            "url": "https://www.nike.com/_next/static/chunks/d978a8607d494609.css"
+          },
+          {
+            "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/header.clientBundle.e51fce2af32ed8fbadd6.js",
+            "wastedMs": 1501,
+            "totalBytes": 70610
+          },
+          {
+            "url": "https://www.nike.com/static/analytics-client/public/analytics-client.min.js",
+            "wastedMs": 1651,
+            "totalBytes": 25903
+          },
+          {
+            "totalBytes": 12368,
+            "wastedMs": 901,
+            "url": "https://www.nike.com/static/ncss/5.0/dotcom/desktop/css/ncss.en-us.min.css"
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 903 KiB",
+        "savingsMs": {
+          "LCP": 3000,
+          "FCP": 300
+        },
+        "items": [
+          {
+            "url": "https://connect.facebook.net/signals/config/753367016113185?v=2.9.439&r=stable&domain=www.nike.com&im=1&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C…",
+            "wastedBytes": 133676.6,
+            "totalBytes": 151332,
+            "cacheLifetimeMs": 1200000
+          },
+          {
+            "url": "https://connect.facebook.net/en_US/fbevents.js",
+            "totalBytes": 102593,
+            "cacheLifetimeMs": 1200000,
+            "wastedBytes": 90623.81666666667
+          },
+          {
+            "wastedBytes": 69248.81527777777,
+            "totalBytes": 75010,
+            "url": "https://www.nike.com/static/uxf/nike-ai-search/_reco/public/5df9ca143f80ff1095ae/index.umd.js",
+            "cacheLifetimeMs": 553000
+          },
+          {
+            "cacheLifetimeMs": 0,
+            "wastedBytes": 48092,
+            "totalBytes": 48092,
+            "url": "https://web-sdk-cdn.singular.net/singular-sdk/latest/singular-sdk.js"
+          },
+          {
+            "cacheLifetimeMs": 37310000,
+            "totalBytes": 76400,
+            "url": "https://www.nike.com/_next/static/chunks/pages/_app-d2ddddbf09e2f8f4.js",
+            "wastedBytes": 41324.97222222222
+          },
+          {
+            "wastedBytes": 39741.77955555556,
+            "url": "https://www.nike.com/static/ncss/5.0/dotcom/fonts/HelveticaNowDisplayMedium.woff2",
+            "cacheLifetimeMs": 20240000,
+            "totalBytes": 61372
+          },
+          {
+            "wastedBytes": 39386.56800000001,
+            "totalBytes": 57564,
+            "cacheLifetimeMs": 13640000,
+            "url": "https://www.nike.com/_next/static/chunks/pages/%5B%5B...page%5D%5D-0468702b8be4e4cf.js"
+          },
+          {
+            "totalBytes": 51970,
+            "cacheLifetimeMs": 19364000,
+            "wastedBytes": 33906.38288888889,
+            "url": "https://www.nike.com/static/ncss/5.0/dotcom/fonts/HelveticaNowTextMedium.woff2"
+          },
+          {
+            "url": "https://www.nike.com/static/uxf/web-shell-client/3.8.0/338.chunk.0542fc.js",
+            "cacheLifetimeMs": 37556000,
+            "totalBytes": 52697,
+            "wastedBytes": 28413.929638888887
+          },
+          {
+            "totalBytes": 27567,
+            "cacheLifetimeMs": 60000,
+            "wastedBytes": 27337.275,
+            "url": "https://nikeconsumerservices.my.site.com/ESWWebEnglishUSGuest1712823616920/assets/js/bootstrap.min.js"
+          }
+        ]
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 849 KiB",
+        "savingsMs": {
+          "LCP": 2300,
+          "FCP": 500
+        },
+        "items": [
+          {
+            "wastedBytes": 124218,
+            "url": "https://static-assets.nike.com/video-player/2.2.0/nike-one-video-player.min.js",
+            "wastedPercent": 64.42396365348984,
+            "totalBytes": 192814
+          },
+          {
+            "totalBytes": 199013,
+            "url": "https://www.nike.com/mtrx9k/uFj3l8bZFkgvGqZs53j5LalU-9BDc9F6cthpEd1_0-lBuKaK5oUlBDIviV3dB9YXxWT72wpzjTx8i38bg3CikIU",
+            "wastedPercent": 41.225521833122905,
+            "wastedBytes": 82044
+          },
+          {
+            "totalBytes": 126385,
+            "subItems": {
+              "items": [
+                {
+                  "sourceWastedBytes": 7643,
+                  "sourceBytes": 15432,
+                  "source": "(unmapped)"
+                },
+                {
+                  "source": "…./src/index.tsx",
+                  "sourceBytes": 8450,
+                  "sourceWastedBytes": 6713
+                },
+                {
+                  "sourceBytes": 4713,
+                  "source": "…./src/services/SalesforceService.ts",
+                  "sourceWastedBytes": 4339
+                },
+                {
+                  "source": "…./src/hooks/useSalesforceSSE.ts",
+                  "sourceWastedBytes": 3748,
+                  "sourceBytes": 3748
+                },
+                {
+                  "sourceBytes": 3514,
+                  "sourceWastedBytes": 3514,
+                  "source": "…./src/hooks/useChatMessages.ts"
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://www.nike.com/static/cssf/async-chat/_reco/public/39167438ea0e037bee4a/index.umd.js",
+            "wastedBytes": 81282,
+            "wastedPercent": 64.31260406246219
+          },
+          {
+            "wastedPercent": 47.80536059410572,
+            "url": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "sourceBytes": 11317,
+                  "sourceWastedBytes": 3914,
+                  "source": "(unmapped)"
+                },
+                {
+                  "source": "…../../node_modules/@radix-ui/react-select/dist/index.mjs",
+                  "sourceWastedBytes": 3535,
+                  "sourceBytes": 3850
+                },
+                {
+                  "sourceBytes": 2696,
+                  "sourceWastedBytes": 2383,
+                  "source": "…../../node_modules/@radix-ui/react-menu/dist/index.mjs"
+                },
+                {
+                  "sourceWastedBytes": 2173,
+                  "source": "…../../node_modules/stacktrace-gps/node_modules/source-map/lib/source-map-consumer.js",
+                  "sourceBytes": 2434
+                },
+                {
+                  "source": "…../../node_modules/@nike/podium/components/select/select.js",
+                  "sourceWastedBytes": 2106,
+                  "sourceBytes": 2130
+                }
+              ]
+            },
+            "wastedBytes": 79756,
+            "totalBytes": 166834
+          },
+          {
+            "wastedPercent": 45.18069706013516,
+            "url": "https://www.nike.com/mtrx9k/uFj3l8bZFSZTesEPnhaDW95r4NEfbNttbdRzH_B0-eBGqYyf1oUdBAcrgh7MWYgM3mCp0UMq1T573i0QgZCF",
+            "totalBytes": 160536,
+            "wastedBytes": 72531
+          },
+          {
+            "wastedBytes": 65956,
+            "totalBytes": 119076,
+            "url": "https://analytics.tiktok.com/i18n/pixel/static/main.MTAyNjc1NzVmMQ.js",
+            "wastedPercent": 55.38991077105211
+          },
+          {
+            "url": "https://www.nike.com/mtrx9k/?id=GTM-NTF2X45&l=marketingClientDataLayer",
+            "wastedBytes": 64905,
+            "wastedPercent": 30.95369779673686,
+            "totalBytes": 209685
+          },
+          {
+            "wastedBytes": 52668,
+            "totalBytes": 146871,
+            "url": "https://connect.facebook.net/signals/config/753367016113185?v=2.9.439&r=stable&domain=www.nike.com&im=1&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C…",
+            "wastedPercent": 35.86019064911484
+          },
+          {
+            "wastedPercent": 63.935639954680234,
+            "wastedBytes": 47178,
+            "totalBytes": 73790,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "sourceWastedBytes": 3374,
+                  "source": "(unmapped)",
+                  "sourceBytes": 9001
+                },
+                {
+                  "sourceWastedBytes": 2311,
+                  "sourceBytes": 2312,
+                  "source": "…../../.yarn/__virtual__/@nike-nike-design-system-components-virtual-d1cebbc5d2/0/cache/@nike-nike-design-system-components-npm-6.0.6-5817cba2e0-88cd45166d.zip/node_modules/@nike/nike-design-system-components/esm/components/Buttons/style.js"
+                },
+                {
+                  "sourceWastedBytes": 2078,
+                  "sourceBytes": 2252,
+                  "source": "…../../.yarn/cache/@emotion-stylis-npm-0.8.5-3e9db8959f-ceaa673457.zip/node_modules/@emotion/stylis/dist/stylis.browser.esm.js"
+                },
+                {
+                  "sourceWastedBytes": 1997,
+                  "source": "…../../.yarn/cache/focus-trap-npm-6.9.4-64b032bc16-dd64b4522a.zip/node_modules/focus-trap/dist/focus-trap.esm.js",
+                  "sourceBytes": 2014
+                },
+                {
+                  "sourceBytes": 2129,
+                  "source": "…../../.yarn/__virtual__/focus-trap-react-virtual-c38744ef86/0/cache/focus-trap-react-npm-8.11.3-a7302c9217-937a8b1eb5.zip/node_modules/focus-trap-react/dist/focus-trap-react.js",
+                  "sourceWastedBytes": 1478
+                }
+              ]
+            },
+            "url": "https://www.nike.com/static/uxf/nike-ai-search/_reco/public/5df9ca143f80ff1095ae/index.umd.js"
+          },
+          {
+            "totalBytes": 51551,
+            "wastedBytes": 43215,
+            "url": "https://www.nike.com/static/uxf/web-shell-client/3.8.0/338.chunk.0542fc.js",
+            "wastedPercent": 83.8302085321944,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "source": "…",
+                  "sourceWastedBytes": 43215,
+                  "sourceBytes": 51519
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "6.0 s",
+        "savingsMs": {
+          "TBT": 2600
+        },
+        "items": [
+          {
+            "scripting": 1646.1840000000063,
+            "scriptParseCompile": 0.9432,
+            "url": "https://www.nike.com/assets/vendor/react/18.3.1/react.production.min.js",
+            "total": 1950.1752000000063
+          },
+          {
+            "scriptParseCompile": 25.466399999999997,
+            "url": "https://www.nike.com/",
+            "scripting": 236.02199999999982,
+            "total": 1135.0836000000002
+          },
+          {
+            "total": 851.089199999992,
+            "scriptParseCompile": 0,
+            "url": "Unattributable",
+            "scripting": 342.5399999999995
+          },
+          {
+            "url": "https://www.nike.com/mtrx9k/?id=GTM-NTF2X45&l=marketingClientDataLayer",
+            "scriptParseCompile": 119.1132,
+            "total": 663.4907999999974,
+            "scripting": 533.0903999999974
+          },
+          {
+            "url": "https://www.nike.com/static/analytics-client/public/5820.chunk.2ced28.js",
+            "total": 610.8539999999991,
+            "scriptParseCompile": 19.8504,
+            "scripting": 551.5727999999991
+          },
+          {
+            "scriptParseCompile": 84.0228,
+            "scripting": 306.1175999999996,
+            "url": "https://www.nike.com/mtrx9k/uFj3l8bZFkgvGqZs53j5LalU-9BDc9F6cthpEd1_0-lBuKaK5oUlBDIviV3dB9YXxWT72wpzjTx8i38bg3CikIU",
+            "total": 393.2483999999996
+          },
+          {
+            "scripting": 143.16839999999988,
+            "url": "https://connect.facebook.net/signals/config/753367016113185?v=2.9.439&r=stable&domain=www.nike.com&im=1&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C…",
+            "scriptParseCompile": 53.1492,
+            "total": 286.54919999999987
+          },
+          {
+            "total": 190.2372000000001,
+            "scripting": 126.13920000000007,
+            "scriptParseCompile": 63.4812,
+            "url": "https://www.nike.com/mtrx9k/uFj3l8bZFSZTesEPnhaDW95r4NEfbNttbdRzH_B0-eBGqYyf1oUdBAcrgh7MWYgM3mCp0UMq1T573i0QgZCF"
+          },
+          {
+            "total": 176.22960000000032,
+            "url": "https://www.nike.com/static/cssf/async-chat/_reco/public/39167438ea0e037bee4a/index.umd.js",
+            "scriptParseCompile": 48.6864,
+            "scripting": 125.60760000000033
+          },
+          {
+            "scriptParseCompile": 10.227599999999999,
+            "url": "https://js-agent.newrelic.com/nr-spa-1.324.1.min.js",
+            "total": 153.7799999999958,
+            "scripting": 122.62919999999579
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "8.8 s",
+        "savingsMs": {
+          "TBT": 2400
+        },
+        "items": [
+          {
+            "duration": 5577.136800000598,
+            "group": "scriptEvaluation",
+            "groupLabel": "Script Evaluation"
+          },
+          {
+            "duration": 1137.6887999999985,
+            "group": "scriptParseCompile",
+            "groupLabel": "Script Parsing & Compilation"
+          },
+          {
+            "group": "other",
+            "duration": 852.8363999999887,
+            "groupLabel": "Other"
+          },
+          {
+            "groupLabel": "Style & Layout",
+            "group": "styleLayout",
+            "duration": 502.3751999999998
+          },
+          {
+            "groupLabel": "Garbage Collection",
+            "duration": 493.3295999999995,
+            "group": "garbageCollection"
+          },
+          {
+            "duration": 103.69560000000051,
+            "groupLabel": "Rendering",
+            "group": "paintCompositeRender"
+          },
+          {
+            "groupLabel": "Parse HTML & CSS",
+            "group": "parseHTML",
+            "duration": 91.42079999999989
+          }
+        ]
+      },
+      {
+        "id": "duplicated-javascript-insight",
+        "title": "Duplicated JavaScript",
+        "description": "Remove large, [duplicate JavaScript modules](https://developer.chrome.com/docs/performance/insights/duplicated-javascript) from bundles to reduce unnecessary bytes consumed by network activity",
+        "score": 0,
+        "displayValue": "Est savings of 156 KiB",
+        "savingsMs": {
+          "LCP": 1050,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 58825,
+            "source": "node_modules/@nike/nike-design-system-components",
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://www.nike.com/_next/static/chunks/912-927a7ddcbae88200.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "url": "https://www.nike.com/static/dotcom-privacy/mfe-privacy-consent/_reco/public/069a1774aa37b2b1c768/index.umd.js",
+                  "sourceTransferBytes": 15358
+                },
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.nike-f4caa929.chunk.832ce3.js",
+                  "sourceTransferBytes": 7821
+                },
+                {
+                  "sourceTransferBytes": 7088,
+                  "url": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js"
+                },
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.nike-a49e0a10.chunk.972dc4.js",
+                  "sourceTransferBytes": 6919
+                },
+                {
+                  "url": "https://www.nike.com/static/uxf/nike-ai-search/_reco/public/5df9ca143f80ff1095ae/index.umd.js",
+                  "sourceTransferBytes": 6602
+                },
+                {
+                  "url": "https://www.nike.com/static/uxf/error-modal/_reco/public/1b12bd7e29a3def3a2dc/index.umd.js",
+                  "sourceTransferBytes": 6027
+                },
+                {
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/header.clientBundle.e51fce2af32ed8fbadd6.js",
+                  "sourceTransferBytes": 4804
+                },
+                {
+                  "sourceTransferBytes": 4206,
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/commons.clientBundle.e51fce2af32ed8fbadd6.js"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "wastedBytes": 37394,
+            "subItems": {
+              "items": [
+                {
+                  "sourceTransferBytes": "[…]",
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/header.clientBundle.e51fce2af32ed8fbadd6.js"
+                },
+                {
+                  "url": "https://www.nike.com/_next/static/chunks/912-927a7ddcbae88200.js",
+                  "sourceTransferBytes": 11248
+                },
+                {
+                  "url": "https://www.nike.com/static/cssf/async-chat/_reco/public/39167438ea0e037bee4a/index.umd.js",
+                  "sourceTransferBytes": 4584
+                },
+                {
+                  "sourceTransferBytes": 3971,
+                  "url": "https://www.nike.com/static/uxf/nike-ai-search/_reco/public/5df9ca143f80ff1095ae/index.umd.js"
+                },
+                {
+                  "url": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js",
+                  "sourceTransferBytes": 3327
+                },
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.nike-3ce1ee95.chunk.b7ad7d.js",
+                  "sourceTransferBytes": 3060
+                },
+                {
+                  "sourceTransferBytes": 2354,
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/footer.clientBundle.e51fce2af32ed8fbadd6.js"
+                },
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.nike-461a4b04.chunk.f26df0.js",
+                  "sourceTransferBytes": 2012
+                },
+                {
+                  "sourceTransferBytes": 1934,
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/commons.clientBundle.e51fce2af32ed8fbadd6.js"
+                },
+                {
+                  "url": "https://www.nike.com/_next/static/chunks/895.0fa2349158c9c380.js",
+                  "sourceTransferBytes": 1775
+                }
+              ],
+              "type": "subitems"
+            },
+            "source": "node_modules/@nike/nike-design-system-icons"
+          },
+          {
+            "source": "node_modules/@tanstack/query-core",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "sourceTransferBytes": "[…]",
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.tanstack-cc8bdbff.chunk.abb831.js"
+                },
+                {
+                  "sourceTransferBytes": 4428,
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.tanstack-85380d1b.chunk.da61c5.js"
+                },
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.tanstack-6c66b8bb.chunk.964e0d.js",
+                  "sourceTransferBytes": 3954
+                },
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.tanstack-d72ec2b0.chunk.0aa8b1.js",
+                  "sourceTransferBytes": 3550
+                },
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.tanstack-180bf415.chunk.f990be.js",
+                  "sourceTransferBytes": 3341
+                }
+              ]
+            },
+            "wastedBytes": 15273
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.qs.chunk.105f03.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "url": "https://www.nike.com/_next/static/chunks/pages/_app-d2ddddbf09e2f8f4.js",
+                  "sourceTransferBytes": 5950
+                },
+                {
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/footer.clientBundle.e51fce2af32ed8fbadd6.js",
+                  "sourceTransferBytes": 3742
+                },
+                {
+                  "sourceTransferBytes": 3178,
+                  "url": "https://www.nike.com/static/dotcom-privacy/mfe-privacy-consent/_reco/public/069a1774aa37b2b1c768/index.umd.js"
+                }
+              ],
+              "type": "subitems"
+            },
+            "source": "node_modules/qs",
+            "wastedBytes": 12870
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/3035.chunk.c5820b.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "url": "https://www.nike.com/static/dotcom-privacy/mfe-privacy-consent/_reco/public/069a1774aa37b2b1c768/index.umd.js",
+                  "sourceTransferBytes": 2265
+                },
+                {
+                  "sourceTransferBytes": 2259,
+                  "url": "https://www.nike.com/static/uxf/error-modal/_reco/public/1b12bd7e29a3def3a2dc/index.umd.js"
+                },
+                {
+                  "url": "https://www.nike.com/static/uxf/nike-ai-search/_reco/public/5df9ca143f80ff1095ae/index.umd.js",
+                  "sourceTransferBytes": 2163
+                },
+                {
+                  "url": "https://www.nike.com/_next/static/chunks/429.56d510398e3e7a26.js",
+                  "sourceTransferBytes": 2047
+                },
+                {
+                  "sourceTransferBytes": 1694,
+                  "url": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js"
+                },
+                {
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/commons.clientBundle.e51fce2af32ed8fbadd6.js",
+                  "sourceTransferBytes": 1286
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 11714,
+            "source": "node_modules/focus-trap-react"
+          },
+          {
+            "source": "node_modules/focus-trap",
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/3035.chunk.c5820b.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "url": "https://www.nike.com/static/dotcom-privacy/mfe-privacy-consent/_reco/public/069a1774aa37b2b1c768/index.umd.js",
+                  "sourceTransferBytes": 2152
+                },
+                {
+                  "sourceTransferBytes": 2109,
+                  "url": "https://www.nike.com/static/uxf/error-modal/_reco/public/1b12bd7e29a3def3a2dc/index.umd.js"
+                },
+                {
+                  "sourceTransferBytes": 2046,
+                  "url": "https://www.nike.com/static/uxf/nike-ai-search/_reco/public/5df9ca143f80ff1095ae/index.umd.js"
+                },
+                {
+                  "url": "https://www.nike.com/_next/static/chunks/429.56d510398e3e7a26.js",
+                  "sourceTransferBytes": 1947
+                },
+                {
+                  "url": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js",
+                  "sourceTransferBytes": 1573
+                },
+                {
+                  "sourceTransferBytes": 1212,
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/commons.clientBundle.e51fce2af32ed8fbadd6.js"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 11039
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "sourceTransferBytes": "[…]",
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.emotion-51cfe721.chunk.565a3c.js"
+                },
+                {
+                  "sourceTransferBytes": 2388,
+                  "url": "https://www.nike.com/static/dotcom-privacy/mfe-privacy-consent/_reco/public/069a1774aa37b2b1c768/index.umd.js"
+                },
+                {
+                  "url": "https://www.nike.com/static/uxf/error-modal/_reco/public/1b12bd7e29a3def3a2dc/index.umd.js",
+                  "sourceTransferBytes": 2382
+                },
+                {
+                  "url": "https://www.nike.com/static/uxf/nike-ai-search/_reco/public/5df9ca143f80ff1095ae/index.umd.js",
+                  "sourceTransferBytes": 2287
+                },
+                {
+                  "sourceTransferBytes": 1792,
+                  "url": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js"
+                },
+                {
+                  "sourceTransferBytes": 1355,
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/commons.clientBundle.e51fce2af32ed8fbadd6.js"
+                }
+              ]
+            },
+            "wastedBytes": 10204,
+            "source": "node_modules/@emotion/stylis"
+          },
+          {
+            "wastedBytes": 9736,
+            "source": "node_modules/uuid",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "sourceTransferBytes": "[…]",
+                  "url": "https://www.nike.com/static/experience/shop-components/public/npm.uuid.chunk.07bbb0.js"
+                },
+                {
+                  "sourceTransferBytes": 3519,
+                  "url": "https://www.nike.com/_next/static/chunks/pages/_app-d2ddddbf09e2f8f4.js"
+                },
+                {
+                  "sourceTransferBytes": 3285,
+                  "url": "https://www.nike.com/static/dotcom-privacy/mfe-privacy-consent/_reco/public/069a1774aa37b2b1c768/index.umd.js"
+                },
+                {
+                  "sourceTransferBytes": 2932,
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/footer.clientBundle.e51fce2af32ed8fbadd6.js"
+                }
+              ]
+            }
+          },
+          {
+            "wastedBytes": 8959,
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://www.nike.com/static/experience/shop-components/public/3035.chunk.c5820b.js",
+                  "sourceTransferBytes": "[…]"
+                },
+                {
+                  "sourceTransferBytes": 1808,
+                  "url": "https://www.nike.com/static/uxf/error-modal/_reco/public/1b12bd7e29a3def3a2dc/index.umd.js"
+                },
+                {
+                  "sourceTransferBytes": 1759,
+                  "url": "https://www.nike.com/static/dotcom-privacy/mfe-privacy-consent/_reco/public/069a1774aa37b2b1c768/index.umd.js"
+                },
+                {
+                  "sourceTransferBytes": 1731,
+                  "url": "https://www.nike.com/static/uxf/nike-ai-search/_reco/public/5df9ca143f80ff1095ae/index.umd.js"
+                },
+                {
+                  "url": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js",
+                  "sourceTransferBytes": 1356
+                },
+                {
+                  "url": "https://www.nike.com/_next/static/chunks/912-927a7ddcbae88200.js",
+                  "sourceTransferBytes": 1276
+                },
+                {
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/commons.clientBundle.e51fce2af32ed8fbadd6.js",
+                  "sourceTransferBytes": 1029
+                }
+              ],
+              "type": "subitems"
+            },
+            "source": "node_modules/react-transition-group"
+          },
+          {
+            "source": "node_modules/@bufbuild/protobuf",
+            "subItems": {
+              "items": [
+                {
+                  "sourceTransferBytes": "[…]",
+                  "url": "https://www.nike.com/static/analytics-client/public/analytics-client.min.js"
+                },
+                {
+                  "url": "https://www.nike.com/static/analytics-client/public/9970.chunk.5cf733.js",
+                  "sourceTransferBytes": 5200
+                },
+                {
+                  "sourceTransferBytes": 3462,
+                  "url": "https://www.nike.com/static/analytics-client/public/6168.chunk.e56ac6.js"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 8662
+          }
+        ]
+      },
+      {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0,
+        "displayValue": "Est savings of 86 KiB",
+        "savingsMs": {
+          "LCP": 300,
+          "FCP": 150
+        },
+        "items": [
+          {
+            "wastedBytes": 60396,
+            "url": "*:where(.pds--globals) {\n  box-sizing: border-box;\n  margin: 0;\n} …",
+            "totalBytes": 62374,
+            "wastedPercent": 96.82814524093527
+          },
+          {
+            "url": "https://static-assets.nike.com/video-player/2.2.0/nike-one-video-player.min.css",
+            "wastedBytes": 15785,
+            "wastedPercent": 95.68493247144649,
+            "totalBytes": 16497
+          },
+          {
+            "wastedPercent": 90.61443626963612,
+            "totalBytes": 12692,
+            "url": "https://www.nike.com/_next/static/chunks/d978a8607d494609.css",
+            "wastedBytes": 11501
+          }
+        ]
+      },
+      {
+        "id": "font-display-insight",
+        "title": "Font display",
+        "description": "Consider setting [`font-display`](https://developer.chrome.com/docs/performance/insights/font-display) to `swap` or `optional` to ensure text is consistently visible. `swap` can be further optimized to mitigate layout shifts with [font metric overrides](https://developer.chrome.com/blog/font-fallbacks).",
+        "score": 0,
+        "displayValue": "Est savings of 140 ms",
+        "savingsMs": {
+          "FCP": 150,
+          "INP": 0
+        },
+        "items": [
+          {
+            "url": "https://www.nike.com/static/ncss/5.0/dotcom/fonts/Nike-Futura-ot-300.woff2",
+            "wastedMs": 140
+          },
+          {
+            "wastedMs": 135,
+            "url": "https://www.nike.com/static/ncss/5.0/dotcom/fonts/HelveticaNowTextMedium.woff2"
+          },
+          {
+            "wastedMs": 135,
+            "url": "https://www.nike.com/static/ncss/5.0/dotcom/fonts/HelveticaNowText.woff2"
+          },
+          {
+            "url": "https://www.nike.com/static/ncss/nike-design-system-fonts/dotcom/fonts/HelveticaNowTextNDL.woff2",
+            "wastedMs": 95
+          },
+          {
+            "wastedMs": 60,
+            "url": "https://www.nike.com/static/ncss/nike-design-system-fonts/dotcom/fonts/Nike-Futura-ND-L-CnXBd.woff2"
+          },
+          {
+            "wastedMs": 40,
+            "url": "https://www.nike.com/static/ncss/5.0/dotcom/fonts/HelveticaNowDisplayMedium.woff2"
+          },
+          {
+            "wastedMs": 40,
+            "url": "https://www.nike.com/static/ncss/nike-design-system-fonts/dotcom/fonts/HelveticaNowTextNDL-Md.woff2"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "selector": "div > div._3PJUZAN0 > div.Yjk73vve > button.nds-btn",
+              "nodeLabel": "See All",
+              "lhId": "1-22-BUTTON",
+              "boundingRect": {
+                "top": 11299,
+                "bottom": 11335,
+                "width": 100,
+                "left": 153,
+                "height": 36,
+                "right": 253
+              },
+              "type": "node",
+              "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,50,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,BUTTON",
+              "snippet": "<button aria-label=\"[object Object]\" class=\"nds-btn inline-flx-btn dz_xjzja _2minRfAM _4EfJ5rYM css-1bu2zqf ex41m6f0 b…\" type=\"button\" aria-expanded=\"false\" data-actiontext=\"[object Object]\" data-analytics-allow=\"true\" data-button-type=\"button\" data-click-mod=\"f7183b3e881b0b9274bceb6f06f99d19fa490c9…"
+            }
+          }
+        ]
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "title": "Elements use prohibited ARIA attributes",
+        "description": "Using ARIA attributes in roles where they are prohibited can mean that important information is not communicated to users of assistive technologies. [Learn more about prohibited ARIA roles](https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "lhId": "1-5-DIV",
+              "snippet": "<div aria-label=\"Nike AI\" tabindex=\"-1\" class=\"nav-css-1sf9wd7\">",
+              "type": "node",
+              "explanation": "Fix all of the following:\n  aria-label attribute cannot be used on \"div\" elements with no valid role attribute.",
+              "nodeLabel": "Nike AI",
+              "selector": "body.nav-scrollable > div#footer-wrapper > div#gen-nav-footer > div.nav-css-1sf9wd7",
+              "path": "1,HTML,1,BODY,15,DIV,1,DIV,1,DIV",
+              "boundingRect": {
+                "height": 0,
+                "width": 412,
+                "bottom": 13542,
+                "left": 0,
+                "top": 13542,
+                "right": 412
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "valid-source-maps",
+        "title": "Missing source maps for large first-party JavaScript",
+        "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "scriptUrl": "https://www.nike.com/mtrx9k/uFj3l8bZFkgvGqZs53j5LalU-9BDc9F6cthpEd1_0-lBuKaK5oUlBDIviV3dB9YXxWT72wpzjTx8i38bg3CikIU",
+            "subItems": {
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                }
+              ],
+              "type": "subitems"
+            },
+            "scriptUrl": "https://www.nike.com/mtrx9k/?id=GTM-NTF2X45&l=marketingClientDataLayer"
+          },
+          {
+            "scriptUrl": "https://static-assets.nike.com/video-player/2.2.0/nike-one-video-player.min.js",
+            "subItems": {
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "sourceMapUrl": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js.map",
+            "subItems": {
+              "items": [
+                {
+                  "error": "Warning: missing 38 items in `.sourcesContent`"
+                }
+              ],
+              "type": "subitems"
+            },
+            "scriptUrl": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js"
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<?xml vers\"... is not valid JSON"
+                }
+              ]
+            },
+            "scriptUrl": "https://www.nike.com/assets/vendor/@emotion/styled/10.3.0/styled.umd.min.js",
+            "sourceMapUrl": "https://www.nike.com/assets/vendor/@emotion/styled/10.3.0/styled.umd.min.js.map"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<?xml vers\"... is not valid JSON"
+                }
+              ],
+              "type": "subitems"
+            },
+            "scriptUrl": "https://www.nike.com/assets/vendor/@emotion/styled-base/10.3.0/styled-base.umd.min.js",
+            "sourceMapUrl": "https://www.nike.com/assets/vendor/@emotion/styled-base/10.3.0/styled-base.umd.min.js.map"
+          },
+          {
+            "scriptUrl": "https://www.nike.com/assets/vendor/@emotion/core/10.3.1/core.umd.min.js",
+            "sourceMapUrl": "https://www.nike.com/assets/vendor/@emotion/core/10.3.1/core.umd.min.js.map",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<?xml vers\"... is not valid JSON"
+                }
+              ]
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Warning: missing 3 items in `.sourcesContent`"
+                }
+              ]
+            },
+            "scriptUrl": "https://www.nike.com/_next/static/chunks/webpack-9ec76f1d1e29a50a.js",
+            "sourceMapUrl": "https://www.nike.com/_next/static/chunks/webpack-9ec76f1d1e29a50a.js.map"
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Error: Map has no numeric `version` field"
+                }
+              ]
+            },
+            "scriptUrl": "https://www.nike.com/_next/static/chunks/pages/%5B%5B...page%5D%5D-0468702b8be4e4cf.js",
+            "sourceMapUrl": "https://www.nike.com/_next/static/chunks/pages/[[...page]]-0468702b8be4e4cf.js.map"
+          },
+          {
+            "scriptUrl": "https://www.nike.com/",
+            "subItems": {
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ],
+              "type": "subitems"
+            },
+            "sourceMapUrl": "https://www.nike.com/shared.clientBundle.e51fce2af32ed8fbadd6.js.map"
+          }
+        ]
+      },
+      {
+        "id": "link-text",
+        "title": "Links do not have descriptive text",
+        "description": "Descriptive link text helps search engines understand your content. [Learn how to make links more accessible](https://developer.chrome.com/docs/lighthouse/seo/link-text/).",
+        "score": 0,
+        "displayValue": "1 link found",
+        "savingsMs": null,
+        "items": [
+          {
+            "text": "Learn more",
+            "textLang": "en-US",
+            "href": "https://www.nike.com/membership"
+          }
+        ]
+      },
+      {
+        "id": "lcp-breakdown-insight",
+        "title": "LCP breakdown",
+        "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "table",
+            "items": [
+              {
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte",
+                "duration": 49.171
+              },
+              {
+                "label": "Resource load delay",
+                "duration": 3110.005,
+                "subpart": "resourceLoadDelay"
+              },
+              {
+                "label": "Resource load duration",
+                "subpart": "resourceLoadDuration",
+                "duration": 14.972
+              },
+              {
+                "label": "Element render delay",
+                "subpart": "elementRenderDelay",
+                "duration": 1660.75
+              }
+            ],
+            "headings": [
+              {
+                "key": "label",
+                "label": "Subpart",
+                "valueType": "text"
+              },
+              {
+                "key": "duration",
+                "label": "Duration",
+                "valueType": "ms"
+              }
+            ]
+          },
+          {
+            "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,2,DIV,0,DIV,0,DIV,0,FIGURE,0,DIV,0,DIV,0,DIV,0,IMG",
+            "nodeLabel": "Greatness<br>Wrapped Up",
+            "lhId": "page-0-IMG",
+            "boundingRect": {
+              "top": 160,
+              "right": 412,
+              "height": 617,
+              "left": 0,
+              "width": 412,
+              "bottom": 777
+            },
+            "type": "node",
+            "snippet": "<img loading=\"eager\" data-qa=\"image-media-img\" alt=\"Greatness&lt;br&gt;Wrapped Up\" class=\"_32IPZERI _3jm9Bm_E guL_1FMX\" data-landscape-url=\"https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/2c4b9687-c0…\" data-portrait-url=\"https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/0…",
+            "selector": "div.WetubkUi > div.l01-Jx1P > div > img._32IPZERI"
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0,
+        "displayValue": "27.9 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "aria-required-parent",
+        "title": "`[role]`s are not contained by their required parent element",
+        "description": "Some ARIA child roles must be contained by specific parent roles to properly perform their intended accessibility functions. [Learn more about ARIA roles and required parent element](https://dequeuniversity.com/rules/axe/4.14/aria-required-parent).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,15,DIV,1,DIV,0,FOOTER,3,DIV,0,UL,1,LI,0,DIV,0,DETAILS,0,SUMMARY",
+              "snippet": "<summary aria-expanded=\"false\" aria-haspopup=\"menu\" aria-label=\"Guides menu\" class=\"drop-down-accessibility-button\" role=\"menuitem\" tabindex=\"0\">",
+              "selector": "li > div.nav-css-s8yvqs > details.nav-css-1qehhq > summary.drop-down-accessibility-button",
+              "boundingRect": {
+                "height": 24,
+                "width": 70,
+                "left": 24,
+                "bottom": 13290,
+                "top": 13266,
+                "right": 94
+              },
+              "lhId": "1-4-SUMMARY",
+              "nodeLabel": "Guides",
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Required ARIA parents role not present: menu, menubar"
+            }
+          }
+        ]
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "title": "LCP request discovery",
+        "description": "[Optimize LCP](https://developer.chrome.com/docs/performance/insights/lcp-discovery) by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "checklist",
+            "items": {
+              "requestDiscoverable": {
+                "label": "Request is discoverable in initial document",
+                "value": false
+              },
+              "eagerlyLoaded": {
+                "label": "LCP resources shouldn’t use loading=lazy",
+                "value": true
+              },
+              "priorityHinted": {
+                "label": "fetchpriority=high should be applied",
+                "value": false
+              }
+            }
+          },
+          {
+            "boundingRect": {
+              "bottom": 777,
+              "right": 412,
+              "left": 0,
+              "top": 160,
+              "width": 412,
+              "height": 617
+            },
+            "selector": "div.WetubkUi > div.l01-Jx1P > div > img._32IPZERI",
+            "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,2,DIV,0,DIV,0,DIV,0,FIGURE,0,DIV,0,DIV,0,DIV,0,IMG",
+            "snippet": "<img loading=\"eager\" data-qa=\"image-media-img\" alt=\"Greatness&lt;br&gt;Wrapped Up\" class=\"_32IPZERI _3jm9Bm_E guL_1FMX\" data-landscape-url=\"https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/2c4b9687-c0…\" data-portrait-url=\"https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/0…",
+            "nodeLabel": "Greatness<br>Wrapped Up",
+            "type": "node",
+            "lhId": "page-0-IMG"
+          }
+        ]
+      },
+      {
+        "id": "forced-reflow-insight",
+        "title": "Forced reflow",
+        "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "items": [
+              {
+                "reflowTime": 13.923,
+                "source": {
+                  "urlProvider": "network",
+                  "type": "source-location",
+                  "url": "https://www.nike.com/assets/vendor/react/18.3.1/react.production.min.js",
+                  "column": 183,
+                  "line": 21
+                }
+              }
+            ],
+            "headings": [
+              {
+                "valueType": "source-location",
+                "key": "source",
+                "label": "Top function call"
+              },
+              {
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Total reflow time",
+                "key": "reflowTime"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "source",
+                "label": "Source",
+                "valueType": "source-location"
+              },
+              {
+                "granularity": 1,
+                "valueType": "ms",
+                "label": "Total reflow time",
+                "key": "reflowTime"
+              }
+            ],
+            "items": [
+              {
+                "source": {
+                  "type": "text",
+                  "value": "[unattributed]"
+                },
+                "reflowTime": 227.318
+              },
+              {
+                "reflowTime": 10.729,
+                "source": {
+                  "urlProvider": "network",
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/commons.clientBundle.e51fce2af32ed8fbadd6.js",
+                  "type": "source-location",
+                  "line": 360,
+                  "column": 3397
+                }
+              },
+              {
+                "source": {
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/commons.clientBundle.e51fce2af32ed8fbadd6.js",
+                  "line": 360,
+                  "urlProvider": "network",
+                  "type": "source-location",
+                  "column": 4193
+                },
+                "reflowTime": 0.64
+              },
+              {
+                "source": {
+                  "type": "source-location",
+                  "column": 79714,
+                  "url": "https://www.nike.com/static/uxf/dotcom-nav-v3/packages/header-footer-renderer/public/commons.clientBundle.e51fce2af32ed8fbadd6.js",
+                  "urlProvider": "network",
+                  "line": 710
+                },
+                "reflowTime": 2.554
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "image-alt",
+        "title": "Image elements do not have `[alt]` attributes",
+        "description": "Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more about the `alt` attribute](https://dequeuniversity.com/rules/axe/4.14/image-alt).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "explanation": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics …",
+              "selector": "body.nav-scrollable > div#singular-banner > img.singular-banner-background-image",
+              "snippet": "<img class=\"singular-banner-background-image\" src=\"\">",
+              "boundingRect": {
+                "height": 60,
+                "width": 0,
+                "left": 11,
+                "right": 11,
+                "top": 752,
+                "bottom": 812
+              },
+              "type": "node",
+              "lhId": "1-20-IMG",
+              "nodeLabel": "body.nav-scrollable > div#singular-banner > img.singular-banner-background-image",
+              "path": "1,HTML,1,BODY,0,DIV,0,IMG"
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-21-IMG",
+              "nodeLabel": "body.nav-scrollable > div#singular-banner > img.singular-banner-logo",
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics …",
+              "path": "1,HTML,1,BODY,0,DIV,1,IMG",
+              "selector": "body.nav-scrollable > div#singular-banner > img.singular-banner-logo",
+              "boundingRect": {
+                "left": 31,
+                "width": 60,
+                "bottom": 812,
+                "right": 91,
+                "height": 60,
+                "top": 752
+              },
+              "snippet": "<img class=\"singular-banner-logo\" src=\"https://cdn.singular.net/dashboard/banners/29beaa59fc1cb4d7195c8ed1c8fc957…\">"
+            }
+          }
+        ]
+      },
+      {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "description": "[NikeAI] users profile is not detected",
+            "source": "console.error",
+            "sourceLocation": {
+              "urlProvider": "network",
+              "type": "source-location",
+              "line": 1,
+              "column": 23593,
+              "url": "https://www.nike.com/"
+            }
+          },
+          {
+            "description": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT",
+            "source": "network",
+            "sourceLocation": {
+              "column": 0,
+              "urlProvider": "network",
+              "url": "https://analytics.nike.com/v1/p",
+              "type": "source-location",
+              "line": 0
+            }
+          },
+          {
+            "source": "network",
+            "sourceLocation": {
+              "url": "https://analytics.nike.com/v1/t",
+              "column": 0,
+              "type": "source-location",
+              "line": 0,
+              "urlProvider": "network"
+            },
+            "description": "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT"
+          },
+          {
+            "source": "network",
+            "sourceLocation": {
+              "type": "source-location",
+              "url": "https://collect.nike.com/g/collect?v=2&tid=G-QTVTHYLBQS&gtm=45g92e6bc0h2v885602126z8831367757za20kzb831367757zd831367757xf4&_p=1794761658038&gcs=G111&gcd=13r3r3r3r5l1&npa=0&dma=0&gdid=dNWVlNT&ecid=266893268&_eu=AAAAAGQ&_fplc=0&cid=546386540.1794761659&frm=0&pscdl=noapi&rcb=7&sr=412x823&uaa=&uab=64&u…",
+              "column": 0,
+              "line": 0,
+              "urlProvider": "network"
+            },
+            "description": "Failed to load resource: net::ERR_TIMED_OUT"
+          },
+          {
+            "sourceLocation": {
+              "column": 0,
+              "line": 0,
+              "urlProvider": "network",
+              "type": "source-location",
+              "url": "https://api.nike.com/buy/carts/v2/US/NIKE/NIKECOM"
+            },
+            "source": "network",
+            "description": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+          },
+          {
+            "source": "network",
+            "sourceLocation": {
+              "line": 0,
+              "urlProvider": "network",
+              "url": "https://api.nike.com/buy/carts/v2/US/NIKE/NIKECOM",
+              "column": 0,
+              "type": "source-location"
+            },
+            "description": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          },
+          {
+            "sourceLocation": {
+              "urlProvider": "network",
+              "column": 23593,
+              "line": 1,
+              "url": "https://www.nike.com/",
+              "type": "source-location"
+            },
+            "source": "console.error",
+            "description": "VIDEOJS: ERROR: (CODE:4 MEDIA_ERR_SRC_NOT_SUPPORTED) The media could not be loaded, either because the server or network failed or because the format is not supported. [object lr]"
+          },
+          {
+            "source": "console.error",
+            "sourceLocation": {
+              "column": 23593,
+              "url": "https://www.nike.com/",
+              "urlProvider": "network",
+              "type": "source-location",
+              "line": 1
+            },
+            "description": "VIDEOJS: ERROR: (CODE:4 MEDIA_ERR_SRC_NOT_SUPPORTED) The media could not be loaded, either because the server or network failed or because the format is not supported. [object lr]"
+          },
+          {
+            "description": "VIDEOJS: ERROR: (CODE:4 MEDIA_ERR_SRC_NOT_SUPPORTED) The media could not be loaded, either because the server or network failed or because the format is not supported. [object lr]",
+            "sourceLocation": {
+              "urlProvider": "network",
+              "url": "https://www.nike.com/",
+              "type": "source-location",
+              "line": 1,
+              "column": 23593
+            },
+            "source": "console.error"
+          }
+        ]
+      },
+      {
+        "id": "heading-order",
+        "title": "Heading elements are not in a sequentially-descending order",
+        "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.14/heading-order).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "boundingRect": {
+                "left": 24,
+                "width": 364,
+                "bottom": 1966,
+                "right": 388,
+                "height": 72,
+                "top": 1894
+              },
+              "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,6,DIV,0,DIV,0,DIV,0,FIGURE,2,FIGCAPTION,0,DIV,0,H3",
+              "nodeLabel": "LOCK IN\nTO LIFT OFF",
+              "selector": "figure.image-card > figcaption._13xDDA0A > div._3T7SP3hk > h3#a11y_react-aria-:Re7ppl6:-title",
+              "type": "node",
+              "snippet": "<h3 class=\"nds-text _1MF91zHG css-p61h82 e1yhcai00 appearance-display2 color-primaryI…\" id=\"a11y_react-aria-:Re7ppl6:-title\" data-qa=\"title\">",
+              "lhId": "1-18-H3",
+              "explanation": "Fix any of the following:\n  Heading order invalid"
+            }
+          },
+          {
+            "node": {
+              "selector": "div#d6a19f7d-3a7e-4e39-850f-a628693392a9 > div#942fc836-58a7-40f1-abe8-19490eb19af8 > div.merchMenuWrapper > h4.merch-menu-heading",
+              "type": "node",
+              "lhId": "1-19-H4",
+              "boundingRect": {
+                "width": 344,
+                "height": 28,
+                "left": 20,
+                "top": 12278,
+                "right": 364,
+                "bottom": 12306
+              },
+              "explanation": "Fix any of the following:\n  Heading order invalid",
+              "nodeLabel": "Featured",
+              "snippet": "<h4 class=\"merch-menu-heading\">",
+              "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,62,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,H4"
+            }
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "longestChain": {
+                "duration": 7343
+              },
+              "chains": {
+                "1DAF76AC169F2B2009DC5F383F875D8D": {
+                  "url": "https://www.nike.com/",
+                  "transferSize": 193383,
+                  "children": "[…]",
+                  "isLongest": true,
+                  "navStartToEndTime": 512
+                }
+              },
+              "type": "network-tree"
+            }
+          },
+          {
+            "title": "Preconnected origins",
+            "type": "list-section",
+            "value": {
+              "type": "table",
+              "headings": [
+                {
+                  "label": "Origin",
+                  "key": "origin",
+                  "valueType": "text",
+                  "subItemsHeading": "[…]"
+                },
+                {
+                  "key": "source",
+                  "valueType": "node",
+                  "label": "Source"
+                }
+              ],
+              "items": [
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://api.nike.com"
+                },
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://static-assets.nike.com"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://static.nike.com",
+                  "subItems": "[…]"
+                },
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://js-agent.newrelic.com"
+                },
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://s.pinimg.com"
+                },
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://analytics.tiktok.com"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://www.redditstatic.com",
+                  "subItems": "[…]"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://bzrcdn.openai.com",
+                  "subItems": "[…]"
+                },
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://web-sdk-cdn.singular.net"
+                }
+              ]
+            },
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to."
+          },
+          {
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "value": {
+              "headings": [
+                {
+                  "label": "Origin",
+                  "valueType": "text",
+                  "key": "origin"
+                },
+                {
+                  "valueType": "ms",
+                  "key": "wastedMs",
+                  "label": "Est LCP savings"
+                }
+              ],
+              "items": [
+                {
+                  "wastedMs": 314,
+                  "origin": "https://nikeconsumerservices.my.site.com"
+                }
+              ],
+              "type": "table"
+            },
+            "type": "list-section",
+            "title": "Preconnect candidates"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.14/color-contrast).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "body.nav-scrollable > div#singular-banner > div.singular-banner-content > span.singular-banner-title",
+              "snippet": "<span class=\"singular-banner-title\">",
+              "path": "1,HTML,1,BODY,0,DIV,2,DIV,0,SPAN",
+              "boundingRect": {
+                "width": 220,
+                "bottom": 785,
+                "left": 101,
+                "top": 760,
+                "height": 25,
+                "right": 321
+              },
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.47 (foreground color: #ffffff, background color: #777777, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "type": "node",
+              "nodeLabel": "Only in the Nike App",
+              "lhId": "1-6-SPAN"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,0,DIV,2,DIV,1,SPAN",
+              "snippet": "<span class=\"singular-banner-subtitle\">",
+              "selector": "body.nav-scrollable > div#singular-banner > div.singular-banner-content > span.singular-banner-subtitle",
+              "nodeLabel": "Get exclusive access, member rewards, and more.",
+              "boundingRect": {
+                "top": 785,
+                "right": 321,
+                "bottom": 804,
+                "left": 101,
+                "height": 19,
+                "width": 220
+              },
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.47 (foreground color: #ffffff, background color: #777777, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "lhId": "1-8-SPAN"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "selector": "body.nav-scrollable > div#singular-banner > div.singular-banner-download-button",
+              "lhId": "1-9-DIV",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.46 (foreground color: #007aff, background color: #eeeeee, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "snippet": "<div class=\"singular-banner-download-button\">",
+              "type": "node",
+              "path": "1,HTML,1,BODY,0,DIV,4,DIV",
+              "boundingRect": {
+                "height": 37,
+                "left": 340,
+                "width": 61,
+                "top": 764,
+                "right": 401,
+                "bottom": 801
+              },
+              "nodeLabel": "OPEN"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.25 (foreground color: #ffffff, background color: #e5e5e5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,40,DIV,0,DIV,0,DIV,0,FIGURE,2,FIGCAPTION,0,DIV,1,P",
+              "boundingRect": {
+                "width": 273,
+                "height": 72,
+                "top": 6662,
+                "bottom": 6734,
+                "right": 321,
+                "left": 48
+              },
+              "nodeLabel": "The game's biggest moments belong to Yordan Álvarez, your 2026 AL MVP.",
+              "type": "node",
+              "lhId": "1-10-P",
+              "selector": "figure.image-card > figcaption._13xDDA0A > div._3T7SP3hk > p.nds-text",
+              "snippet": "<p class=\"nds-text mt2-sm css-of85v2 e1yhcai00 appearance-body1 color-primaryInverse…\" data-qa=\"body\">"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "NEW NIKESKIMS",
+              "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,43,DIV,0,DIV,0,DIV,0,FIGURE,2,FIGCAPTION,0,DIV,0,H3",
+              "snippet": "<h3 class=\"nds-text _1MF91zHG css-p61h82 e1yhcai00 appearance-display2 color-primaryI…\" id=\"a11y_react-aria-:Rncppl6:-title\" data-qa=\"title\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.25 (foreground color: #ffffff, background color: #e5e5e5, font size: 30.0pt (40px), font weight: normal). Expected contrast ratio of 3:1",
+              "boundingRect": {
+                "bottom": 7810,
+                "left": 24,
+                "top": 7774,
+                "right": 388,
+                "width": 364,
+                "height": 36
+              },
+              "selector": "figure.image-card > figcaption._13xDDA0A > div._3T7SP3hk > h3#a11y_react-aria-:Rncppl6:-title",
+              "lhId": "1-12-H3",
+              "type": "node"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "node": {
+              "snippet": "<p class=\"nds-text mt2-sm css-of85v2 e1yhcai00 appearance-body1 color-primaryInverse…\" data-qa=\"body\">",
+              "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,43,DIV,0,DIV,0,DIV,0,FIGURE,2,FIGCAPTION,0,DIV,1,P",
+              "nodeLabel": "Retro Sport Collection. Launching 11/17.",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.25 (foreground color: #ffffff, background color: #e5e5e5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "lhId": "1-14-P",
+              "selector": "figure.image-card > figcaption._13xDDA0A > div._3T7SP3hk > p.nds-text",
+              "type": "node",
+              "boundingRect": {
+                "height": 24,
+                "width": 364,
+                "left": 24,
+                "right": 388,
+                "top": 7818,
+                "bottom": 7842
+              }
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-15-H3",
+              "selector": "figure.image-card > figcaption._13xDDA0A > div._3T7SP3hk > h3#a11y_react-aria-:Rrcppl6:-title",
+              "type": "node",
+              "snippet": "<h3 class=\"nds-text _1MF91zHG css-p61h82 e1yhcai00 appearance-display2 color-primaryI…\" id=\"a11y_react-aria-:Rrcppl6:-title\" data-qa=\"title\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.25 (foreground color: #ffffff, background color: #e5e5e5, font size: 30.0pt (40px), font weight: normal). Expected contrast ratio of 3:1",
+              "boundingRect": {
+                "bottom": 8427,
+                "top": 8355,
+                "right": 388,
+                "width": 364,
+                "left": 24,
+                "height": 72
+              },
+              "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,43,DIV,0,DIV,1,DIV,0,FIGURE,2,FIGCAPTION,0,DIV,0,H3",
+              "nodeLabel": "THE NIKESKIMS\nWAFFLE RACER"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.25 (foreground color: #ffffff, background color: #e5e5e5, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "type": "node",
+              "lhId": "1-17-P",
+              "snippet": "<p class=\"nds-text mt2-sm css-of85v2 e1yhcai00 appearance-body1 color-primaryInverse…\" data-qa=\"body\">",
+              "boundingRect": {
+                "width": 364,
+                "bottom": 8459,
+                "height": 24,
+                "right": 388,
+                "left": 24,
+                "top": 8435
+              },
+              "selector": "figure.image-card > figcaption._13xDDA0A > div._3T7SP3hk > p.nds-text",
+              "nodeLabel": "A Legacy Shoe, Reimagined.",
+              "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,43,DIV,0,DIV,1,DIV,0,FIGURE,2,FIGCAPTION,0,DIV,1,P"
+            }
+          }
+        ]
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "displayValue": "16.8 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.03,
+        "displayValue": "610 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.05,
+        "displayValue": "2,400 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.09,
+        "displayValue": "10.1 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.12,
+        "displayValue": "4.7 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 4,463 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "totalBytes": 210538,
+            "url": "https://www.nike.com/mtrx9k/?id=GTM-NTF2X45&l=marketingClientDataLayer"
+          },
+          {
+            "url": "https://www.nike.com/mtrx9k/uFj3l8bZFkgvGqZs53j5LalU-9BDc9F6cthpEd1_0-lBuKaK5oUlBDIviV3dB9YXxWT72wpzjTx8i38bg3CikIU",
+            "totalBytes": 199820
+          },
+          {
+            "url": "https://static-assets.nike.com/video-player/2.2.0/nike-one-video-player.min.js",
+            "totalBytes": 195741
+          },
+          {
+            "url": "https://www.nike.com/",
+            "totalBytes": 193383
+          },
+          {
+            "totalBytes": 168040,
+            "url": "https://www.nike.com/static/bellotti/playcard/_reco/public/1575286df5ef4d909e03/index.umd.js"
+          },
+          {
+            "totalBytes": 161345,
+            "url": "https://www.nike.com/mtrx9k/uFj3l8bZFSZTesEPnhaDW95r4NEfbNttbdRzH_B0-eBGqYyf1oUdBAcrgh7MWYgM3mCp0UMq1T573i0QgZCF"
+          },
+          {
+            "url": "https://connect.facebook.net/signals/config/753367016113185?v=2.9.439&r=stable&domain=www.nike.com&im=1&hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C…",
+            "totalBytes": 151332
+          },
+          {
+            "totalBytes": 127814,
+            "url": "https://www.nike.com/static/cssf/async-chat/_reco/public/39167438ea0e037bee4a/index.umd.js"
+          },
+          {
+            "url": "https://analytics.tiktok.com/i18n/pixel/static/main.MTAyNjc1NzVmMQ.js",
+            "totalBytes": 120190
+          },
+          {
+            "url": "https://connect.facebook.net/en_US/fbevents.js",
+            "totalBytes": 102593
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0.5,
+        "displayValue": "Est savings of 80 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "subItems": {
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-classes",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "@babel/plugin-transform-regenerator",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.from"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.isArray"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.concat"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.filter"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.forEach"
+                },
+                {
+                  "signal": "Array.prototype.indexOf",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.map"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.slice"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 19632,
+            "url": "https://web-sdk-cdn.singular.net/singular-sdk/latest/singular-sdk.js"
+          },
+          {
+            "url": "https://www.nike.com/static/cssf/async-chat/_reco/public/39167438ea0e037bee4a/index.umd.js",
+            "subItems": {
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-classes",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-regenerator"
+                },
+                {
+                  "signal": "@babel/plugin-transform-spread",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.from",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.concat",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.filter",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.find",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.join"
+                },
+                {
+                  "signal": "Array.prototype.map",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 19499
+          },
+          {
+            "url": "https://www.nike.com/_next/static/chunks/main-c6a5aa7ea7abe2d7.js",
+            "subItems": {
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.flat",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.flatMap"
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Object.hasOwn",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "String.prototype.trimEnd",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 11376
+          },
+          {
+            "wastedBytes": 11289,
+            "url": "https://connect.facebook.net/en_US/fbevents.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-classes"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-regenerator"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-spread"
+                },
+                {
+                  "signal": "Array.from",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.filter",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.find",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.map",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.startsWith"
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://www.redditstatic.com/ads/pixel.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-classes"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-regenerator"
+                },
+                {
+                  "signal": "Promise.allSettled",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Promise.any",
+                  "location": "[…]"
+                }
+              ]
+            },
+            "wastedBytes": 11285
+          },
+          {
+            "wastedBytes": 9103,
+            "subItems": {
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-regenerator",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Promise.allSettled",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Promise.any",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://analytics.tiktok.com/i18n/pixel/static/main.MTAyNjc1NzVmMQ.js"
+          }
+        ]
+      },
+      {
+        "id": "unminified-css",
+        "title": "Minify CSS",
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 46 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedPercent": 69.5813613451845,
+            "wastedBytes": 43401,
+            "totalBytes": 62374,
+            "url": "*:where(.pds--globals) {\n  box-sizing: border-box;\n  margin: 0;\n} …"
+          },
+          {
+            "wastedPercent": 64.2849315068493,
+            "url": "@font-face {\n  font-family: \"Helvetica Now Text\";\n  font-style: normal; … } …",
+            "totalBytes": 5475,
+            "wastedBytes": 3520
+          }
+        ]
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery).",
+        "score": 0.5,
+        "displayValue": "Est savings of 4 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "totalBytes": 79902,
+            "url": "https://static.nike.com/a/images/f_auto/dpr_1.8,cs_srgb/h_617,c_limit/57732b08-919f-4fa7-b2d0-f56d68aeffef/nike-just-do-it.jpg",
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 4434,
+                  "reason": "This image file is larger than it needs to be (742x1111) for its displayed dimensions (721x1080). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "nodeLabel": "A NikeSKIMS Waffle Racer in Baroque Brown sits atop a tall stack of waffles aga…",
+              "path": "1,HTML,1,BODY,14,DIV,0,DIV,0,DIV,1,DIV,29,DIV,0,DIV,0,DIV,0,FIGURE,0,DIV,0,DIV,0,DIV,0,IMG",
+              "type": "node",
+              "lhId": "page-11-IMG",
+              "boundingRect": {
+                "bottom": 3498,
+                "right": 412,
+                "left": 0,
+                "width": 412,
+                "top": 2881,
+                "height": 617
+              },
+              "selector": "div.WetubkUi > div.l01-Jx1P > div > img._32IPZERI",
+              "snippet": "<img loading=\"lazy\" data-qa=\"image-media-img\" alt=\"A NikeSKIMS Waffle Racer in Baroque Brown sits atop a tall stack of waffle…\" class=\"_32IPZERI _3jm9Bm_E guL_1FMX\" data-landscape-url=\"https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/869815b1-af…\" data-portrait-url=\"https://static.nike…"
+            },
+            "wastedBytes": 4434
+          }
+        ]
+      },
+      {
+        "id": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "displayValue": null,
+        "savingsMs": {
+          "CLS": 0
+        },
+        "items": [
+          {
+            "node": {
+              "type": "node",
+              "snippet": "<img alt=\"\" aria-hidden=\"true\" src=\"https://static.nike.com/a/images/w_960,c_limit/3732c58b-d0ad-4c3c-898c-c4b…\" style=\"object-fit:contain\">",
+              "boundingRect": {
+                "bottom": 13415,
+                "top": 13393,
+                "right": 52,
+                "width": 28,
+                "left": 24,
+                "height": 22
+              },
+              "lhId": "1-845-IMG",
+              "path": "1,HTML,1,BODY,15,DIV,1,DIV,0,FOOTER,3,DIV,0,UL,5,LI,0,A,0,IMG",
+              "selector": "ul.footer-list > li > a.nav-css-1isz5ne > img",
+              "nodeLabel": "ul.footer-list > li > a.nav-css-1isz5ne > img"
+            },
+            "url": "https://static.nike.com/a/images/w_960,c_limit/3732c58b-d0ad-4c3c-898c-c4b90193312b/image.png"
+          },
+          {
+            "node": {
+              "selector": "body.nav-scrollable > div#singular-banner > img.singular-banner-background-image",
+              "lhId": "1-20-IMG",
+              "type": "node",
+              "boundingRect": {
+                "height": 60,
+                "width": 0,
+                "top": 752,
+                "left": 11,
+                "right": 11,
+                "bottom": 812
+              },
+              "nodeLabel": "body.nav-scrollable > div#singular-banner > img.singular-banner-background-image",
+              "snippet": "<img class=\"singular-banner-background-image\" src=\"\">",
+              "path": "1,HTML,1,BODY,0,DIV,0,IMG"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.nike.com/",
+    "status": 200,
+    "htmlBytes": 1068864,
+    "headers": {
+      "contentType": "text/html; charset=UTF-8",
+      "cacheControl": "max-age=721",
+      "contentEncoding": "gzip",
+      "xRobotsTag": null,
+      "server": "unified-edge-router"
+    },
+    "meta": {
+      "title": "Nike. Just Do It. Nike.com",
+      "description": "Inspiring the world's athletes, Nike delivers innovative products, experiences and services.",
+      "canonical": "https://www.nike.com/",
+      "lang": "en-US",
+      "robots": "index, follow",
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=2.0",
+      "openGraph": {
+        "og:description": "Nike delivers innovative products, experiences and services to inspire athletes.",
+        "og:image": "https://c.static-nike.com/a/images/w_1920,c_limit/bzl2wmsfh7kgdkufrrjq/image.jpg",
+        "og:locale": "en-US",
+        "og:site_name": "Nike.com",
+        "og:title": "Nike. Just Do It",
+        "og:type": "website",
+        "og:url": "https://www.nike.com/"
+      }
+    },
+    "headings": [
+      {
+        "level": 1,
+        "text": "GreatnessWrapped Up"
+      },
+      {
+        "level": 3,
+        "text": "LOCK INTO LIFT OFF"
+      },
+      {
+        "level": 3,
+        "text": "GreatnessWrapped Up"
+      },
+      {
+        "level": 3,
+        "text": "LOCK INTO LIFT OFF"
+      },
+      {
+        "level": 3,
+        "text": "THRIVE IN COLDCONDITIONS"
+      },
+      {
+        "level": 3,
+        "text": "NEVER MISS A DAY"
+      },
+      {
+        "level": 3,
+        "text": "The future ofair, by you"
+      },
+      {
+        "level": 3,
+        "text": "Left the yard.Owned the year."
+      },
+      {
+        "level": 3,
+        "text": "THRIVE IN COLDCONDITIONS"
+      },
+      {
+        "level": 3,
+        "text": "NEVER MISS A DAY"
+      },
+      {
+        "level": 3,
+        "text": "The future ofair, by you"
+      },
+      {
+        "level": 3,
+        "text": "Left the yard.Owned the year."
+      },
+      {
+        "level": 3,
+        "text": "New NikeSKIMS"
+      },
+      {
+        "level": 3,
+        "text": "The NikeSKIMSWaffle Racer"
+      },
+      {
+        "level": 3,
+        "text": "Your Rhythm. Your Rules."
+      },
+      {
+        "level": 3,
+        "text": "Last Four Standing"
+      },
+      {
+        "level": 3,
+        "text": "LIGHTEST.LEBRON. EVER."
+      },
+      {
+        "level": 3,
+        "text": "Your Rhythm. Your Rules."
+      },
+      {
+        "level": 3,
+        "text": "Last Four Standing"
+      },
+      {
+        "level": 3,
+        "text": "LIGHTEST.LEBRON. EVER."
+      },
+      {
+        "level": 2,
+        "text": "TRENDING"
+      },
+      {
+        "level": 2,
+        "text": "Inside Nike"
+      },
+      {
+        "level": 2,
+        "text": "TRENDING"
+      },
+      {
+        "level": 2,
+        "text": "Inside Nike"
+      },
+      {
+        "level": 2,
+        "text": "Africa"
+      },
+      {
+        "level": 2,
+        "text": "Americas"
+      },
+      {
+        "level": 2,
+        "text": "Asia Pacific"
+      },
+      {
+        "level": 2,
+        "text": "Europe"
+      },
+      {
+        "level": 2,
+        "text": "Middle East"
+      }
+    ],
+    "h1Count": 1,
+    "images": {
+      "total": 40,
+      "missingAlt": 0,
+      "missingDimensions": 40,
+      "lazy": 35,
+      "firstImages": [
+        {
+          "src": "",
+          "alt": "Nike. Just Do It",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "Nike. Just Do It",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "Greatness<br>Wrapped Up",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "Nike. Just Do It",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "Nike. Just Do It",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "LOCK IN<br>TO LIFT OFF",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "Greatness<br>Wrapped Up",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "Nike. Just Do It",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 4,
+      "blockingScripts": 0,
+      "preloads": [
+        {
+          "href": "https://www.nike.com/static/ncss/5.0/dotcom/fonts/Nike-Futura.woff2",
+          "as": "font"
+        },
+        {
+          "href": "/_next/static/chunks/d978a8607d494609.css",
+          "as": "style"
+        }
+      ],
+      "preconnects": []
+    },
+    "scripts": {
+      "total": 0,
+      "external": 25,
+      "thirdPartyHosts": [
+        "api.nike.com",
+        "static-assets.nike.com"
+      ]
+    },
+    "structuredData": {
+      "jsonLdBlocks": 3,
+      "types": [
+        "WebPage",
+        "Organization",
+        "WebSite"
+      ],
+      "invalidBlocks": 0,
+      "raw": [
+        "\n    {\"@context\":\"http://schema.org\",\"@type\":\"WebPage\",\"@id\":\"https://www.nike.com/#webpage\",\"name\":\"nike\",\"url\":\"https://www.nike.com/\"}\n  ",
+        "\n    {\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://www.nike.com/#organization\",\"contactPoint\":[{\"@type\":\"ContactPoint\",\"areaServed\":\"US\",\"availableLanguage\":\"English\",\"contactType\":\"customer support\",\"telephone\":\"+1-800-806-6453\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"AT\",\"availableLanguage\":[\"English\",\"German\"],\"contactType\":\"customer support\",\"telephone\":\"+43 (0) 13602773720\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"BE\",\"availableLanguage\":[\"English\",\"Dutch\",\"French\",\"German\"],\"contactType\":\"customer support\",\"telephone\":\"+32 (0) 26200166\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"CN\",\"availableLanguage\":\"Simplified Chinese\",\"contactOption\":\"Mobile\",\"contactType\":\"customer support\",\"telephone\":\"+86 400-880-6453\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"CN\",\"availableLanguage\":\"Simplified Chinese\",\"contactOption\":\"Landline\",\"contactType\":\"customer support\",\"telephone\":\"+86 800-820-8865\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"CZ\",\"availableLanguage\":[\"English\",\"Czech\"],\"contactType\":\"customer support\",\"telephone\":\"+420 225376453\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"DK\",\"availableLanguage\":[\"English\",\"Danish\"],\"contactType\":\"customer support\",\"telephone\":\"+45 82333183\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"FI\",\"availableLanguage\":\"English\",\"contactType\":\"customer support\",\"telephone\":\"+358 (0) 981710428\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"FR\",\"availableLanguage\":\"French\",\"contactType\":\"customer support\",\"telephone\":\"+33 (0) 170489073\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"DE\",\"availableLanguage\":\"German\",\"contactType\":\"customer support\",\"telephone\":\"+49 (0) 6995206453\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"GR\",\"availableLanguage\":\"Greek\",\"contactType\":\"customer support\",\"telephone\":\"+30 2111813851\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"HU\",\"availableLanguage\":[\"English\",\"Hungarian\"],\"contactType\":\"customer support\",\"telephone\":\"+36 13285338\"},{\"@type\":\"ContactPoint\",\"areaServed\":\"IE\",\"availableLanguage\":\"English\",\"contactType\":\"customer su…",
+        "\n    {\"@context\":\"http://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://www.nike.com/#website\",\"name\":\"Nike\",\"potentialAction\":{\"@type\":\"SearchAction\",\"query-input\":\"required name=search_term_string\",\"target\":\"https://www.nike.com/w?q={search_term_string}&vst={search_term_string}&cp=91120261542_sea_\"},\"url\":\"https://www.nike.com/\"}\n  "
+      ]
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [],
+      "allowed": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "Skip to main contentAccessibility at NikeFind a StoreHelpHelpOrder StatusShipping & DeliveryReturnsOrder CancellationSize ChartsContact UsMembershipPromotions & DiscountsProduct AdviceSend Us FeedbackJoin UsSign InBlack FridayBlack FridayExtra 25% Off Select StylesBlack Friday Best SellersMenShoesClothing AccessoriesShop AllWomenShoesClothing AccessoriesShop AllKidsShoesClothing AccessoriesShop AllMenBlack FridayExtra 25% Off Select StylesBlack Friday Best SellersNew & FeaturedNew ArrivalsBest SellersLatest DropsGiftsJordan Brand x Space JamSNKRS Launch CalendarAccessoriesAll AccessoriesBags & BackpacksBlack Friday Accessories Hats & HeadwearSocksSunglassesShoesAll ShoesBasketballBlack Friday ShoesJordanRunningSportswearTraining & GymCustom ShoesClothingAll ClothingBlack Friday ClothingFleeceHoodies & SweatshirtsJackets & VestsPantsShortsTops & Graphic TeesShop By SportACG (All Conditions Gear)BaseballBasketballFootballGolfLocker RoomRunningSoccerSkateboardingSwimmingTennisTrainingWomenBlack FridayExtra 25% Off Select StylesBlack Friday Best SellersNew & FeaturedNew ArrivalsBest SellersGiftsJordan Brand x Space JamSNKRS Launch CalendarAccessoriesAll AccessoriesBags & BackpacksBlack Friday Accessories Hats & HeadwearSocksSunglassesShoesAll ShoesBasketballBlack Friday ShoesJordanRunningSportswearTraining & GymCustom ShoesShop by ColorDark NeutralsPurple PulseSpruce GreensVery BerryWarm NeutralsClothingAll ClothingBlack Friday ClothingBrasFleeceHoodies & SweatshirtsJackets & Ves…"
+  }
+}

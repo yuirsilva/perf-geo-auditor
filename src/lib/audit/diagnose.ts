@@ -42,6 +42,7 @@ How to work:
 - Every issue must cite concrete evidence from the data. If the data doesn't support a claim, don't make it.
 - GEO (generative engine optimization): check whether AI crawlers are blocked, whether the content is server-rendered and readable without JS, and whether structured data describes the page well.
 - Prioritize: the first issue should be the change with the biggest real-user impact.
+- Always report images missing alt text.
 
 Core Web Vitals thresholds (field p75):
 | Metric | Good    | Poor    |

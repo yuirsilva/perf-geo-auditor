@@ -1,0 +1,1287 @@
+{
+  "name": "walmart",
+  "url": "https://www.walmart.com/",
+  "collectedAt": "2026-11-15T19:28:05.028Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-15T19:28:05.024Z",
+    "finalUrl": "https://www.walmart.com/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 38,
+      "accessibility": 100,
+      "best-practices": 54,
+      "seo": 92
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 2801,
+        "category": "AVERAGE"
+      },
+      "inpMs": {
+        "p75": 339,
+        "category": "AVERAGE"
+      },
+      "cls": {
+        "p75": 0.16,
+        "category": "AVERAGE"
+      },
+      "fcpMs": {
+        "p75": 2635,
+        "category": "AVERAGE"
+      },
+      "ttfbMs": {
+        "p75": 778,
+        "category": "FAST"
+      },
+      "overall": "AVERAGE"
+    },
+    "lab": {
+      "lcp": {
+        "value": 19989.846663678305,
+        "display": "20.0 s"
+      },
+      "cls": {
+        "value": 0.0003960870566593192,
+        "display": "0"
+      },
+      "tbt": {
+        "value": 1660.9999999999982,
+        "display": "1,660 ms"
+      },
+      "fcp": {
+        "value": 2065.9948865670835,
+        "display": "2.1 s"
+      },
+      "speedIndex": {
+        "value": 9341.61147523944,
+        "display": "9.3 s"
+      },
+      "ttfb": {
+        "value": 25,
+        "display": "Root document took 30 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 1,636 KiB",
+        "savingsMs": {
+          "LCP": 4550,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedPercent": 92.51458327579806,
+            "totalBytes": 651774,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/35302-ff0f46897373ac07.js",
+            "wastedBytes": 602986
+          },
+          {
+            "wastedBytes": 440012,
+            "wastedPercent": 61.166560748449115,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/pages/_app-d17072662f7dfbde.js",
+            "totalBytes": 719367
+          },
+          {
+            "url": "https://www.walmart.com/px/PXu6b0qd2S/init.js",
+            "totalBytes": 146703,
+            "wastedPercent": 55.75395124862313,
+            "wastedBytes": 81793
+          },
+          {
+            "wastedPercent": 93.1617592523919,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/763-b8bf5be2543bd8fb.js",
+            "totalBytes": 80898,
+            "wastedBytes": 75366
+          },
+          {
+            "wastedBytes": 52494,
+            "totalBytes": 54719,
+            "wastedPercent": 95.9340065697183,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/30424-152d1ff05478b650.js"
+          },
+          {
+            "wastedPercent": 84.26568930041152,
+            "wastedBytes": 52420,
+            "totalBytes": 62208,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/52810-f8f545e4b9dd5e3e.js"
+          },
+          {
+            "wastedPercent": 93.54072781896593,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/61687-c9d90d582a9918e1.js",
+            "wastedBytes": 38608,
+            "totalBytes": 41274
+          },
+          {
+            "totalBytes": 42114,
+            "wastedPercent": 89.83235978534454,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/36433-dcb6ad88c44109ce.js",
+            "wastedBytes": 37832
+          },
+          {
+            "wastedBytes": 37121,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/16714.df8df21af72db3bb.js",
+            "wastedPercent": 63.09222994314593,
+            "totalBytes": 58837
+          },
+          {
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/51879-7dafe7c4dc8d7639.js",
+            "wastedBytes": 36573,
+            "totalBytes": 37866,
+            "wastedPercent": 96.5853272064649
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "6.8 s",
+        "savingsMs": {
+          "TBT": 1650
+        },
+        "items": [
+          {
+            "duration": 3417.833999999993,
+            "group": "scriptEvaluation",
+            "groupLabel": "Script Evaluation"
+          },
+          {
+            "group": "other",
+            "duration": 1088.7683999999783,
+            "groupLabel": "Other"
+          },
+          {
+            "duration": 1031.368799999997,
+            "group": "scriptParseCompile",
+            "groupLabel": "Script Parsing & Compilation"
+          },
+          {
+            "group": "styleLayout",
+            "duration": 661.5815999999996,
+            "groupLabel": "Style & Layout"
+          },
+          {
+            "duration": 334.21079999999995,
+            "groupLabel": "Garbage Collection",
+            "group": "garbageCollection"
+          },
+          {
+            "groupLabel": "Rendering",
+            "duration": 157.3644000000001,
+            "group": "paintCompositeRender"
+          },
+          {
+            "groupLabel": "Parse HTML & CSS",
+            "duration": 77.69879999999998,
+            "group": "parseHTML"
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "3.7 s",
+        "savingsMs": {
+          "TBT": 1500
+        },
+        "items": [
+          {
+            "scripting": 1392.7871999999804,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/framework-31d3b826166ff95f.js",
+            "scriptParseCompile": 27.537600000000005,
+            "total": 1842.5327999999809
+          },
+          {
+            "scriptParseCompile": 4.6152,
+            "scripting": 53.75760000000011,
+            "total": 1103.6039999999998,
+            "url": "https://www.walmart.com/"
+          },
+          {
+            "total": 929.8079999999997,
+            "scripting": 537.0587999999996,
+            "scriptParseCompile": 293.87760000000003,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/pages/_app-d17072662f7dfbde.js"
+          },
+          {
+            "url": "Unattributable",
+            "scriptParseCompile": 0,
+            "total": 665.6171999999865,
+            "scripting": 72.73920000000007
+          },
+          {
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/pages/index-4eecbd19b490717a.js",
+            "scriptParseCompile": 0.3024,
+            "scripting": 303.2376,
+            "total": 304.26959999999997
+          },
+          {
+            "scripting": 226.44839999999982,
+            "url": "https://www.walmart.com/px/PXu6b0qd2S/init.js",
+            "scriptParseCompile": 41.308800000000005,
+            "total": 285.2771999999998
+          },
+          {
+            "scripting": 156.36000000000024,
+            "url": "https://www.walmart.com/~partytown/partytown-sandbox-sw.html?1794770852516",
+            "total": 174.47400000000022,
+            "scriptParseCompile": 1.9163999999999999
+          },
+          {
+            "scripting": 173.0496,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/pages/cart-9998e637f586478d.js",
+            "total": 173.6436,
+            "scriptParseCompile": 0.37079999999999996
+          },
+          {
+            "scripting": 170.36999999999992,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/83043.27228361edb999e2.js",
+            "total": 171.6599999999999,
+            "scriptParseCompile": 1.0115999999999998
+          },
+          {
+            "total": 96.45839999999995,
+            "scriptParseCompile": 16.1472,
+            "scripting": 74.01599999999995,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/main-9af786db1db276d7.js"
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 430 ms",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 450
+        },
+        "items": [
+          {
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/css/0cf39045614bf702.css",
+            "wastedMs": 1201,
+            "totalBytes": 71632
+          }
+        ]
+      },
+      {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0,
+        "displayValue": "Est savings of 59 KiB",
+        "savingsMs": {
+          "LCP": 450,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedPercent": 85.42403392833982,
+            "totalBytes": 70248,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/css/0cf39045614bf702.css",
+            "wastedBytes": 60009
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 142 KiB",
+        "savingsMs": {
+          "LCP": 300,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "cacheLifetimeMs": 600000,
+            "wastedBytes": 135760.16666666666,
+            "url": "https://www.walmart.com/px/PXu6b0qd2S/init.js",
+            "totalBytes": 148102
+          },
+          {
+            "cacheLifetimeMs": 3600000,
+            "wastedBytes": 9171.2,
+            "url": "https://i5.walmartimages.com/dfw/4ff9c6c9-9d3c/k2-_4929fdb8-29f8-4277-95ad-aa5de0c17652.v1.jpg?odnHeight=318&odnWidth=568&odnBg=&odnDynImageQuality=70",
+            "totalBytes": 11464
+          },
+          {
+            "totalBytes": 2319,
+            "wastedBytes": 927.6,
+            "cacheLifetimeMs": 86400000,
+            "url": "https://i5.walmartimages.com/beacon/beacon.js?bd=b.www.walmart.com&bh=beacon.lightest.walmart.com"
+          }
+        ]
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "displayValue": "20.0 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "lcp-breakdown-insight",
+        "title": "LCP breakdown",
+        "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "items": [
+              {
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte",
+                "duration": 25.238
+              },
+              {
+                "label": "Resource load delay",
+                "duration": 3680.9,
+                "subpart": "resourceLoadDelay"
+              },
+              {
+                "subpart": "resourceLoadDuration",
+                "duration": 14.396,
+                "label": "Resource load duration"
+              },
+              {
+                "subpart": "elementRenderDelay",
+                "duration": 85.093,
+                "label": "Element render delay"
+              }
+            ],
+            "type": "table",
+            "headings": [
+              {
+                "label": "Subpart",
+                "valueType": "text",
+                "key": "label"
+              },
+              {
+                "valueType": "ms",
+                "key": "duration",
+                "label": "Duration"
+              }
+            ]
+          },
+          {
+            "selector": "div.card-wrapper > div.aspect-ratio--object > div.w-100 > img#PrismAdjustableBanner-small-contentZone8-LYdPCyut",
+            "boundingRect": {
+              "right": 396,
+              "height": 213,
+              "left": 16,
+              "width": 380,
+              "bottom": 649,
+              "top": 437
+            },
+            "path": "1,HTML,1,BODY,0,DIV,0,DIV,1,DIV,0,DIV,2,DIV,0,DIV,0,MAIN,1,DIV,0,DIV,0,DIV,0,DIV,1,SECTION,0,DIV,0,DIV,0,DIV,0,IMG",
+            "lhId": "page-0-IMG",
+            "snippet": "<img loading=\"lazy\" class=\"w-100 absolute absolute--fill\" width=\"auto\" height=\"auto\" src=\"https://i5.walmartimages.com/dfw/4ff9c6c9-9d3c/k2-_4929fdb8-29f8-4277-95ad…\" alt=\"Crocs green rubber clog, Nike white athletic sneaker and Ugg brown suede s…\" id=\"PrismAdjustableBanner-small-contentZone8-LYdPCy…",
+            "type": "node",
+            "nodeLabel": "Crocs green rubber clog, Nike white athletic sneaker and Ugg brown suede slip o…"
+          }
+        ]
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "title": "LCP request discovery",
+        "description": "[Optimize LCP](https://developer.chrome.com/docs/performance/insights/lcp-discovery) by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "items": {
+              "requestDiscoverable": {
+                "label": "Request is discoverable in initial document",
+                "value": true
+              },
+              "priorityHinted": {
+                "value": false,
+                "label": "fetchpriority=high should be applied"
+              },
+              "eagerlyLoaded": {
+                "label": "LCP resources shouldn’t use loading=lazy",
+                "value": false
+              }
+            },
+            "type": "checklist"
+          },
+          {
+            "boundingRect": {
+              "height": 213,
+              "top": 437,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "bottom": 649
+            },
+            "snippet": "<img loading=\"lazy\" class=\"w-100 absolute absolute--fill\" width=\"auto\" height=\"auto\" src=\"https://i5.walmartimages.com/dfw/4ff9c6c9-9d3c/k2-_4929fdb8-29f8-4277-95ad…\" alt=\"Crocs green rubber clog, Nike white athletic sneaker and Ugg brown suede s…\" id=\"PrismAdjustableBanner-small-contentZone8-LYdPCy…",
+            "type": "node",
+            "nodeLabel": "Crocs green rubber clog, Nike white athletic sneaker and Ugg brown suede slip o…",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,0,DIV,0,DIV,1,DIV,0,DIV,2,DIV,0,DIV,0,MAIN,1,DIV,0,DIV,0,DIV,0,DIV,1,SECTION,0,DIV,0,DIV,0,DIV,0,IMG",
+            "selector": "div.card-wrapper > div.aspect-ratio--object > div.w-100 > img#PrismAdjustableBanner-small-contentZone8-LYdPCyut"
+          }
+        ]
+      },
+      {
+        "id": "crawlable-anchors",
+        "title": "Links are not crawlable",
+        "description": "Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn how to make links crawlable](https://support.google.com/webmasters/answer/9112205)",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "nodeLabel": "div#__next > div.relative > span.bg-secondary > a.o-0",
+              "type": "node",
+              "boundingRect": {
+                "right": 0,
+                "height": 0,
+                "width": 0,
+                "bottom": 0,
+                "left": 0,
+                "top": 0
+              },
+              "lhId": "1-17-A",
+              "selector": "div#__next > div.relative > span.bg-secondary > a.o-0",
+              "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,SPAN,0,A",
+              "snippet": "<a link-identifier=\"Generic Name\" class=\"o-0 absolute\" tabindex=\"-1\" data-dca-aid=\"L:CDF8623A25\" data-dca-intent=\"select\">"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "div.relative > div.absolute > div.f7 > a",
+              "selector": "div.relative > div.absolute > div.f7 > a",
+              "type": "node",
+              "path": "1,HTML,1,BODY,0,DIV,0,DIV,1,DIV,0,DIV,2,DIV,0,DIV,0,MAIN,1,DIV,0,DIV,0,DIV,0,DIV,0,SECTION,0,DIV,1,DIV,0,DIV,2,A",
+              "snippet": "<a link-identifier=\"\" data-dca-aid=\"L:E76BCEB8E8\" data-dca-intent=\"__DCA_INTENT_TBD__\" style=\"color: rgb(46, 47, 50);\">",
+              "lhId": "1-43-A",
+              "boundingRect": {
+                "width": 0,
+                "bottom": 419,
+                "left": 396,
+                "height": 14,
+                "top": 405,
+                "right": 396
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "issueType": "Cookie",
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://i5.walmartimages.com/dfw/63fd9f59-4c54/7adb6fe1-4149-4ebe-b4c7-2ea1921d4a19/v344/create-3p-cookie.html"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "issueType": "Content security policy",
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://b.www.walmart.com/rum.gif?param=PAM"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+        "score": 0,
+        "displayValue": "1 cookie found",
+        "savingsMs": null,
+        "items": [
+          {
+            "name": "s",
+            "url": "https://i5.walmartimages.com/dfw/63fd9f59-4c54/7adb6fe1-4149-4ebe-b4c7-2ea1921d4a19/v344/create-3p-cookie.html"
+          }
+        ]
+      },
+      {
+        "id": "forced-reflow-insight",
+        "title": "Forced reflow",
+        "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "headings": [
+              {
+                "label": "Top function call",
+                "valueType": "source-location",
+                "key": "source"
+              },
+              {
+                "granularity": 1,
+                "valueType": "ms",
+                "key": "reflowTime",
+                "label": "Total reflow time"
+              }
+            ],
+            "type": "table",
+            "items": [
+              {
+                "reflowTime": 203.82,
+                "source": {
+                  "type": "source-location",
+                  "column": 207045,
+                  "line": 1,
+                  "urlProvider": "network",
+                  "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/framework-31d3b826166ff95f.js"
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "items": [
+              {
+                "reflowTime": 203.82,
+                "source": {
+                  "urlProvider": "network",
+                  "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/pages/_app-d17072662f7dfbde.js",
+                  "line": 0,
+                  "type": "source-location",
+                  "column": 2912076
+                }
+              },
+              {
+                "reflowTime": 175.08,
+                "source": {
+                  "value": "[unattributed]",
+                  "type": "text"
+                }
+              }
+            ],
+            "headings": [
+              {
+                "key": "source",
+                "label": "Source",
+                "valueType": "source-location"
+              },
+              {
+                "granularity": 1,
+                "key": "reflowTime",
+                "valueType": "ms",
+                "label": "Total reflow time"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "source": "security",
+            "sourceLocation": {
+              "urlProvider": "network",
+              "type": "source-location",
+              "column": 0,
+              "line": 0,
+              "url": "https://www.walmart.com/"
+            },
+            "description": "Loading the image 'https://gum.us.criteo.com/fpm/sid?first_party_id=Wt5AViEKsqLFQVO6Apfz-o&first_party_domain=walmart.com&first_party_name=Walmart&p=8757&Instrumentation=rWeb&s=1' violates the following Content Security Policy directive: \"img-src 'self' *.1worldsync.com *.accenture.com *.adsafeprote…"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "type": "node",
+              "nodeLabel": "0\n$0.00",
+              "path": "1,HTML,1,BODY,0,DIV,0,DIV,0,SPAN,1,HEADER,5,NAV,0,UL,2,LI,0,DIV,0,DIV,0,BUTTON",
+              "lhId": "1-12-BUTTON",
+              "boundingRect": {
+                "right": 412,
+                "height": 52,
+                "width": 60,
+                "left": 352,
+                "bottom": 62,
+                "top": 10
+              },
+              "snippet": "<button id=\"cart-button-header\" data-automation-id=\"cart-button-header\" aria-label=\"Cart contains 0 items Total Amount $0.00\" class=\"bn bg-transparent br2 flex flex-column items-center pa0 pointer relative s…\" type=\"button\" data-dca-aid=\"B:15DCD02430\" data-dca-intent=\"__DCA_INTENT_TBD__\" data-dca-ev…",
+              "selector": "li.undefined > div.relative > div.cart-button > button#cart-button-header",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+        "score": 0,
+        "displayValue": "3 warnings found",
+        "savingsMs": null,
+        "items": [
+          {
+            "source": {
+              "type": "source-location",
+              "column": 5749,
+              "line": 0,
+              "urlProvider": "network",
+              "url": "https://b.www.walmart.com/rum.js?bh=beacon.lightest.walmart.com"
+            },
+            "value": "The Topics API is deprecated and will be removed in a future release."
+          },
+          {
+            "source": {
+              "type": "source-location",
+              "line": 1,
+              "url": "https://www.walmart.com/~partytown/partytown-sandbox-sw.html?1794770852516",
+              "urlProvider": "network",
+              "column": 8147
+            },
+            "subItems": {
+              "items": [
+                {
+                  "type": "link",
+                  "url": "https://chromestatus.com/feature/6366274495053824",
+                  "text": "Check the feature status page for more details."
+                },
+                {
+                  "text": "This change will go into effect with milestone 156.",
+                  "url": "https://chromiumdash.appspot.com/schedule",
+                  "type": "link"
+                }
+              ],
+              "type": "subitems"
+            },
+            "value": "Fenced Frame API is deprecated and scheduled for removal."
+          },
+          {
+            "value": "Attribution Reporting is deprecated and will be removed. See https://goo.gle/ps-status for details.",
+            "source": {
+              "url": "https://www.walmart.com/~partytown/partytown-sandbox-sw.html?1794770852516",
+              "type": "source-location",
+              "column": 8147,
+              "urlProvider": "network",
+              "line": 1
+            },
+            "subItems": {
+              "items": [
+                {
+                  "type": "link",
+                  "url": "https://chromestatus.com/feature/6320639375966208",
+                  "text": "Check the feature status page for more details."
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.01,
+        "displayValue": "21.9 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.03,
+        "displayValue": "630 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.11,
+        "displayValue": "1,660 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.12,
+        "displayValue": "9.3 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "displayValue": null,
+        "savingsMs": {
+          "CLS": 0
+        },
+        "items": [
+          {
+            "url": "https://i5.walmartimages.com/dfw/4ff9c6c9-baef/k2-_c35d7995-5b92-4656-b2e5-5304715cbbca.v1.png",
+            "node": {
+              "snippet": "<img loading=\"lazy\" data-testid=\"wplus-banner-logo\" class=\"mr2 self-center\" alt=\"\" src=\"https://i5.walmartimages.com/dfw/4ff9c6c9-baef/k2-_c35d7995-5b92-4656-b2e5…\" width=\"auto\" height=\"24\">",
+              "type": "node",
+              "selector": "div.w-two-thirds > div.flex > div.flex > img.mr2",
+              "lhId": "1-87-IMG",
+              "boundingRect": {
+                "right": 103,
+                "height": 24,
+                "top": 207,
+                "left": 33,
+                "width": 70,
+                "bottom": 231
+              },
+              "nodeLabel": "div.w-two-thirds > div.flex > div.flex > img.mr2",
+              "path": "1,HTML,1,BODY,0,DIV,0,DIV,1,DIV,0,DIV,2,DIV,0,DIV,0,MAIN,1,DIV,0,DIV,0,DIV,0,DIV,0,SECTION,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,IMG"
+            }
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0.5,
+        "displayValue": "Est savings of 25 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://www.walmart.com/px/PXu6b0qd2S/init.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-spread"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Math.acosh"
+                },
+                {
+                  "signal": "Math.asinh",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Math.atanh"
+                },
+                {
+                  "signal": "Math.log1p",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Math.sinh",
+                  "location": "[…]"
+                }
+              ]
+            },
+            "wastedBytes": 13824
+          },
+          {
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/main-9af786db1db276d7.js",
+            "subItems": {
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.at"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.flat"
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.fromEntries"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.hasOwn"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.trimEnd"
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 11713
+          }
+        ]
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 3,731 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "totalBytes": 721183,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/pages/_app-d17072662f7dfbde.js"
+          },
+          {
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/35302-ff0f46897373ac07.js",
+            "totalBytes": 153585
+          },
+          {
+            "totalBytes": 153585,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/35302-ff0f46897373ac07.js"
+          },
+          {
+            "totalBytes": 148102,
+            "url": "https://www.walmart.com/px/PXu6b0qd2S/init.js"
+          },
+          {
+            "totalBytes": 88470,
+            "url": "https://www.walmart.com/"
+          },
+          {
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/css/0cf39045614bf702.css",
+            "totalBytes": 71632
+          },
+          {
+            "totalBytes": 69232,
+            "url": "https://www.walmart.com/orchestra/api/ccm/v3/bootstrap?configNames=account,ads,amends,auto_care_center,bookslot,brandpage,cart,category,checkout,converse,conversations,onefinance,onepaylater,footer,gcomm,header,help,homepage,hw_pharmacy,identity,list,marketplace,nonprofits,nonprofits_features,orders…"
+          },
+          {
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/16714.df8df21af72db3bb.js",
+            "totalBytes": 60276
+          },
+          {
+            "totalBytes": 56125,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/30424-152d1ff05478b650.js"
+          },
+          {
+            "totalBytes": 51251,
+            "url": "https://i5.walmartimages.com/dfw/d5139f4b-5a6c/8efd40a0-9208-4e05-b469-01e01a694228/v2/en-US/_next/static/chunks/framework-31d3b826166ff95f.js"
+          }
+        ]
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.82,
+        "displayValue": "2.1 s",
+        "savingsMs": null,
+        "items": []
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.walmart.com/",
+    "status": 200,
+    "htmlBytes": 685895,
+    "headers": {
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "max-age=0, no-cache, no-store",
+      "contentEncoding": "gzip",
+      "xRobotsTag": null,
+      "server": null
+    },
+    "meta": {
+      "title": "Walmart | Save Money. Live better.",
+      "description": "Shop Walmart.com today for Every Day Low Prices. Join Walmart+ for unlimited free delivery from your store & free shipping with no order minimum. Start your free 30-day trial now!",
+      "canonical": "https://www.walmart.com/",
+      "lang": "en-US",
+      "robots": "INDEX,FOLLOW",
+      "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1, interactive-widget=resizes-content",
+      "openGraph": {
+        "og:url": "https://www.walmart.com/",
+        "og:description": "Shop Walmart.com today for Every Day Low Prices. Join Walmart+ for unlimited free delivery from your store & free shipping with no order minimum. Start your free 30-day trial now!",
+        "og:title": "Walmart | Save Money. Live better.",
+        "og:type": "Website",
+        "og:image": "https://i5.walmartimages.com/dfw/63fd9f59-49ff/k2-_52fee322-2e60-452a-bccc-1e847f452a13.v1.png",
+        "og:site_name": "Walmart.com"
+      }
+    },
+    "headings": [
+      {
+        "level": 2,
+        "text": "Deals & More"
+      },
+      {
+        "level": 2,
+        "text": "Holiday Shop"
+      },
+      {
+        "level": 2,
+        "text": "Grocery"
+      },
+      {
+        "level": 2,
+        "text": "Clothing, Shoes & Accessories"
+      },
+      {
+        "level": 2,
+        "text": "Baby"
+      },
+      {
+        "level": 2,
+        "text": "Pharmacy, Health & Wellness"
+      },
+      {
+        "level": 2,
+        "text": "Home, Garden & Tools"
+      },
+      {
+        "level": 2,
+        "text": "Electronics"
+      },
+      {
+        "level": 2,
+        "text": "Gaming & Movies"
+      },
+      {
+        "level": 2,
+        "text": "Auto & Tires"
+      },
+      {
+        "level": 2,
+        "text": "Personal Care"
+      },
+      {
+        "level": 2,
+        "text": "Beauty"
+      },
+      {
+        "level": 2,
+        "text": "Toys & Outdoor Play"
+      },
+      {
+        "level": 2,
+        "text": "Household Essentials"
+      },
+      {
+        "level": 2,
+        "text": "Pet Supplies"
+      },
+      {
+        "level": 2,
+        "text": "School, Office & Art Supplies"
+      },
+      {
+        "level": 2,
+        "text": "Sports & Outdoors"
+      },
+      {
+        "level": 2,
+        "text": "Collectibles"
+      },
+      {
+        "level": 2,
+        "text": "Books"
+      },
+      {
+        "level": 2,
+        "text": "Music"
+      },
+      {
+        "level": 2,
+        "text": "Party Supplies"
+      },
+      {
+        "level": 2,
+        "text": "Resold"
+      },
+      {
+        "level": 2,
+        "text": "Auto Care Services"
+      },
+      {
+        "level": 2,
+        "text": "Pharmacy"
+      },
+      {
+        "level": 2,
+        "text": "Health Services"
+      },
+      {
+        "level": 2,
+        "text": "Vaccines"
+      },
+      {
+        "level": 2,
+        "text": "Vision Center"
+      },
+      {
+        "level": 2,
+        "text": "Benefit Programs"
+      },
+      {
+        "level": 2,
+        "text": "Insurance Services"
+      },
+      {
+        "level": 2,
+        "text": "Lists"
+      },
+      {
+        "level": 2,
+        "text": "Registries"
+      },
+      {
+        "level": 2,
+        "text": "Gift Cards"
+      },
+      {
+        "level": 2,
+        "text": "Spark Good"
+      },
+      {
+        "level": 2,
+        "text": "Custom Cakes"
+      },
+      {
+        "level": 2,
+        "text": "Custom Cupcakes"
+      },
+      {
+        "level": 2,
+        "text": "Featured"
+      },
+      {
+        "level": 2,
+        "text": "Photo Gifts"
+      },
+      {
+        "level": 2,
+        "text": "Spend"
+      },
+      {
+        "level": 2,
+        "text": "Save"
+      },
+      {
+        "level": 2,
+        "text": "Borrow"
+      }
+    ],
+    "h1Count": 0,
+    "images": {
+      "total": 38,
+      "missingAlt": 0,
+      "missingDimensions": 12,
+      "lazy": 31,
+      "firstImages": [
+        {
+          "src": "//i5.walmartimages.com/dfw/63fd9f59-14e2/9d304ce6-96de-4331-b8ec-c5191226d378/v1/spark-icon.svg",
+          "alt": "Walmart",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "36",
+          "height": "auto"
+        },
+        {
+          "src": "https://i5.walmartimages.com/dfw/4ff9c6c9-ad46/k2-_0a671c38-d307-447c-835e-7904ab143c26.v1.png",
+          "alt": "Banner title icon",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "32",
+          "height": "32"
+        },
+        {
+          "src": "//i5.walmartimages.com/dfw/63fd9f59-596b/4cc11143-1c17-45fb-87b3-36e1f7bdfb1d/v1/flag-usa.svg",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "24px",
+          "height": "24px"
+        },
+        {
+          "src": "//i5.walmartimages.com/dfw/63fd9f59-30b3/629cc93a-dae2-4b74-afd7-faecce345c85/v1/wplus-indigo-rebrand-bug.svg",
+          "alt": "Walmart+",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "16",
+          "height": "16"
+        },
+        {
+          "src": "https://i5.walmartimages.com/dfw/4ff9c6c9-ad46/k2-_0a671c38-d307-447c-835e-7904ab143c26.v1.png",
+          "alt": "Banner title icon",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "32",
+          "height": "32"
+        },
+        {
+          "src": "https://i5.walmartimages.com/dfw/4ff9c6c9-9bf9/k2-_baac738c-9c90-48bd-933b-608dd4d44fb6.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "alt": "Black Friday Deals and More badge. November twelve through fifteen. Coach crossbody bag, red stand mixer and tablet on gift boxes.",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": "auto",
+          "height": "auto"
+        },
+        {
+          "src": "https://i5.walmartimages.com/dfw/4ff9c6c9-f5c4/k2-_7659bcbc-350d-4de1-b6e1-a99963d28af7.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "alt": "Inflatable Santa sleigh with two reindeer, tall lit artificial Christmas tree, and two large decorative ornaments on blue panels.",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": "auto",
+          "height": "auto"
+        },
+        {
+          "src": "https://i5.walmartimages.com/dfw/4ff9c6c9-83f5/k2-_849b4c8e-efdd-492c-b8c6-ce6634678112.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "alt": "Michael Kors crossbody bag with chain strap, tall brown fashion boots and folded pink sweater stacked on a blue gift box with ribbon.",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": "auto",
+          "height": "auto"
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 1,
+      "blockingScripts": 0,
+      "preloads": [
+        {
+          "href": "https://i5.walmartimages.com/dfw/63fd9f59-2788/472a8a6b-a545-4dec-a839-4c18dbb125be/v1/ESB.woff2",
+          "as": "font"
+        },
+        {
+          "href": "https://i5.walmartimages.com/dfw/63fd9f59-2788/472a8a6b-a545-4dec-a839-4c18dbb125be/v1/ES.woff2",
+          "as": "font"
+        },
+        {
+          "href": "//i5.walmartimages.com/dfw/63fd9f59-596b/4cc11143-1c17-45fb-87b3-36e1f7bdfb1d/v1/flag-usa.svg",
+          "as": "image"
+        },
+        {
+          "href": "https://i5.walmartimages.com/dfw/4ff9c6c9-9bf9/k2-_baac738c-9c90-48bd-933b-608dd4d44fb6.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "as": "image"
+        },
+        {
+          "href": "https://i5.walmartimages.com/dfw/4ff9c6c9-f5c4/k2-_7659bcbc-350d-4de1-b6e1-a99963d28af7.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "as": "image"
+        },
+        {
+          "href": "https://i5.walmartimages.com/dfw/4ff9c6c9-83f5/k2-_849b4c8e-efdd-492c-b8c6-ce6634678112.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "as": "image"
+        },
+        {
+          "href": "https://i5.walmartimages.com/dfw/4ff9c6c9-7c28/k2-_74e2c2c8-674f-438d-a685-2da24a9fa52b.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "as": "image"
+        },
+        {
+          "href": "https://i5.walmartimages.com/dfw/4ff9c6c9-6d66/k2-_54e38917-e413-404b-9818-c98d17b9fa04.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "as": "image"
+        },
+        {
+          "href": "https://i5.walmartimages.com/dfw/4ff9c6c9-e97c/k2-_1766b4c0-99d4-4658-94f7-3fc86dce303d.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "as": "image"
+        },
+        {
+          "href": "https://i5.walmartimages.com/dfw/4ff9c6c9-a2a5/k2-_fc7e6753-5bcd-481a-b956-2f7e559eb4a3.v1.jpg?odnHeight=591&odnWidth=444&odnBg=&odnDynImageQuality=70",
+          "as": "image"
+        }
+      ],
+      "preconnects": [
+        "https://i5.walmartimages.com",
+        "/"
+      ]
+    },
+    "scripts": {
+      "total": 0,
+      "external": 118,
+      "thirdPartyHosts": [
+        "i5.walmartimages.com"
+      ]
+    },
+    "structuredData": {
+      "jsonLdBlocks": 2,
+      "types": [
+        "Organization",
+        "WebSite"
+      ],
+      "invalidBlocks": 0,
+      "raw": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Walmart\",\"url\":\"https://www.walmart.com/\",\"logo\":\"https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg\"}",
+        "{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Walmart\",\"url\":\"https://www.walmart.com/\",\"logo\":\"https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.walmart.com/search?q={search_term_string}\"},\"query-input\":\"required name=search_term_string\"}]}"
+      ]
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [],
+      "allowed": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "Skip to Main ContentPickup or delivery?CancelENReorderMy ItemsReorderListsRegistriesSign InAccountSign in or create accountPurchase HistoryWalmart+SubscriptionsLanguage | English$0.00 Departments Services All DepartmentsDeals & MoreDeals & MoreShop AllTop 100TechHomeFashionToysAutoBabySeasonal DecorBeauty & Personal CarePatio & GardenGroceryHome ImprovementHealth & WellnessHousehold EssentialsSports & OutdoorsPetsCraft & OfficeHoliday ShopHoliday ShopAll HolidayHoliday GiftingThanksgiving MealHoliday DecorHoliday FashionGuest ReadyToy ShopMatching PajamasHoliday HomeTrending on Social Arts & Crafts GroceryGroceryAll GroceryHoliday DessertsMeals Made EasyWeekly EssentialsRecipe InspirationMeat & SeafoodFresh ProduceFrozenBakery & BreadSnacksPantryDeliDairy & EggsBeveragesBreakfast & CerealBakingCandyGlobal CuisineAlcoholFloral ShopClothing, Shoes & Accessories Clothing, Shoes & Accessories All Clothing, Shoes & AccessoriesPremium FashionNew ArrivalsWomenWomen's PlusMaternityMenMen's Big & TallYoung AdultTweenKidsToddlerBabyShoesJewelry & WatchesBags & AccessoriesScrubsEditors' PicksBabyBabyAll BabyAll ToddlerBaby ClothingToddler ClothingBulk Baby SuppliesDiapers & WipesBaby Formula & Baby FoodNursery & DecorBaby Travel GearBaby RegistryWICPharmacy, Health & WellnessPharmacy, Health & WellnessAll Health & WellnessPharmacyFSA/HSACough, Cold & FluVitamins & SupplementsPain ManagementCaregiving & Home Health Care SolutionsProtein, Fitness & Weight ManagementDiabetes Management All…"
+  }
+}
