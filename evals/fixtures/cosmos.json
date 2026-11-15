@@ -1,0 +1,1192 @@
+{
+  "name": "cosmos",
+  "url": "https://www.cosmos.so/",
+  "collectedAt": "2026-11-14T17:33:47.584Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-14T17:33:47.581Z",
+    "finalUrl": "https://www.cosmos.so/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 79,
+      "accessibility": 92,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 3010,
+        "category": "AVERAGE"
+      },
+      "inpMs": {
+        "p75": 460,
+        "category": "AVERAGE"
+      },
+      "cls": {
+        "p75": 0.01,
+        "category": "FAST"
+      },
+      "fcpMs": {
+        "p75": 2727,
+        "category": "AVERAGE"
+      },
+      "ttfbMs": {
+        "p75": 1111,
+        "category": "AVERAGE"
+      },
+      "overall": "AVERAGE"
+    },
+    "lab": {
+      "lcp": {
+        "value": 1351,
+        "display": "1.4 s"
+      },
+      "cls": {
+        "value": 0,
+        "display": "0"
+      },
+      "tbt": {
+        "value": 599.5,
+        "display": "600 ms"
+      },
+      "fcp": {
+        "value": 1351,
+        "display": "1.4 s"
+      },
+      "speedIndex": {
+        "value": 6233.463770789094,
+        "display": "6.2 s"
+      },
+      "ttfb": {
+        "value": 122,
+        "display": "Root document took 120 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 900 ms",
+        "savingsMs": {
+          "LCP": 900,
+          "FCP": 900
+        },
+        "items": [
+          {
+            "url": "https://www.cosmos.so/_next/static/chunks/1rat1si5qt-gw.css",
+            "wastedMs": 472,
+            "totalBytes": 2952
+          },
+          {
+            "url": "https://www.cosmos.so/_next/static/chunks/3ybihyx_46m9_.css",
+            "wastedMs": 943,
+            "totalBytes": 46324
+          },
+          {
+            "wastedMs": 472,
+            "url": "https://www.cosmos.so/_next/static/chunks/1xjunzocon7oh.css",
+            "totalBytes": 1632
+          },
+          {
+            "url": "https://www.cosmos.so/_next/static/chunks/3jdgqrfgzso1n.css",
+            "totalBytes": 2834,
+            "wastedMs": 472
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "6.0 s",
+        "savingsMs": {
+          "TBT": 600
+        },
+        "items": [
+          {
+            "duration": 3363.9348000000296,
+            "groupLabel": "Other",
+            "group": "other"
+          },
+          {
+            "group": "scriptEvaluation",
+            "duration": 1717.0103999999174,
+            "groupLabel": "Script Evaluation"
+          },
+          {
+            "duration": 303.96479999999957,
+            "group": "scriptParseCompile",
+            "groupLabel": "Script Parsing & Compilation"
+          },
+          {
+            "groupLabel": "Style & Layout",
+            "group": "styleLayout",
+            "duration": 260.76720000000006
+          },
+          {
+            "group": "paintCompositeRender",
+            "groupLabel": "Rendering",
+            "duration": 166.55760000002712
+          },
+          {
+            "group": "garbageCollection",
+            "groupLabel": "Garbage Collection",
+            "duration": 119.95680000000004
+          },
+          {
+            "duration": 18.7812,
+            "group": "parseHTML",
+            "groupLabel": "Parse HTML & CSS"
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "1.7 s",
+        "savingsMs": {
+          "TBT": 300
+        },
+        "items": [
+          {
+            "scripting": 254.89559999999244,
+            "total": 3253.7471999999893,
+            "scriptParseCompile": 8.8248,
+            "url": "https://www.cosmos.so/_next/static/chunks/3ez2h0qdvlu99.js"
+          },
+          {
+            "scripting": 806.5307999999555,
+            "total": 944.2871999999556,
+            "url": "https://www.cosmos.so/_next/static/chunks/0rbhb7o7rrm0t.js",
+            "scriptParseCompile": 11.1072
+          },
+          {
+            "scriptParseCompile": 0,
+            "url": "Unattributable",
+            "total": 456.01319999998685,
+            "scripting": 43.897200000000005
+          },
+          {
+            "scripting": 14.065199999999999,
+            "total": 356.46000000000026,
+            "url": "https://www.cosmos.so/",
+            "scriptParseCompile": 10.645199999999997
+          },
+          {
+            "url": "https://www.cosmos.so/_next/static/chunks/1hzdfi-n-qvd-.js",
+            "scriptParseCompile": 6.1488,
+            "total": 202.50839999999988,
+            "scripting": 195.31919999999988
+          },
+          {
+            "scripting": 118.55280000000006,
+            "total": 143.44440000000006,
+            "scriptParseCompile": 0.9047999999999999,
+            "url": "https://www.cosmos.so/_next/static/chunks/0fcpv0clz792h.js"
+          },
+          {
+            "scriptParseCompile": 6.098399999999999,
+            "total": 141.39720000000025,
+            "url": "https://www.cosmos.so/_next/static/chunks/0m02od95bcui2.js",
+            "scripting": 129.74520000000027
+          },
+          {
+            "scriptParseCompile": 33.313199999999995,
+            "url": "https://www.cosmos.so/_next/static/chunks/141g0ix6q4rcd.js",
+            "total": 91.13159999999999,
+            "scripting": 56.93399999999999
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "longestChain": {
+                "duration": 406
+              },
+              "type": "network-tree",
+              "chains": {
+                "A0AF08C9581C508C9384A9026016FC29": {
+                  "url": "https://www.cosmos.so/",
+                  "navStartToEndTime": 354,
+                  "isLongest": true,
+                  "transferSize": 80258,
+                  "children": "[…]"
+                }
+              }
+            }
+          },
+          {
+            "value": {
+              "headings": [
+                {
+                  "key": "origin",
+                  "label": "Origin",
+                  "valueType": "text",
+                  "subItemsHeading": "[…]"
+                },
+                {
+                  "valueType": "node",
+                  "key": "source",
+                  "label": "Source"
+                }
+              ],
+              "type": "table",
+              "items": [
+                {
+                  "origin": "https://api.cosmos.so/",
+                  "subItems": "[…]",
+                  "source": "[…]"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://cdn.cosmos.so/",
+                  "subItems": "[…]"
+                }
+              ]
+            },
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "type": "list-section",
+            "title": "Preconnected origins"
+          },
+          {
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            },
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "type": "list-section",
+            "title": "Preconnect candidates"
+          }
+        ]
+      },
+      {
+        "id": "meta-viewport",
+        "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+        "description": "Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more about the viewport meta tag](https://dequeuniversity.com/rules/axe/4.14/meta-viewport).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "head > meta",
+              "path": "1,HTML,0,HEAD,1,META",
+              "nodeLabel": "head > meta",
+              "lhId": "1-41-META",
+              "snippet": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover\">",
+              "type": "node",
+              "boundingRect": {
+                "right": 0,
+                "left": 0,
+                "top": 0,
+                "height": 0,
+                "bottom": 0,
+                "width": 0
+              },
+              "explanation": "Fix any of the following:\n  maximum-scale on <meta> tag disables zooming on mobile devices"
+            }
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.14/color-contrast).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "nodeLabel": "@laurentdelrey",
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">",
+              "type": "node",
+              "boundingRect": {
+                "width": 174,
+                "bottom": 2332,
+                "height": 20,
+                "left": 33,
+                "right": 207,
+                "top": 2313
+              },
+              "lhId": "1-0-P",
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "nodeLabel": "@joannahalpin",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">",
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty",
+              "boundingRect": {
+                "height": 20,
+                "top": 2313,
+                "width": 174,
+                "left": 265,
+                "bottom": 2332,
+                "right": 439
+              },
+              "type": "node",
+              "lhId": "1-2-P",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,1,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "lhId": "1-4-P",
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,2,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P",
+              "boundingRect": {
+                "bottom": 2332,
+                "right": 671,
+                "left": 497,
+                "top": 2313,
+                "height": 20,
+                "width": 174
+              },
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "nodeLabel": "@athenacalderone",
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "@alexisfoucault",
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">",
+              "boundingRect": {
+                "height": 20,
+                "width": 174,
+                "top": 2313,
+                "bottom": 2332,
+                "right": 903,
+                "left": 729
+              },
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "lhId": "1-6-P",
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,3,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P",
+              "type": "node"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,4,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P",
+              "lhId": "1-8-P",
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">",
+              "type": "node",
+              "nodeLabel": "@linusrogge",
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "boundingRect": {
+                "width": 174,
+                "bottom": 2332,
+                "height": 20,
+                "top": 2313,
+                "left": 961,
+                "right": 1135
+              }
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "boundingRect": {
+                "top": 2313,
+                "right": 1367,
+                "left": 1193,
+                "height": 20,
+                "bottom": 2332,
+                "width": 174
+              },
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "nodeLabel": "@ryanbelk",
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty",
+              "type": "node",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,5,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P",
+              "lhId": "1-10-P"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">",
+              "nodeLabel": "@colindancel",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty",
+              "boundingRect": {
+                "top": 2313,
+                "right": 1599,
+                "bottom": 2332,
+                "width": 174,
+                "left": 1425,
+                "height": 20
+              },
+              "lhId": "1-12-P",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,6,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P",
+              "type": "node"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "boundingRect": {
+                "bottom": 2332,
+                "left": 1657,
+                "right": 1831,
+                "width": 174,
+                "top": 2313,
+                "height": 20
+              },
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty",
+              "nodeLabel": "@fonsmans",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,7,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P",
+              "lhId": "1-14-P",
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">",
+              "type": "node"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "nodeLabel": "@orenmeetsworld",
+              "boundingRect": {
+                "height": 20,
+                "width": 174,
+                "top": 2313,
+                "left": 1889,
+                "right": 2063,
+                "bottom": 2332
+              },
+              "type": "node",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,8,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">",
+              "lhId": "1-16-P",
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "right": 2295,
+                "height": 20,
+                "left": 2121,
+                "top": 2313,
+                "width": 174,
+                "bottom": 2332
+              },
+              "lhId": "1-18-P",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,8,DIV,1,SECTION,1,DIV,1,DIV,9,DIV,0,DIV,0,DIV,1,DIV,0,A,1,SPAN,1,P",
+              "snippet": "<p class=\"text-pretty font-normal text-body-small mt-1 truncate text-tertiary\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.9 (foreground color: #9a9796, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "nodeLabel": "@stallboerger",
+              "selector": "div.relative > a.flex > span.mt-2 > p.text-pretty",
+              "type": "node"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.12,
+        "displayValue": "13.0 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.43,
+        "displayValue": "6.2 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 339 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 129237,
+            "totalBytes": 156660,
+            "wastedPercent": 82.49526388069877,
+            "url": "https://www.cosmos.so/_next/static/chunks/141g0ix6q4rcd.js"
+          },
+          {
+            "url": "https://www.cosmos.so/_next/static/chunks/18le85my9pfr6.js",
+            "wastedPercent": 86.42658680041858,
+            "wastedBytes": 36649,
+            "totalBytes": 42405
+          },
+          {
+            "wastedBytes": 35731,
+            "wastedPercent": 57.41633199464524,
+            "totalBytes": 62231,
+            "url": "https://www.cosmos.so/_next/static/chunks/3ez2h0qdvlu99.js"
+          },
+          {
+            "totalBytes": 26412,
+            "wastedPercent": 99.34343004622933,
+            "url": "https://www.cosmos.so/_next/static/chunks/377ft1dn7e8wb.js",
+            "wastedBytes": 26239
+          },
+          {
+            "wastedPercent": 99.14542899464469,
+            "totalBytes": 25601,
+            "wastedBytes": 25382,
+            "url": "https://www.cosmos.so/_next/static/chunks/3z1u69-_hfg7w.js"
+          },
+          {
+            "totalBytes": 25879,
+            "url": "https://www.cosmos.so/_next/static/chunks/2y04wlkaxzfp0.js",
+            "wastedBytes": 24107,
+            "wastedPercent": 93.15178649048075
+          },
+          {
+            "wastedPercent": 59.846044142031154,
+            "wastedBytes": 23890,
+            "totalBytes": 39920,
+            "url": "https://www.cosmos.so/_next/static/chunks/2zfwuvg8p8r3t.js"
+          },
+          {
+            "totalBytes": 36588,
+            "wastedBytes": 23658,
+            "url": "https://www.cosmos.so/_next/static/chunks/2ngjsug_qqj9k.js",
+            "wastedPercent": 64.6607077553728
+          },
+          {
+            "wastedPercent": 89.46258942569926,
+            "url": "https://www.cosmos.so/_next/static/chunks/283te99zk21ri.js",
+            "totalBytes": 25365,
+            "wastedBytes": 22692
+          }
+        ]
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery).",
+        "score": 0.5,
+        "displayValue": "Est savings of 272 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://cdn.cosmos.so/2c510c86-d6cf-46f0-bfce-929f7e3bc6a2?format=webp&w=400",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 61290,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (400x396) for its displayed dimensions (60x73). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 85284
+                }
+              ]
+            },
+            "totalBytes": 87680,
+            "wastedBytes": 86959
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 61290,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (400x396) for its displayed dimensions (60x73). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 85284
+                }
+              ]
+            },
+            "wastedBytes": 86959,
+            "url": "https://cdn.cosmos.so/2c510c86-d6cf-46f0-bfce-929f7e3bc6a2?format=webp&w=400",
+            "totalBytes": 87680
+          },
+          {
+            "url": "https://cdn.cosmos.so/fcefd740-0b24-4fdb-bd52-a6f60a7bce9e?format=webp&w=400",
+            "totalBytes": 42198,
+            "wastedBytes": 41460,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 15214,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (400x405) for its displayed dimensions (60x74). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 41045
+                }
+              ]
+            }
+          },
+          {
+            "url": "https://cdn.cosmos.so/fcefd740-0b24-4fdb-bd52-a6f60a7bce9e?format=webp&w=400",
+            "wastedBytes": 41460,
+            "subItems": {
+              "items": [
+                {
+                  "reason": "Increasing the image compression factor could improve this image’s download size",
+                  "wastedBytes": 15214
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (400x405) for its displayed dimensions (60x74). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 41045
+                }
+              ],
+              "type": "subitems"
+            },
+            "totalBytes": 42198
+          },
+          {
+            "totalBytes": 18624,
+            "node": {
+              "type": "node",
+              "nodeLabel": "Organize your inspiration demonstration",
+              "selector": "article > div.relative > div.absolute > video.size-full",
+              "snippet": "<video muted=\"\" loop=\"\" playsinline=\"\" preload=\"auto\" aria-label=\"Organize your inspiration demonstration\" class=\"size-full object-cover scale-75 mix-blend-darken\" poster=\"https://image.mux.com/GTOyN2QkJ6gSS2o02IrjPWPXjgcT7mALD2MQ0201hhN4n8/thumb…\" src=\"blob:https://www.cosmos.so/ce564161-1f3d-40c2-…",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,3,SECTION,1,DIV,0,DIV,1,DIV,0,ARTICLE,0,DIV,0,DIV,0,VIDEO",
+              "lhId": "page-4-VIDEO",
+              "boundingRect": {
+                "bottom": 1217,
+                "top": 989,
+                "left": 382,
+                "right": 610,
+                "width": 228,
+                "height": 228
+              }
+            },
+            "subItems": {
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (960x960) for its displayed dimensions (532x532). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 12905
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 12905,
+            "url": "https://image.mux.com/GTOyN2QkJ6gSS2o02IrjPWPXjgcT7mALD2MQ0201hhN4n8/thumbnail.webp?time=0"
+          },
+          {
+            "totalBytes": 10388,
+            "url": "https://cdn.cosmos.so/ef65cac0-a063-4cf0-80fa-d59ba439c9cc?rect=670%2C0%2C1484%2C1484&format=webp&w=160",
+            "node": {
+              "boundingRect": {
+                "top": 1486,
+                "height": 64,
+                "width": 64,
+                "left": 16,
+                "bottom": 1550,
+                "right": 80
+              },
+              "type": "node",
+              "nodeLabel": "a.group/brand > span.pointer-events-none > span.relative > img.absolute",
+              "lhId": "page-5-IMG",
+              "path": "1,HTML,1,BODY,9,MAIN,4,DIV,6,SECTION,1,DIV,0,UL,0,LI,0,A,0,SPAN,0,SPAN,0,IMG",
+              "selector": "a.group/brand > span.pointer-events-none > span.relative > img.absolute",
+              "snippet": "<img src=\"https://cdn.cosmos.so/ef65cac0-a063-4cf0-80fa-d59ba439c9cc?rect=670%2C0%2C…\" alt=\"\" loading=\"lazy\" decoding=\"async\" draggable=\"false\" class=\"absolute inset-0 size-full object-cover\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "Increasing the image compression factor could improve this image’s download size",
+                  "wastedBytes": 6121
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (160x160) for its displayed dimensions (112x112). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 5298
+                }
+              ]
+            },
+            "wastedBytes": 8297
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0.5,
+        "displayValue": "Est savings of 25 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 13896,
+            "url": "https://www.cosmos.so/_next/static/chunks/3ez2h0qdvlu99.js",
+            "subItems": {
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.flat",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.hasOwn"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.trimEnd"
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "signal": "Array.from",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://www.cosmos.so/_next/static/chunks/1hzdfi-n-qvd-.js",
+            "wastedBytes": 11614
+          }
+        ]
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 18,140 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://www.cosmos.so/_next/static/chunks/141g0ix6q4rcd.js",
+            "totalBytes": 157856
+          },
+          {
+            "url": "https://cdn.cosmos.so/01a1a343-0172-7386-862c-c89646b33965?format=webp&w=400",
+            "totalBytes": 142968
+          },
+          {
+            "totalBytes": 142968,
+            "url": "https://cdn.cosmos.so/01a1a343-0172-7386-862c-c89646b33965?format=webp&w=400"
+          },
+          {
+            "totalBytes": 141444,
+            "url": "https://cdn.cosmos.so/01a1a343-1ee9-734c-97e0-4790abeb3832?format=webp&w=400"
+          },
+          {
+            "url": "https://cdn.cosmos.so/01a1a343-1ee9-734c-97e0-4790abeb3832?format=webp&w=400",
+            "totalBytes": 141444
+          },
+          {
+            "totalBytes": 126714,
+            "url": "https://cdn.cosmos.so/157b4522-ec02-48ab-bb29-10b1a461b573?format=webp&w=400"
+          },
+          {
+            "url": "https://cdn.cosmos.so/157b4522-ec02-48ab-bb29-10b1a461b573?format=webp&w=400",
+            "totalBytes": 126714
+          },
+          {
+            "url": "https://cdn.cosmos.so/08c4de88-4cb9-4a81-867f-9a344677243b?format=webp&w=400",
+            "totalBytes": 118744
+          },
+          {
+            "totalBytes": 118744,
+            "url": "https://cdn.cosmos.so/08c4de88-4cb9-4a81-867f-9a344677243b?format=webp&w=400"
+          },
+          {
+            "url": "https://cdn.cosmos.so/01a1a343-0995-70a1-b875-ffd14eefe5ff?format=webp&w=400",
+            "totalBytes": 111418
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0.5,
+        "displayValue": "Est savings of 3 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "totalBytes": 19502,
+            "cacheLifetimeMs": 604800000,
+            "url": "https://image.mux.com/GTOyN2QkJ6gSS2o02IrjPWPXjgcT7mALD2MQ0201hhN4n8/thumbnail.webp?time=0",
+            "wastedBytes": 1950.1999999999996
+          },
+          {
+            "cacheLifetimeMs": 604800000,
+            "wastedBytes": 721.5999999999998,
+            "url": "https://image.mux.com/FSMFlzLWYKk9amzKX00Cxx6u5oFBa00nQFxqYh7xiDaTc/thumbnail.webp?time=0",
+            "totalBytes": 7216
+          }
+        ]
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.5,
+        "displayValue": "600 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.61,
+        "displayValue": "220 ms",
+        "savingsMs": null,
+        "items": []
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.cosmos.so/",
+    "status": 200,
+    "htmlBytes": 396579,
+    "headers": {
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "contentEncoding": "gzip",
+      "xRobotsTag": null,
+      "server": "istio-envoy"
+    },
+    "meta": {
+      "title": "Cosmos",
+      "description": "Your space for inspiration",
+      "canonical": "https://www.cosmos.so",
+      "lang": "en",
+      "robots": null,
+      "viewport": "width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover",
+      "openGraph": {
+        "og:title": "Cosmos",
+        "og:description": "Your space for inspiration",
+        "og:image": "https://www.cosmos.so/opengraph-image.jpg",
+        "og:video": "https://www.cosmos.so/videos/og-video.mp4",
+        "og:video:type": "video/mp4",
+        "og:video:width": "1280",
+        "og:video:height": "720"
+      }
+    },
+    "headings": [
+      {
+        "level": 1,
+        "text": "Find your nextlamp with character"
+      },
+      {
+        "level": 2,
+        "text": "Build your world, your way"
+      },
+      {
+        "level": 3,
+        "text": "Search by color"
+      },
+      {
+        "level": 3,
+        "text": "Organize your inspiration"
+      },
+      {
+        "level": 3,
+        "text": "Hide AI"
+      },
+      {
+        "level": 3,
+        "text": "Find similar elements"
+      },
+      {
+        "level": 3,
+        "text": "Collaborate together"
+      },
+      {
+        "level": 3,
+        "text": "Save from anywhere"
+      },
+      {
+        "level": 2,
+        "text": "Shop from brands like"
+      },
+      {
+        "level": 2,
+        "text": "Find what others\nare saving"
+      },
+      {
+        "level": 2,
+        "text": "Discover\nwhat’s next"
+      },
+      {
+        "level": 3,
+        "text": "Follow us"
+      },
+      {
+        "level": 3,
+        "text": "Info"
+      }
+    ],
+    "h1Count": 1,
+    "images": {
+      "total": 117,
+      "missingAlt": 0,
+      "missingDimensions": 117,
+      "lazy": 109,
+      "firstImages": [
+        {
+          "src": "",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 3,
+      "blockingScripts": 0,
+      "preloads": [
+        {
+          "href": "/_next/static/chunks/11s5mtg4uksht.js",
+          "as": "script"
+        },
+        {
+          "href": "/_next/static/chunks/3jdgqrfgzso1n.css",
+          "as": "style"
+        }
+      ],
+      "preconnects": [
+        "https://api.cosmos.so",
+        "https://cdn.cosmos.so"
+      ]
+    },
+    "scripts": {
+      "total": 0,
+      "external": 65,
+      "thirdPartyHosts": []
+    },
+    "structuredData": {
+      "jsonLdBlocks": 3,
+      "types": [
+        "Organization",
+        "WebSite",
+        "SoftwareApplication"
+      ],
+      "invalidBlocks": 0,
+      "raw": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://www.cosmos.so/#organization\",\"name\":\"Cosmos\",\"legalName\":\"Cosmos Entity, INC.\",\"url\":\"https://www.cosmos.so\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.cosmos.so/cosmos-logo.png\"},\"description\":\"A visual inspiration platform for creatives — save, organize, search, and discover images, links, videos, articles, and text in a distraction-free, ad-free environment.\",\"foundingDate\":\"2021\",\"founders\":[{\"@type\":\"Person\",\"name\":\"Andy McCune\"}],\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"New York\",\"addressRegion\":\"NY\",\"addressCountry\":\"US\"},\"sameAs\":[\"https://www.instagram.com/cosmos/\",\"https://x.com/thecosmos\",\"https://www.tiktok.com/@inspirethecosmos\",\"https://sequencebycosmos.substack.com/\"],\"knowsAbout\":[\"Visual inspiration\",\"Mood boards\",\"Design tools\",\"Creative curation\",\"Image attribution\"]}",
+        "{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://www.cosmos.so/#website\",\"name\":\"Cosmos\",\"url\":\"https://www.cosmos.so\",\"description\":\"A visual inspiration platform for creatives — save, organize, search, and discover images, links, videos, articles, and text in a distraction-free, ad-free environment.\",\"inLanguage\":\"en\",\"publisher\":{\"@id\":\"https://www.cosmos.so/#organization\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.cosmos.so/search/elements/{search_term_string}\"},\"query-input\":\"required name=search_term_string\"}}",
+        "{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"Cosmos\",\"url\":\"https://www.cosmos.so\",\"applicationCategory\":\"DesignApplication\",\"operatingSystem\":\"Web, iOS, Android\",\"description\":\"A visual inspiration platform for creatives — save, organize, search, and discover images, links, videos, articles, and text in a distraction-free, ad-free environment.\",\"publisher\":{\"@type\":\"Organization\",\"@id\":\"https://www.cosmos.so/#organization\",\"name\":\"Cosmos\",\"url\":\"https://www.cosmos.so\"},\"downloadUrl\":\"https://link.cosmos.so/app\",\"installUrl\":\"https://chromewebstore.google.com/detail/save-to-cosmos/mgjneceglphcpbbfbhjplkpgfapebmdg\",\"offers\":[{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"USD\",\"name\":\"Free\",\"description\":\"Full access to core features — saving, organizing, searching, discovering, and collaborating.\"},{\"@type\":\"Offer\",\"price\":\"8\",\"priceCurrency\":\"USD\",\"name\":\"Premium\",\"priceSpecification\":{\"@type\":\"UnitPriceSpecification\",\"price\":\"8\",\"priceCurrency\":\"USD\",\"billingDuration\":\"P1M\"},\"description\":\"Advanced tools for power users and creative professionals.\"}],\"featureList\":[\"Visual search by keyword, color, or similarity\",\"AI-powered image attribution (Captions)\",\"AI content detection\",\"Browser extensions for Chrome and Safari\",\"Import from Pinterest, Are.na, and Tumblr\",\"Collaborative collections\"]}"
+      ]
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [
+        "CCBot"
+      ],
+      "allowed": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended"
+      ],
+      "llmsTxtFound": true
+    },
+    "textSample": "MenuExploreSequenceShopLog inSign upFind your nextlamp with characterJoin Cosmos for freeDownload appGet the appSearchSearch forlampsSearch forlampsBuild your world, your waySearch by colorFind inspiration in the exact shade you have in mind.Organize your inspirationCreate collections for every project, outfit, or space.ShowBlurHideAIAIAIHide AIShow, blur, or hide images flagged as AI-generated.Find similar elementsStart with an image you love and find more like it.Collaborate togetherInvite others to build collections with you.Save from anywhereSave inspiration to Cosmos as you browse the web.Shop from brands likeProject 213ABodeCafe ForgotSophie BuhaiSUKU HomeToveYellow The LabelFind what others are savingExplore CosmosUsed by the world’s leading creative teams, studios, and students.Discover what’s nextDownload appSign upLog inFollow usSequenceInstagramTikTokXInfoCareersTermsPrivacyCopyrightContactGet the applaurent del rey@laurentdelreyFollowJoanna Halpin@joannahalpinFollowAthena Calderone@athenacalderoneFollowAlexis Foucault@alexisfoucaultFollowLinus Rogge@linusroggeFollowRyan Belk@ryanbelkFollowColin Dancel@colindancelFollowFons Mans@fonsmansFollowOren John@orenmeetsworldFollowAnton Stallbörger@stallboergerFollowCaroline Wellborn@carolinewellbornFollowBianca DesJardins@biancadjardinsFollowMarty@martyFollowCatherine@ssssooooFollowMary Royall Wilgis@maryroyallstudioFollowcate@cghirardiniFollowzoe!!@traderjoesFollowJP@helvetiiiicaFollow"
+  }
+}

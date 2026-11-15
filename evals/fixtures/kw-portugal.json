@@ -1,0 +1,2142 @@
+{
+  "name": "kw-portugal",
+  "url": "https://www.kwportugal.pt/",
+  "collectedAt": "2026-11-14T17:20:43.310Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-14T17:20:43.307Z",
+    "finalUrl": "https://www.kwportugal.pt/pt?types=1",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 65,
+      "accessibility": 78,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 1575,
+        "category": "FAST"
+      },
+      "inpMs": {
+        "p75": 319,
+        "category": "AVERAGE"
+      },
+      "cls": {
+        "p75": 0.89,
+        "category": "SLOW"
+      },
+      "fcpMs": {
+        "p75": 1498,
+        "category": "FAST"
+      },
+      "ttfbMs": {
+        "p75": 882,
+        "category": "AVERAGE"
+      },
+      "overall": "SLOW"
+    },
+    "lab": {
+      "lcp": {
+        "value": 5938.897477114144,
+        "display": "5.9 s"
+      },
+      "cls": {
+        "value": 0,
+        "display": "0"
+      },
+      "tbt": {
+        "value": 348.5,
+        "display": "350 ms"
+      },
+      "fcp": {
+        "value": 1092.878037447857,
+        "display": "1.1 s"
+      },
+      "speedIndex": {
+        "value": 5851.90588997259,
+        "display": "5.9 s"
+      },
+      "ttfb": {
+        "value": 7,
+        "display": "Root document took 10 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "redirects",
+        "title": "Avoid multiple page redirects",
+        "description": "Redirects introduce additional delays before the page can be loaded. [Learn how to avoid page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects/).",
+        "score": 0,
+        "displayValue": "Est savings of 760 ms",
+        "savingsMs": {
+          "LCP": 750,
+          "FCP": 750
+        },
+        "items": [
+          {
+            "url": "https://www.kwportugal.pt/",
+            "wastedMs": 758.1268224687142
+          },
+          {
+            "wastedMs": 0,
+            "url": "https://www.kwportugal.pt/pt"
+          }
+        ]
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 429 KiB",
+        "savingsMs": {
+          "LCP": 750,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 127184,
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-WD78FPX2LN",
+            "wastedPercent": 70.05379270891963,
+            "totalBytes": 181552
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtm.js?id=G-WD78FPX2LN",
+            "totalBytes": 181542,
+            "wastedPercent": 41.63795378502525,
+            "wastedBytes": 75590
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/static/chunks/4664-973270437ea6884b.js",
+            "totalBytes": 125299,
+            "wastedBytes": 55854,
+            "wastedPercent": 44.57609967359357
+          },
+          {
+            "wastedBytes": 48751,
+            "totalBytes": 50251,
+            "wastedPercent": 97.01563260211961,
+            "url": "https://www.kwportugal.pt/_next/static/chunks/f4898fe8-671cabe566d0f416.js"
+          },
+          {
+            "wastedPercent": 71.40659425186944,
+            "url": "https://www.kwportugal.pt/_next/static/chunks/4872-be2f606910ed9dcd.js",
+            "wastedBytes": 40465,
+            "totalBytes": 56668
+          },
+          {
+            "wastedBytes": 36003,
+            "wastedPercent": 64.25367595306042,
+            "totalBytes": 56032,
+            "url": "https://web.cmp.usercentrics.eu/ui/v/4.32.0/WebSdk.lib.eb8e107d.js"
+          },
+          {
+            "wastedBytes": 32901,
+            "url": "https://www.kwportugal.pt/_next/static/chunks/52774a7f-10a8d12a02ce3ccd.js",
+            "wastedPercent": 91.62900575184881,
+            "totalBytes": 35907
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/static/chunks/4932-1eddfc49e97dfaba.js",
+            "wastedPercent": 45.44870462404808,
+            "totalBytes": 48867,
+            "wastedBytes": 22209
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 580 ms",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 600
+        },
+        "items": [
+          {
+            "wastedMs": 458,
+            "url": "https://www.kwportugal.pt/_next/static/css/d75d6fe4228ab84a.css",
+            "totalBytes": 1129
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/static/css/a90f0e9989770fae.css",
+            "totalBytes": 3006,
+            "wastedMs": 458
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/static/css/53d7270bfb1c46b9.css",
+            "wastedMs": 153,
+            "totalBytes": 3339
+          },
+          {
+            "totalBytes": 17983,
+            "url": "https://www.kwportugal.pt/_next/static/css/a04da8e08289749e.css",
+            "wastedMs": 763
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/static/css/565ae42e9ab362fe.css",
+            "totalBytes": 538,
+            "wastedMs": 153
+          }
+        ]
+      },
+      {
+        "id": "document-latency-insight",
+        "title": "Document request latency",
+        "description": "Your first network request is the most important. [Reduce its latency](https://developer.chrome.com/docs/performance/insights/document-latency) by avoiding redirects, ensuring a fast server response, and enabling text compression.",
+        "score": 0,
+        "displayValue": "Est savings of 180 ms",
+        "savingsMs": {
+          "LCP": 200,
+          "FCP": 200
+        },
+        "items": {
+          "usesCompression": {
+            "label": "Applies text compression",
+            "value": true
+          },
+          "serverResponseIsFast": {
+            "value": true,
+            "label": "Server responds quickly (observed 7 ms)"
+          },
+          "noRedirects": {
+            "label": "Had redirects (1 redirects, +175 ms)",
+            "value": false
+          }
+        }
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "1.5 s",
+        "savingsMs": {
+          "TBT": 400
+        },
+        "items": [
+          {
+            "total": 1471.2923999999825,
+            "scripting": 946.9703999999839,
+            "url": "https://www.kwportugal.pt/_next/static/chunks/4664-973270437ea6884b.js",
+            "scriptParseCompile": 23.420400000000004
+          },
+          {
+            "scripting": 287.3388000000004,
+            "scriptParseCompile": 15.0576,
+            "url": "https://www.kwportugal.pt/_next/static/chunks/4bd1b696-19924f8c60f03644.js",
+            "total": 316.2912000000004
+          },
+          {
+            "total": 249.92039999999994,
+            "scripting": 17.517599999999987,
+            "url": "https://www.kwportugal.pt/pt",
+            "scriptParseCompile": 14.766000000000004
+          },
+          {
+            "url": "Unattributable",
+            "scripting": 21.458399999999994,
+            "total": 226.29479999999745,
+            "scriptParseCompile": 0
+          },
+          {
+            "total": 129.5616000000003,
+            "scriptParseCompile": 36.28679999999999,
+            "scripting": 92.25240000000034,
+            "url": "https://www.googletagmanager.com/gtm.js?id=G-WD78FPX2LN"
+          },
+          {
+            "total": 59.990399999999916,
+            "url": "https://www.kwportugal.pt/_next/static/chunks/6669-184d4bef4b0ccf13.js",
+            "scriptParseCompile": 2.2487999999999997,
+            "scripting": 57.295199999999916
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "2.9 s",
+        "savingsMs": {
+          "TBT": 350
+        },
+        "items": [
+          {
+            "duration": 1606.435199999937,
+            "group": "scriptEvaluation",
+            "groupLabel": "Script Evaluation"
+          },
+          {
+            "group": "other",
+            "duration": 515.6807999999935,
+            "groupLabel": "Other"
+          },
+          {
+            "duration": 296.7047999999999,
+            "group": "scriptParseCompile",
+            "groupLabel": "Script Parsing & Compilation"
+          },
+          {
+            "duration": 265.41600000000034,
+            "group": "styleLayout",
+            "groupLabel": "Style & Layout"
+          },
+          {
+            "duration": 129.4560000000001,
+            "groupLabel": "Rendering",
+            "group": "paintCompositeRender"
+          },
+          {
+            "duration": 53.21760000000001,
+            "group": "garbageCollection",
+            "groupLabel": "Garbage Collection"
+          },
+          {
+            "groupLabel": "Parse HTML & CSS",
+            "duration": 26.074800000000003,
+            "group": "parseHTML"
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0,
+        "displayValue": "Est savings of 23 KiB",
+        "savingsMs": {
+          "LCP": 300,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://www.kwportugal.pt/_next/static/chunks/4664-973270437ea6884b.js",
+            "wastedBytes": 12207,
+            "subItems": {
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.at"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.flat"
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.hasOwn"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.trimEnd"
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "wastedBytes": 11130,
+            "url": "https://www.kwportugal.pt/_next/static/chunks/52774a7f-10a8d12a02ce3ccd.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.from",
+                  "location": "[…]"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery).",
+        "score": 0,
+        "displayValue": "Est savings of 943 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,6,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+              "boundingRect": {
+                "bottom": 3819,
+                "width": 340,
+                "left": 2152,
+                "height": 200,
+                "right": 2492,
+                "top": 3619
+              },
+              "nodeLabel": "Enterprise",
+              "lhId": "page-0-IMG",
+              "type": "node",
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover",
+              "snippet": "<img alt=\"Enterprise\" loading=\"eager\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F33850%2Fproperties%…\" src=\"https://www.k…"
+            },
+            "wastedBytes": 78422,
+            "totalBytes": 90270,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F33850%2Fproperties%2F59c59ec4-307f-48a1-980b-18e1475bf7af.jpg&w=750&q=75",
+            "subItems": {
+              "items": [
+                {
+                  "reason": "Increasing the image compression factor could improve this image’s download size",
+                  "wastedBytes": 39891
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (716x422) for its displayed dimensions (355x200). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 69041
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "totalBytes": 90084,
+            "node": {
+              "lhId": "page-1-IMG",
+              "boundingRect": {
+                "height": 200,
+                "width": 340,
+                "left": 3576,
+                "top": 3619,
+                "bottom": 3819,
+                "right": 3916
+              },
+              "type": "node",
+              "nodeLabel": "Enterprise",
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,10,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+              "snippet": "<img alt=\"Enterprise\" loading=\"eager\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com…\" src=\"https://www.k…"
+            },
+            "wastedBytes": 78208,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F11287%2F40968c27-7775-4fff-abf5-f6f8172b98cb.jpg&w=750&q=75",
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 39824,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                },
+                {
+                  "wastedBytes": 68798,
+                  "reason": "This image file is larger than it needs to be (716x421) for its displayed dimensions (356x200). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "wastedBytes": 67354,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F0%2F6e23b163-2870-41d9-8623-957ee6fe4109.jpeg&w=750&q=75",
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 28823,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (716x422) for its displayed dimensions (355x200). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 60576
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "lhId": "page-2-IMG",
+              "snippet": "<img alt=\"Enterprise\" loading=\"eager\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com…\" src=\"https://www.k…",
+              "type": "node",
+              "boundingRect": {
+                "height": 200,
+                "width": 340,
+                "left": 2864,
+                "right": 3204,
+                "bottom": 3819,
+                "top": 3619
+              },
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover",
+              "nodeLabel": "Enterprise",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,8,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG"
+            },
+            "totalBytes": 79202
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F40275%2Fproperties%2Ff5932ff1-e350-4425-8ef3-8181d6e2654e.jpg&w=750&q=75",
+            "totalBytes": 90068,
+            "node": {
+              "lhId": "page-3-IMG",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 3819,
+                "top": 3619,
+                "right": 1764,
+                "left": 1424,
+                "width": 340,
+                "height": 200
+              },
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,3,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,IMG",
+              "snippet": "<img alt=\"Enterprise\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F40275%2Fproperties%…\" src=\"https://www.kw…",
+              "nodeLabel": "Enterprise"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "reason": "Increasing the image compression factor could improve this image’s download size",
+                  "wastedBytes": 35002
+                },
+                {
+                  "wastedBytes": 48051,
+                  "reason": "This image file is larger than it needs to be (750x441) for its displayed dimensions (340x453). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 64379
+          },
+          {
+            "totalBytes": 88630,
+            "node": {
+              "type": "node",
+              "nodeLabel": "Enterprise",
+              "lhId": "page-4-IMG",
+              "snippet": "<img alt=\"Enterprise\" loading=\"eager\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F40275%2Fproperties%…\" src=\"https://www.k…",
+              "boundingRect": {
+                "width": 340,
+                "bottom": 3819,
+                "top": 3619,
+                "right": 1424,
+                "left": 1084,
+                "height": 200
+              },
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,3,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "Increasing the image compression factor could improve this image’s download size",
+                  "wastedBytes": 33564
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (750x441) for its displayed dimensions (340x453). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 47284
+                }
+              ]
+            },
+            "wastedBytes": 62941,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F40275%2Fproperties%2F168207e9-b156-4cb4-a664-a4e0b965e4b2.jpg&w=750&q=75"
+          },
+          {
+            "wastedBytes": 62440,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "Increasing the image compression factor could improve this image’s download size",
+                  "wastedBytes": 21922
+                },
+                {
+                  "wastedBytes": 56673,
+                  "reason": "This image file is larger than it needs to be (750x440) for its displayed dimensions (340x255). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "totalBytes": 76902,
+            "node": {
+              "nodeLabel": "Enterprise",
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,12,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+              "boundingRect": {
+                "right": 4628,
+                "height": 200,
+                "bottom": 3819,
+                "left": 4288,
+                "top": 3619,
+                "width": 340
+              },
+              "snippet": "<img alt=\"Enterprise\" loading=\"eager\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com…\" src=\"https://www.k…",
+              "lhId": "page-5-IMG",
+              "type": "node"
+            },
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F43007%2F77caf4f0-1b96-4083-8c21-b9a05a757233.jpg&w=750&q=75"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 14526,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (750x442) for its displayed dimensions (340x227). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 53619
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F81%2F52f237eb-9d10-4232-a1cf-a841796271d4.jpg&w=750&q=75",
+            "wastedBytes": 56992,
+            "totalBytes": 69836,
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,IMG",
+              "boundingRect": {
+                "bottom": 3819,
+                "right": 696,
+                "left": 356,
+                "width": 340,
+                "height": 200,
+                "top": 3619
+              },
+              "nodeLabel": "Enterprise",
+              "snippet": "<img alt=\"Enterprise\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com…\" src=\"https://www.kw…",
+              "lhId": "page-6-IMG",
+              "type": "node",
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover"
+            }
+          },
+          {
+            "wastedBytes": 49512,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F74038%2F085ac9d6-f11a-4a7d-87f3-ca6f44e4d085.jpg&w=750&q=75",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "Increasing the image compression factor could improve this image’s download size",
+                  "wastedBytes": 7046
+                },
+                {
+                  "wastedBytes": 47876,
+                  "reason": "This image file is larger than it needs to be (750x442) for its displayed dimensions (340x227). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "totalBytes": 62356,
+            "node": {
+              "snippet": "<img alt=\"Enterprise\" loading=\"eager\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com…\" src=\"https://www.k…",
+              "type": "node",
+              "lhId": "page-7-IMG",
+              "nodeLabel": "Enterprise",
+              "boundingRect": {
+                "left": 3932,
+                "width": 340,
+                "height": 200,
+                "right": 4272,
+                "bottom": 3819,
+                "top": 3619
+              },
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,11,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "bottom": 3819,
+                "right": 2136,
+                "top": 3619,
+                "width": 340,
+                "height": 200,
+                "left": 1796
+              },
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover",
+              "snippet": "<img alt=\"Enterprise\" loading=\"eager\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com…\" src=\"https://www.k…",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,5,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "page-8-IMG",
+              "type": "node",
+              "nodeLabel": "Enterprise"
+            },
+            "totalBytes": 61452,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "Increasing the image compression factor could improve this image’s download size",
+                  "wastedBytes": 6142
+                },
+                {
+                  "wastedBytes": 47182,
+                  "reason": "This image file is larger than it needs to be (750x442) for its displayed dimensions (340x227). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "wastedBytes": 48608,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F97612%2F463eb17d-9043-4a61-902a-95c00e6da4e5.png&w=750&q=75"
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F3643%2Fb460e2e3-08e7-46e4-9c69-9242e1f32265.png&w=750&q=75",
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 6142,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                },
+                {
+                  "wastedBytes": 47182,
+                  "reason": "This image file is larger than it needs to be (750x442) for its displayed dimensions (340x227). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 48608,
+            "totalBytes": 61452,
+            "node": {
+              "type": "node",
+              "nodeLabel": "Enterprise",
+              "selector": "div.flex > div.min-w-0 > div.relative > img.object-cover",
+              "lhId": "page-9-IMG",
+              "snippet": "<img alt=\"Enterprise\" loading=\"lazy\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover pointer-events-none\" sizes=\"100vw, (min-width: 24em) 50vw, (min-width: 48em) 25vw, (min-width: 90em) 1…\" srcset=\"/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com…\" src=\"https://www.kw…",
+              "boundingRect": {
+                "width": 340,
+                "height": 200,
+                "top": 3619,
+                "bottom": 3819,
+                "right": 2120,
+                "left": 1780
+              },
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,4,DIV,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,IMG"
+            }
+          }
+        ]
+      },
+      {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0,
+        "displayValue": "Est savings of 120 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": ".overlay {\n  --color-cmp-overlay: #303030;\n  --feature-overlay-opacity: 0.7;\n} …",
+            "wastedPercent": 81.95253268871554,
+            "totalBytes": 80089,
+            "wastedBytes": 65635
+          },
+          {
+            "wastedBytes": 43977,
+            "totalBytes": 45564,
+            "url": "https://www.kwportugal.pt/_next/static/css/abd0b0a797ab9868.css",
+            "wastedPercent": 96.51606320939563
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/static/css/a04da8e08289749e.css",
+            "totalBytes": 17408,
+            "wastedBytes": 13740,
+            "wastedPercent": 78.92664145485816
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 1,029 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "totalBytes": 90717,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F33850%2Fproperties%2F59c59ec4-307f-48a1-980b-18e1475bf7af.jpg&w=750&q=75",
+            "cacheLifetimeMs": 14400000,
+            "wastedBytes": 61687.56
+          },
+          {
+            "cacheLifetimeMs": 14400000,
+            "wastedBytes": 61561.079999999994,
+            "totalBytes": 90531,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F11287%2F40968c27-7775-4fff-abf5-f6f8172b98cb.jpg&w=750&q=75"
+          },
+          {
+            "wastedBytes": 61543.399999999994,
+            "totalBytes": 90505,
+            "cacheLifetimeMs": 14400000,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F40275%2Fproperties%2Ff5932ff1-e350-4425-8ef3-8181d6e2654e.jpg&w=750&q=75"
+          },
+          {
+            "cacheLifetimeMs": 14400000,
+            "totalBytes": 89077,
+            "wastedBytes": 60572.35999999999,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F40275%2Fproperties%2F168207e9-b156-4cb4-a664-a4e0b965e4b2.jpg&w=750&q=75"
+          },
+          {
+            "totalBytes": 79650,
+            "cacheLifetimeMs": 14400000,
+            "wastedBytes": 54161.99999999999,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F0%2F6e23b163-2870-41d9-8623-957ee6fe4109.jpeg&w=750&q=75"
+          },
+          {
+            "wastedBytes": 52597.31999999999,
+            "cacheLifetimeMs": 14400000,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F43007%2F77caf4f0-1b96-4083-8c21-b9a05a757233.jpg&w=750&q=75",
+            "totalBytes": 77349
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F81%2F52f237eb-9d10-4232-a1cf-a841796271d4.jpg&w=750&q=75",
+            "cacheLifetimeMs": 14400000,
+            "wastedBytes": 47792.439999999995,
+            "totalBytes": 70283
+          },
+          {
+            "totalBytes": 62803,
+            "cacheLifetimeMs": 14400000,
+            "wastedBytes": 42706.03999999999,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F74038%2F085ac9d6-f11a-4a7d-87f3-ca6f44e4d085.jpg&w=750&q=75"
+          },
+          {
+            "totalBytes": 61899,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F97612%2F463eb17d-9043-4a61-902a-95c00e6da4e5.png&w=750&q=75",
+            "wastedBytes": 42091.32,
+            "cacheLifetimeMs": 14400000
+          },
+          {
+            "cacheLifetimeMs": 14400000,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F3643%2Fb460e2e3-08e7-46e4-9c69-9242e1f32265.png&w=750&q=75",
+            "totalBytes": 61889,
+            "wastedBytes": 42084.52
+          }
+        ]
+      },
+      {
+        "id": "link-name",
+        "title": "Links do not have a discernible name",
+        "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn how to make links accessible](https://dequeuniversity.com/rules/axe/4.14/link-name).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "div.flex > div.p-3 > div.grid > a.flex",
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351967892718?text=Ol%C3%A1%2C%20M%C3%B3nica%20Piedade!%20Te…\">",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "boundingRect": {
+                "top": 3931,
+                "right": 344,
+                "height": 24,
+                "left": 320,
+                "width": 24,
+                "bottom": 3955
+              },
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…",
+              "type": "node",
+              "lhId": "1-98-A",
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex"
+            }
+          },
+          {
+            "node": {
+              "selector": "div.flex > div.p-3 > div.grid > a.flex",
+              "boundingRect": {
+                "top": 3931,
+                "height": 24,
+                "width": 24,
+                "left": 676,
+                "bottom": 3955,
+                "right": 700
+              },
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex",
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…",
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351964442062?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Vilas-Boas!%20T…\">",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,1,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "type": "node",
+              "lhId": "1-99-A"
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,2,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…",
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex",
+              "selector": "div.flex > div.p-3 > div.grid > a.flex",
+              "type": "node",
+              "lhId": "1-100-A",
+              "boundingRect": {
+                "right": 1056,
+                "height": 24,
+                "left": 1032,
+                "bottom": 3955,
+                "width": 24,
+                "top": 3931
+              },
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351967892718?text=Ol%C3%A1%2C%20M%C3%B3nica%20Piedade!%20Te…\">"
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,3,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex",
+              "selector": "div.flex > div.p-3 > div.grid > a.flex",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 3955,
+                "width": 24,
+                "left": 1388,
+                "top": 3931,
+                "height": 24,
+                "right": 1412
+              },
+              "lhId": "1-101-A",
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…",
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351925998053?text=Ol%C3%A1%2C%20An%C3%A1lia%20Betencourt!%2…\">"
+            }
+          },
+          {
+            "node": {
+              "selector": "div.flex > div.p-3 > div.grid > a.flex",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,4,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "type": "node",
+              "lhId": "1-102-A",
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351966033063?text=Ol%C3%A1%2C%20Pedro%20Sanches!%20Tenho%20…\">",
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…",
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex",
+              "boundingRect": {
+                "bottom": 3955,
+                "right": 1768,
+                "left": 1744,
+                "width": 24,
+                "height": 24,
+                "top": 3931
+              }
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,5,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351966033063?text=Ol%C3%A1%2C%20Pedro%20Sanches!%20Tenho%20…\">",
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…",
+              "boundingRect": {
+                "right": 2124,
+                "left": 2100,
+                "height": 24,
+                "bottom": 3955,
+                "width": 24,
+                "top": 3931
+              },
+              "lhId": "1-103-A",
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex",
+              "selector": "div.flex > div.p-3 > div.grid > a.flex",
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "bottom": 3955,
+                "width": 24,
+                "left": 2456,
+                "height": 24,
+                "right": 2480,
+                "top": 3931
+              },
+              "type": "node",
+              "lhId": "1-104-A",
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…",
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,6,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351916086780?text=Ol%C3%A1%2C%20Ilda%20Lourenco!%20Tenho%20…\">",
+              "selector": "div.flex > div.p-3 > div.grid > a.flex"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351912618016?text=Ol%C3%A1%2C%20Carlota%20Abade!%20Tenho%20…\">",
+              "lhId": "1-105-A",
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…",
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,7,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "boundingRect": {
+                "top": 3931,
+                "height": 24,
+                "right": 2836,
+                "bottom": 3955,
+                "width": 24,
+                "left": 2812
+              },
+              "selector": "div.flex > div.p-3 > div.grid > a.flex"
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-106-A",
+              "type": "node",
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex",
+              "boundingRect": {
+                "bottom": 3955,
+                "right": 3192,
+                "left": 3168,
+                "top": 3931,
+                "height": 24,
+                "width": 24
+              },
+              "selector": "div.flex > div.p-3 > div.grid > a.flex",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,8,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351932667761?text=Ol%C3%A1%2C%20Michela%20Segrini!%20Tenho%…\">",
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "width": 24,
+                "bottom": 3955,
+                "left": 3524,
+                "top": 3931,
+                "height": 24,
+                "right": 3548
+              },
+              "lhId": "1-107-A",
+              "type": "node",
+              "explanation": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do no…",
+              "nodeLabel": "div.flex > div.p-3 > div.grid > a.flex",
+              "snippet": "<a type=\"button\" class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" target=\"_blank\" href=\"https://wa.me/+351938040914?text=Ol%C3%A1%2C%20Antonio%20Brito!%20Tenho%20…\">",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,9,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,1,A",
+              "selector": "div.flex > div.p-3 > div.grid > a.flex"
+            }
+          }
+        ]
+      },
+      {
+        "id": "button-name",
+        "title": "Buttons do not have an accessible name",
+        "description": "When a button doesn't have an accessible name, screen readers announce it as \"button\", making it unusable for users who rely on screen readers. [Learn how to make buttons more accessible](https://dequeuniversity.com/rules/axe/4.14/button-name).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "lhId": "1-17-BUTTON",
+              "type": "node",
+              "selector": "ul.flex > li.xl:hidden > span > button.w-full",
+              "snippet": "<button class=\"w-full flex whitespace-nowrap items-center justify-center gap-2 transition…\" type=\"button\">",
+              "nodeLabel": "ul.flex > li.xl:hidden > span > button.w-full",
+              "boundingRect": {
+                "right": 388,
+                "height": 44,
+                "left": 344,
+                "bottom": 58,
+                "top": 14,
+                "width": 44
+              },
+              "path": "1,HTML,1,BODY,1,DIV,3,HEADER,0,DIV,2,NAV,0,UL,4,LI,0,SPAN,0,BUTTON",
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "selector": "div.flex > div.relative > div.z-[12] > button.flex",
+              "lhId": "1-18-BUTTON",
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "snippet": "<button class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" type=\"button\">",
+              "nodeLabel": "div.flex > div.relative > div.z-[12] > button.flex",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,1,DIV,0,BUTTON",
+              "boundingRect": {
+                "width": 24,
+                "bottom": 3651,
+                "left": 320,
+                "top": 3627,
+                "height": 24,
+                "right": 344
+              }
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,2,DIV,0,BUTTON",
+              "selector": "div.flex > div.relative > div.absolute > button.flex",
+              "boundingRect": {
+                "left": 28,
+                "height": 28,
+                "width": 28,
+                "right": 56,
+                "top": 3779,
+                "bottom": 3807
+              },
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "snippet": "<button class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" type=\"button\">",
+              "nodeLabel": "div.flex > div.relative > div.absolute > button.flex",
+              "lhId": "1-19-BUTTON",
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "selector": "div.flex > div.relative > div.w-full > button.flex",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,3,DIV,1,BUTTON",
+              "nodeLabel": "div.flex > div.relative > div.w-full > button.flex",
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "lhId": "1-20-BUTTON",
+              "snippet": "<button class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" disabled=\"\" type=\"button\">",
+              "type": "node",
+              "boundingRect": {
+                "right": 44,
+                "bottom": 3729,
+                "width": 20,
+                "top": 3709,
+                "left": 24,
+                "height": 20
+              }
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "bottom": 3729,
+                "left": 328,
+                "right": 348,
+                "top": 3709,
+                "width": 20,
+                "height": 20
+              },
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,3,DIV,2,BUTTON",
+              "snippet": "<button class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" type=\"button\">",
+              "type": "node",
+              "nodeLabel": "div.flex > div.relative > div.w-full > button.flex",
+              "selector": "div.flex > div.relative > div.w-full > button.flex",
+              "lhId": "1-21-BUTTON"
+            }
+          },
+          {
+            "node": {
+              "selector": "div.flex > div.relative > div.z-[12] > button.flex",
+              "snippet": "<button class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" type=\"button\">",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 3651,
+                "right": 700,
+                "top": 3627,
+                "left": 676,
+                "width": 24,
+                "height": 24
+              },
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "lhId": "1-22-BUTTON",
+              "nodeLabel": "div.flex > div.relative > div.z-[12] > button.flex",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,1,DIV,0,DIV,1,DIV,0,DIV,1,DIV,0,BUTTON"
+            }
+          },
+          {
+            "node": {
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,1,DIV,0,DIV,1,DIV,0,DIV,3,DIV,1,BUTTON",
+              "boundingRect": {
+                "height": 20,
+                "width": 20,
+                "top": 3709,
+                "left": 380,
+                "right": 400,
+                "bottom": 3729
+              },
+              "type": "node",
+              "nodeLabel": "div.flex > div.relative > div.w-full > button.flex",
+              "lhId": "1-23-BUTTON",
+              "snippet": "<button class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" disabled=\"\" type=\"button\">",
+              "selector": "div.flex > div.relative > div.w-full > button.flex"
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-24-BUTTON",
+              "type": "node",
+              "nodeLabel": "div.flex > div.relative > div.w-full > button.flex",
+              "boundingRect": {
+                "right": 704,
+                "height": 20,
+                "left": 684,
+                "bottom": 3729,
+                "width": 20,
+                "top": 3709
+              },
+              "selector": "div.flex > div.relative > div.w-full > button.flex",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,1,DIV,0,DIV,1,DIV,0,DIV,3,DIV,2,BUTTON",
+              "snippet": "<button class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" type=\"button\">",
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "nodeLabel": "div.flex > div.relative > div.z-[12] > button.flex",
+              "lhId": "1-25-BUTTON",
+              "selector": "div.flex > div.relative > div.z-[12] > button.flex",
+              "boundingRect": {
+                "height": 24,
+                "width": 24,
+                "left": 1032,
+                "top": 3627,
+                "right": 1056,
+                "bottom": 3651
+              },
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "snippet": "<button class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" type=\"button\">",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,2,DIV,0,DIV,1,DIV,0,DIV,1,DIV,0,BUTTON"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "snippet": "<button class=\"flex whitespace-nowrap items-center justify-center gap-2 transition-all du…\" disabled=\"\" type=\"button\">",
+              "selector": "div.flex > div.relative > div.w-full > button.flex",
+              "lhId": "1-26-BUTTON",
+              "nodeLabel": "div.flex > div.relative > div.w-full > button.flex",
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "boundingRect": {
+                "bottom": 3729,
+                "right": 756,
+                "top": 3709,
+                "width": 20,
+                "left": 736,
+                "height": 20
+              },
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,2,DIV,0,DIV,1,DIV,0,DIV,3,DIV,1,BUTTON"
+            }
+          }
+        ]
+      },
+      {
+        "id": "forced-reflow-insight",
+        "title": "Forced reflow",
+        "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "type": "table",
+            "items": [
+              {
+                "source": {
+                  "urlProvider": "network",
+                  "type": "source-location",
+                  "line": 5,
+                  "column": 61615,
+                  "url": "https://www.kwportugal.pt/_next/static/chunks/4664-973270437ea6884b.js"
+                },
+                "reflowTime": 70.028
+              }
+            ],
+            "headings": [
+              {
+                "valueType": "source-location",
+                "key": "source",
+                "label": "Top function call"
+              },
+              {
+                "label": "Total reflow time",
+                "granularity": 1,
+                "valueType": "ms",
+                "key": "reflowTime"
+              }
+            ]
+          },
+          {
+            "headings": [
+              {
+                "label": "Source",
+                "key": "source",
+                "valueType": "source-location"
+              },
+              {
+                "label": "Total reflow time",
+                "granularity": 1,
+                "valueType": "ms",
+                "key": "reflowTime"
+              }
+            ],
+            "type": "table",
+            "items": [
+              {
+                "source": {
+                  "line": 4,
+                  "type": "source-location",
+                  "url": "https://www.kwportugal.pt/_next/static/chunks/9336-30c0e3ca75f4ea69.js",
+                  "column": 11092,
+                  "urlProvider": "network"
+                },
+                "reflowTime": 2.471
+              },
+              {
+                "source": {
+                  "column": 16688,
+                  "url": "https://www.kwportugal.pt/_next/static/chunks/9336-30c0e3ca75f4ea69.js",
+                  "type": "source-location",
+                  "line": 4,
+                  "urlProvider": "network"
+                },
+                "reflowTime": 37.14
+              },
+              {
+                "source": {
+                  "type": "source-location",
+                  "urlProvider": "network",
+                  "url": "https://www.kwportugal.pt/_next/static/chunks/3459-e9f737d47032a3f7.js",
+                  "column": 4460,
+                  "line": 0
+                },
+                "reflowTime": 30.417
+              },
+              {
+                "reflowTime": 1.53,
+                "source": {
+                  "type": "text",
+                  "value": "[unattributed]"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.14/color-contrast).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "div.grid > div.flex > div.flex > span.text-9xl",
+              "snippet": "<span class=\"text-9xl\">",
+              "path": "1,HTML,1,BODY,1,DIV,9,DIV,0,DIV,0,DIV,1,SPAN",
+              "nodeLabel": "Keller Williams",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.6 (foreground color: #cccccc, background color: #ffffff, font size: 70.1pt (93.52px), font weight: normal). Expected contrast ratio of 3:1",
+              "type": "node",
+              "boundingRect": {
+                "height": 164,
+                "right": 403,
+                "left": -205,
+                "bottom": 2473,
+                "top": 2309,
+                "width": 608
+              },
+              "lhId": "1-73-SPAN"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,10,DIV,0,DIV,1,SECTION,0,DIV,0,DIV,1,SPAN",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.84 (foreground color: #828282, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "boundingRect": {
+                "height": 24,
+                "top": 2927,
+                "right": 396,
+                "left": 16,
+                "width": 380,
+                "bottom": 2951
+              },
+              "selector": "section.gap-6 > div.w-full > div.flex > span.text-[1rem]",
+              "lhId": "1-75-SPAN",
+              "snippet": "<span class=\"text-[1rem] leading-[1.5rem] text-black font-normal text-grey-03 h-max\">",
+              "type": "node",
+              "nodeLabel": "Associados em todo o mundo"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "boundingRect": {
+                "top": 3063,
+                "width": 380,
+                "height": 24,
+                "left": 16,
+                "right": 396,
+                "bottom": 3087
+              },
+              "lhId": "1-76-SPAN",
+              "type": "node",
+              "selector": "section.gap-6 > div.w-full > div.flex > span.text-[1rem]",
+              "snippet": "<span class=\"text-[1rem] leading-[1.5rem] text-black font-normal text-grey-03 h-max\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.84 (foreground color: #828282, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "nodeLabel": "Associados em Portugal",
+              "path": "1,HTML,1,BODY,1,DIV,10,DIV,0,DIV,1,SECTION,0,DIV,1,DIV,1,SPAN"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "snippet": "<span class=\"text-[1rem] leading-[1.5rem] text-black font-normal text-grey-03 h-max\">",
+              "lhId": "1-77-SPAN",
+              "selector": "section.gap-6 > div.w-full > div.flex > span.text-[1rem]",
+              "boundingRect": {
+                "left": 16,
+                "width": 380,
+                "bottom": 3223,
+                "right": 396,
+                "height": 24,
+                "top": 3199
+              },
+              "path": "1,HTML,1,BODY,1,DIV,10,DIV,0,DIV,1,SECTION,0,DIV,2,DIV,1,SPAN",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.84 (foreground color: #828282, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "nodeLabel": "Market Centers"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "Palmela, Palmela",
+              "selector": "div.flex > div.flex > div.flex > span.text-[0.75rem]",
+              "snippet": "<span class=\"text-[0.75rem] leading-[1rem] text-black font-normal text-grey-03 line-cla…\">",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,1,DIV,1,SPAN",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.84 (foreground color: #828282, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "type": "node",
+              "boundingRect": {
+                "height": 16,
+                "top": 3859,
+                "left": 46,
+                "width": 96,
+                "right": 142,
+                "bottom": 3875
+              },
+              "lhId": "1-78-SPAN"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "Évora, Bacelo e Senhora da Saúde",
+              "selector": "div.flex > div.flex > div.flex > span.text-[0.75rem]",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,1,DIV,0,DIV,1,DIV,1,DIV,0,DIV,1,DIV,1,SPAN",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 3875,
+                "width": 188,
+                "top": 3859,
+                "height": 16,
+                "right": 590,
+                "left": 402
+              },
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.84 (foreground color: #828282, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "lhId": "1-80-SPAN",
+              "snippet": "<span class=\"text-[0.75rem] leading-[1rem] text-black font-normal text-grey-03 line-cla…\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "longestChain": {
+                "duration": 617
+              },
+              "type": "network-tree",
+              "chains": {
+                "BEC4A7D347B2994E290B6198836E9BA4": {
+                  "children": "[…]",
+                  "url": "https://www.kwportugal.pt/pt",
+                  "transferSize": 57309,
+                  "navStartToEndTime": 561,
+                  "isLongest": true
+                }
+              }
+            }
+          },
+          {
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "value": "No origins were preconnected",
+              "type": "text"
+            },
+            "title": "Preconnected origins",
+            "type": "list-section"
+          },
+          {
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "title": "Preconnect candidates",
+            "type": "list-section",
+            "value": {
+              "value": "No additional origins are good candidates for preconnecting",
+              "type": "text"
+            }
+          }
+        ]
+      },
+      {
+        "id": "label",
+        "title": "Form elements do not have associated labels",
+        "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more about form element labels](https://dequeuniversity.com/rules/axe/4.14/label).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "snippet": "<input class=\"\" autocapitalize=\"none\" autocomplete=\"off\" autocorrect=\"off\" id=\"react-select-2-input\" spellcheck=\"false\" tabindex=\"0\" aria-autocomplete=\"list\" aria-expanded=\"false\" aria-haspopup=\"true\" role=\"combobox\" aria-activedescendant=\"\" aria-describedby=\"react-select-2-placeholder\" type=\"text\" …",
+              "path": "1,HTML,1,BODY,1,DIV,7,DIV,2,DIV,0,DIV,0,DIV,1,DIV,2,FORM,0,DIV,2,DIV,0,DIV,2,DIV,0,INPUT",
+              "explanation": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Elem…",
+              "boundingRect": {
+                "right": 80,
+                "height": 24,
+                "left": 77,
+                "bottom": 673,
+                "top": 649,
+                "width": 3
+              },
+              "selector": "div.read-only:bg-grey-10 > div.clearValue > div.clearValue > input#react-select-2-input",
+              "nodeLabel": "div.read-only:bg-grey-10 > div.clearValue > div.clearValue > input#react-select-2-input",
+              "type": "node",
+              "lhId": "1-97-INPUT"
+            }
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "title": "Touch targets do not have sufficient size or spacing.",
+        "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.14/target-size).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "boundingRect": {
+                "height": 16,
+                "width": 103,
+                "left": 16,
+                "right": 119,
+                "bottom": 7045,
+                "top": 7029
+              },
+              "path": "1,HTML,1,BODY,1,DIV,15,FOOTER,0,DIV,1,DIV,1,DIV,1,DIV,1,UL,2,LI,0,A",
+              "nodeLabel": "Política de cookies",
+              "selector": "div.flex > ul.flex > li.inline-flex > a.inline-flex",
+              "lhId": "1-113-A",
+              "snippet": "<a class=\"inline-flex\" href=\"/pt/politica-de-cookies\">",
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Target has insufficient size (103px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px."
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,15,FOOTER,0,DIV,1,DIV,1,DIV,1,DIV,1,UL,4,LI,0,A",
+              "nodeLabel": "Livro de reclamações",
+              "explanation": "Fix any of the following:\n  Target has insufficient size (119px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.8px instead of at least 24px.",
+              "lhId": "1-114-A",
+              "selector": "div.flex > ul.flex > li.inline-flex > a.inline-flex",
+              "type": "node",
+              "boundingRect": {
+                "top": 7051,
+                "left": 16,
+                "bottom": 7067,
+                "right": 135,
+                "width": 119,
+                "height": 16
+              },
+              "snippet": "<a target=\"_blank\" class=\"inline-flex\" href=\"https://www.livroreclamacoes.pt/Inicio/\">"
+            }
+          }
+        ]
+      },
+      {
+        "id": "aria-allowed-attr",
+        "title": "`[aria-*]` attributes do not match their roles",
+        "description": "Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn how to match ARIA attributes to their roles](https://dequeuniversity.com/rules/axe/4.14/aria-allowed-attr).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "nodeLabel": "nav.justify-self-end > ul.flex > li.xl:hidden > span",
+              "type": "node",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+              "boundingRect": {
+                "height": 44,
+                "width": 44,
+                "left": 344,
+                "top": 14,
+                "right": 388,
+                "bottom": 58
+              },
+              "lhId": "1-0-SPAN",
+              "snippet": "<span type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_R_2nhl9fiivb_\" data-state=\"closed\">",
+              "path": "1,HTML,1,BODY,1,DIV,3,HEADER,0,DIV,2,NAV,0,UL,4,LI,0,SPAN",
+              "selector": "nav.justify-self-end > ul.flex > li.xl:hidden > span"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "right": 380,
+                "left": 32,
+                "height": 44,
+                "bottom": 627,
+                "width": 348,
+                "top": 583
+              },
+              "nodeLabel": "Tipo de imóvel",
+              "path": "1,HTML,1,BODY,1,DIV,7,DIV,2,DIV,0,DIV,0,DIV,1,DIV,1,DIV",
+              "selector": "div.gap-10 > div.flex > div.max-lg:flex-col > div.w-full",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+              "snippet": "<div class=\"w-full\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_3_\" data-state=\"closed\">",
+              "type": "node",
+              "lhId": "1-1-DIV"
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,0,DIV",
+              "nodeLabel": "Contactar",
+              "selector": "div.flex > div.p-3 > div.grid > div.z-10",
+              "snippet": "<div class=\"z-10 col-span-1\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_7v_\" data-state=\"closed\">",
+              "type": "node",
+              "lhId": "1-2-DIV",
+              "boundingRect": {
+                "right": 316,
+                "height": 24,
+                "left": 220,
+                "top": 3931,
+                "bottom": 3955,
+                "width": 96
+              },
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,1,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,0,DIV",
+              "boundingRect": {
+                "right": 672,
+                "height": 24,
+                "top": 3931,
+                "width": 96,
+                "left": 576,
+                "bottom": 3955
+              },
+              "nodeLabel": "Contactar",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+              "type": "node",
+              "snippet": "<div class=\"z-10 col-span-1\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_82_\" data-state=\"closed\">",
+              "lhId": "1-3-DIV",
+              "selector": "div.flex > div.p-3 > div.grid > div.z-10"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "top": 3931,
+                "right": 1028,
+                "height": 24,
+                "left": 932,
+                "bottom": 3955,
+                "width": 96
+              },
+              "snippet": "<div class=\"z-10 col-span-1\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_85_\" data-state=\"closed\">",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,2,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,0,DIV",
+              "selector": "div.flex > div.p-3 > div.grid > div.z-10",
+              "nodeLabel": "Contactar",
+              "type": "node",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+              "lhId": "1-4-DIV"
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,3,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,0,DIV",
+              "selector": "div.flex > div.p-3 > div.grid > div.z-10",
+              "nodeLabel": "Contactar",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+              "boundingRect": {
+                "width": 96,
+                "bottom": 3955,
+                "top": 3931,
+                "height": 24,
+                "left": 1288,
+                "right": 1384
+              },
+              "type": "node",
+              "lhId": "1-5-DIV",
+              "snippet": "<div class=\"z-10 col-span-1\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_88_\" data-state=\"closed\">"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "bottom": 3955,
+                "top": 3931,
+                "left": 1644,
+                "right": 1740,
+                "width": 96,
+                "height": 24
+              },
+              "selector": "div.flex > div.p-3 > div.grid > div.z-10",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,4,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,0,DIV",
+              "nodeLabel": "Contactar",
+              "type": "node",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+              "snippet": "<div class=\"z-10 col-span-1\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_8b_\" data-state=\"closed\">",
+              "lhId": "1-6-DIV"
+            }
+          },
+          {
+            "node": {
+              "selector": "div.flex > div.p-3 > div.grid > div.z-10",
+              "lhId": "1-7-DIV",
+              "type": "node",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+              "snippet": "<div class=\"z-10 col-span-1\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_8e_\" data-state=\"closed\">",
+              "nodeLabel": "Contactar",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,5,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,0,DIV",
+              "boundingRect": {
+                "bottom": 3955,
+                "top": 3931,
+                "right": 2096,
+                "left": 2000,
+                "width": 96,
+                "height": 24
+              }
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "bottom": 3955,
+                "left": 2356,
+                "top": 3931,
+                "width": 96,
+                "right": 2452,
+                "height": 24
+              },
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,6,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,0,DIV",
+              "lhId": "1-8-DIV",
+              "type": "node",
+              "snippet": "<div class=\"z-10 col-span-1\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_8h_\" data-state=\"closed\">",
+              "selector": "div.flex > div.p-3 > div.grid > div.z-10",
+              "nodeLabel": "Contactar",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          },
+          {
+            "node": {
+              "snippet": "<div class=\"z-10 col-span-1\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_8k_\" data-state=\"closed\">",
+              "nodeLabel": "Contactar",
+              "path": "1,HTML,1,BODY,1,DIV,11,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,7,DIV,0,DIV,1,DIV,1,DIV,1,DIV,1,DIV,0,DIV",
+              "explanation": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\"",
+              "boundingRect": {
+                "bottom": 3955,
+                "right": 2808,
+                "left": 2712,
+                "top": 3931,
+                "height": 24,
+                "width": 96
+              },
+              "selector": "div.flex > div.p-3 > div.grid > div.z-10",
+              "lhId": "1-9-DIV",
+              "type": "node"
+            }
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.11,
+        "displayValue": "13.6 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.14,
+        "displayValue": "5.9 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.49,
+        "displayValue": "5.9 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 3,271 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://www.kwportugal.pt/_next/static/media/05c2cc39c70e2158-s.p.otf",
+            "totalBytes": 290459
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-WD78FPX2LN",
+            "totalBytes": 182241
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtm.js?id=G-WD78FPX2LN",
+            "totalBytes": 182231
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/static/chunks/4664-973270437ea6884b.js",
+            "totalBytes": 125885
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F33850%2Fproperties%2F59c59ec4-307f-48a1-980b-18e1475bf7af.jpg&w=750&q=75",
+            "totalBytes": 90717
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F11287%2F40968c27-7775-4fff-abf5-f6f8172b98cb.jpg&w=750&q=75",
+            "totalBytes": 90531
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F40275%2Fproperties%2Ff5932ff1-e350-4425-8ef3-8181d6e2654e.jpg&w=750&q=75",
+            "totalBytes": 90505
+          },
+          {
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F40275%2Fproperties%2F168207e9-b156-4cb4-a664-a4e0b965e4b2.jpg&w=750&q=75",
+            "totalBytes": 89077
+          },
+          {
+            "totalBytes": 79650,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F0%2F6e23b163-2870-41d9-8623-957ee6fe4109.jpeg&w=750&q=75"
+          },
+          {
+            "totalBytes": 77349,
+            "url": "https://www.kwportugal.pt/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F43007%2F77caf4f0-1b96-4083-8c21-b9a05a757233.jpg&w=750&q=75"
+          }
+        ]
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.54,
+        "displayValue": "240 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.73,
+        "displayValue": "350 ms",
+        "savingsMs": null,
+        "items": []
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.kwportugal.pt/pt",
+    "status": 200,
+    "htmlBytes": 202498,
+    "headers": {
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "contentEncoding": "gzip",
+      "xRobotsTag": null,
+      "server": null
+    },
+    "meta": {
+      "title": "KW Portugal",
+      "description": "Procura um lugar onde viver a sua história? Nós ajudamos.",
+      "canonical": "https://www.kwportugal.pt/pt",
+      "lang": "pt",
+      "robots": "index, follow, nocache",
+      "viewport": "width=device-width, initial-scale=1",
+      "openGraph": {}
+    },
+    "headings": [
+      {
+        "level": 2,
+        "text": "A carreira que ambiciona é na KW. Construa-a connosco."
+      },
+      {
+        "level": 1,
+        "text": "Procura um lugar onde viver a sua história? Nós ajudamos."
+      },
+      {
+        "level": 2,
+        "text": "Sabe quanto vale a sua casa?"
+      },
+      {
+        "level": 2,
+        "text": "A casa que vai ter. Simule já o seu crédito."
+      },
+      {
+        "level": 2,
+        "text": "Uma casa de excelência"
+      },
+      {
+        "level": 2,
+        "text": "Comece a viver a sua história num novo lugar"
+      },
+      {
+        "level": 2,
+        "text": "O que nos diferencia são as pessoas que trabalham connosco."
+      },
+      {
+        "level": 2,
+        "text": "O nosso compromisso, a sua oportunidade."
+      },
+      {
+        "level": 2,
+        "text": "Contrate um serviço personalizado a pensar em si."
+      },
+      {
+        "level": 2,
+        "text": "Alcança o êxito que procuras e a carreira que ambicionas."
+      }
+    ],
+    "h1Count": 1,
+    "images": {
+      "total": 16,
+      "missingAlt": 0,
+      "missingDimensions": 0,
+      "lazy": 13,
+      "firstImages": [
+        {
+          "src": "/images/kw-logo-red.svg",
+          "alt": "KW logo",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": "48",
+          "height": "32"
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fbanner-footer.webp&w=1920&q=75",
+          "alt": "People talking in a table at work",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": "820",
+          "height": "420"
+        },
+        {
+          "src": "/images/kw-logo-red.svg",
+          "alt": "KW logo",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "48",
+          "height": "32"
+        },
+        {
+          "src": "/images/logo-prosperas.svg",
+          "alt": "Onde tu prosperas",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "203",
+          "height": "32"
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fmanager.soukwportugal.pt%2Fstorage%2F01JP2W1PCKZEGJMMH6MCD3T3A7.jpg&w=3840&q=75",
+          "alt": "Hero background image",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "width": "1200",
+          "height": "600"
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fphoto-06.webp&w=3840&q=75",
+          "alt": "woman smiling with boxes in her hands",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "1200",
+          "height": "600"
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fsoukwimgsprod.s3.eu-central-1.amazonaws.com%2Fproperty%2F2026%2F81280%2Fa526fb0c-7414-4f36-b097-e2e5630a3e85.png&w=3840&q=75",
+          "alt": "image property",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "878",
+          "height": "460"
+        },
+        {
+          "src": "/_next/image?url=https%3A%2F%2Fimgs.soukwportugal.pt%2F33988%2Fproperties%2F30ad788f-cb89-4e8e-9525-7ef64d3fdcbf.jpg&w=3840&q=75",
+          "alt": "image property",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "878",
+          "height": "460"
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 5,
+      "blockingScripts": 0,
+      "preloads": [
+        {
+          "href": "/images/kw-logo-red.svg",
+          "as": "image"
+        },
+        {
+          "href": "",
+          "as": "image"
+        },
+        {
+          "href": "/_next/static/chunks/webpack-fdb8f71982abd7c9.js",
+          "as": "script"
+        },
+        {
+          "href": "https://web.cmp.usercentrics.eu/ui/loader.js",
+          "as": "script"
+        },
+        {
+          "href": "https://www.googletagmanager.com/gtm.js?id=G-WD78FPX2LN",
+          "as": "script"
+        },
+        {
+          "href": "https://www.googletagmanager.com/gtag/js?id=G-WD78FPX2LN",
+          "as": "script"
+        },
+        {
+          "href": "/_next/static/chunks/9336-30c0e3ca75f4ea69.js",
+          "as": "script"
+        },
+        {
+          "href": "",
+          "as": "image"
+        },
+        {
+          "href": "/_next/static/chunks/4783.c4a2a961ab0625cd.js",
+          "as": "script"
+        },
+        {
+          "href": "/_next/static/chunks/8557-fe9d72fa6beeff7e.js",
+          "as": "script"
+        }
+      ],
+      "preconnects": []
+    },
+    "scripts": {
+      "total": 0,
+      "external": 34,
+      "thirdPartyHosts": []
+    },
+    "structuredData": {
+      "jsonLdBlocks": 0,
+      "types": [],
+      "invalidBlocks": 0,
+      "raw": []
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [],
+      "allowed": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "ComprarVenderKW LuxuryEmpreendimentosFranchisingA Keller WilliamsJunte-se a nósA carreira que ambiciona é na KW. Construa-a connosco.Aqui terá as ferramentas e a formação para fazer crescer o seu negócio, onde o seu potencial é o fator diferenciador. Cresça connosco.Fale connoscoImóveisComprarVenderKW LuxuryEmpreendimentosJunte-se a nósConsultoresEquipasMarket CentersFranchisingA Keller WilliamsImprensaRedes sociaisInstagramFacebookLinkedinYoutubeTodos os direitos reservados © 2014-2026 Keller Williams PortugalPolítica de privacidadeTermos e condiçõesPolítica de cookiesResolução alternativa de litígiosLivro de reclamaçõesCanal de Denúncias16.276 Imóveis à sua esperaProcura um lugar onde viver a sua história? Nós ajudamos.ComprarArrendarTipo de imóvelProcurarVender imóvelSabe quanto vale a sua casa?Avaliar a minha casaSimulador de CréditoA casa que vai ter. Simule já o seu crédito.Simulador de Crédito0104Keller Williams LuxuryUma casa de excelência16 novosEncontre o seu imóvelEmpreendimentosComece a viver a sua história num novo lugarÚltimas unidadesQuando compra um imóvel de empreendimento, tem a certeza de adquirir novo e com garantia do promotorÚltimas unidadesVer empreendimentos·Keller Williams·Keller Williams·Keller Williams·Keller Williams·Keller Williams·Keller WilliamsA Keller WilliamsO que nos diferencia são as pessoas que trabalham connosco.Mais sobre nós+0+0Associados em todo o mundo+0+0Associados em Portugal00Market CentersFranchisingO nosso compromisso, a sua …"
+  }
+}

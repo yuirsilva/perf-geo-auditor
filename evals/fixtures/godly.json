@@ -1,0 +1,1647 @@
+{
+  "name": "godly",
+  "url": "https://recent.design/",
+  "collectedAt": "2026-11-14T17:30:28.535Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-14T17:30:28.532Z",
+    "finalUrl": "https://recent.design/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 58,
+      "accessibility": 85,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 3937,
+        "category": "AVERAGE"
+      },
+      "inpMs": {
+        "p75": 332,
+        "category": "AVERAGE"
+      },
+      "cls": {
+        "p75": 0.2,
+        "category": "AVERAGE"
+      },
+      "fcpMs": {
+        "p75": 2718,
+        "category": "AVERAGE"
+      },
+      "ttfbMs": {
+        "p75": 1853,
+        "category": "SLOW"
+      },
+      "overall": "SLOW"
+    },
+    "lab": {
+      "lcp": {
+        "value": 10276.127914742592,
+        "display": "10.3 s"
+      },
+      "cls": {
+        "value": 0.1704001147454019,
+        "display": "0.17"
+      },
+      "tbt": {
+        "value": 133,
+        "display": "130 ms"
+      },
+      "fcp": {
+        "value": 2423.0269294194923,
+        "display": "2.4 s"
+      },
+      "speedIndex": {
+        "value": 6040.343268319006,
+        "display": "6.0 s"
+      },
+      "ttfb": {
+        "value": 13,
+        "display": "Root document took 10 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 114 KiB",
+        "savingsMs": {
+          "LCP": 600,
+          "FCP": 450
+        },
+        "items": [
+          {
+            "wastedBytes": 116908,
+            "url": "https://recent.design/assets/main-mTU8JJIJ.js",
+            "totalBytes": 268106,
+            "wastedPercent": 43.60492637739084
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0,
+        "displayValue": "Est savings of 10 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.findLast",
+                  "location": "[…]"
+                }
+              ]
+            },
+            "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+            "wastedBytes": 10620
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "3.0 s",
+        "savingsMs": {
+          "TBT": 150
+        },
+        "items": [
+          {
+            "group": "scriptEvaluation",
+            "duration": 1362.373199999988,
+            "groupLabel": "Script Evaluation"
+          },
+          {
+            "duration": 1327.0320000000002,
+            "groupLabel": "Other",
+            "group": "other"
+          },
+          {
+            "groupLabel": "Script Parsing & Compilation",
+            "duration": 154.734,
+            "group": "scriptParseCompile"
+          },
+          {
+            "duration": 78.32760000000201,
+            "groupLabel": "Rendering",
+            "group": "paintCompositeRender"
+          },
+          {
+            "group": "styleLayout",
+            "duration": 59.08199999999997,
+            "groupLabel": "Style & Layout"
+          },
+          {
+            "duration": 35.0556,
+            "groupLabel": "Garbage Collection",
+            "group": "garbageCollection"
+          },
+          {
+            "duration": 33.0072,
+            "groupLabel": "Parse HTML & CSS",
+            "group": "parseHTML"
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 9 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://cdn.visitors.now/v.js",
+            "cacheLifetimeMs": 14400000,
+            "totalBytes": 7961,
+            "wastedBytes": 5413.48
+          },
+          {
+            "cacheLifetimeMs": 86400000,
+            "wastedBytes": 4246,
+            "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+            "totalBytes": 10615
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 160 ms",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 150
+        },
+        "items": [
+          {
+            "wastedMs": 160,
+            "totalBytes": 16480,
+            "url": "https://recent.design/assets/app-D6DOIlXl.css"
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "1.4 s",
+        "savingsMs": {
+          "TBT": 100
+        },
+        "items": [
+          {
+            "url": "https://recent.design/assets/main-mTU8JJIJ.js",
+            "scripting": 1297.8515999999597,
+            "scriptParseCompile": 71.38199999999999,
+            "total": 2566.7795999999803
+          },
+          {
+            "url": "Unattributable",
+            "scripting": 14.168400000000002,
+            "scriptParseCompile": 0,
+            "total": 205.46280000000016
+          },
+          {
+            "scriptParseCompile": 26.113200000000003,
+            "url": "https://recent.design/",
+            "total": 142.89479999999998,
+            "scripting": 13.9824
+          }
+        ]
+      },
+      {
+        "id": "layout-shifts",
+        "title": "Avoid large layout shifts",
+        "description": "These are the largest layout shifts observed on the page. Each table item represents a single layout shift, and shows the element that shifted the most. Below each item are possible root causes that led to the layout shift. Some of these layout shifts may not be included in the CLS metric value due to [windowing](https://web.dev/articles/cls#what_is_cls). [Learn how to improve CLS](https://web.dev/articles/optimize-cls)",
+        "score": 0,
+        "displayValue": "1 layout shift found",
+        "savingsMs": {
+          "CLS": 0.17
+        },
+        "items": [
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN",
+              "nodeLabel": "Design\n\nThe best design inspiration on the Internet.\n\nAll\nWeb\nInterface\nBrandin…",
+              "snippet": "<main data-feed-body=\"\" data-presence-anchor=\"page\" class=\"x1wtva3j x78zum5 x98rzlu xdt5ytf xeuugli x1n2onr6 x68pp3s\" style=\"transform:none\">",
+              "lhId": "page-1-MAIN",
+              "boundingRect": {
+                "left": 16,
+                "right": 396,
+                "height": 8909,
+                "bottom": 9146,
+                "width": 380,
+                "top": 237
+              },
+              "type": "node",
+              "selector": "div.x78zum5 > div.x78zum5 > div.x78zum5 > main.x1wtva3j"
+            },
+            "score": 0.1704001147454019
+          }
+        ]
+      },
+      {
+        "id": "lcp-breakdown-insight",
+        "title": "LCP breakdown",
+        "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "items": [
+              {
+                "duration": 13.212,
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte"
+              },
+              {
+                "label": "Resource load delay",
+                "subpart": "resourceLoadDelay",
+                "duration": 350.381
+              },
+              {
+                "duration": 78.886,
+                "label": "Resource load duration",
+                "subpart": "resourceLoadDuration"
+              },
+              {
+                "label": "Element render delay",
+                "subpart": "elementRenderDelay",
+                "duration": 2603.62
+              }
+            ],
+            "headings": [
+              {
+                "valueType": "text",
+                "label": "Subpart",
+                "key": "label"
+              },
+              {
+                "valueType": "ms",
+                "key": "duration",
+                "label": "Duration"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "type": "node",
+            "snippet": "<img alt=\"\" class=\"xsm0vga x1lliihq x5yr21d xl1xv1r xh8yej3\" draggable=\"false\" fetchpriority=\"high\" height=\"1200\" loading=\"eager\" sizes=\"(min-width: 2560px) 11vw, (min-width: 1920px) 12vw, (min-width: 1536px) 16…\" src=\"https://cdn.recent.design/items/2pl65e8/0/poster/960.webp\" srcset=\"https://cdn.re…",
+            "nodeLabel": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga",
+            "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,0,ARTICLE,0,DIV,0,SPAN,0,SPAN,0,IMG",
+            "selector": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga",
+            "boundingRect": {
+              "height": 432,
+              "right": 396,
+              "top": 355,
+              "width": 380,
+              "left": 16,
+              "bottom": 787
+            },
+            "lhId": "page-0-IMG"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.14/color-contrast).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "nodeLabel": "Join 31,752 members, including 194 who signed up today",
+              "path": "1,HTML,1,BODY,1,DIV,0,ASIDE,0,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,1,DIV,1,SPAN",
+              "snippet": "<span class=\"x1tz6pr4 xlb5dbd xloq5t5\">",
+              "lhId": "1-1-SPAN",
+              "selector": "div.xxkxylk > div.x7a106z > div.x78zum5 > span.x1tz6pr4",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 205,
+                "right": 236,
+                "left": 16,
+                "width": 220,
+                "top": 168,
+                "height": 36
+              },
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.79 (foreground color: #838383, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,0,HEADER,0,DIV,1,P",
+              "snippet": "<p data-presence-anchor=\"page:tagline\" class=\"x1tz6pr4 xlb5dbd xloq5t5 xeuugli x1fzhlzt\">",
+              "lhId": "1-3-P",
+              "boundingRect": {
+                "width": 380,
+                "top": 277,
+                "height": 18,
+                "bottom": 295,
+                "left": 16,
+                "right": 396
+              },
+              "nodeLabel": "The best design inspiration on the Internet.",
+              "type": "node",
+              "selector": "main.x1wtva3j > header.x9f619 > div.x78zum5 > p.x1tz6pr4",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.79 (foreground color: #838383, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "Web",
+              "lhId": "1-5-BUTTON",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,1,DIV,0,DIV,1,BUTTON",
+              "selector": "main.x1wtva3j > div.x6s0dn4 > div.x6s0dn4 > button.x6s0dn4",
+              "snippet": "<button type=\"button\" data-presence-anchor=\"page:category:web\" aria-pressed=\"false\" class=\"x6s0dn4 x9r1u3d xrwr6ys x1y0btm7 xmkeg23 x9f619 x3nfvp2 x2lah0s xlb5dbd xn…\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #7b7b7b, background color: #efefef, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "type": "node",
+              "boundingRect": {
+                "left": 65,
+                "bottom": 339,
+                "width": 54,
+                "top": 311,
+                "height": 28,
+                "right": 119
+              }
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "snippet": "<button type=\"button\" data-presence-anchor=\"page:category:interface\" aria-pressed=\"false\" class=\"x6s0dn4 x9r1u3d xrwr6ys x1y0btm7 xmkeg23 x9f619 x3nfvp2 x2lah0s xlb5dbd xn…\">",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 339,
+                "top": 311,
+                "right": 210,
+                "width": 83,
+                "left": 127,
+                "height": 28
+              },
+              "nodeLabel": "Interface",
+              "lhId": "1-7-BUTTON",
+              "selector": "main.x1wtva3j > div.x6s0dn4 > div.x6s0dn4 > button.x6s0dn4",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,1,DIV,0,DIV,2,BUTTON",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #7b7b7b, background color: #efefef, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "selector": "main.x1wtva3j > div.x6s0dn4 > div.x6s0dn4 > button.x6s0dn4",
+              "type": "node",
+              "nodeLabel": "Branding",
+              "lhId": "1-8-BUTTON",
+              "snippet": "<button type=\"button\" data-presence-anchor=\"page:category:branding\" aria-pressed=\"false\" class=\"x6s0dn4 x9r1u3d xrwr6ys x1y0btm7 xmkeg23 x9f619 x3nfvp2 x2lah0s xlb5dbd xn…\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #7b7b7b, background color: #efefef, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,1,DIV,0,DIV,3,BUTTON",
+              "boundingRect": {
+                "bottom": 339,
+                "right": 300,
+                "top": 311,
+                "width": 82,
+                "left": 218,
+                "height": 28
+              }
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "lhId": "1-9-BUTTON",
+              "boundingRect": {
+                "height": 28,
+                "left": 308,
+                "width": 68,
+                "top": 311,
+                "right": 376,
+                "bottom": 339
+              },
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #7b7b7b, background color: #efefef, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "snippet": "<button type=\"button\" data-presence-anchor=\"page:category:motion\" aria-pressed=\"false\" class=\"x6s0dn4 x9r1u3d xrwr6ys x1y0btm7 xmkeg23 x9f619 x3nfvp2 x2lah0s xlb5dbd xn…\">",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,1,DIV,0,DIV,4,BUTTON",
+              "selector": "main.x1wtva3j > div.x6s0dn4 > div.x6s0dn4 > button.x6s0dn4",
+              "nodeLabel": "Motion",
+              "type": "node"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,ASIDE,0,DIV,0,DIV,0,H2",
+              "snippet": "<h2 class=\"x1tz6pr4 xlb5dbd x1r4xzce xiq2fc0 xloq5t5 xeuugli\">",
+              "boundingRect": {
+                "top": 1291,
+                "bottom": 1310,
+                "right": 105,
+                "left": 32,
+                "width": 73,
+                "height": 18
+              },
+              "lhId": "1-10-H2",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #808080, background color: #f9f9f9, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "nodeLabel": "Design jobs",
+              "type": "node",
+              "selector": "aside.xpkksdo > div.x78zum5 > div.x6s0dn4 > h2.x1tz6pr4"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "selector": "div.x78zum5 > div.x6s0dn4 > a.x6s0dn4 > span.x6s0dn4",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,ASIDE,0,DIV,0,DIV,1,A,0,SPAN",
+              "boundingRect": {
+                "top": 1291,
+                "width": 62,
+                "bottom": 1310,
+                "left": 305,
+                "height": 18,
+                "right": 367
+              },
+              "lhId": "1-12-SPAN",
+              "type": "node",
+              "snippet": "<span class=\"x6s0dn4 x3nfvp2 x14kbac9\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.63 (foreground color: #787878, background color: #e9e9e9, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "nodeLabel": "Post a job"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,ASIDE,0,DIV,1,UL,0,LI,1,DIV,1,DIV,0,P",
+              "nodeLabel": "pen.dev",
+              "lhId": "1-14-P",
+              "snippet": "<p class=\"xlb5dbd xiq2fc0 xloq5t5 xb3r6kr xlyipyv xuxw1ft x1tz6pr4\">",
+              "selector": "li.x1325ith > div.x6s0dn4 > div.x98rzlu > p.xlb5dbd",
+              "type": "node",
+              "boundingRect": {
+                "height": 18,
+                "left": 80,
+                "width": 300,
+                "right": 380,
+                "top": 1333,
+                "bottom": 1351
+              },
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #808080, background color: #f9f9f9, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "nodeLabel": "Opendoor",
+              "snippet": "<p class=\"xlb5dbd xiq2fc0 xloq5t5 xb3r6kr xlyipyv xuxw1ft x1tz6pr4\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #808080, background color: #f9f9f9, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,ASIDE,0,DIV,1,UL,1,LI,1,DIV,1,DIV,0,P",
+              "selector": "li.x1325ith > div.x6s0dn4 > div.x98rzlu > p.xlb5dbd",
+              "boundingRect": {
+                "width": 300,
+                "top": 1381,
+                "bottom": 1399,
+                "left": 80,
+                "height": 18,
+                "right": 380
+              },
+              "lhId": "1-15-P"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "valid-source-maps",
+        "title": "Missing source maps for large first-party JavaScript",
+        "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "sourceMapUrl": "https://recent.design/assets/main-mTU8JJIJ.js.map",
+            "scriptUrl": "https://recent.design/assets/main-mTU8JJIJ.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                },
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ]
+            }
+          },
+          {
+            "sourceMapUrl": "https://recent.design/assets/wrap-C6_XUwwJ.js.map",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ]
+            },
+            "scriptUrl": "https://recent.design/assets/wrap-C6_XUwwJ.js"
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ]
+            },
+            "sourceMapUrl": "https://recent.design/assets/user-avatar-CAkw2DuF.js.map",
+            "scriptUrl": "https://recent.design/assets/user-avatar-CAkw2DuF.js"
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ]
+            },
+            "scriptUrl": "https://recent.design/assets/useOpenInteractionType-UDIggWif.js",
+            "sourceMapUrl": "https://recent.design/assets/useOpenInteractionType-UDIggWif.js.map"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ],
+              "type": "subitems"
+            },
+            "scriptUrl": "https://recent.design/assets/useMutation-BEjRe85S.js",
+            "sourceMapUrl": "https://recent.design/assets/useMutation-BEjRe85S.js.map"
+          },
+          {
+            "sourceMapUrl": "https://recent.design/assets/useListNavigation-BT_T7trg.js.map",
+            "scriptUrl": "https://recent.design/assets/useListNavigation-BT_T7trg.js",
+            "subItems": {
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ]
+            },
+            "scriptUrl": "https://recent.design/assets/useLabelableId-tSjm60yp.js",
+            "sourceMapUrl": "https://recent.design/assets/useLabelableId-tSjm60yp.js.map"
+          },
+          {
+            "sourceMapUrl": "https://recent.design/assets/useInteractions-BdfKzCfh.js.map",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ]
+            },
+            "scriptUrl": "https://recent.design/assets/useInteractions-BdfKzCfh.js"
+          },
+          {
+            "sourceMapUrl": "https://recent.design/assets/use-sponsor-impression-DfQVt0AU.js.map",
+            "scriptUrl": "https://recent.design/assets/use-sponsor-impression-DfQVt0AU.js",
+            "subItems": {
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "sourceMapUrl": "https://recent.design/assets/use-scroll-fade-mask-D9n7oCoI.js.map",
+            "scriptUrl": "https://recent.design/assets/use-scroll-fade-mask-D9n7oCoI.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "value": {
+              "type": "network-tree",
+              "longestChain": {
+                "duration": 1057
+              },
+              "chains": {
+                "F500F1D4943531649BC473B1CBEDE33B": {
+                  "transferSize": 41338,
+                  "navStartToEndTime": 394,
+                  "isLongest": true,
+                  "children": "[…]",
+                  "url": "https://recent.design/"
+                }
+              }
+            },
+            "type": "list-section"
+          },
+          {
+            "type": "list-section",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "title": "Preconnected origins",
+            "value": {
+              "type": "text",
+              "value": "No origins were preconnected"
+            }
+          },
+          {
+            "title": "Preconnect candidates",
+            "type": "list-section",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "value": {
+              "type": "table",
+              "headings": [
+                {
+                  "valueType": "text",
+                  "key": "origin",
+                  "label": "Origin"
+                },
+                {
+                  "key": "wastedMs",
+                  "valueType": "ms",
+                  "label": "Est LCP savings"
+                }
+              ],
+              "items": [
+                {
+                  "wastedMs": 319,
+                  "origin": "https://api.recent.design"
+                },
+                {
+                  "wastedMs": 305,
+                  "origin": "https://o4511855074410496.ingest.de.sentry.io"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "nodeLabel": "Recent",
+              "selector": "div.x78zum5 > main.x1wtva3j > div.x6s0dn4 > button#base-ui-_R_tacmlcq_",
+              "type": "node",
+              "snippet": "<button type=\"button\" tabindex=\"0\" aria-haspopup=\"menu\" id=\"base-ui-_R_tacmlcq_\" aria-label=\"Sort posts\" class=\"x6s0dn4 xrwr6ys x9f619 xt0e3qv x3nfvp2 xlb5dbd x1r4xzce xn0d3qd xl56j7k xi…\" aria-expanded=\"false\">",
+              "lhId": "1-25-BUTTON",
+              "boundingRect": {
+                "right": 396,
+                "left": 318,
+                "height": 28,
+                "bottom": 339,
+                "top": 311,
+                "width": 78
+              },
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,1,DIV,1,BUTTON",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-26-A",
+              "nodeLabel": "Sponsor",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,2,A",
+              "boundingRect": {
+                "right": 396,
+                "top": 1025,
+                "left": 16,
+                "bottom": 1263,
+                "height": 238,
+                "width": 380
+              },
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "selector": "div.x1hc1fzr > div.x1hc1fzr > div > a.xsm0vga",
+              "snippet": "<a href=\"/go/zq1wql8?s=feed.sponsor&amp;p=3\" target=\"_blank\" rel=\"noopener\" aria-label=\"Visit Mobbin\" class=\"xsm0vga x1lliihq x1a2a7pz x1g0ag68 xdccri7 x11xpdln x7gonq5 xd3so5o xdcmvx…\">",
+              "type": "node"
+            }
+          }
+        ]
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "title": "Elements use prohibited ARIA attributes",
+        "description": "Using ARIA attributes in roles where they are prohibited can mean that important information is not communicated to users of assistive technologies. [Learn more about prohibited ARIA roles](https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "snippet": "<div aria-label=\"Latest members\" class=\"x6s0dn4 x78zum5\">",
+              "lhId": "1-0-DIV",
+              "explanation": "Fix all of the following:\n  aria-label attribute cannot be used on \"div\" elements with no valid role attribute.",
+              "path": "1,HTML,1,BODY,1,DIV,0,ASIDE,0,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,1,DIV,0,DIV,1,DIV",
+              "nodeLabel": "Latest members",
+              "boundingRect": {
+                "right": 177,
+                "left": 101,
+                "bottom": 148,
+                "height": 20,
+                "top": 128,
+                "width": 76
+              },
+              "type": "node",
+              "selector": "div.x7a106z > div.x78zum5 > div.x6s0dn4 > div.x6s0dn4"
+            }
+          }
+        ]
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "displayValue": "10.3 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "cls-culprits-insight",
+        "title": "Layout shift culprits",
+        "description": "Layout shifts occur when elements move absent any user interaction. [Investigate the causes of layout shifts](https://developer.chrome.com/docs/performance/insights/cls-culprit), such as elements being added, removed, or their fonts changing as the page loads.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "CLS": 0
+        },
+        "items": [
+          {
+            "headings": [
+              {
+                "label": "Element",
+                "subItemsHeading": {
+                  "key": "extra"
+                },
+                "key": "node",
+                "valueType": "node"
+              },
+              {
+                "key": "score",
+                "valueType": "numeric",
+                "label": "Layout shift score",
+                "granularity": 0.001,
+                "subItemsHeading": {
+                  "valueType": "text",
+                  "key": "cause"
+                }
+              }
+            ],
+            "items": [
+              {
+                "score": 0.1704001147454019,
+                "node": {
+                  "type": "text",
+                  "value": "Total"
+                }
+              },
+              {
+                "score": 0.1704001147454019,
+                "node": {
+                  "snippet": "<main data-feed-body=\"\" data-presence-anchor=\"page\" class=\"x1wtva3j x78zum5 x98rzlu xdt5ytf xeuugli x1n2onr6 x68pp3s\" style=\"transform:none\">",
+                  "nodeLabel": "Design\n\nThe best design inspiration on the Internet.\n\nAll\nWeb\nInterface\nBrandin…",
+                  "type": "node",
+                  "selector": "div.x78zum5 > div.x78zum5 > div.x78zum5 > main.x1wtva3j",
+                  "lhId": "page-1-MAIN",
+                  "boundingRect": "[…]",
+                  "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN"
+                }
+              }
+            ],
+            "type": "table"
+          }
+        ]
+      },
+      {
+        "id": "meta-viewport",
+        "title": "`[user-scalable=\"no\"]` is used in the `<meta name=\"viewport\">` element or the `[maximum-scale]` attribute is less than 5.",
+        "description": "Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more about the viewport meta tag](https://dequeuniversity.com/rules/axe/4.14/meta-viewport).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "path": "1,HTML,0,HEAD,1,META",
+              "boundingRect": {
+                "width": 0,
+                "bottom": 0,
+                "left": 0,
+                "top": 0,
+                "height": 0,
+                "right": 0
+              },
+              "nodeLabel": "head > meta",
+              "lhId": "1-27-META",
+              "selector": "head > meta",
+              "explanation": "Fix any of the following:\n  user-scalable=no on <meta> tag disables zooming on mobile devices",
+              "snippet": "<meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, vi…\" name=\"viewport\">",
+              "type": "node"
+            }
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.24,
+        "displayValue": "10.5 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.46,
+        "displayValue": "6.0 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "unminified-css",
+        "title": "Minify CSS",
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 5 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 4736,
+            "url": "https://recent.design/assets/app-D6DOIlXl.css",
+            "wastedPercent": 28.736617968888623,
+            "totalBytes": 16480
+          }
+        ]
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery).",
+        "score": 0.5,
+        "displayValue": "Est savings of 561 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "totalBytes": 326338,
+            "url": "https://cdn.recent.design/items/o635a0e/0/image/c7d1929d36fb7dd3120f/1200.webp",
+            "wastedBytes": 234221,
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 26538,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (1200x1499) for its displayed dimensions (665x831). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 226067
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "lhId": "page-2-IMG",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,10,ARTICLE,0,DIV,0,SPAN,0,IMG",
+              "snippet": "<img data-feed-transition-visual=\"\" src=\"https://cdn.recent.design/items/o635a0e/0/image/c7d1929d36fb7dd3120f/1200.…\" srcset=\"https://cdn.recent.design/items/o635a0e/0/image/c7d1929d36fb7dd3120f/480.w…\" sizes=\"(min-width: 2560px) 11vw, (min-width: 1920px) 12vw, (min-width: 1536px) 16…\" alt=\"Research…",
+              "selector": "article.x1qgqlal > div.x1ghqbdy > span.x1lliihq > img.xsm0vga",
+              "boundingRect": {
+                "right": 396,
+                "bottom": 4434,
+                "left": 16,
+                "top": 3959,
+                "height": 475,
+                "width": 380
+              },
+              "type": "node",
+              "nodeLabel": "Research Lab Brand Identity"
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image’s download size",
+                  "wastedBytes": 46187
+                },
+                {
+                  "wastedBytes": 78063,
+                  "reason": "This image file is larger than it needs to be (448x448) for its displayed dimensions (63x63). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "totalBytes": 79638,
+            "url": "https://cdn.recent.design/entities/3e0b790d-eed8-4bfa-a3aa-1a9fd566e11e/logo/b368bb02547ba9b18543/448.png",
+            "node": {
+              "type": "node",
+              "boundingRect": {
+                "height": 36,
+                "width": 36,
+                "right": 68,
+                "left": 32,
+                "bottom": 1562,
+                "top": 1526
+              },
+              "nodeLabel": "ul.x78zum5 > li.x1325ith > div.x6s0dn4 > img.x2lah0s",
+              "selector": "ul.x78zum5 > li.x1325ith > div.x6s0dn4 > img.x2lah0s",
+              "lhId": "page-3-IMG",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,ASIDE,0,DIV,1,UL,4,LI,1,DIV,0,IMG",
+              "snippet": "<img alt=\"\" src=\"https://cdn.recent.design/entities/3e0b790d-eed8-4bfa-a3aa-1a9fd566e11e/lo…\" class=\"x2lah0s xc9qbxq xl1xv1r x14qfxbe\">"
+            },
+            "wastedBytes": 78976
+          },
+          {
+            "totalBytes": 47382,
+            "node": {
+              "selector": "ul.x78zum5 > li.x1325ith > div.x6s0dn4 > img.x2lah0s",
+              "type": "node",
+              "boundingRect": {
+                "top": 1623,
+                "width": 36,
+                "left": 32,
+                "height": 36,
+                "right": 68,
+                "bottom": 1659
+              },
+              "nodeLabel": "ul.x78zum5 > li.x1325ith > div.x6s0dn4 > img.x2lah0s",
+              "lhId": "page-4-IMG",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,ASIDE,0,DIV,1,UL,6,LI,1,DIV,0,IMG",
+              "snippet": "<img alt=\"\" src=\"https://cdn.recent.design/entities/b67bdbc6-f287-4c00-bd24-e3f08b4b774d/lo…\" class=\"x2lah0s xc9qbxq xl1xv1r x14qfxbe\">"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image’s download size",
+                  "wastedBytes": 20715
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (400x400) for its displayed dimensions (63x63). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 46207
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://cdn.recent.design/entities/b67bdbc6-f287-4c00-bd24-e3f08b4b774d/logo/56231337fb8b1581d0c9/400.png",
+            "wastedBytes": 46720
+          },
+          {
+            "url": "https://cdn.recent.design/entities/53061b56-46ee-43bb-afe6-7b7606ae0e9e/logo/d26d97eee0837493bda7/256.png",
+            "node": {
+              "boundingRect": {
+                "bottom": 1369,
+                "right": 68,
+                "left": 32,
+                "width": 36,
+                "top": 1333,
+                "height": 36
+              },
+              "lhId": "page-5-IMG",
+              "selector": "ul.x78zum5 > li.x1325ith > div.x6s0dn4 > img.x2lah0s",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,ASIDE,0,DIV,1,UL,0,LI,1,DIV,0,IMG",
+              "snippet": "<img alt=\"\" src=\"https://cdn.recent.design/entities/53061b56-46ee-43bb-afe6-7b7606ae0e9e/lo…\" class=\"x2lah0s xc9qbxq xl1xv1r x14qfxbe\">",
+              "nodeLabel": "ul.x78zum5 > li.x1325ith > div.x6s0dn4 > img.x2lah0s",
+              "type": "node"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 23505,
+                  "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image’s download size"
+                },
+                {
+                  "wastedBytes": 32343,
+                  "reason": "This image file is larger than it needs to be (256x256) for its displayed dimensions (63x63). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "totalBytes": 34428,
+            "wastedBytes": 33766
+          },
+          {
+            "totalBytes": 34311,
+            "subItems": {
+              "items": [
+                {
+                  "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image’s download size",
+                  "wastedBytes": 23388
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (256x256) for its displayed dimensions (63x63). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 32233
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "boundingRect": {
+                "width": 36,
+                "height": 36,
+                "top": 1575,
+                "left": 32,
+                "right": 68,
+                "bottom": 1611
+              },
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,ASIDE,0,DIV,1,UL,5,LI,1,DIV,0,IMG",
+              "snippet": "<img alt=\"\" src=\"https://cdn.recent.design/entities/9744e3ae-cc75-4883-b377-2321fb16280b/lo…\" class=\"x2lah0s xc9qbxq xl1xv1r x14qfxbe\">",
+              "lhId": "page-6-IMG",
+              "nodeLabel": "ul.x78zum5 > li.x1325ith > div.x6s0dn4 > img.x2lah0s",
+              "type": "node",
+              "selector": "ul.x78zum5 > li.x1325ith > div.x6s0dn4 > img.x2lah0s"
+            },
+            "url": "https://cdn.recent.design/entities/9744e3ae-cc75-4883-b377-2321fb16280b/logo/1f9bb1b79860acd26808/256.png",
+            "wastedBytes": 33649
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (960x1091) for its displayed dimensions (665x756). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 31139
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 31139,
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,0,ARTICLE,0,DIV,0,SPAN,0,SPAN,0,IMG",
+              "snippet": "<img alt=\"\" class=\"xsm0vga x1lliihq x5yr21d xl1xv1r xh8yej3\" draggable=\"false\" fetchpriority=\"high\" height=\"1200\" loading=\"eager\" sizes=\"(min-width: 2560px) 11vw, (min-width: 1920px) 12vw, (min-width: 1536px) 16…\" src=\"https://cdn.recent.design/items/2pl65e8/0/poster/960.webp\" srcset=\"https://cdn.re…",
+              "selector": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga",
+              "lhId": "page-0-IMG",
+              "type": "node",
+              "nodeLabel": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga",
+              "boundingRect": {
+                "bottom": 787,
+                "top": 355,
+                "width": 380,
+                "left": 16,
+                "right": 396,
+                "height": 432
+              }
+            },
+            "url": "https://cdn.recent.design/items/2pl65e8/0/poster/960.webp",
+            "totalBytes": 59902
+          },
+          {
+            "totalBytes": 42356,
+            "url": "https://cdn.recent.design/items/01nuhob/0/poster/960.webp",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (960x507) for its displayed dimensions (665x351). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 22032
+                }
+              ]
+            },
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,6,ARTICLE,0,DIV,0,SPAN,0,SPAN,0,IMG",
+              "lhId": "page-7-IMG",
+              "type": "node",
+              "selector": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga",
+              "nodeLabel": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga",
+              "snippet": "<img alt=\"\" class=\"xsm0vga x1lliihq x5yr21d xl1xv1r xh8yej3\" draggable=\"false\" fetchpriority=\"auto\" height=\"633\" loading=\"lazy\" sizes=\"(min-width: 2560px) 11vw, (min-width: 1920px) 12vw, (min-width: 1536px) 16…\" src=\"https://cdn.recent.design/items/01nuhob/0/poster/960.webp\" srcset=\"https://cdn.rece…",
+              "boundingRect": {
+                "top": 2540,
+                "right": 396,
+                "bottom": 2741,
+                "left": 16,
+                "height": 201,
+                "width": 380
+              }
+            },
+            "wastedBytes": 22032
+          },
+          {
+            "node": {
+              "snippet": "<img data-feed-transition-visual=\"\" src=\"https://cdn.recent.design/items/s153en0/0/image/67593a5c1494af2dd220/1200.…\" srcset=\"https://cdn.recent.design/items/s153en0/0/image/67593a5c1494af2dd220/480.w…\" sizes=\"(min-width: 2560px) 11vw, (min-width: 1920px) 12vw, (min-width: 1536px) 16…\" alt=\"NOEMA Br…",
+              "selector": "article.x1qgqlal > div.x1ghqbdy > span.x1lliihq > img.xsm0vga",
+              "type": "node",
+              "boundingRect": {
+                "left": 16,
+                "bottom": 3947,
+                "width": 380,
+                "height": 538,
+                "right": 396,
+                "top": 3409
+              },
+              "lhId": "page-8-IMG",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,9,ARTICLE,0,DIV,0,SPAN,0,IMG",
+              "nodeLabel": "NOEMA Brand World"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 21534,
+                  "reason": "This image file is larger than it needs to be (1200x1698) for its displayed dimensions (665x941). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://cdn.recent.design/items/s153en0/0/image/67593a5c1494af2dd220/1200.webp",
+            "wastedBytes": 21534,
+            "totalBytes": 31088
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 21321,
+                  "reason": "This image file is larger than it needs to be (960x720) for its displayed dimensions (665x499). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "url": "https://cdn.recent.design/items/1xh94om/0/poster/960.webp",
+            "wastedBytes": 21321,
+            "totalBytes": 40990,
+            "node": {
+              "selector": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga",
+              "lhId": "page-9-IMG",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,5,ARTICLE,0,DIV,0,SPAN,0,SPAN,0,IMG",
+              "boundingRect": {
+                "width": 380,
+                "bottom": 2528,
+                "left": 16,
+                "top": 2243,
+                "right": 396,
+                "height": 285
+              },
+              "snippet": "<img alt=\"\" class=\"xsm0vga x1lliihq x5yr21d xl1xv1r xh8yej3\" draggable=\"false\" fetchpriority=\"auto\" height=\"900\" loading=\"lazy\" sizes=\"(min-width: 2560px) 11vw, (min-width: 1920px) 12vw, (min-width: 1536px) 16…\" src=\"https://cdn.recent.design/items/1xh94om/0/poster/960.webp\" srcset=\"https://cdn.rece…",
+              "type": "node",
+              "nodeLabel": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga"
+            }
+          },
+          {
+            "totalBytes": 43968,
+            "wastedBytes": 19964,
+            "node": {
+              "type": "node",
+              "selector": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga",
+              "snippet": "<img alt=\"\" class=\"xsm0vga x1lliihq x5yr21d xl1xv1r xh8yej3\" draggable=\"false\" fetchpriority=\"auto\" height=\"1200\" loading=\"lazy\" sizes=\"(min-width: 2560px) 11vw, (min-width: 1920px) 12vw, (min-width: 1536px) 16…\" src=\"https://cdn.recent.design/items/e4nb43w/0/poster/900.webp\" srcset=\"https://cdn.rec…",
+              "path": "1,HTML,1,BODY,1,DIV,1,DIV,0,DIV,0,MAIN,2,DIV,0,DIV,0,DIV,0,DIV,4,ARTICLE,0,DIV,0,SPAN,0,SPAN,0,IMG",
+              "boundingRect": {
+                "bottom": 2231,
+                "top": 1724,
+                "right": 396,
+                "left": 16,
+                "height": 507,
+                "width": 380
+              },
+              "nodeLabel": "div.x1ghqbdy > span.x1lliihq > span.x1lliihq > img.xsm0vga",
+              "lhId": "page-10-IMG"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (900x1200) for its displayed dimensions (665x887). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 19964
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://cdn.recent.design/items/e4nb43w/0/poster/900.webp"
+          }
+        ]
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 5,111 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://cdn.recent.design/items/n8vaetb/0/1280x720.mp4",
+            "totalBytes": 1538657
+          },
+          {
+            "url": "https://cdn.recent.design/items/2pl65e8/0/720x818.mp4",
+            "totalBytes": 1479329
+          },
+          {
+            "totalBytes": 352863,
+            "url": "https://recent.design/assets/InterVariable-DiVDrmQJ.woff2"
+          },
+          {
+            "totalBytes": 327041,
+            "url": "https://cdn.recent.design/items/o635a0e/0/image/c7d1929d36fb7dd3120f/1200.webp"
+          },
+          {
+            "url": "https://recent.design/assets/main-mTU8JJIJ.js",
+            "totalBytes": 268828
+          },
+          {
+            "url": "https://api.recent.design/rpc/sponsors/active/__batch__",
+            "totalBytes": 233352
+          },
+          {
+            "totalBytes": 80316,
+            "url": "https://cdn.recent.design/entities/3e0b790d-eed8-4bfa-a3aa-1a9fd566e11e/logo/b368bb02547ba9b18543/448.png"
+          },
+          {
+            "totalBytes": 63661,
+            "url": "https://cdn.recent.design/sponsors/5bc6dnv/campaign/8c2f6556554c0c10/720.mp4"
+          },
+          {
+            "totalBytes": 60593,
+            "url": "https://cdn.recent.design/items/2pl65e8/0/poster/960.webp"
+          },
+          {
+            "url": "https://cdn.recent.design/entities/b67bdbc6-f287-4c00-bd24-e3f08b4b774d/logo/56231337fb8b1581d0c9/400.png",
+            "totalBytes": 48064
+          }
+        ]
+      },
+      {
+        "id": "cumulative-layout-shift",
+        "title": "Cumulative Layout Shift",
+        "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
+        "score": 0.7,
+        "displayValue": "0.17",
+        "savingsMs": null,
+        "items": [
+          {
+            "newEngineResult": {
+              "cumulativeLayoutShift": 0.1704001147454019,
+              "cumulativeLayoutShiftMainFrame": 0.1704001147454019
+            },
+            "cumulativeLayoutShiftMainFrame": 0.1704001147454019,
+            "newEngineResultDiffered": false
+          }
+        ]
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.7,
+        "displayValue": "2.4 s",
+        "savingsMs": null,
+        "items": []
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://recent.design/",
+    "status": 200,
+    "htmlBytes": 340247,
+    "headers": {
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "no-store",
+      "contentEncoding": "br",
+      "xRobotsTag": null,
+      "server": "cloudflare"
+    },
+    "meta": {
+      "title": "Recent — Design Inspiration",
+      "description": "The best design inspiration on the Internet.",
+      "canonical": "https://recent.design",
+      "lang": "en",
+      "robots": null,
+      "viewport": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover",
+      "openGraph": {
+        "og:type": "website",
+        "og:url": "https://recent.design",
+        "og:title": "Recent — Design Inspiration",
+        "og:description": "The best design inspiration on the Internet.",
+        "og:image": "https://recent.design/og.png"
+      }
+    },
+    "headings": [
+      {
+        "level": 2,
+        "text": "Browse"
+      },
+      {
+        "level": 2,
+        "text": "Resources"
+      },
+      {
+        "level": 1,
+        "text": "Design"
+      },
+      {
+        "level": 2,
+        "text": "Design jobs"
+      }
+    ],
+    "h1Count": 1,
+    "images": {
+      "total": 51,
+      "missingAlt": 0,
+      "missingDimensions": 8,
+      "lazy": 19,
+      "firstImages": [
+        {
+          "src": "https://cdn.recent.design/items/2pl65e8/0/poster/1056.webp",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "width": "1056",
+          "height": "1200"
+        },
+        {
+          "src": "https://cdn.recent.design/entities/531c65de-c99e-4dfa-8373-634bc09b7fbc/avatar/8d4d5e6cf98f620fb92f/400.webp",
+          "alt": "src",
+          "loading": null,
+          "fetchpriority": null,
+          "width": "400",
+          "height": "400"
+        },
+        {
+          "src": "https://cdn.recent.design/items/n8vaetb/0/poster/1200.webp",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "width": "1200",
+          "height": "675"
+        },
+        {
+          "src": "https://cdn.recent.design/entities/031bc2a6-4f8e-46d1-aa78-adfa7e0baffe/avatar/43df21e13e05541963c4/400.webp",
+          "alt": "Bruno Arizio",
+          "loading": null,
+          "fetchpriority": null,
+          "width": "400",
+          "height": "400"
+        },
+        {
+          "src": "https://cdn.recent.design/sponsors/e9sku1s/campaign/4ab1244628298456/poster/1280.webp",
+          "alt": "",
+          "loading": "lazy",
+          "fetchpriority": "auto",
+          "width": "1280",
+          "height": "800"
+        },
+        {
+          "src": "https://cdn.recent.design/sponsors/0t6rz7n/logo/b6670565a2b221a4/256.png",
+          "alt": "",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://cdn.recent.design/entities/a71375e8-e5d6-4f18-a047-39ed86382f52/logo/f3b37f8fa6d23b8db399/249.png",
+          "alt": "",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://cdn.recent.design/entities/53061b56-46ee-43bb-afe6-7b7606ae0e9e/logo/d26d97eee0837493bda7/256.png",
+          "alt": "",
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 1,
+      "blockingScripts": 0,
+      "preloads": [
+        {
+          "href": "",
+          "as": "image"
+        },
+        {
+          "href": "",
+          "as": "image"
+        },
+        {
+          "href": "",
+          "as": "image"
+        },
+        {
+          "href": "",
+          "as": "image"
+        },
+        {
+          "href": "",
+          "as": "image"
+        },
+        {
+          "href": "https://cdn.recent.design/entities/a71375e8-e5d6-4f18-a047-39ed86382f52/logo/f3b37f8fa6d23b8db399/249.png",
+          "as": "image"
+        },
+        {
+          "href": "https://cdn.recent.design/entities/53061b56-46ee-43bb-afe6-7b7606ae0e9e/logo/d26d97eee0837493bda7/256.png",
+          "as": "image"
+        },
+        {
+          "href": "https://cdn.recent.design/entities/c9a89b2d-b988-408c-9e92-e20049d7c7ea/logo/e8dc40642957fcf5b6f7/180.png",
+          "as": "image"
+        },
+        {
+          "href": "https://cdn.recent.design/entities/3e0b790d-eed8-4bfa-a3aa-1a9fd566e11e/logo/b368bb02547ba9b18543/448.png",
+          "as": "image"
+        },
+        {
+          "href": "https://cdn.recent.design/entities/b67bdbc6-f287-4c00-bd24-e3f08b4b774d/logo/56231337fb8b1581d0c9/400.png",
+          "as": "image"
+        }
+      ],
+      "preconnects": []
+    },
+    "scripts": {
+      "total": 0,
+      "external": 2,
+      "thirdPartyHosts": [
+        "cdn.visitors.now",
+        "static.cloudflareinsights.com"
+      ]
+    },
+    "structuredData": {
+      "jsonLdBlocks": 0,
+      "types": [],
+      "invalidBlocks": 0,
+      "raw": []
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [
+        "GPTBot",
+        "ClaudeBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "allowed": [
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "BrowseDesignLaunch VideosnewWebsitesOG ImagesApp ScreenshotsApp IconsResourcesToolsSkillsJobs© 2026SponsorInfoDesignThe best design inspiration on the Internet.AllWebInterfaceBrandingMotionIllustrationPostersPrintRecentSponsorDesign jobsPost a jobOpendoorProduct Designerpen.devGeneralist EngineerPaperDesign Engineer222product designerBlackstarUI/UX DesignerMOMENTVisual DesignerPaperProduct DesignerSee all jobs3 slides33 slides33 slides34 slides4?© 2026SponsorInfo"
+  }
+}

@@ -3,50 +3,58 @@
  * and prints a summary. No database, no Claude call, so it costs nothing.
  *
  *   pnpm collect https://example.com
+ *   pnpm collect https://example.com --save example   → evals/fixtures/example.json
  *
- * Useful for building the eval set: save the output for each site, then write
- * down what a correct diagnosis should say.
+ * --save freezes the collected data as an eval fixture, so the diagnosis can
+ * be run on exactly the same input every time.
  */
 import "dotenv/config";
+import { saveFixture } from "../evals/fixtures";
+import { printCrawl, printPsi } from "../evals/summary";
 import { crawlPage } from "@/lib/audit/crawl";
 import { runPsi } from "@/lib/audit/psi";
 import { assertPublicUrl } from "@/lib/audit/url-guard";
 
 async function main() {
-  const input = process.argv[2];
-  if (!input) {
-    console.error("Usage: pnpm collect <url>");
+  const args = process.argv.slice(2);
+  const saveIdx = args.indexOf("--save");
+  const saveName = saveIdx >= 0 ? args[saveIdx + 1] : undefined;
+  // The URL is the first argument that isn't a flag or the --save value.
+  const input = args.find((a, i) => !a.startsWith("--") && !(saveIdx >= 0 && i === saveIdx + 1));
+  if (!input || (saveIdx >= 0 && !saveName)) {
+    console.error("Usage: pnpm collect <url> [--save <fixture-name>]");
     process.exit(1);
   }
   const url = (await assertPublicUrl(input)).toString();
 
-  const [psi, crawl] = await Promise.allSettled([runPsi(url), crawlPage(url)]);
+  // PageSpeed Insights fails intermittently (timeouts, 500s), so retry it once.
+  const psiWithRetry = () =>
+    runPsi(url).catch((err) => {
+      console.log(`PageSpeed failed (${err.message}), retrying once...`);
+      return runPsi(url);
+    });
+  const [psi, crawl] = await Promise.allSettled([psiWithRetry(), crawlPage(url)]);
 
-  if (psi.status === "fulfilled") {
-    const p = psi.value;
-    console.log("== PageSpeed Insights ==");
-    console.log("categories:", p.categories);
-    console.log("field:", p.field ? `${p.field.scope}-level` : "none", p.field);
-    console.log("lab:", Object.fromEntries(Object.entries(p.lab).map(([k, v]) => [k, v?.display])));
-    console.log("top failing audits:");
-    for (const a of p.failingAudits.slice(0, 8)) {
-      console.log(`  - ${a.id} (${a.displayValue ?? a.score})`);
+  if (psi.status === "fulfilled") printPsi(psi.value);
+  else console.log("PSI failed:", psi.reason.message);
+
+  if (crawl.status === "fulfilled") printCrawl(crawl.value);
+  else console.log("Crawl failed:", crawl.reason.message);
+
+  if (saveName) {
+    // A fixture is only useful with both halves of the data.
+    if (psi.status !== "fulfilled" || crawl.status !== "fulfilled") {
+      console.error(`\nNot saved: ${saveName} needs both PageSpeed and crawl data. Try again.`);
+      process.exit(1);
     }
-  } else {
-    console.log("PSI failed:", psi.reason.message);
-  }
-
-  if (crawl.status === "fulfilled") {
-    const c = crawl.value;
-    console.log("\n== Crawl ==");
-    console.log("status:", c.status, "html KB:", Math.round(c.htmlBytes / 1024));
-    console.log("title:", c.meta.title);
-    console.log("h1 count:", c.h1Count, "| images:", c.images.total, "missing alt:", c.images.missingAlt);
-    console.log("blocking css/js in head:", c.head.blockingStylesheets, "/", c.head.blockingScripts);
-    console.log("JSON-LD types:", c.structuredData.types);
-    console.log("AI crawlers blocked:", c.aiCrawlers.blocked, "| llms.txt:", c.aiCrawlers.llmsTxtFound);
-  } else {
-    console.log("Crawl failed:", crawl.reason.message);
+    saveFixture({
+      name: saveName,
+      url,
+      collectedAt: new Date().toISOString(),
+      psi: psi.value,
+      crawl: crawl.value,
+    });
+    console.log(`\nSaved fixture → evals/fixtures/${saveName}.json`);
   }
 }
 

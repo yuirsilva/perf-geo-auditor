@@ -1,0 +1,2544 @@
+{
+  "name": "nytimes",
+  "url": "https://www.nytimes.com/",
+  "collectedAt": "2026-11-14T18:04:45.796Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-14T18:04:45.793Z",
+    "finalUrl": "https://www.nytimes.com/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 19,
+      "accessibility": 88,
+      "best-practices": 54,
+      "seo": 85
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 1401,
+        "category": "FAST"
+      },
+      "inpMs": {
+        "p75": 174,
+        "category": "FAST"
+      },
+      "cls": {
+        "p75": 0.21,
+        "category": "AVERAGE"
+      },
+      "fcpMs": {
+        "p75": 1159,
+        "category": "FAST"
+      },
+      "ttfbMs": {
+        "p75": 595,
+        "category": "FAST"
+      },
+      "overall": "AVERAGE"
+    },
+    "lab": {
+      "lcp": {
+        "value": 27111.050343892657,
+        "display": "27.1 s"
+      },
+      "cls": {
+        "value": 0.2113953873184622,
+        "display": "0.211"
+      },
+      "tbt": {
+        "value": 3677.5,
+        "display": "3,680 ms"
+      },
+      "fcp": {
+        "value": 3312.255787073142,
+        "display": "3.3 s"
+      },
+      "speedIndex": {
+        "value": 12652.605825406,
+        "display": "12.7 s"
+      },
+      "ttfb": {
+        "value": 31,
+        "display": "Root document took 30 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 1,443 KiB",
+        "savingsMs": {
+          "LCP": 5400,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "totalBytes": 318392,
+            "wastedPercent": 54.092104687797615,
+            "wastedBytes": 172225,
+            "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/vendor-u8E3U9GY.js"
+          },
+          {
+            "wastedBytes": 155774,
+            "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611120101/pubads_impl.js?cb=122882267",
+            "totalBytes": 229772,
+            "wastedPercent": 67.79500629716894
+          },
+          {
+            "totalBytes": 135682,
+            "wastedBytes": 129588,
+            "wastedPercent": 95.50834004046467,
+            "url": "https://static01.nyt.com/video-static/betamax/hlsjs-_9xCybzz.js"
+          },
+          {
+            "totalBytes": 107580,
+            "wastedPercent": 89.11909466423414,
+            "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/PaymentOptionsV2-DZH96Osj.js",
+            "wastedBytes": 95874
+          },
+          {
+            "wastedPercent": 37.07908351004966,
+            "wastedBytes": 79609,
+            "totalBytes": 214701,
+            "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P528B3&gtm_auth=tfAzqo1rYDLgYhmTnSjPqw&gtm_preview=env-130&gtm_cookies_win=x"
+          },
+          {
+            "wastedBytes": 75075,
+            "totalBytes": 116871,
+            "wastedPercent": 64.23781718375804,
+            "url": "https://static01.nytimes.com/newsgraphics/_l-HTaf6CYlN-Q/_app.PC5Q_5xKUs8UDWdRnHGuGvrhpiDPwkiXo1mN1T89_CE/immutable/nodes/2.wkmOkzEt.js"
+          },
+          {
+            "wastedBytes": 74292,
+            "url": "https://warp.media.net/js/tags/clientag.js?cid=8CU26C87G&dn=www.nytimes.com&ysection=home&version=1",
+            "wastedPercent": 34.763838560539796,
+            "totalBytes": 213704
+          },
+          {
+            "wastedPercent": 71.40452570186974,
+            "totalBytes": 102724,
+            "url": "https://accounts.google.com/gsi/client",
+            "wastedBytes": 73350
+          },
+          {
+            "totalBytes": 149567,
+            "url": "https://www.googletagmanager.com/gtag/destination?id=DC-5290727&cx=c&gtm=4e6bb1",
+            "wastedPercent": 45.488665671236596,
+            "wastedBytes": 68036
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtm.js?id=GTM-N5P6T9S&gtm=4e6bb1",
+            "totalBytes": 123453,
+            "wastedPercent": 54.27851271512972,
+            "wastedBytes": 67008
+          }
+        ]
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "9.5 s",
+        "savingsMs": {
+          "TBT": 3700
+        },
+        "items": [
+          {
+            "group": "scriptEvaluation",
+            "groupLabel": "Script Evaluation",
+            "duration": 6479.125200000605
+          },
+          {
+            "duration": 1039.1111999999587,
+            "groupLabel": "Other",
+            "group": "other"
+          },
+          {
+            "duration": 683.1107999999989,
+            "groupLabel": "Garbage Collection",
+            "group": "garbageCollection"
+          },
+          {
+            "group": "scriptParseCompile",
+            "groupLabel": "Script Parsing & Compilation",
+            "duration": 640.0319999999994
+          },
+          {
+            "group": "styleLayout",
+            "groupLabel": "Style & Layout",
+            "duration": 510.4944000000004
+          },
+          {
+            "duration": 134.08439999999993,
+            "groupLabel": "Parse HTML & CSS",
+            "group": "parseHTML"
+          },
+          {
+            "duration": 33.09840000000014,
+            "groupLabel": "Rendering",
+            "group": "paintCompositeRender"
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "6.5 s",
+        "savingsMs": {
+          "TBT": 3150
+        },
+        "items": [
+          {
+            "total": 4566.567599999993,
+            "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/vendor-u8E3U9GY.js",
+            "scriptParseCompile": 53.08200000000001,
+            "scripting": 3943.0055999999913
+          },
+          {
+            "scriptParseCompile": 0,
+            "scripting": 201.39600000000016,
+            "total": 853.3487999999886,
+            "url": "Unattributable"
+          },
+          {
+            "scriptParseCompile": 27.441599999999998,
+            "url": "https://warp.media.net/js/tags/clientag.js?cid=8CU26C87G&dn=www.nytimes.com&ysection=home&version=1",
+            "total": 585.9660000000026,
+            "scripting": 539.2872000000026
+          },
+          {
+            "total": 583.1652000000004,
+            "scripting": 224.4792000000005,
+            "scriptParseCompile": 39.348,
+            "url": "https://www.nytimes.com/"
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P528B3&gtm_auth=tfAzqo1rYDLgYhmTnSjPqw&gtm_preview=env-130&gtm_cookies_win=x",
+            "scripting": 247.73519999999903,
+            "scriptParseCompile": 47.00880000000003,
+            "total": 332.59679999999906
+          },
+          {
+            "total": 303.6612000000006,
+            "scripting": 259.7340000000006,
+            "url": "https://static01.nyt.com/vi-assets/static-assets/fides-gpp-532b3abd08f853139eec6cb7880e922f.js",
+            "scriptParseCompile": 14.819999999999999
+          },
+          {
+            "url": "https://www.gstatic.com/_/mss/boq-payments-consumer/_/js/k=boq-payments-consumer.InstantbuyFrontendBuyflowPayframeUi.en_US.6xIQW9gtCZ4.2018.O/ck=boq-payments-consumer.InstantbuyFrontendBuyflowPayframeUi.cUIkONm7eHU.L.B1.O/am=AAAAAAAN/d=1/exm=_b,_tp/excm=_b,_tp,payframeview/ed=1/wt=2/ujg=1/rs=AMitfrj…",
+            "scriptParseCompile": 6.395999999999999,
+            "total": 259.3548000000002,
+            "scripting": 33.746399999999994
+          },
+          {
+            "scripting": 84.49560000000004,
+            "total": 197.93520000000004,
+            "scriptParseCompile": 6.731999999999999,
+            "url": "https://dd.nytimes.com/tags.js"
+          },
+          {
+            "scripting": 90.59880000000047,
+            "total": 139.83120000000048,
+            "scriptParseCompile": 44.34480000000001,
+            "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611120101/pubads_impl.js?cb=122882267"
+          },
+          {
+            "total": 118.1400000000001,
+            "scripting": 57.23400000000009,
+            "url": "https://static01.nytimes.com/newsgraphics/_l-HTaf6CYlN-Q/_app.PC5Q_5xKUs8UDWdRnHGuGvrhpiDPwkiXo1mN1T89_CE/immutable/nodes/2.wkmOkzEt.js",
+            "scriptParseCompile": 14.109599999999999
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render-blocking requests",
+        "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 2,660 ms",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 2650
+        },
+        "items": [
+          {
+            "url": "https://static01.nytimes.com/newsgraphics/_l-HTaf6CYlN-Q/_app.PC5Q_5xKUs8UDWdRnHGuGvrhpiDPwkiXo1mN1T89_CE/immutable/assets/2.Cs8XVnze.css",
+            "wastedMs": 1203,
+            "totalBytes": 20903
+          },
+          {
+            "url": "https://static01.nyt.com/elections-assets/pages/assets/ShareResultsButton-DG5ZPXiT.css",
+            "totalBytes": 1945,
+            "wastedMs": 451
+          },
+          {
+            "url": "https://static01.nyt.com/elections-assets/pages/assets/SquareParty-CN-7y2qc.css",
+            "totalBytes": 2712,
+            "wastedMs": 451
+          },
+          {
+            "url": "https://static01.nyt.com/elections-assets/pages/assets/MapToggle-Yzw1b7yw.css",
+            "wastedMs": 901,
+            "totalBytes": 9562
+          },
+          {
+            "url": "https://static01.nyt.com/elections-assets/pages/assets/WinProbNeedle-Di-A9Tk1.css",
+            "totalBytes": 3145,
+            "wastedMs": 601
+          },
+          {
+            "totalBytes": 1959,
+            "wastedMs": 451,
+            "url": "https://static01.nyt.com/elections-assets/pages/assets/Checkmark-Bb2qaTPy.css"
+          },
+          {
+            "wastedMs": 601,
+            "url": "https://static01.nyt.com/elections-assets/pages/assets/NationalMap-B2G2ge1L.css",
+            "totalBytes": 4209
+          },
+          {
+            "url": "https://static01.nyt.com/elections-assets/pages/assets/EmbedWrapper-DlxdYnSD.css",
+            "wastedMs": 451,
+            "totalBytes": 2884
+          },
+          {
+            "wastedMs": 451,
+            "totalBytes": 2184,
+            "url": "https://static01.nyt.com/elections-assets/pages/assets/PartyControlPopularVoteNeedle-BjCrF8Wh.css"
+          },
+          {
+            "url": "https://static01.nyt.com/elections-assets/pages/assets/CandidateImage-DkdGe0iF.css",
+            "wastedMs": 451,
+            "totalBytes": 1961
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 6,653 KiB",
+        "savingsMs": {
+          "LCP": 500,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "cacheLifetimeMs": 60000,
+            "url": "https://vp.nyt.com/video/2026/11/13/183474_1_22mag-interview-wilde-homepage_wg_mobile_720p.mp4",
+            "wastedBytes": 6360128.541666667,
+            "totalBytes": 6413575
+          },
+          {
+            "cacheLifetimeMs": 1800000,
+            "url": "https://warp.media.net/js/tags/clientag.js?cid=8CU26C87G&dn=www.nytimes.com&ysection=home&version=1",
+            "wastedBytes": 184713.86250000002,
+            "totalBytes": 214161
+          },
+          {
+            "url": "https://c.amazon-adsystem.com/aax2/apstag.js",
+            "wastedBytes": 77608.8,
+            "cacheLifetimeMs": 3600000,
+            "totalBytes": 97011
+          },
+          {
+            "totalBytes": 64615,
+            "cacheLifetimeMs": 14400000,
+            "wastedBytes": 43938.2,
+            "url": "https://www.datadoghq-browser-agent.com/us1/v7/datadog-rum.js"
+          },
+          {
+            "totalBytes": 52697,
+            "wastedBytes": 42157.600000000006,
+            "cacheLifetimeMs": 3600000,
+            "url": "https://dd.nytimes.com/tags.js"
+          },
+          {
+            "wastedBytes": 25410.916666666664,
+            "url": "https://phx.bmtrcs.com/api/v2/4486dfe2-780e-4dfa-a60a-2a948887658f/lib/site.js",
+            "cacheLifetimeMs": 600000,
+            "totalBytes": 27721
+          },
+          {
+            "totalBytes": 23819,
+            "wastedBytes": 23620.508333333335,
+            "url": "https://vp.nyt.com/video/2026/11/13/183474_1_22mag-interview-wilde-homepage_wg_mobile_720p.mp4",
+            "cacheLifetimeMs": 60000
+          },
+          {
+            "totalBytes": 26785,
+            "cacheLifetimeMs": 86400000,
+            "url": "https://static.chartbeat.com/js/chartbeat_video.js",
+            "wastedBytes": 10714
+          },
+          {
+            "wastedBytes": 8343.299999999997,
+            "url": "https://static01.nyt.com/images/2026/11/14/multimedia/14faa-groundstop-carousel-bkpv/14faa-groundstop-carousel-bkpv-verticalTwoByThree735.jpg?quality=75&auto=avif",
+            "totalBytes": 83433,
+            "cacheLifetimeMs": 604800000
+          },
+          {
+            "wastedBytes": 7934,
+            "url": "https://a1.nyt.com/analytics/comscore-streaming.js",
+            "totalBytes": 19835,
+            "cacheLifetimeMs": 86400000
+          }
+        ]
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery).",
+        "score": 0,
+        "displayValue": "Est savings of 116 KiB",
+        "savingsMs": {
+          "LCP": 300,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (735x1103) for its displayed dimensions (358x537). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 62283
+                }
+              ]
+            },
+            "node": {
+              "snippet": "<img loading=\"eager\" draggable=\"false\" class=\"d3BmaG_media\" alt=\"\" src=\"https://static01.nyt.com/images/2026/11/14/multimedia/14faa-groundstop-car…\">",
+              "nodeLabel": "a.d3BmaG_link > div.d3BmaG_slideWrapper > picture > img.d3BmaG_media",
+              "lhId": "page-0-IMG",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,FIGURE,0,DIV,0,SECTION,0,DIV,0,OL,0,LI,0,FIGURE,0,A,0,DIV,0,PICTURE,1,IMG",
+              "type": "node",
+              "selector": "a.d3BmaG_link > div.d3BmaG_slideWrapper > picture > img.d3BmaG_media",
+              "boundingRect": {
+                "left": 25,
+                "height": 542,
+                "right": 387,
+                "bottom": 818,
+                "width": 362,
+                "top": 276
+              }
+            },
+            "totalBytes": 81644,
+            "wastedBytes": 62283,
+            "url": "https://static01.nyt.com/images/2026/11/14/multimedia/14faa-groundstop-carousel-bkpv/14faa-groundstop-carousel-bkpv-verticalTwoByThree735.jpg?quality=75&auto=avif"
+          },
+          {
+            "totalBytes": 73996,
+            "node": {
+              "selector": "a.d3BmaG_link > div.d3BmaG_slideWrapper > picture > img.d3BmaG_media",
+              "nodeLabel": "a.d3BmaG_link > div.d3BmaG_slideWrapper > picture > img.d3BmaG_media",
+              "type": "node",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,FIGURE,0,DIV,0,SECTION,0,DIV,0,OL,1,LI,0,FIGURE,0,A,0,DIV,0,PICTURE,1,IMG",
+              "boundingRect": {
+                "height": 542,
+                "right": 745,
+                "top": 276,
+                "left": 383,
+                "bottom": 818,
+                "width": 362
+              },
+              "snippet": "<img loading=\"lazy\" draggable=\"false\" class=\"d3BmaG_media\" alt=\"\" src=\"https://static01.nyt.com/images/2026/11/14/multimedia/14faa-groundstop-car…\">",
+              "lhId": "page-1-IMG"
+            },
+            "wastedBytes": 56449,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (735x1103) for its displayed dimensions (358x537). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 56449
+                }
+              ]
+            },
+            "url": "https://static01.nyt.com/images/2026/11/14/multimedia/14faa-groundstop-carousel-01-qbpc/14faa-groundstop-carousel-01-qbpc-verticalTwoByThree735.jpg?quality=75&auto=avif"
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0,
+        "displayValue": "Est savings of 24 KiB",
+        "savingsMs": {
+          "LCP": 300,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.trim"
+                }
+              ]
+            },
+            "url": "https://warp.media.net/js/tags/clientag.js?cid=8CU26C87G&dn=www.nytimes.com&ysection=home&version=1",
+            "wastedBytes": 9628
+          },
+          {
+            "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/useMessageSelection-Bkd-O92J.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "Object.assign"
+                }
+              ]
+            },
+            "wastedBytes": 7659
+          },
+          {
+            "wastedBytes": 7335,
+            "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/vendor-u8E3U9GY.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-classes"
+                },
+                {
+                  "signal": "@babel/plugin-transform-regenerator",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "@babel/plugin-transform-spread",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.assign"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.is"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.keys"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "layout-shifts",
+        "title": "Avoid large layout shifts",
+        "description": "These are the largest layout shifts observed on the page. Each table item represents a single layout shift, and shows the element that shifted the most. Below each item are possible root causes that led to the layout shift. Some of these layout shifts may not be included in the CLS metric value due to [windowing](https://web.dev/articles/cls#what_is_cls). [Learn how to improve CLS](https://web.dev/articles/optimize-cls)",
+        "score": 0,
+        "displayValue": "2 layout shifts found",
+        "savingsMs": {
+          "CLS": 0.211
+        },
+        "items": [
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "extra": "[…]",
+                  "cause": "Media element lacking an explicit size"
+                }
+              ]
+            },
+            "score": 0.2113953873184622,
+            "node": {
+              "selector": "body > div#app > main#site-content",
+              "type": "node",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN",
+              "nodeLabel": "New York Times - Top Stories\n\nThese top stories are free to read.\n\nThousands St…",
+              "lhId": "page-3-MAIN",
+              "snippet": "<main id=\"site-content\" data-paywall-inert=\"\">",
+              "boundingRect": {
+                "top": 106,
+                "height": 20251,
+                "right": 412,
+                "left": 0,
+                "bottom": 20357,
+                "width": 412
+              }
+            }
+          },
+          {
+            "score": 0.0001834733854008822,
+            "node": {
+              "snippet": "<div class=\"css-50gbj e1j3jvdr1\">",
+              "selector": "div.Wr7_RG_mastheadContainer > header.Wr7_RG_mastheadWrapper > section.Wr7_RG_mastheadSection > div.css-50gbj",
+              "nodeLabel": "Log in",
+              "lhId": "page-2-DIV",
+              "boundingRect": {
+                "left": 370,
+                "width": 32,
+                "bottom": 40,
+                "top": 8,
+                "height": 32,
+                "right": 402
+              },
+              "path": "1,HTML,1,BODY,2,DIV,2,DIV,1,DIV,0,HEADER,0,SECTION,3,DIV",
+              "type": "node"
+            }
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "title": "Touch targets do not have sufficient size or spacing.",
+        "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.14/target-size).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "subItems": {
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "node": {
+              "nodeLabel": "NYTCo",
+              "selector": "nav#footer > ul.css-t8x4fj > li.css-a7htku > a.css-jq1cx6",
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://www.nytco.com/\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 32px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.",
+              "boundingRect": {
+                "width": 32,
+                "bottom": 20689,
+                "top": 20656,
+                "left": 41,
+                "height": 33,
+                "right": 73
+              },
+              "lhId": "1-4-A",
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,0,LI,0,A",
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "height": 33,
+                "width": 53,
+                "left": 93,
+                "right": 146,
+                "top": 20656,
+                "bottom": 20689
+              },
+              "lhId": "1-6-A",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 53px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 16.4px instead of at least 24px.",
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,1,LI,0,A",
+              "type": "node",
+              "selector": "nav#footer > ul.css-t8x4fj > li.css-a7htku > a.css-jq1cx6",
+              "nodeLabel": "Contact Us",
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://help.nytimes.com/hc/en-us/articles/115015385887-Contact-The-New-Yo…\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://help.nytimes.com/hc/en-us/articles/115015727108-Accessibility\">",
+              "nodeLabel": "Accessibility",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 59px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 16.4px instead of at least 24px.",
+              "lhId": "1-9-A",
+              "selector": "nav#footer > ul.css-t8x4fj > li.css-a7htku > a.css-jq1cx6",
+              "boundingRect": {
+                "top": 20656,
+                "bottom": 20689,
+                "right": 225,
+                "left": 166,
+                "height": 33,
+                "width": 59
+              },
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,2,LI,0,A",
+              "type": "node"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "nodeLabel": "Work with us",
+              "selector": "nav#footer > ul.css-t8x4fj > li.css-a7htku > a.css-jq1cx6",
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://www.nytco.com/careers/\">",
+              "type": "node",
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,3,LI,0,A",
+              "boundingRect": {
+                "height": 33,
+                "top": 20656,
+                "width": 61,
+                "left": 245,
+                "right": 306,
+                "bottom": 20689
+              },
+              "lhId": "1-11-A",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 61px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 16.4px instead of at least 24px."
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "selector": "nav#footer > ul.css-t8x4fj > li.css-a7htku > a.css-jq1cx6",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 45px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.",
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,4,LI,0,A",
+              "type": "node",
+              "boundingRect": {
+                "right": 371,
+                "top": 20656,
+                "height": 33,
+                "bottom": 20689,
+                "width": 45,
+                "left": 326
+              },
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://advertising.nytimes.com/\">",
+              "nodeLabel": "Advertise",
+              "lhId": "1-13-A"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 72px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.",
+              "selector": "nav#footer > ul.css-t8x4fj > li.css-a7htku > a.css-jq1cx6",
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://advertising.nytimes.com/custom-content/\">",
+              "boundingRect": {
+                "height": 33,
+                "right": 107,
+                "left": 35,
+                "top": 20676,
+                "width": 72,
+                "bottom": 20709
+              },
+              "lhId": "1-5-A",
+              "type": "node",
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,5,LI,0,A",
+              "nodeLabel": "T Brand Studio"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "nodeLabel": "Privacy Policy",
+              "type": "node",
+              "selector": "nav#footer > ul.css-t8x4fj > li.css-a7htku > a.css-jq1cx6",
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,6,LI,0,A",
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://help.nytimes.com/hc/en-us/articles/10940941449492-The-New-York-Tim…\">",
+              "lhId": "1-7-A",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 67px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 13.8px instead of at least 24px.",
+              "boundingRect": {
+                "height": 33,
+                "left": 127,
+                "width": 67,
+                "right": 194,
+                "top": 20676,
+                "bottom": 20709
+              }
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            },
+            "node": {
+              "boundingRect": {
+                "right": 279,
+                "height": 33,
+                "width": 65,
+                "bottom": 20709,
+                "top": 20676,
+                "left": 214
+              },
+              "selector": "nav#footer > ul.css-t8x4fj > li.css-a7htku > a.css-jq1cx6",
+              "nodeLabel": "Cookie Policy",
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://www.nytimes.com/privacy/cookie-policy\">",
+              "type": "node",
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,7,LI,0,A",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 65px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 16.4px instead of at least 24px.",
+              "lhId": "1-10-A"
+            }
+          },
+          {
+            "node": {
+              "selector": "nav#footer > ul.css-t8x4fj > li.css-a7htku > a.css-jq1cx6",
+              "nodeLabel": "Terms of Service",
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,8,LI,0,A",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 20709,
+                "right": 378,
+                "left": 299,
+                "top": 20676,
+                "height": 33,
+                "width": 79
+              },
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 79px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 16px instead of at least 24px.",
+              "lhId": "1-12-A",
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://help.nytimes.com/hc/en-us/articles/115014893428-Terms-of-Service\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-16-A",
+              "boundingRect": {
+                "left": 199,
+                "height": 33,
+                "right": 236,
+                "top": 20696,
+                "bottom": 20729,
+                "width": 37
+              },
+              "path": "1,HTML,1,BODY,2,DIV,5,DIV,0,FOOTER,0,NAV,2,UL,11,LI,0,A",
+              "type": "node",
+              "selector": "nav#footer > ul.css-t8x4fj > li.mobileOnly > a.css-jq1cx6",
+              "nodeLabel": "Canada",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 37px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.",
+              "snippet": "<a data-testid=\"footer-link\" class=\"css-jq1cx6\" href=\"https://www.nytimes.com/ca/\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                },
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "valid-source-maps",
+        "title": "Missing source maps for large first-party JavaScript",
+        "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "sourceMapUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/vendor-u8E3U9GY.js.map",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                },
+                {
+                  "error": "TypeError: Failed to fetch"
+                }
+              ]
+            },
+            "scriptUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/vendor-u8E3U9GY.js"
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                },
+                {
+                  "error": "TypeError: Failed to fetch"
+                }
+              ]
+            },
+            "sourceMapUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/Home-fh4Y94Yq.js.map",
+            "scriptUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/Home-fh4Y94Yq.js"
+          },
+          {
+            "scriptUrl": "https://www.nytimes.com/",
+            "subItems": {
+              "items": [
+                {
+                  "error": "Large JavaScript file is missing a source map"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "TypeError: Failed to fetch"
+                }
+              ]
+            },
+            "scriptUrl": "https://www.nytimes.com/vi-assets/static-assets/main-BzuCS7Wo.js",
+            "sourceMapUrl": "https://www.nytimes.com/vi-assets/static-assets/main-BzuCS7Wo.js.map"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "error": "TypeError: Failed to fetch"
+                }
+              ],
+              "type": "subitems"
+            },
+            "sourceMapUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/withErrorBoundary-CPkTM6p9.js.map",
+            "scriptUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/withErrorBoundary-CPkTM6p9.js"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "error": "TypeError: Failed to fetch"
+                }
+              ],
+              "type": "subitems"
+            },
+            "scriptUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/WelcomeAd-C3zTU-AT.js",
+            "sourceMapUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/WelcomeAd-C3zTU-AT.js.map"
+          },
+          {
+            "scriptUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/WatchTab-0xdFCfWw.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "TypeError: Failed to fetch"
+                }
+              ]
+            },
+            "sourceMapUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/WatchTab-0xdFCfWw.js.map"
+          },
+          {
+            "sourceMapUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/watch-feed.module-P7H7YOfh.js.map",
+            "scriptUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/watch-feed.module-P7H7YOfh.js",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "TypeError: Failed to fetch"
+                }
+              ]
+            }
+          },
+          {
+            "sourceMapUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/watch-feed-utils-ChVCwSo9.js.map",
+            "scriptUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/watch-feed-utils-ChVCwSo9.js",
+            "subItems": {
+              "items": [
+                {
+                  "error": "TypeError: Failed to fetch"
+                }
+              ],
+              "type": "subitems"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "error": "TypeError: Failed to fetch"
+                }
+              ]
+            },
+            "scriptUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/VideoShareButton-Brvwqj-Q.js",
+            "sourceMapUrl": "https://www.nytimes.com/vi-assets/static-assets/chunks/VideoShareButton-Brvwqj-Q.js.map"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.14/color-contrast).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "div._container_s7i45_18 > div._play-button-container_s7i45_116 > div._duration_s7i45_303",
+              "boundingRect": {
+                "bottom": 3060,
+                "right": 219,
+                "width": 25,
+                "left": 194,
+                "top": 3048,
+                "height": 12
+              },
+              "snippet": "<div data-testid=\"betamax-overlay-controls-duration\" class=\"_duration_s7i45_303\">",
+              "type": "node",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.46 between the foreground and shadow color (foreground color: #ffffff, text-shadow color: #d5d5d5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,3,SECTION,0,FIGURE,0,DIV,0,DIV,0,DIV,0,DIV,0,NYT-BETAMAX,1,NYT-BETAMAX-OVERLAY-CONTROLS,a,#document-fragment,2,DIV,1,DIV,1,DIV",
+              "nodeLabel": "2:58",
+              "lhId": "1-0-DIV"
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,1,DIV,1,DIV,2,DIV,0,DIV,0,DIV,0,DIV,0,P",
+              "type": "node",
+              "boundingRect": {
+                "top": 9746,
+                "right": 92,
+                "left": 20,
+                "height": 14,
+                "bottom": 9760,
+                "width": 72
+              },
+              "lhId": "1-1-P",
+              "snippet": "<p class=\"css-e6rebf\" data-ttr=\"1\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.03 (foreground color: #727272, background color: #ebebeb, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "nodeLabel": "div.WvEB8a_row > div > div.WvEB8a_signalSlotWithoutKebab > p.css-e6rebf",
+              "selector": "div.WvEB8a_row > div > div.WvEB8a_signalSlotWithoutKebab > p.css-e6rebf"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": "[…]"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "url": "https://static01.nyt.com/ads/tpc-check.html"
+                },
+                {
+                  "url": "https://pay.google.com/gp/p/ui/payframe?origin=https%3A%2F%2Fwww.nytimes.com&mid=&expids=107012411%2C106971063%2C106908372%2C106846844%2C106943274%2C107006730%2C106704029%2C97728584"
+                },
+                {
+                  "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dpubmatic.com%26id%3D&gdpr=0"
+                },
+                {
+                  "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?kdntuid=1&p=163427&gpp=DBABLA~BVQqAAAAAABo.QA&gpp_sid=7"
+                },
+                {
+                  "url": "https://gum.criteo.com/syncframe?origin=criteoPrebidAdapter&topUrl=www.nytimes.com&gpp=DBABLA~BVQqAAAAAABo.QA&gpp_sid=7#{%22bundle%22:%22QqoXjl8xcVBIM01NYVFtemMzWHEzak5Ld2pLellSWmlSYzUlMkJ4NFU5ZmRKRTIlMkJsSkglMkJQRjZLS3lUTmtIJTJCeTZTV0NZMWhPMHBwQTRycGFnRTVvak51MURsNmtIWExROSUyQlpYOHZyJTJGbDdwdUFicHJ…"
+                },
+                {
+                  "url": "https://eus.rubiconproject.com/usync.html?gpp=DBABLA~BVQqAAAAAABo.QA&gpp_sid=7"
+                },
+                {
+                  "url": "https://hbx.media.net/checksync.php?cid=8CU26C87G&cs=16&cv=37&hb=1&vsSync=1&refUrl=&gdpr=0&gdprconsent=0&usp_status=0&usp_consent=1&coppa=0&ckdel=0&visitID=259466791393615921794679451862"
+                }
+              ]
+            },
+            "issueType": "Cookie"
+          }
+        ]
+      },
+      {
+        "id": "lcp-breakdown-insight",
+        "title": "LCP breakdown",
+        "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "items": [
+              {
+                "duration": 31.147,
+                "label": "Time to first byte",
+                "subpart": "timeToFirstByte"
+              },
+              {
+                "subpart": "resourceLoadDelay",
+                "duration": 396.13,
+                "label": "Resource load delay"
+              },
+              {
+                "duration": 103.847,
+                "label": "Resource load duration",
+                "subpart": "resourceLoadDuration"
+              },
+              {
+                "duration": 3322.925,
+                "label": "Element render delay",
+                "subpart": "elementRenderDelay"
+              }
+            ],
+            "headings": [
+              {
+                "key": "label",
+                "label": "Subpart",
+                "valueType": "text"
+              },
+              {
+                "label": "Duration",
+                "key": "duration",
+                "valueType": "ms"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "snippet": "<img loading=\"eager\" draggable=\"false\" class=\"d3BmaG_media\" alt=\"\" src=\"https://static01.nyt.com/images/2026/11/14/multimedia/14faa-groundstop-car…\">",
+            "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,FIGURE,0,DIV,0,SECTION,0,DIV,0,OL,0,LI,0,FIGURE,0,A,0,DIV,0,PICTURE,1,IMG",
+            "type": "node",
+            "nodeLabel": "a.d3BmaG_link > div.d3BmaG_slideWrapper > picture > img.d3BmaG_media",
+            "lhId": "page-0-IMG",
+            "boundingRect": {
+              "height": 542,
+              "right": 387,
+              "top": 276,
+              "left": 25,
+              "width": 362,
+              "bottom": 818
+            },
+            "selector": "a.d3BmaG_link > div.d3BmaG_slideWrapper > picture > img.d3BmaG_media"
+          }
+        ]
+      },
+      {
+        "id": "robots-txt",
+        "title": "robots.txt is not valid",
+        "description": "If your robots.txt file is malformed, crawlers may not be able to understand how you want your website to be crawled or indexed. [Learn more about robots.txt](https://developer.chrome.com/docs/lighthouse/seo/invalid-robots-txt/).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "displayValue": "27.1 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "forced-reflow-insight",
+        "title": "Forced reflow",
+        "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "source",
+                "label": "Top function call",
+                "valueType": "source-location"
+              },
+              {
+                "label": "Total reflow time",
+                "valueType": "ms",
+                "granularity": 1,
+                "key": "reflowTime"
+              }
+            ],
+            "items": [
+              {
+                "reflowTime": 122.767,
+                "source": {
+                  "type": "source-location",
+                  "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/vendor-u8E3U9GY.js",
+                  "line": 1,
+                  "urlProvider": "network",
+                  "column": 8823
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "reflowTime": 6.268,
+                "source": {
+                  "urlProvider": "network",
+                  "url": "https://www.nytimes.com/",
+                  "type": "source-location",
+                  "column": 2340,
+                  "line": 655
+                }
+              },
+              {
+                "reflowTime": 75.249,
+                "source": {
+                  "type": "text",
+                  "value": "[unattributed]"
+                }
+              },
+              {
+                "reflowTime": 62.644,
+                "source": {
+                  "column": 833,
+                  "type": "source-location",
+                  "line": 0,
+                  "url": "https://static01.nyt.com/elections-assets/pages/assets/createCSSVariables-DPr15pb_.js",
+                  "urlProvider": "network"
+                }
+              },
+              {
+                "reflowTime": 8.947,
+                "source": {
+                  "column": 2153,
+                  "type": "source-location",
+                  "url": "https://static01.nyt.com/elections-assets/pages/assets/OverflowScroll-DWM5AZfl.js",
+                  "urlProvider": "network",
+                  "line": 0
+                }
+              },
+              {
+                "source": {
+                  "urlProvider": "network",
+                  "type": "source-location",
+                  "line": 0,
+                  "column": 318,
+                  "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/useWindowDimensionsOnResize-wHEpKF-6.js"
+                },
+                "reflowTime": 33.821
+              },
+              {
+                "source": {
+                  "column": 34820,
+                  "line": 19,
+                  "type": "source-location",
+                  "urlProvider": "network",
+                  "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/Home-fh4Y94Yq.js"
+                },
+                "reflowTime": 37.328
+              },
+              {
+                "reflowTime": 51.618,
+                "source": {
+                  "column": 126727,
+                  "type": "source-location",
+                  "line": 90,
+                  "urlProvider": "network",
+                  "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/Home-fh4Y94Yq.js"
+                }
+              },
+              {
+                "source": {
+                  "column": 23819,
+                  "urlProvider": "network",
+                  "url": "https://c.amazon-adsystem.com/aax2/apstag.js",
+                  "type": "source-location",
+                  "line": 2
+                },
+                "reflowTime": 3.018
+              }
+            ],
+            "type": "table",
+            "headings": [
+              {
+                "valueType": "source-location",
+                "key": "source",
+                "label": "Source"
+              },
+              {
+                "label": "Total reflow time",
+                "key": "reflowTime",
+                "valueType": "ms",
+                "granularity": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+        "score": 0,
+        "displayValue": "1 warning found",
+        "savingsMs": null,
+        "items": [
+          {
+            "value": "Unload event listeners are deprecated and will be removed.",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "type": "link",
+                  "text": "Check the feature status page for more details.",
+                  "url": "https://chromestatus.com/feature/5579556305502208"
+                }
+              ]
+            },
+            "source": {
+              "urlProvider": "network",
+              "column": 22120,
+              "url": "https://www.nytimes.com/vi-assets/static-assets/adslot-D_67OE_I.js",
+              "line": 0,
+              "type": "source-location"
+            }
+          }
+        ]
+      },
+      {
+        "id": "select-name",
+        "title": "Select elements do not have associated label elements.",
+        "description": "Form elements without effective labels can create frustrating experiences for screen reader users. [Learn more about the `select` element](https://dequeuniversity.com/rules/axe/4.14/select-name).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "div.full-results > div.linkstrip-dropdown > div.select-container > select.eln-7co5tj",
+              "explanation": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Elem…",
+              "nodeLabel": "div.full-results > div.linkstrip-dropdown > div.select-container > select.eln-7co5tj",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,DIV,9,SECTION,0,SECTION,0,FIGURE,0,DIV,0,DIV,0,DIV,0,SECTION,0,DIV,88,NYT-ELECTIONS,4,SECTION,5,DIV,4,SECTION,1,DIV,2,DIV,8,DIV,3,DIV,0,SELECT",
+              "type": "node",
+              "snippet": "<select class=\"eln-7co5tj\">",
+              "boundingRect": {
+                "bottom": 5045,
+                "width": 372,
+                "top": 5005,
+                "right": 392,
+                "height": 40,
+                "left": 20
+              },
+              "lhId": "1-3-SELECT"
+            }
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0,
+        "displayValue": "40.0 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+        "score": 0,
+        "displayValue": "25 cookies found",
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://pay.google.com/gp/p/ui/payframe?origin=https%3A%2F%2Fwww.nytimes.com&mid=&expids=107012411%2C106971063%2C106908372%2C106846844%2C106943274%2C107006730%2C106704029%2C97728584",
+            "name": "NID"
+          },
+          {
+            "name": "KTPCACOOKIE",
+            "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dpubmatic.com%26id%3D&gdpr=0"
+          },
+          {
+            "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dpubmatic.com%26id%3D&gdpr=0",
+            "name": "KCCH"
+          },
+          {
+            "name": "KADUSERCOOKIE",
+            "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dpubmatic.com%26id%3D&gdpr=0"
+          },
+          {
+            "name": "chkChromeAb67Sec",
+            "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dpubmatic.com%26id%3D&gdpr=0"
+          },
+          {
+            "name": "pi",
+            "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dpubmatic.com%26id%3D&gdpr=0"
+          },
+          {
+            "name": "DPSync4",
+            "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dpubmatic.com%26id%3D&gdpr=0"
+          },
+          {
+            "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?p=156011&s=165626&predirect=https%3A%2F%2Fs.amazon-adsystem.com%2Fecm3%3Fex%3Dpubmatic.com%26id%3D&gdpr=0",
+            "name": "SyncRTB4"
+          },
+          {
+            "name": "KRTBCOOKIE_80",
+            "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?kdntuid=1&p=163427&gpp=DBABLA~BVQqAAAAAABo.QA&gpp_sid=7"
+          },
+          {
+            "url": "https://ads.pubmatic.com/AdServer/js/user_sync.html?kdntuid=1&p=163427&gpp=DBABLA~BVQqAAAAAABo.QA&gpp_sid=7",
+            "name": "KRTBCOOKIE_148"
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "AAC1231094E17096A37D7A0D644AA72B": {
+                  "transferSize": 148370,
+                  "isLongest": true,
+                  "children": "[…]",
+                  "url": "https://www.nytimes.com/",
+                  "navStartToEndTime": 494
+                }
+              },
+              "longestChain": {
+                "duration": 1995
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "items": [
+                {
+                  "source": "[…]",
+                  "origin": "https://g1.nyt.com/",
+                  "subItems": "[…]"
+                },
+                {
+                  "origin": "https://www.gstatic.com/",
+                  "subItems": "[…]",
+                  "source": "[…]"
+                },
+                {
+                  "origin": "https://pay.google.com/",
+                  "subItems": "[…]",
+                  "source": "[…]"
+                }
+              ],
+              "headings": [
+                {
+                  "label": "Origin",
+                  "subItemsHeading": "[…]",
+                  "valueType": "text",
+                  "key": "origin"
+                },
+                {
+                  "key": "source",
+                  "valueType": "node",
+                  "label": "Source"
+                }
+              ],
+              "type": "table"
+            }
+          },
+          {
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "value": {
+              "headings": [
+                {
+                  "key": "origin",
+                  "label": "Origin",
+                  "valueType": "text"
+                },
+                {
+                  "key": "wastedMs",
+                  "label": "Est LCP savings",
+                  "valueType": "ms"
+                }
+              ],
+              "items": [
+                {
+                  "origin": "https://purr.nytimes.com",
+                  "wastedMs": 326
+                },
+                {
+                  "wastedMs": 326,
+                  "origin": "https://a.nytimes.com"
+                },
+                {
+                  "origin": "https://dd.nytimes.com",
+                  "wastedMs": 319
+                },
+                {
+                  "wastedMs": 317,
+                  "origin": "https://samizdat-graphql.nytimes.com"
+                }
+              ],
+              "type": "table"
+            },
+            "type": "list-section",
+            "title": "Preconnect candidates"
+          }
+        ]
+      },
+      {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "source": "console.error",
+            "sourceLocation": {
+              "line": 0,
+              "type": "source-location",
+              "column": 8257,
+              "urlProvider": "network",
+              "url": "https://www.datadoghq-browser-agent.com/us1/v7/datadog-rum.js"
+            },
+            "description": "[GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token."
+          },
+          {
+            "description": "Access to fetch at 'https://cs.media.net/cst?gdpr=0&cs=16&usp_status=0&ckdel=0&gdprconsent=0&usp_consent=1&cid=8CU26C87G&coppa=0&chlog=0&visitID=259466791393615921794679451862&ref=https%3A%2F%2Fwww.nytimes.com%2F' from origin 'https://hbx.media.net' has been blocked by CORS policy: No 'Access-Contro…",
+            "sourceLocation": {
+              "type": "source-location",
+              "line": 0,
+              "column": 0,
+              "url": "https://hbx.media.net/checksync.php?cid=8CU26C87G&cs=16&cv=37&hb=1&vsSync=1&refUrl=&gdpr=0&gdprconsent=0&usp_status=0&usp_consent=1&coppa=0&ckdel=0&visitID=259466791393615921794679451862",
+              "urlProvider": "network"
+            },
+            "source": "javascript"
+          },
+          {
+            "sourceLocation": {
+              "line": 7,
+              "urlProvider": "network",
+              "type": "source-location",
+              "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/vendor-u8E3U9GY.js",
+              "column": 31176
+            },
+            "source": "exception",
+            "description": "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n    at Di (https://www.nytimes.com/vi-assets/static-assets/chunks/vendor-u8E3U9GY.js:8:31177)\n    at …"
+          },
+          {
+            "sourceLocation": {
+              "line": 0,
+              "column": 0,
+              "urlProvider": "network",
+              "type": "source-location",
+              "url": "https://match.sharethrough.com/sync/v1?source_id=UiRtTsXAfjmfSDAKnR1FjWsu&source_user_id=MWGPT6CF-S-C960"
+            },
+            "description": "Failed to load resource: net::ERR_CONNECTION_FAILED",
+            "source": "network"
+          },
+          {
+            "description": "Failed to load resource: net::ERR_FAILED",
+            "sourceLocation": {
+              "column": 0,
+              "url": "https://cs.media.net/cst?gdpr=0&cs=16&usp_status=0&ckdel=0&gdprconsent=0&usp_consent=1&cid=8CU26C87G&coppa=0&chlog=0&visitID=259466791393615921794679451862&ref=https%3A%2F%2Fwww.nytimes.com%2F",
+              "line": 0,
+              "type": "source-location",
+              "urlProvider": "network"
+            },
+            "source": "network"
+          },
+          {
+            "description": "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+            "source": "network",
+            "sourceLocation": {
+              "urlProvider": "network",
+              "column": 0,
+              "url": "https://ssp.wp.pl/v1/sync/pixel/index?gdpr=&gdpr_consent=",
+              "line": 0,
+              "type": "source-location"
+            }
+          },
+          {
+            "source": "network",
+            "description": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+            "sourceLocation": {
+              "column": 0,
+              "line": 0,
+              "type": "source-location",
+              "url": "https://platform.iteratehq.com/loader.js",
+              "urlProvider": "network"
+            }
+          },
+          {
+            "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "source": "network",
+            "sourceLocation": {
+              "url": "https://vp.nyt.com/video/2026/11/14/183015_1_00vid-rv-Trump-Jensen_wg_1080p.vtt",
+              "urlProvider": "network",
+              "line": 0,
+              "column": 0,
+              "type": "source-location"
+            }
+          },
+          {
+            "description": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "source": "network",
+            "sourceLocation": {
+              "line": 0,
+              "column": 0,
+              "url": "https://vp.nyt.com/video/2026/11/14/183015_1_00vid-rv-Trump-Jensen_wg_1080p.vtt",
+              "type": "source-location",
+              "urlProvider": "network"
+            }
+          },
+          {
+            "sourceLocation": {
+              "column": 0,
+              "urlProvider": "network",
+              "type": "source-location",
+              "line": 0,
+              "url": "https://idsync.rlcdn.com/420486.gif?partner_uid=E08E7148-74E4-4676-B4A6-E4F47544EE7B"
+            },
+            "description": "Failed to load resource: the server responded with a status of 451 (Unavailable For Legal Reasons)",
+            "source": "network"
+          }
+        ]
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "title": "LCP request discovery",
+        "description": "[Optimize LCP](https://developer.chrome.com/docs/performance/insights/lcp-discovery) by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "items": {
+              "priorityHinted": {
+                "label": "fetchpriority=high should be applied",
+                "value": false
+              },
+              "eagerlyLoaded": {
+                "label": "LCP resources shouldn’t use loading=lazy",
+                "value": true
+              },
+              "requestDiscoverable": {
+                "label": "Request is discoverable in initial document",
+                "value": true
+              }
+            },
+            "type": "checklist"
+          },
+          {
+            "boundingRect": {
+              "left": 25,
+              "height": 542,
+              "right": 387,
+              "bottom": 818,
+              "width": 362,
+              "top": 276
+            },
+            "nodeLabel": "a.d3BmaG_link > div.d3BmaG_slideWrapper > picture > img.d3BmaG_media",
+            "lhId": "page-0-IMG",
+            "selector": "a.d3BmaG_link > div.d3BmaG_slideWrapper > picture > img.d3BmaG_media",
+            "type": "node",
+            "snippet": "<img loading=\"eager\" draggable=\"false\" class=\"d3BmaG_media\" alt=\"\" src=\"https://static01.nyt.com/images/2026/11/14/multimedia/14faa-groundstop-car…\">",
+            "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,FIGURE,0,DIV,0,SECTION,0,DIV,0,OL,0,LI,0,FIGURE,0,A,0,DIV,0,PICTURE,1,IMG"
+          }
+        ]
+      },
+      {
+        "id": "crawlable-anchors",
+        "title": "Links are not crawlable",
+        "description": "Search engines may use `href` attributes on links to crawl websites. Ensure that the `href` attribute of anchor elements links to an appropriate destination, so more pages of the site can be discovered. [Learn how to make links crawlable](https://support.google.com/webmasters/answer/9112205)",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,7,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "type": "node",
+              "boundingRect": {
+                "top": 6557,
+                "left": 20,
+                "bottom": 6557,
+                "right": 20,
+                "width": 0,
+                "height": 0
+              },
+              "lhId": "1-387-A",
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">"
+            }
+          },
+          {
+            "node": {
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "type": "node",
+              "lhId": "1-400-A",
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">",
+              "boundingRect": {
+                "right": 20,
+                "bottom": 10670,
+                "width": 0,
+                "left": 20,
+                "height": 0,
+                "top": 10670
+              }
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "type": "node",
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "lhId": "1-401-A",
+              "boundingRect": {
+                "top": 10747,
+                "height": 0,
+                "width": 0,
+                "bottom": 10747,
+                "right": 20,
+                "left": 20
+              }
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "lhId": "1-402-A",
+              "type": "node",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">",
+              "boundingRect": {
+                "right": 20,
+                "height": 0,
+                "left": 20,
+                "width": 0,
+                "bottom": 10824,
+                "top": 10824
+              }
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "left": 20,
+                "bottom": 10901,
+                "top": 10901,
+                "width": 0,
+                "height": 0,
+                "right": 20
+              },
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">",
+              "lhId": "1-403-A",
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,4,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "lhId": "1-404-A",
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "boundingRect": {
+                "left": 20,
+                "height": 0,
+                "right": 20,
+                "bottom": 10978,
+                "width": 0,
+                "top": 10978
+              },
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">"
+            }
+          },
+          {
+            "node": {
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,3,DIV,0,DIV,0,DIV,5,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,5,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "type": "node",
+              "boundingRect": {
+                "right": 20,
+                "height": 0,
+                "top": 11055,
+                "bottom": 11055,
+                "width": 0,
+                "left": 20
+              },
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "lhId": "1-405-A"
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,2,DIV,1,DIV,0,DIV,0,DIV,9,DIV,0,DIV,0,SECTION,0,DIV,0,DIV,0,DIV,0,DIV,0,SECTION,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "type": "node",
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">",
+              "lhId": "1-415-A",
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "boundingRect": {
+                "top": 12686,
+                "right": 20,
+                "bottom": 12686,
+                "height": 0,
+                "left": 20,
+                "width": 0
+              },
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl"
+            }
+          },
+          {
+            "node": {
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">",
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "boundingRect": {
+                "left": 355,
+                "height": 0,
+                "right": 355,
+                "width": 0,
+                "top": 12686,
+                "bottom": 12686
+              },
+              "lhId": "1-416-A",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,2,DIV,1,DIV,0,DIV,0,DIV,9,DIV,0,DIV,0,SECTION,0,DIV,0,DIV,0,DIV,1,DIV,0,SECTION,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "snippet": "<a class=\"tpl-lbl wm41dq_link css-9l1wwj\" data-tpl=\"l\">",
+              "selector": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "nodeLabel": "div > div.css-1jwi144 > div.css-cfnhvx > a.tpl-lbl",
+              "boundingRect": {
+                "left": 690,
+                "height": 0,
+                "width": 0,
+                "top": 12686,
+                "bottom": 12686,
+                "right": 690
+              },
+              "lhId": "1-417-A",
+              "path": "1,HTML,1,BODY,2,DIV,3,MAIN,0,DIV,0,DIV,1,DIV,0,DIV,2,DIV,1,DIV,0,DIV,0,DIV,9,DIV,0,DIV,0,SECTION,0,DIV,0,DIV,0,DIV,2,DIV,0,SECTION,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,A",
+              "type": "node"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cls-culprits-insight",
+        "title": "Layout shift culprits",
+        "description": "Layout shifts occur when elements move absent any user interaction. [Investigate the causes of layout shifts](https://developer.chrome.com/docs/performance/insights/cls-culprit), such as elements being added, removed, or their fonts changing as the page loads.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "CLS": 0
+        },
+        "items": [
+          {
+            "items": [
+              {
+                "node": {
+                  "type": "text",
+                  "value": "Total"
+                },
+                "score": 0.0001834733854008822
+              },
+              {
+                "score": 0.0001834733854008822,
+                "node": {
+                  "snippet": "<div class=\"css-50gbj e1j3jvdr1\">",
+                  "lhId": "page-2-DIV",
+                  "type": "node",
+                  "path": "1,HTML,1,BODY,2,DIV,2,DIV,1,DIV,0,HEADER,0,SECTION,3,DIV",
+                  "selector": "div.Wr7_RG_mastheadContainer > header.Wr7_RG_mastheadWrapper > section.Wr7_RG_mastheadSection > div.css-50gbj",
+                  "nodeLabel": "Log in",
+                  "boundingRect": "[…]"
+                }
+              }
+            ],
+            "headings": [
+              {
+                "key": "node",
+                "label": "Element",
+                "subItemsHeading": {
+                  "key": "extra"
+                },
+                "valueType": "node"
+              },
+              {
+                "granularity": 0.001,
+                "label": "Layout shift score",
+                "subItemsHeading": {
+                  "valueType": "text",
+                  "key": "cause"
+                },
+                "key": "score",
+                "valueType": "numeric"
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "items": [
+              {
+                "score": 0.2113953873184622,
+                "node": {
+                  "type": "text",
+                  "value": "Total"
+                }
+              },
+              {
+                "node": {
+                  "selector": "body > div#app > main#site-content",
+                  "nodeLabel": "New York Times - Top Stories\n\nThese top stories are free to read.\n\nThousands St…",
+                  "lhId": "page-3-MAIN",
+                  "boundingRect": "[…]",
+                  "type": "node",
+                  "path": "1,HTML,1,BODY,2,DIV,3,MAIN",
+                  "snippet": "<main id=\"site-content\" data-paywall-inert=\"\">"
+                },
+                "subItems": {
+                  "type": "subitems",
+                  "items": [
+                    "[…]"
+                  ]
+                },
+                "score": 0.2113953873184622
+              }
+            ],
+            "headings": [
+              {
+                "subItemsHeading": {
+                  "key": "extra"
+                },
+                "key": "node",
+                "valueType": "node",
+                "label": "Element"
+              },
+              {
+                "subItemsHeading": {
+                  "key": "cause",
+                  "valueType": "text"
+                },
+                "granularity": 0.001,
+                "label": "Layout shift score",
+                "key": "score",
+                "valueType": "numeric"
+              }
+            ],
+            "type": "table"
+          }
+        ]
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.01,
+        "displayValue": "3,680 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.02,
+        "displayValue": "710 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.03,
+        "displayValue": "12.7 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.4,
+        "displayValue": "3.3 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 40 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 40756,
+            "url": ".css-1pg5jir { max-width: calc(100% - 40px); margin: auto; } …",
+            "totalBytes": 41169,
+            "wastedPercent": 98.99729892539982
+          }
+        ]
+      },
+      {
+        "id": "unminified-javascript",
+        "title": "Minify JavaScript",
+        "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 13 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedBytes": 12925,
+            "totalBytes": 41086,
+            "url": "https://launchpad.privacymanager.io/latest/launchpad.bundle.js",
+            "wastedPercent": 31.457245406438705
+          }
+        ]
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 12,862 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "totalBytes": 6413575,
+            "url": "https://vp.nyt.com/video/2026/11/13/183474_1_22mag-interview-wilde-homepage_wg_mobile_720p.mp4"
+          },
+          {
+            "totalBytes": 434169,
+            "url": "https://pay.google.com/gp/p/ui/pay"
+          },
+          {
+            "url": "https://static01.nyt.com/elections-assets/pages/data/2026-11-03/hp-multi.json",
+            "totalBytes": 391447
+          },
+          {
+            "totalBytes": 320136,
+            "url": "https://www.nytimes.com/vi-assets/static-assets/chunks/vendor-u8E3U9GY.js"
+          },
+          {
+            "url": "https://rumcdn.geoedge.be/b3960cc6-bfd2-4adc-910c-6e917e8a6a0e/grumi.js",
+            "totalBytes": 253650
+          },
+          {
+            "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611120101/pubads_impl.js?cb=122882267",
+            "totalBytes": 230610
+          },
+          {
+            "totalBytes": 215406,
+            "url": "https://www.googletagmanager.com/gtm.js?id=GTM-P528B3&gtm_auth=tfAzqo1rYDLgYhmTnSjPqw&gtm_preview=env-130&gtm_cookies_win=x"
+          },
+          {
+            "totalBytes": 214161,
+            "url": "https://warp.media.net/js/tags/clientag.js?cid=8CU26C87G&dn=www.nytimes.com&ysection=home&version=1"
+          },
+          {
+            "totalBytes": 173016,
+            "url": "https://samizdat-graphql.nytimes.com/graphql/v2?operationName=LegacyGenericPersonalizedPackagesQuery&variables=%7B%22ids%22%3A%5B%22nyt%3A%2F%2Fprogrammingnode%2F2473c24b-5adb-5f66-a5e1-ba2f1d82dfbd%22%2C%22nyt%3A%2F%2Fprogrammingnode%2F7ba1fa98-cbba-5a5b-883e-ebf82572476f%22%2C%22nyt%3A%2F%2Fprogra…"
+          },
+          {
+            "totalBytes": 150651,
+            "url": "https://www.googletagmanager.com/gtag/destination?id=DC-5290727&cx=c&gtm=4e6bb1"
+          }
+        ]
+      },
+      {
+        "id": "unminified-css",
+        "title": "Minify CSS",
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 4 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": ".css-1pg5jir { max-width: calc(100% - 40px); margin: auto; } …",
+            "totalBytes": 41169,
+            "wastedPercent": 11.13270243485358,
+            "wastedBytes": 4583
+          }
+        ]
+      },
+      {
+        "id": "cumulative-layout-shift",
+        "title": "Cumulative Layout Shift",
+        "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
+        "score": 0.59,
+        "displayValue": "0.211",
+        "savingsMs": null,
+        "items": [
+          {
+            "cumulativeLayoutShiftMainFrame": 0.2113953873184622,
+            "newEngineResult": {
+              "cumulativeLayoutShift": 0.2113953873184622,
+              "cumulativeLayoutShiftMainFrame": 0.2113953873184622
+            },
+            "newEngineResultDiffered": false
+          }
+        ]
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.nytimes.com/",
+    "status": 200,
+    "htmlBytes": 1296831,
+    "headers": {
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "s-maxage=300,no-cache",
+      "contentEncoding": "br",
+      "xRobotsTag": null,
+      "server": "envoy"
+    },
+    "meta": {
+      "title": "The New York Times - Breaking News, US News, World News and Videos",
+      "description": "Live news, investigations, opinion, photos and video by the journalists of The New York Times from more than 150 countries around the world. Subscribe for coverage of U.S. and international news, politics, business, technology, science, health, arts, sports and more.",
+      "canonical": "https://www.nytimes.com",
+      "lang": "en",
+      "robots": null,
+      "viewport": "width=device-width, initial-scale=1",
+      "openGraph": {
+        "og:url": "https://www.nytimes.com",
+        "og:type": "website",
+        "og:title": "The New York Times - Breaking News, US News, World News and Videos",
+        "og:description": "Live news, investigations, opinion, photos and video by the journalists of The New York Times from more than 150 countries around the world. Subscribe for coverage of U.S. and international news, poli…",
+        "og:image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png"
+      }
+    },
+    "headings": [
+      {
+        "level": 3,
+        "text": "SECTIONS"
+      },
+      {
+        "level": 3,
+        "text": "TOP STORIES"
+      },
+      {
+        "level": 3,
+        "text": "NEWSLETTERS"
+      },
+      {
+        "level": 3,
+        "text": "PODCASTS"
+      },
+      {
+        "level": 3,
+        "text": "SECTIONS"
+      },
+      {
+        "level": 3,
+        "text": "TOP STORIES"
+      },
+      {
+        "level": 3,
+        "text": "NEWSLETTERS"
+      },
+      {
+        "level": 3,
+        "text": ""
+      },
+      {
+        "level": 3,
+        "text": "SECTIONS"
+      },
+      {
+        "level": 3,
+        "text": "TOP STORIES"
+      },
+      {
+        "level": 3,
+        "text": "NEWSLETTERS"
+      },
+      {
+        "level": 3,
+        "text": "PODCASTS"
+      },
+      {
+        "level": 3,
+        "text": "SECTIONS"
+      },
+      {
+        "level": 3,
+        "text": "RECOMMENDATIONS"
+      },
+      {
+        "level": 3,
+        "text": "NEWSLETTERS"
+      },
+      {
+        "level": 3,
+        "text": "PODCASTS"
+      },
+      {
+        "level": 3,
+        "text": "SECTIONS"
+      },
+      {
+        "level": 3,
+        "text": "COLUMNS"
+      },
+      {
+        "level": 3,
+        "text": "NEWSLETTERS"
+      },
+      {
+        "level": 3,
+        "text": "PODCASTS"
+      },
+      {
+        "level": 3,
+        "text": "SECTIONS"
+      },
+      {
+        "level": 3,
+        "text": "TOPICS"
+      },
+      {
+        "level": 3,
+        "text": "COLUMNISTS"
+      },
+      {
+        "level": 3,
+        "text": "PODCASTS"
+      },
+      {
+        "level": 3,
+        "text": "Playlists"
+      },
+      {
+        "level": 3,
+        "text": "Explore"
+      },
+      {
+        "level": 3,
+        "text": "Featured"
+      },
+      {
+        "level": 3,
+        "text": "Newsletters"
+      },
+      {
+        "level": 3,
+        "text": "Play"
+      },
+      {
+        "level": 3,
+        "text": "Community"
+      },
+      {
+        "level": 3,
+        "text": "Newsletters"
+      },
+      {
+        "level": 3,
+        "text": "Recipes"
+      },
+      {
+        "level": 3,
+        "text": "Editors’ Picks"
+      },
+      {
+        "level": 3,
+        "text": "Newsletters"
+      },
+      {
+        "level": 3,
+        "text": ""
+      },
+      {
+        "level": 3,
+        "text": "Reviews"
+      },
+      {
+        "level": 3,
+        "text": "The Best..."
+      },
+      {
+        "level": 3,
+        "text": "Newsletters"
+      },
+      {
+        "level": 3,
+        "text": "LEAGUES"
+      },
+      {
+        "level": 3,
+        "text": "TOP STORIES"
+      }
+    ],
+    "h1Count": 0,
+    "images": {
+      "total": 36,
+      "missingAlt": 0,
+      "missingDimensions": 20,
+      "lazy": 33,
+      "firstImages": [
+        {
+          "src": "https://static01.nyt.com/images/2026/11/14/multimedia/14faa-groundstop-carousel-bkpv/14faa-groundstop-carousel-bkpv-verticalTwoByThree735.jpg?quality=75&auto=avif",
+          "alt": "",
+          "loading": "eager",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://static01.nyt.com/images/2026/03/26/reader-center/author-Sean-Keenan/author-Sean-Keenan-thumbLarge.png?quality=75&auto=avif",
+          "alt": "Sean Keenan",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "src": "https://static01.nyt.com/images/2026/03/26/reader-center/author-Sean-Keenan/author-Sean-Keenan-thumbLarge.png?quality=75&auto=avif",
+          "alt": "Sean Keenan",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "src": "https://static01.nyt.com/images/2024/08/21/reader-center/author-robert-chiarito/author-robert-chiarito-thumbLarge.png?quality=75&auto=avif",
+          "alt": "Robert Chiarito",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "src": "https://static01.nyt.com/images/2026/06/18/reader-center/author-ryley-ober/author-ryley-ober-thumbLarge.png?quality=75&auto=avif",
+          "alt": "Ryley Ober",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "src": "https://static01.nyt.com/images/2022/09/29/reader-center/author-madison-malone-kircher/author-madison-malone-kircher-thumbLarge-v2.png?quality=75&auto=avif",
+          "alt": "Madison Malone Kircher",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "src": "https://static01.nyt.com/images/2022/09/29/reader-center/author-madison-malone-kircher/author-madison-malone-kircher-thumbLarge-v2.png?quality=75&auto=avif",
+          "alt": "Madison Malone Kircher",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "src": "https://static01.nyt.com/images/2022/09/29/reader-center/author-madison-malone-kircher/author-madison-malone-kircher-thumbLarge-v2.png?quality=75&auto=avif",
+          "alt": "Madison Malone Kircher",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": "40",
+          "height": "40"
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 48,
+      "blockingScripts": 0,
+      "preloads": [
+        {
+          "href": "https://static01.nyt.com/video-static/betamax/player-0.3.50-BroPhdQ5.css",
+          "as": "style"
+        },
+        {
+          "href": "https://static01.nyt.com/video-static/betamax/cover-0.3.50-eTrf0IGY.css",
+          "as": "style"
+        },
+        {
+          "href": "https://static01.nyt.com/video-static/betamax/poster-0.3.50-Cda1v6Rn.css",
+          "as": "style"
+        },
+        {
+          "href": "https://static01.nyt.com/video-static/betamax/overlay-controls-0.3.50-BN-qu2gk.css",
+          "as": "style"
+        },
+        {
+          "href": "https://static01.nyt.com/video-static/betamax/share-button-0.3.50-7EJBVZJg.css",
+          "as": "style"
+        }
+      ],
+      "preconnects": [
+        "https://g1.nyt.com"
+      ]
+    },
+    "scripts": {
+      "total": 0,
+      "external": 8,
+      "thirdPartyHosts": [
+        "static01.nyt.com",
+        "www.googletagmanager.com"
+      ]
+    },
+    "structuredData": {
+      "jsonLdBlocks": 2,
+      "types": [
+        "WebSite",
+        "NewsMediaOrganization"
+      ],
+      "invalidBlocks": 0,
+      "raw": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"image\":[{\"@context\":\"https://schema.org\",\"@type\":\"ImageObject\",\"url\":\"https://static01.nyt.com/vi-assets/images/share/1200x675_nameplate.png\",\"height\":675,\"width\":1200,\"contentUrl\":\"https://static01.nyt.com/vi-assets/images/share/1200x675_nameplate.png\",\"creditText\":\"The New York Times\"},{\"@context\":\"https://schema.org\",\"@type\":\"ImageObject\",\"url\":\"https://static01.nyt.com/vi-assets/images/share/1200x900_t.png\",\"height\":900,\"width\":1200,\"contentUrl\":\"https://static01.nyt.com/vi-assets/images/share/1200x900_t.png\",\"creditText\":\"The New York Times\"},{\"@context\":\"https://schema.org\",\"@type\":\"ImageObject\",\"url\":\"https://static01.nyt.com/vi-assets/images/share/1200x1200_t.png\",\"height\":1200,\"width\":1200,\"contentUrl\":\"https://static01.nyt.com/vi-assets/images/share/1200x1200_t.png\",\"creditText\":\"The New York Times\"}],\"url\":\"https://www.nytimes.com\",\"name\":\"The New York Times\",\"alternateName\":[\"NYT\",\"new york times\",\"nytimes\",\"ny times\"],\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.nytimes.com/search?query={search_term_string}\"},\"query-input\":\"required name=search_term_string\"},\"mainEntity\":{\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"itemListElement\":[{\"@context\":\"https://schema.org\",\"@type\":\"ListItem\",\"url\":\"https://www.nytimes.com/live/2026/11/14/us/faa-nationwide-ground-stop-flights\",\"position\":1},{\"@context\":\"https://schema.org\",\"@type\":\"ListItem\",\"url\":\"https://www.nytimes.com/2026/11/14/us/faa-groundstop-flights-restarting.html\",\"position\":2},{\"@context\":\"https://schema.org\",\"@type\":\"ListItem\",\"url\":\"https://www.nytimes.com/2026/11/14/us/politics/ground-stop-air-traffic-faa.html\",\"position\":3},{\"@context\":\"https://schema.org\",\"@type\":\"ListItem\",\"url\":\"https://www.nytimes.com/2026/11/13/us/politics/nvidia-alice-huang-spy-china.html\",\"position\":4},{\"@context\":\"https://schema.org\",\"@type\":\"ListItem\",\"url\":\"https://www.nytimes.com/video/us/politics/10000001…",
+        "{\"@context\":\"https://schema.org\",\"@type\":\"NewsMediaOrganization\",\"name\":\"The New York Times\",\"logo\":{\"@context\":\"https://schema.org\",\"@type\":\"ImageObject\",\"url\":\"https://static01.nyt.com/images/icons/t_logo_291_black.png\",\"height\":291,\"width\":291,\"contentUrl\":\"https://static01.nyt.com/images/icons/t_logo_291_black.png\",\"creditText\":\"The New York Times\"},\"url\":\"https://www.nytimes.com/\",\"@id\":\"https://www.nytimes.com/#publisher\",\"publishingPrinciples\":\"https://www.nytimes.com/editorial-standards/ethical-journalism.html\",\"diversityPolicy\":\"https://www.nytco.com/company/diversity-and-inclusion/\",\"ethicsPolicy\":\"https://www.nytco.com/company/standards-ethics/\",\"masthead\":\"https://www.nytimes.com/interactive/2023/01/28/admin/the-new-york-times-masthead.html\",\"foundingDate\":\"1851-09-18\",\"sameAs\":[\"https://www.facebook.com/nytimes/\",\"https://x.com/nytimes\",\"https://www.instagram.com/nytimes/\",\"https://www.youtube.com/user/TheNewYorkTimes\",\"https://www.linkedin.com/company/the-new-york-times\",\"https://www.wikidata.org/wiki/Q9684\",\"https://en.wikipedia.org/wiki/The_New_York_Times\"],\"alternateName\":[\"NYT\",\"new york times\",\"nytimes\",\"ny times\"],\"subOrganization\":[{\"@type\":\"Organization\",\"name\":\"NYT Cooking\",\"url\":\"https://cooking.nytimes.com/\",\"sameAs\":[\"https://www.facebook.com/nytcooking/\",\"https://www.facebook.com/groups/nytcooks/\",\"https://www.instagram.com/nytcooking/\",\"https://www.youtube.com/channel/UC1rIOwTqDuWkFj87HZYRFOg\",\"https://x.com/nytfood\"],\"logo\":[{\"url\":\"https://static01.nyt.com/applications/cooking/37f1abc/assets/SiteLogoRed.svg\",\"height\":31,\"width\":168,\"@type\":\"ImageObject\"},{\"url\":\"https://static01.nyt.com/applications/cooking/37f1abc/assets/SiteLogoBlack.svg\",\"height\":24,\"width\":131,\"@type\":\"ImageObject\"}]},{\"@type\":\"Organization\",\"name\":\"Wirecutter\",\"url\":\"https://www.nytimes.com/wirecutter/\",\"sameAs\":[\"https://www.facebook.com/thewirecutter/\",\"https://www.instagram.com/wirecutter/\",\"https://x.com/wirecutter/\",\"https://www.linkedin.com/company/the-wirecu…"
+      ]
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "allowed": [],
+      "llmsTxtFound": false
+    },
+    "textSample": "Skip to contentSkip to site indexU.S.InternationalCanadaEspañol中文 Today’s PaperGoHome U.S.SECTIONSU.S.PoliticsNew YorkCaliforniaEducationHealthObituariesScienceClimateWeatherSportsBusinessTechThe UpshotThe MagazineTOP STORIESDonald TrumpSupreme CourtCongressImmigrationAbortionLatest PollsNEWSLETTERSThe MorningMake sense of the day’s news and ideas.The EveningCatch up on big news, and wind down to end your day.See all newslettersPODCASTSThe DailyThe biggest stories of our time, in 20 minutes a day.See all podcastsWorldSECTIONSWorldAfricaAmericasAsiaAustraliaCanadaEuropeMiddle EastScienceClimateWeatherHealthObituariesTOP STORIESMiddle East CrisisRussia-Ukraine WarChina International RelationsThe Global ProfileLeer en EspañolNEWSLETTERSThe WorldA guide to understanding the news, made for readers around the globe.Your Places: Global UpdateThe latest news for any part of the world you select.Canada LetterBackstories and analysis from our Canadian correspondents.See all newslettersBusinessSECTIONSBusinessTechEconomyMediaFinance and MarketsDealBookPersonal TechEnergy TransitionYour MoneyTOP STORIESU.S. EconomyStock MarketArtificial IntelligenceNEWSLETTERSDealBookThe most crucial business and policy news you need to know.On TechOur best tech reporting from the week.See all newslettersPODCASTSHard ForkOur tech journalists help you make sense of the rapidly changing tech world.See all podcastsArtsSECTIONSToday's ArtsBook ReviewBest SellersDanceMoviesMusicTelevisionTheaterPop CultureT M…"
+  }
+}

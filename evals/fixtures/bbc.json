@@ -1,0 +1,2125 @@
+{
+  "name": "bbc",
+  "url": "https://www.bbc.com/",
+  "collectedAt": "2026-11-14T17:18:57.031Z",
+  "psi": {
+    "strategy": "mobile",
+    "fetchedAt": "2026-11-14T17:18:57.029Z",
+    "finalUrl": "https://www.bbc.com/",
+    "lighthouseVersion": "13.6.0",
+    "categories": {
+      "performance": 36,
+      "accessibility": 95,
+      "best-practices": 54,
+      "seo": 100
+    },
+    "field": {
+      "scope": "url",
+      "lcpMs": {
+        "p75": 1156,
+        "category": "FAST"
+      },
+      "inpMs": {
+        "p75": 107,
+        "category": "FAST"
+      },
+      "cls": {
+        "p75": 0.05,
+        "category": "FAST"
+      },
+      "fcpMs": {
+        "p75": 650,
+        "category": "FAST"
+      },
+      "ttfbMs": {
+        "p75": 346,
+        "category": "FAST"
+      },
+      "overall": "FAST"
+    },
+    "lab": {
+      "lcp": {
+        "value": 7741.288647278256,
+        "display": "7.7 s"
+      },
+      "cls": {
+        "value": 0.07528394620634876,
+        "display": "0.075"
+      },
+      "tbt": {
+        "value": 2555.500000000002,
+        "display": "2,560 ms"
+      },
+      "fcp": {
+        "value": 1225.0047767531196,
+        "display": "1.2 s"
+      },
+      "speedIndex": {
+        "value": 15325.533873421027,
+        "display": "15.3 s"
+      },
+      "ttfb": {
+        "value": 11,
+        "display": "Root document took 10 ms"
+      }
+    },
+    "failingAudits": [
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+        "score": 0,
+        "displayValue": "9.4 s",
+        "savingsMs": {
+          "TBT": 2550
+        },
+        "items": [
+          {
+            "duration": 6507.405600000363,
+            "groupLabel": "Script Evaluation",
+            "group": "scriptEvaluation"
+          },
+          {
+            "duration": 977.1803999999993,
+            "groupLabel": "Script Parsing & Compilation",
+            "group": "scriptParseCompile"
+          },
+          {
+            "duration": 744.7667999999719,
+            "groupLabel": "Other",
+            "group": "other"
+          },
+          {
+            "group": "styleLayout",
+            "groupLabel": "Style & Layout",
+            "duration": 506.4012
+          },
+          {
+            "groupLabel": "Garbage Collection",
+            "group": "garbageCollection",
+            "duration": 455.5775999999992
+          },
+          {
+            "group": "paintCompositeRender",
+            "duration": 168.98280000000014,
+            "groupLabel": "Rendering"
+          },
+          {
+            "duration": 68.18160000000006,
+            "group": "parseHTML",
+            "groupLabel": "Parse HTML & CSS"
+          }
+        ]
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/).",
+        "score": 0,
+        "displayValue": "6.6 s",
+        "savingsMs": {
+          "TBT": 2500
+        },
+        "items": [
+          {
+            "url": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/_next/static/chunks/0y-nyl-getpga.js",
+            "total": 2445.4751999999835,
+            "scripting": 2156.4779999999837,
+            "scriptParseCompile": 18.7212
+          },
+          {
+            "scriptParseCompile": 68.8056,
+            "scripting": 881.129999999992,
+            "url": "https://cdn.doubleverify.com/dv-measurements11293.js",
+            "total": 1026.889199999992
+          },
+          {
+            "url": "https://scripts.webcontentassessor.com/scripts/64ca3dfd44dd68a629e2e51a27e7ccd960974b5961e4ca2897139d14bf10be8b",
+            "scriptParseCompile": 91.12080000000003,
+            "scripting": 569.1731999999994,
+            "total": 674.2391999999994
+          },
+          {
+            "total": 645.8004000000001,
+            "scripting": 26.502000000000006,
+            "scriptParseCompile": 9.977999999999996,
+            "url": "https://www.bbc.com/"
+          },
+          {
+            "scriptParseCompile": 0,
+            "scripting": 99.03359999999999,
+            "url": "Unattributable",
+            "total": 589.1087999999912
+          },
+          {
+            "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611100101/pubads_impl.js?cb=122882259",
+            "total": 412.1508000000002,
+            "scriptParseCompile": 104.58959999999998,
+            "scripting": 250.74000000000018
+          },
+          {
+            "scripting": 213.97319999999988,
+            "total": 259.90319999999986,
+            "scriptParseCompile": 44.6004,
+            "url": "https://scripts.webcontentassessor.com/scripts/727d9b43a076aa925788e8b215b1d39a710cbe7ace5268ab65490af6db50168b"
+          },
+          {
+            "scripting": 54.81840000000045,
+            "url": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/_next/static/chunks/0x01rgvk49mtx.js",
+            "scriptParseCompile": 2.028,
+            "total": 234.54600000000067
+          },
+          {
+            "scriptParseCompile": 33.0552,
+            "scripting": 136.00920000000008,
+            "total": 189.97440000000012,
+            "url": "https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js"
+          },
+          {
+            "scriptParseCompile": 61.001999999999995,
+            "url": "https://cdn.permutive.app/e488cdb0-e7cb-4d91-9648-60d437d8e491-web.js",
+            "scripting": 108.14640000000007,
+            "total": 187.0944000000001
+          }
+        ]
+      },
+      {
+        "id": "font-display-insight",
+        "title": "Font display",
+        "description": "Consider setting [`font-display`](https://developer.chrome.com/docs/performance/insights/font-display) to `swap` or `optional` to ensure text is consistently visible. `swap` can be further optimized to mitigate layout shifts with [font metric overrides](https://developer.chrome.com/blog/font-fallbacks).",
+        "score": 0,
+        "displayValue": "Est savings of 280 ms",
+        "savingsMs": {
+          "FCP": 300,
+          "INP": 0
+        },
+        "items": [
+          {
+            "url": "https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Rg.woff2",
+            "wastedMs": 275
+          },
+          {
+            "wastedMs": 250,
+            "url": "https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSerif_W_Md.woff2"
+          },
+          {
+            "wastedMs": 130,
+            "url": "https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSerif_W_Rg.woff2"
+          },
+          {
+            "url": "https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Md.woff2",
+            "wastedMs": 75
+          },
+          {
+            "wastedMs": 65,
+            "url": "https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_ExBd.woff2"
+          },
+          {
+            "wastedMs": 30,
+            "url": "https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2"
+          }
+        ]
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 770 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "wastedPercent": 51.435705192081315,
+            "totalBytes": 222560,
+            "wastedBytes": 114475,
+            "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611100101/pubads_impl.js?cb=122882259"
+          },
+          {
+            "wastedBytes": 91685,
+            "wastedPercent": 62.14398498184378,
+            "totalBytes": 147536,
+            "url": "https://cdn.tinypass.com/api/tinypass.min.js"
+          },
+          {
+            "url": "https://mybbc-analytics.files.bbci.co.uk/echo-client-js/echo-2.6.0-avi.min.js",
+            "wastedBytes": 55411,
+            "totalBytes": 112600,
+            "wastedPercent": 49.21068228824667
+          },
+          {
+            "totalBytes": 167861,
+            "wastedPercent": 31.169624523609652,
+            "wastedBytes": 52322,
+            "url": "https://www.googletagmanager.com/gtag/js?id=AW-417091839"
+          },
+          {
+            "wastedPercent": 26.646998202044898,
+            "wastedBytes": 47582,
+            "url": "https://cdn.permutive.app/e488cdb0-e7cb-4d91-9648-60d437d8e491-web.js",
+            "totalBytes": 178564
+          },
+          {
+            "totalBytes": 103717,
+            "wastedBytes": 40223,
+            "wastedPercent": 38.781513553367084,
+            "url": "https://cdn.doubleverify.com/dv-measurements11293.js"
+          },
+          {
+            "totalBytes": 103717,
+            "wastedPercent": 38.760636176919775,
+            "url": "https://cdn.doubleverify.com/dv-measurements11293.js",
+            "wastedBytes": 40201
+          },
+          {
+            "url": "https://emp.bbci.co.uk/emp/bump-4/bump-4.js",
+            "wastedBytes": 36338,
+            "totalBytes": 40672,
+            "wastedPercent": 89.34583704445245
+          },
+          {
+            "wastedBytes": 35021,
+            "url": "https://cdn.optimizely.com/public/4621041136/s/bbcx_prod.js",
+            "wastedPercent": 32.974946487871364,
+            "totalBytes": 106205
+          },
+          {
+            "wastedBytes": 32545,
+            "wastedPercent": 42.69017632241814,
+            "totalBytes": 76236,
+            "url": "https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js"
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about caching](https://developer.chrome.com/docs/performance/insights/cache).",
+        "score": 0,
+        "displayValue": "Est savings of 1,443 KiB",
+        "savingsMs": {
+          "LCP": 150,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://cdn.permutive.app/e488cdb0-e7cb-4d91-9648-60d437d8e491-web.js",
+            "totalBytes": 179537,
+            "wastedBytes": 160461.19375,
+            "cacheLifetimeMs": 900000
+          },
+          {
+            "totalBytes": 150330,
+            "wastedBytes": 120264,
+            "url": "https://scripts.webcontentassessor.com/scripts/64ca3dfd44dd68a629e2e51a27e7ccd960974b5961e4ca2897139d14bf10be8b",
+            "cacheLifetimeMs": 3600000
+          },
+          {
+            "wastedBytes": 110031.20000000001,
+            "url": "https://scripts.webcontentassessor.com/scripts/727d9b43a076aa925788e8b215b1d39a710cbe7ace5268ab65490af6db50168b",
+            "totalBytes": 137539,
+            "cacheLifetimeMs": 3600000
+          },
+          {
+            "url": "https://cdn.optimizely.com/public/4621041136/s/bbcx_prod.js",
+            "totalBytes": 107299,
+            "cacheLifetimeMs": 120000,
+            "wastedBytes": 105510.68333333333
+          },
+          {
+            "url": "https://cdn.tinypass.com/api/tinypass.min.js",
+            "cacheLifetimeMs": 14400000,
+            "wastedBytes": 101094.91999999998,
+            "totalBytes": 148669
+          },
+          {
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pcy616.jpg.webp",
+            "totalBytes": 173835,
+            "cacheLifetimeMs": 86400000,
+            "wastedBytes": 69534
+          },
+          {
+            "wastedBytes": 61608,
+            "totalBytes": 77010,
+            "url": "https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js",
+            "cacheLifetimeMs": 3600000
+          },
+          {
+            "wastedBytes": 44252.4,
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pgq3qs.jpg.webp",
+            "cacheLifetimeMs": 86400000,
+            "totalBytes": 110631
+          },
+          {
+            "cacheLifetimeMs": 86400000,
+            "wastedBytes": 41120.4,
+            "totalBytes": 102801,
+            "url": "https://ichef.bbci.co.uk/images/ic/800x450/p0pmyqpz.jpg.webp"
+          },
+          {
+            "totalBytes": 41738,
+            "cacheLifetimeMs": 300000,
+            "url": "https://emp.bbci.co.uk/emp/bump-4/bump-4.js",
+            "wastedBytes": 39998.91666666667
+          }
+        ]
+      },
+      {
+        "id": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+        "score": 0,
+        "displayValue": "1 cookie found",
+        "savingsMs": null,
+        "items": [
+          {
+            "name": "https://www.bbc.com_oeu1794676672603r0.3447347841656673$$27302320011$$session_state",
+            "url": "https://a4621041136.cdn.optimizely.com/client_storage/a4621041136.html"
+          }
+        ]
+      },
+      {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "issueType": "Cookie",
+            "subItems": {
+              "items": [
+                {
+                  "url": "https://a4621041136.cdn.optimizely.com/client_storage/a4621041136.html"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "description": "Deprecated APIs will eventually be removed from the browser. [Learn more about deprecated APIs](https://developer.chrome.com/docs/lighthouse/best-practices/deprecations/).",
+        "score": 0,
+        "displayValue": "1 warning found",
+        "savingsMs": null,
+        "items": [
+          {
+            "value": "Fenced Frame API is deprecated and scheduled for removal.",
+            "source": {
+              "url": "https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js",
+              "line": 269,
+              "column": 186,
+              "urlProvider": "network",
+              "type": "source-location"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "url": "https://chromestatus.com/feature/6366274495053824",
+                  "text": "Check the feature status page for more details.",
+                  "type": "link"
+                },
+                {
+                  "type": "link",
+                  "url": "https://chromiumdash.appspot.com/schedule",
+                  "text": "This change will go into effect with milestone 156."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "title": "LCP request discovery",
+        "description": "[Optimize LCP](https://developer.chrome.com/docs/performance/insights/lcp-discovery) by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loading",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "items": {
+              "priorityHinted": {
+                "label": "fetchpriority=high should be applied",
+                "value": false
+              },
+              "requestDiscoverable": {
+                "value": true,
+                "label": "Request is discoverable in initial document"
+              },
+              "eagerlyLoaded": {
+                "label": "LCP resources shouldn’t use loading=lazy",
+                "value": false
+              }
+            },
+            "type": "checklist"
+          },
+          {
+            "snippet": "<img sizes=\"(min-width: 1008px) 33vw, (min-width: 600px) 66vw, 100vw\" srcset=\"https://ichef.bbci.co.uk/news/240/cpsprodpb/d028/live/47c10ab0-e013-11f1-b…\" src=\"https://ichef.bbci.co.uk/news/800/cpsprodpb/d028/live/47c10ab0-e013-11f1-b…\" loading=\"lazy\" alt=\"US envoy Jared Kushner speaks alongside Ukr…",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,2,SECTION,0,SECTION,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+            "type": "node",
+            "selector": "div.Westminster-styles__MediaWrapperStyled-sc-348bb4b5-5 > div.Westminster-styles__MediaStyled-sc-348bb4b5-1 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+            "nodeLabel": "US envoy Jared Kushner speaks alongside Ukraine's President Volodymyr Zelensky …",
+            "boundingRect": {
+              "top": 158,
+              "left": 0,
+              "right": 412,
+              "height": 232,
+              "width": 412,
+              "bottom": 390
+            }
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": {
+          "LCP": 0
+        },
+        "items": [
+          {
+            "value": {
+              "longestChain": {
+                "duration": 5151
+              },
+              "chains": {
+                "7CC3C7DDBA8CBE0D2288BF67E475AD06": {
+                  "url": "https://www.bbc.com/",
+                  "transferSize": 101421,
+                  "navStartToEndTime": 96,
+                  "children": "[…]",
+                  "isLongest": true
+                }
+              },
+              "type": "network-tree"
+            },
+            "type": "list-section"
+          },
+          {
+            "value": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "origin",
+                  "label": "Origin",
+                  "subItemsHeading": "[…]",
+                  "valueType": "text"
+                },
+                {
+                  "label": "Source",
+                  "valueType": "node",
+                  "key": "source"
+                }
+              ],
+              "items": [
+                {
+                  "source": "[…]",
+                  "subItems": "[…]",
+                  "origin": "https://www.bbc.com/"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://securepubads.g.doubleclick.net/",
+                  "subItems": "[…]"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://pagead2.googlesyndication.com/",
+                  "subItems": "[…]"
+                },
+                {
+                  "origin": "https://prebid.the-ozone-project.com/",
+                  "subItems": "[…]",
+                  "source": "[…]"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://elb.the-ozone-project.com/",
+                  "subItems": "[…]"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://bbc.gscontxt.net/",
+                  "subItems": "[…]"
+                },
+                {
+                  "source": "[…]",
+                  "origin": "https://cdn.permutive.app/",
+                  "subItems": "[…]"
+                },
+                {
+                  "origin": "https://api.permutive.app/",
+                  "source": "[…]",
+                  "subItems": "[…]"
+                },
+                {
+                  "origin": "https://cdn.adsafeprotected.com/",
+                  "subItems": "[…]",
+                  "source": "[…]"
+                },
+                {
+                  "subItems": "[…]",
+                  "source": "[…]",
+                  "origin": "https://static.adsafeprotected.com/"
+                }
+              ]
+            },
+            "title": "Preconnected origins",
+            "type": "list-section",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to."
+          },
+          {
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "value": {
+              "value": "No additional origins are good candidates for preconnecting",
+              "type": "text"
+            }
+          }
+        ]
+      },
+      {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "source": "network",
+            "description": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+            "sourceLocation": {
+              "type": "source-location",
+              "column": 0,
+              "line": 0,
+              "urlProvider": "network",
+              "url": "https://ping.chartbeat.net/ping?h=bbc.com&p=%2F&u=CdGFULquJWXCs7N4f&d=bbc.com&g=50924&g0=No%20Section&g1=NewsMediaOrganization&g4=indexPage&n=1&f=00001&c=0&x=0&m=0&y=17243&o=412&w=823&j=45&R=1&W=0&I=0&E=0&e=0&r=&PA=https%3A%2F%2Fwww.bbc.com%2F&b=3229&_s=%7B%7D&t=zKnAUBHOyFlC8fQ9cCxxuYJrxGUg&V=154&i=…"
+            }
+          },
+          {
+            "description": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+            "source": "network",
+            "sourceLocation": {
+              "urlProvider": "network",
+              "line": 0,
+              "url": "https://ping.chartbeat.net/ping?h=bbc.com&p=%2F&u=CdGFULquJWXCs7N4f&d=bbc.com&g=50924&g0=No%20Section&g1=NewsMediaOrganization&g4=indexPage&n=1&f=00001&c=0.25&x=0&m=0&y=17264&o=412&w=823&j=30&R=1&W=0&I=0&E=5&e=5&r=&PA=https%3A%2F%2Fwww.bbc.com%2F&b=3229&_s=%7B%7D&t=zKnAUBHOyFlC8fQ9cCxxuYJrxGUg&V=154…",
+              "type": "source-location",
+              "column": 0
+            }
+          },
+          {
+            "description": "Refused to execute script from 'https://secure-us.imrworldwide.com/cgi-bin/m?ci=us-804789h&cg=0&cc=1&si=https://www.bbc.com/&rp=&ts=compact&rnd=1794676673704&ja=1' because its MIME type ('image/gif') is not executable.",
+            "source": "security",
+            "sourceLocation": {
+              "url": "https://www.bbc.com/",
+              "line": 0,
+              "type": "source-location",
+              "urlProvider": "network",
+              "column": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "nodeLabel": "The Global Story\nGTA 6: A mirror of America?",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "lhId": "1-17-A",
+              "boundingRect": {
+                "top": 2784,
+                "width": 145,
+                "left": 16,
+                "bottom": 2993,
+                "height": 209,
+                "right": 161
+              },
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,A",
+              "type": "node",
+              "snippet": "<a href=\"/audio/play/w3ct8m9q\" data-testid=\"internal-link\" aria-label=\"Audio: The Global Story - GTA 6: A mirror of America?\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0"
+            }
+          },
+          {
+            "node": {
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "type": "node",
+              "boundingRect": {
+                "top": 2784,
+                "width": 145,
+                "height": 245,
+                "right": 322,
+                "bottom": 3029,
+                "left": 177
+              },
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,A",
+              "snippet": "<a href=\"/audio/play/p0pmw5pp\" data-testid=\"internal-link\" aria-label=\"Audio: Global News Podcast - The Happy Pod: I've put women on the map with…\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "lhId": "1-18-A",
+              "nodeLabel": "Global News Podcast\nThe Happy Pod: I've put women on the map with Antarctic rec…"
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "top": 2784,
+                "width": 145,
+                "left": 338,
+                "bottom": 2975,
+                "right": 483,
+                "height": 191
+              },
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,2,DIV,0,DIV,0,DIV,0,A",
+              "snippet": "<a href=\"/audio/play/p0pmnrj3\" data-testid=\"internal-link\" aria-label=\"Audio: Witness History - Wales at Euro 2016\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "lhId": "1-19-A",
+              "nodeLabel": "Witness History\nWales at Euro 2016",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0",
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0",
+              "snippet": "<a href=\"/audio/play/w3ct999p\" data-testid=\"internal-link\" aria-label=\"Audio: More or Less - Is Trump right to suggest polling errors in the US m…\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "nodeLabel": "More or Less\nIs Trump right to suggest polling errors in the US midterm electio…",
+              "boundingRect": {
+                "height": 263,
+                "top": 2784,
+                "right": 644,
+                "bottom": 3047,
+                "left": 499,
+                "width": 145
+              },
+              "lhId": "1-20-A",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,3,DIV,0,DIV,0,DIV,0,A",
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "The Documentary Podcast\nLiving through the Gaza floods",
+              "snippet": "<a href=\"/audio/play/p0pmwzsh\" data-testid=\"internal-link\" aria-label=\"Audio: The Documentary Podcast - Living through the Gaza floods\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,4,DIV,0,DIV,0,DIV,0,A",
+              "lhId": "1-21-A",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "type": "node",
+              "boundingRect": {
+                "width": 145,
+                "bottom": 3009,
+                "height": 225,
+                "top": 2784,
+                "right": 805,
+                "left": 660
+              }
+            }
+          },
+          {
+            "node": {
+              "boundingRect": {
+                "width": 145,
+                "left": 821,
+                "bottom": 3011,
+                "top": 2784,
+                "right": 966,
+                "height": 227
+              },
+              "snippet": "<a href=\"/audio/play/w3ct8m02\" data-testid=\"internal-link\" aria-label=\"Audio: Americast - The Democrats pull off an historic victory in Mississip…\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "nodeLabel": "Americast\nThe Democrats pull off an historic victory in Mississippi",
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0",
+              "type": "node",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,5,DIV,0,DIV,0,DIV,0,A",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "lhId": "1-22-A"
+            }
+          },
+          {
+            "node": {
+              "type": "node",
+              "nodeLabel": "Business Daily\nPower Players: What did Trump and the White House know about Nvi…",
+              "lhId": "1-23-A",
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,6,DIV,0,DIV,0,DIV,0,A",
+              "snippet": "<a href=\"/audio/play/w3ct8gby\" data-testid=\"internal-link\" aria-label=\"Audio: Business Daily - Power Players: What did Trump and the White House …\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "boundingRect": {
+                "right": 1127,
+                "left": 982,
+                "top": 2784,
+                "bottom": 3029,
+                "width": 145,
+                "height": 245
+              }
+            }
+          },
+          {
+            "node": {
+              "snippet": "<a href=\"/audio/play/p0pms4s8\" data-testid=\"internal-link\" aria-label=\"Audio: The Documentary Podcast - The tomb in the mountain\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "boundingRect": {
+                "top": 2784,
+                "bottom": 3009,
+                "right": 1288,
+                "height": 225,
+                "left": 1143,
+                "width": 145
+              },
+              "nodeLabel": "The Documentary Podcast\nThe tomb in the mountain",
+              "type": "node",
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "lhId": "1-24-A",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,7,DIV,0,DIV,0,DIV,0,A"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "Witness History\nDenmark’s lost Viking ships",
+              "type": "node",
+              "boundingRect": {
+                "left": 1304,
+                "top": 2784,
+                "width": 145,
+                "bottom": 2993,
+                "height": 209,
+                "right": 1449
+              },
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "lhId": "1-25-A",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,8,DIV,0,DIV,0,DIV,0,A",
+              "snippet": "<a href=\"/audio/play/w3ct98fl\" data-testid=\"internal-link\" aria-label=\"Audio: Witness History - Denmark’s lost Viking ships\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0"
+            }
+          },
+          {
+            "node": {
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "snippet": "<a href=\"/audio/play/w3ct98l3\" data-testid=\"internal-link\" aria-label=\"Audio: The Interview - Mike Repole, entrepreneur: You’ve got to keep chall…\" class=\"Anchor-styles__AnchorStyled-sc-651d33db-0 hygVWX\">",
+              "type": "node",
+              "nodeLabel": "The Interview\nMike Repole, entrepreneur: You’ve got to keep challenging",
+              "selector": "div.IndexCard-styles__IndexCardStyled-sc-3a0d8802-0 > div.Ipswich-styles__IpswichCardStyled-sc-9e107448-4 > div > a.Anchor-styles__AnchorStyled-sc-651d33db-0",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,9,DIV,0,DIV,0,DIV,0,A",
+              "boundingRect": {
+                "top": 2784,
+                "right": 1610,
+                "width": 145,
+                "left": 1465,
+                "height": 245,
+                "bottom": 3029
+              },
+              "lhId": "1-26-A"
+            }
+          }
+        ]
+      },
+      {
+        "id": "forced-reflow-insight",
+        "title": "Forced reflow",
+        "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations.",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "headings": [
+              {
+                "key": "source",
+                "label": "Top function call",
+                "valueType": "source-location"
+              },
+              {
+                "granularity": 1,
+                "valueType": "ms",
+                "key": "reflowTime",
+                "label": "Total reflow time"
+              }
+            ],
+            "items": [
+              {
+                "source": {
+                  "column": 2516,
+                  "url": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/_next/static/chunks/0y-nyl-getpga.js",
+                  "type": "source-location",
+                  "urlProvider": "network",
+                  "line": 1
+                },
+                "reflowTime": 26.284
+              }
+            ],
+            "type": "table"
+          },
+          {
+            "items": [
+              {
+                "source": {
+                  "value": "[unattributed]",
+                  "type": "text"
+                },
+                "reflowTime": 198.181
+              },
+              {
+                "reflowTime": 19.8,
+                "source": {
+                  "url": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/_next/static/chunks/0c.fzizjof3_9.js",
+                  "column": 8296,
+                  "urlProvider": "network",
+                  "line": 0,
+                  "type": "source-location"
+                }
+              },
+              {
+                "source": {
+                  "urlProvider": "network",
+                  "type": "source-location",
+                  "url": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/_next/static/chunks/0fmsfuctu-bad.js",
+                  "line": 271,
+                  "column": 3820
+                },
+                "reflowTime": 6.484
+              }
+            ],
+            "headings": [
+              {
+                "valueType": "source-location",
+                "label": "Source",
+                "key": "source"
+              },
+              {
+                "valueType": "ms",
+                "key": "reflowTime",
+                "granularity": 1,
+                "label": "Total reflow time"
+              }
+            ],
+            "type": "table"
+          }
+        ]
+      },
+      {
+        "id": "button-name",
+        "title": "Buttons do not have an accessible name",
+        "description": "When a button doesn't have an accessible name, screen readers announce it as \"button\", making it unusable for users who rely on screen readers. [Learn how to make buttons more accessible](https://dequeuniversity.com/rules/axe/4.14/button-name).",
+        "score": 0,
+        "displayValue": null,
+        "savingsMs": null,
+        "items": [
+          {
+            "node": {
+              "snippet": "<button data-testid=\"mobile-account-toggle\" class=\"AccountButtons-styles__AccountMobileToggleButtonStyled-sc-32916240-0 vzgip\">",
+              "selector": "div.Header-styles__HeaderContentStyled-sc-36071384-1 > div.Header-styles__HeaderButtonsContainerStyled-sc-36071384-6 > div.AccountButtons-styles__AccountButtonsMobileContainerStyled-sc-32916240-9 > button.AccountButtons-styles__AccountMobileToggleButtonStyled-sc-32916240-0",
+              "boundingRect": {
+                "right": 400,
+                "left": 368,
+                "top": 91,
+                "width": 32,
+                "height": 20,
+                "bottom": 111
+              },
+              "nodeLabel": "div.Header-styles__HeaderContentStyled-sc-36071384-1 > div.Header-styles__HeaderButtonsContainerStyled-sc-36071384-6 > div.AccountButtons-styles__AccountButtonsMobileContainerStyled-sc-32916240-9 > button.AccountButtons-styles__AccountMobileToggleButtonStyled-sc-32916240-0",
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  …",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,5,HEADER,0,DIV,2,DIV,1,DIV,0,BUTTON",
+              "lhId": "1-0-BUTTON",
+              "type": "node"
+            }
+          }
+        ]
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0,
+        "displayValue": "28.0 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.01,
+        "displayValue": "15.3 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.03,
+        "displayValue": "7.7 s",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+        "score": 0.04,
+        "displayValue": "2,560 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.2,
+        "displayValue": "380 ms",
+        "savingsMs": null,
+        "items": []
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery).",
+        "score": 0.5,
+        "displayValue": "Est savings of 828 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "totalBytes": 173258,
+            "wastedBytes": 130616,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "Increasing the image compression factor could improve this image’s download size",
+                  "wastedBytes": 13258
+                },
+                {
+                  "wastedBytes": 127082,
+                  "reason": "This image file is larger than it needs to be (800x1200) for its displayed dimensions (413x620). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "node": {
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "boundingRect": {
+                "right": 1512,
+                "height": 354,
+                "top": 3169,
+                "left": 1276,
+                "width": 236,
+                "bottom": 3523
+              },
+              "nodeLabel": "Einstein and Hawking: Masters of Our Universe",
+              "type": "node",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,5,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "page-16-IMG",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pcy616.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pcy616.jpg.webp\" loading=\"lazy\" alt=\"Einstein and Hawking: Masters of Our Univ…"
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pcy616.jpg.webp"
+          },
+          {
+            "node": {
+              "nodeLabel": "Are We Still Evolving?",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pgq3qs.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pgq3qs.jpg.webp\" loading=\"lazy\" alt=\"Are We Still Evolving?\" class=\"Image-styl…",
+              "type": "node",
+              "boundingRect": {
+                "right": 252,
+                "left": 16,
+                "top": 3169,
+                "width": 236,
+                "height": 354,
+                "bottom": 3523
+              },
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "page-17-IMG"
+            },
+            "totalBytes": 110054,
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pgq3qs.jpg.webp",
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 80723,
+                  "reason": "This image file is larger than it needs to be (800x1200) for its displayed dimensions (413x620). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 80723
+          },
+          {
+            "wastedBytes": 71019,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 71019,
+                  "reason": "This image file is larger than it needs to be (800x1200) for its displayed dimensions (413x620). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pgq4g1.jpg.webp",
+            "totalBytes": 96824,
+            "node": {
+              "nodeLabel": "Clive Myrie's African Adventure",
+              "boundingRect": {
+                "right": 756,
+                "height": 354,
+                "bottom": 3523,
+                "left": 520,
+                "width": 236,
+                "top": 3169
+              },
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,2,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "page-18-IMG",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pgq4g1.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pgq4g1.jpg.webp\" loading=\"lazy\" alt=\"Clive Myrie's African Adventure\" class=\"I…",
+              "type": "node",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0"
+            }
+          },
+          {
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 69586,
+                  "reason": "This image file is larger than it needs to be (800x1200) for its displayed dimensions (413x620). Use responsive images to reduce the image download size."
+                }
+              ]
+            },
+            "node": {
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "nodeLabel": "Wonderland: Secrets of the Spymasters and Spies",
+              "type": "node",
+              "lhId": "page-19-IMG",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pcy6j3.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pcy6j3.jpg.webp\" loading=\"lazy\" alt=\"Wonderland: Secrets of the Spymasters and…",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,6,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "boundingRect": {
+                "right": 1764,
+                "left": 1528,
+                "top": 3169,
+                "width": 236,
+                "height": 354,
+                "bottom": 3523
+              }
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pcy6j3.jpg.webp",
+            "wastedBytes": 69586,
+            "totalBytes": 94870
+          },
+          {
+            "totalBytes": 90088,
+            "node": {
+              "boundingRect": {
+                "height": 354,
+                "top": 3169,
+                "bottom": 3523,
+                "width": 236,
+                "left": 772,
+                "right": 1008
+              },
+              "type": "node",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,3,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "page-20-IMG",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "nodeLabel": "Secret of the Lost Grail with Alice Roberts",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pkjr7q.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pkjr7q.jpg.webp\" loading=\"lazy\" alt=\"Secret of the Lost Grail with Alice Rober…"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 66078,
+                  "reason": "This image file is larger than it needs to be (800x1200) for its displayed dimensions (413x620). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 66078,
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pkjr7q.jpg.webp"
+          },
+          {
+            "url": "https://ichef.bbci.co.uk/images/ic/800x450/p0pmyqpz.jpg.webp",
+            "node": {
+              "snippet": "<img sizes=\"(min-width: 600px) 50vw, 100vw\" srcset=\"https://ichef.bbci.co.uk/images/ic/160x90/p0pmyqpz.jpg.webp 160w, https://…\" src=\"https://ichef.bbci.co.uk/images/ic/800x450/p0pmyqpz.jpg.webp\" loading=\"lazy\" alt=\"A cave bear skull from a newly discovered cave dating from the Ice Age (Cr…\" class=\"…",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,4,SECTION,0,DIV,1,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "page-21-IMG",
+              "boundingRect": {
+                "width": 380,
+                "left": 16,
+                "bottom": 2180,
+                "top": 1966,
+                "right": 396,
+                "height": 214
+              },
+              "type": "node",
+              "selector": "div.Edinburgh-styles__MediaWrapperStyled-sc-73f6adba-1 > div.Edinburgh-styles__MediaStyled-sc-73f6adba-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "nodeLabel": "A cave bear skull from a newly discovered cave dating from the Ice Age (Credit:…"
+            },
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 42224,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                },
+                {
+                  "reason": "This image file is larger than it needs to be (800x450) for its displayed dimensions (665x374). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 31590
+                }
+              ],
+              "type": "subitems"
+            },
+            "totalBytes": 102224,
+            "wastedBytes": 60765
+          },
+          {
+            "totalBytes": 75660,
+            "node": {
+              "lhId": "page-22-IMG",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,5,SECTION,0,DIV,1,DIV,0,DIV,8,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,IMG",
+              "type": "node",
+              "selector": "a.Anchor-styles__AnchorStyled-sc-651d33db-0 > div.Ipswich-styles__ImageContainerStyled-sc-9e107448-0 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "snippet": "<img sizes=\"(min-width: 1280px) 347px, (min-width: 1020px) calc(35.42vw - 31px), (min-…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160x90/p0pgrrh8.jpg.webp 160w, https://…\" src=\"https://ichef.bbci.co.uk/images/ic/640x360/p0pgrrh8.jpg.webp\" loading=\"lazy\" alt=\"Witness History, Denmark’s lost Viking …",
+              "nodeLabel": "Witness History, Denmark’s lost Viking ships",
+              "boundingRect": {
+                "bottom": 2929,
+                "width": 145,
+                "top": 2784,
+                "left": 1304,
+                "height": 145,
+                "right": 1449
+              }
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "wastedBytes": 53995,
+                  "reason": "Increasing the image compression factor could improve this image’s download size"
+                }
+              ]
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/640x360/p0pgrrh8.jpg.webp",
+            "wastedBytes": 53995
+          },
+          {
+            "totalBytes": 73134,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (800x1200) for its displayed dimensions (413x620). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 53643
+                }
+              ]
+            },
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "page-23-IMG",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "boundingRect": {
+                "right": 504,
+                "top": 3169,
+                "height": 354,
+                "left": 268,
+                "width": 236,
+                "bottom": 3523
+              },
+              "type": "node",
+              "nodeLabel": "The Three Kings of 1936",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pkjwrx.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pkjwrx.jpg.webp\" loading=\"lazy\" alt=\"The Three Kings of 1936\" class=\"Image-sty…"
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pkjwrx.jpg.webp",
+            "wastedBytes": 53643
+          },
+          {
+            "node": {
+              "nodeLabel": "The Castle: Rebuilding History",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pc4rkb.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pc4rkb.jpg.webp\" loading=\"lazy\" alt=\"The Castle: Rebuilding History\" class=\"Im…",
+              "type": "node",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,7,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "boundingRect": {
+                "top": 3169,
+                "right": 2016,
+                "height": 354,
+                "width": 236,
+                "left": 1780,
+                "bottom": 3523
+              },
+              "lhId": "page-24-IMG"
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pc4rkb.jpg.webp",
+            "totalBytes": 67010,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "reason": "This image file is larger than it needs to be (800x1200) for its displayed dimensions (413x620). Use responsive images to reduce the image download size.",
+                  "wastedBytes": 49151
+                }
+              ]
+            },
+            "wastedBytes": 49151
+          },
+          {
+            "wastedBytes": 39077,
+            "subItems": {
+              "items": [
+                {
+                  "wastedBytes": 39077,
+                  "reason": "This image file is larger than it needs to be (800x1200) for its displayed dimensions (413x620). Use responsive images to reduce the image download size."
+                }
+              ],
+              "type": "subitems"
+            },
+            "totalBytes": 53276,
+            "node": {
+              "type": "node",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,4,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "page-25-IMG",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pcy8t4.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pcy8t4.jpg.webp\" loading=\"lazy\" alt=\"Stolen Babies: Britain's Adoption Scandal…",
+              "boundingRect": {
+                "bottom": 3523,
+                "right": 1260,
+                "height": 354,
+                "width": 236,
+                "left": 1024,
+                "top": 3169
+              },
+              "nodeLabel": "Stolen Babies: Britain's Adoption Scandal"
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pcy8t4.jpg.webp"
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren’t necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript).",
+        "score": 0.5,
+        "displayValue": "Est savings of 98 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": "https://mybbc-analytics.files.bbci.co.uk/echo-client-js/echo-2.6.0-avi.min.js",
+            "subItems": {
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "Array.from"
+                },
+                {
+                  "signal": "Array.isArray",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.of",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.concat"
+                },
+                {
+                  "signal": "Array.prototype.copyWithin",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.every",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.fill",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.filter",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.find",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.findIndex",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 34856
+          },
+          {
+            "url": "https://cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js",
+            "wastedBytes": 21006,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-classes"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-spread"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.from"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.concat"
+                },
+                {
+                  "signal": "Array.prototype.filter",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.indexOf",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.join",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.map",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.slice"
+                },
+                {
+                  "signal": "Object.assign",
+                  "location": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "wastedBytes": 14887,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.at"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.flat"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.flatMap"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.fromEntries"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.hasOwn"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.trimEnd"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.trimStart"
+                }
+              ]
+            },
+            "url": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/_next/static/chunks/12w5u9fluro3i.js"
+          },
+          {
+            "url": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/_next/static/chunks/0n-kjrsnwe2tb.js",
+            "wastedBytes": 9196,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "@babel/plugin-transform-regenerator"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.filter"
+                },
+                {
+                  "signal": "Array.prototype.forEach",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.map",
+                  "location": "[…]"
+                }
+              ]
+            }
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "location": "[…]",
+                  "signal": "Object.assign"
+                }
+              ],
+              "type": "subitems"
+            },
+            "wastedBytes": 8339,
+            "url": "https://cdn.tinypass.com/api/tinypass.min.js"
+          },
+          {
+            "subItems": {
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-classes",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "@babel/plugin-transform-regenerator",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "@babel/plugin-transform-spread",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Array.prototype.sort",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Object.getPrototypeOf"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Reflect.construct"
+                },
+                {
+                  "signal": "Reflect.get",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "String.prototype.repeat"
+                }
+              ],
+              "type": "subitems"
+            },
+            "url": "https://cdn.privacy-mgmt.com/unified/4.41.0/gdpr-tcf.e7290277d588e0de9bb9.bundle.js",
+            "wastedBytes": 6973
+          },
+          {
+            "url": "https://cdn.privacy-mgmt.com/unified/4.41.0/usnat-gpp.1af7b0a971740919848e.bundle.js",
+            "wastedBytes": 4814,
+            "subItems": {
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-classes",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "@babel/plugin-transform-regenerator",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "@babel/plugin-transform-spread",
+                  "location": "[…]"
+                },
+                {
+                  "location": "[…]",
+                  "signal": "Array.prototype.sort"
+                },
+                {
+                  "signal": "Object.getPrototypeOf",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Reflect.construct",
+                  "location": "[…]"
+                },
+                {
+                  "signal": "Reflect.get",
+                  "location": "[…]"
+                }
+              ],
+              "type": "subitems"
+            }
+          }
+        ]
+      },
+      {
+        "id": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+        "score": 0.5,
+        "displayValue": null,
+        "savingsMs": {
+          "CLS": 0
+        },
+        "items": [
+          {
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pgq3qs.jpg.webp",
+            "node": {
+              "nodeLabel": "Are We Still Evolving?",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pgq3qs.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pgq3qs.jpg.webp\" loading=\"lazy\" alt=\"Are We Still Evolving?\" class=\"Image-styl…",
+              "boundingRect": {
+                "width": 236,
+                "top": 3169,
+                "bottom": 3523,
+                "left": 16,
+                "height": 354,
+                "right": 252
+              },
+              "lhId": "1-1-IMG",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "type": "node"
+            }
+          },
+          {
+            "node": {
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,1,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "boundingRect": {
+                "right": 504,
+                "top": 3169,
+                "height": 354,
+                "width": 236,
+                "bottom": 3523,
+                "left": 268
+              },
+              "lhId": "1-2-IMG",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pkjwrx.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pkjwrx.jpg.webp\" loading=\"lazy\" alt=\"The Three Kings of 1936\" class=\"Image-sty…",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "type": "node",
+              "nodeLabel": "The Three Kings of 1936"
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pkjwrx.jpg.webp"
+          },
+          {
+            "node": {
+              "lhId": "1-3-IMG",
+              "boundingRect": {
+                "width": 236,
+                "bottom": 3523,
+                "top": 3169,
+                "height": 354,
+                "right": 756,
+                "left": 520
+              },
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,2,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "type": "node",
+              "nodeLabel": "Clive Myrie's African Adventure",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pgq4g1.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pgq4g1.jpg.webp\" loading=\"lazy\" alt=\"Clive Myrie's African Adventure\" class=\"I…"
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pgq4g1.jpg.webp"
+          },
+          {
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pkjr7q.jpg.webp",
+            "node": {
+              "boundingRect": {
+                "top": 3169,
+                "height": 354,
+                "width": 236,
+                "bottom": 3523,
+                "left": 772,
+                "right": 1008
+              },
+              "type": "node",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pkjr7q.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pkjr7q.jpg.webp\" loading=\"lazy\" alt=\"Secret of the Lost Grail with Alice Rober…",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,3,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "nodeLabel": "Secret of the Lost Grail with Alice Roberts",
+              "lhId": "1-4-IMG",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0"
+            }
+          },
+          {
+            "node": {
+              "nodeLabel": "Stolen Babies: Britain's Adoption Scandal",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pcy8t4.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pcy8t4.jpg.webp\" loading=\"lazy\" alt=\"Stolen Babies: Britain's Adoption Scandal…",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "type": "node",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,4,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "boundingRect": {
+                "top": 3169,
+                "height": 354,
+                "bottom": 3523,
+                "width": 236,
+                "left": 1024,
+                "right": 1260
+              },
+              "lhId": "1-5-IMG"
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pcy8t4.jpg.webp"
+          },
+          {
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pcy616.jpg.webp",
+            "node": {
+              "boundingRect": {
+                "right": 1512,
+                "height": 354,
+                "top": 3169,
+                "width": 236,
+                "bottom": 3523,
+                "left": 1276
+              },
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,5,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "1-6-IMG",
+              "nodeLabel": "Einstein and Hawking: Masters of Our Universe",
+              "type": "node",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pcy616.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pcy616.jpg.webp\" loading=\"lazy\" alt=\"Einstein and Hawking: Masters of Our Univ…",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0"
+            }
+          },
+          {
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pcy6j3.jpg.webp",
+            "node": {
+              "nodeLabel": "Wonderland: Secrets of the Spymasters and Spies",
+              "boundingRect": {
+                "bottom": 3523,
+                "right": 1764,
+                "left": 1528,
+                "top": 3169,
+                "height": 354,
+                "width": 236
+              },
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pcy6j3.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pcy6j3.jpg.webp\" loading=\"lazy\" alt=\"Wonderland: Secrets of the Spymasters and…",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "type": "node",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,6,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "lhId": "1-7-IMG"
+            }
+          },
+          {
+            "node": {
+              "lhId": "1-8-IMG",
+              "selector": "div.Worcester-styles__WorcesterCardStyled-sc-8b2f7019-1 > div.Worcester-styles__ImageWrapperStyled-sc-8b2f7019-2 > div.Image-styles__ImageCardStyled-sc-8c99a12b-1 > img.Image-styles__ImageStyled-sc-8c99a12b-0",
+              "snippet": "<img sizes=\"(min-width: 1280px) 300px, (min-width: 780px) calc(2.08vw + 214px), (min-w…\" srcset=\"https://ichef.bbci.co.uk/images/ic/160xn/p0pc4rkb.jpg.webp 160w, https://i…\" src=\"https://ichef.bbci.co.uk/images/ic/800xn/p0pc4rkb.jpg.webp\" loading=\"lazy\" alt=\"The Castle: Rebuilding History\" class=\"Im…",
+              "path": "1,HTML,1,BODY,1,DIV,0,DIV,10,MAIN,0,ARTICLE,6,DIV,0,DIV,0,DIV,0,DIV,1,DIV,7,DIV,0,DIV,0,A,0,DIV,0,DIV,0,DIV,0,IMG",
+              "nodeLabel": "The Castle: Rebuilding History",
+              "type": "node",
+              "boundingRect": {
+                "bottom": 3523,
+                "top": 3169,
+                "left": 1780,
+                "width": 236,
+                "height": 354,
+                "right": 2016
+              }
+            },
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pc4rkb.jpg.webp"
+          }
+        ]
+      },
+      {
+        "id": "total-byte-weight",
+        "title": "Avoid enormous network payloads",
+        "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/).",
+        "score": 0.5,
+        "displayValue": "Total size was 4,830 KiB",
+        "savingsMs": null,
+        "items": [
+          {
+            "url": "https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202611100101/pubads_impl.js?cb=122882259",
+            "totalBytes": 223398
+          },
+          {
+            "totalBytes": 179537,
+            "url": "https://cdn.permutive.app/e488cdb0-e7cb-4d91-9648-60d437d8e491-web.js"
+          },
+          {
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pcy616.jpg.webp",
+            "totalBytes": 173835
+          },
+          {
+            "totalBytes": 168546,
+            "url": "https://www.googletagmanager.com/gtag/js?id=AW-417091839"
+          },
+          {
+            "url": "https://scripts.webcontentassessor.com/scripts/64ca3dfd44dd68a629e2e51a27e7ccd960974b5961e4ca2897139d14bf10be8b",
+            "totalBytes": 150330
+          },
+          {
+            "totalBytes": 148669,
+            "url": "https://cdn.tinypass.com/api/tinypass.min.js"
+          },
+          {
+            "url": "https://scripts.webcontentassessor.com/scripts/727d9b43a076aa925788e8b215b1d39a710cbe7ace5268ab65490af6db50168b",
+            "totalBytes": 137539
+          },
+          {
+            "url": "https://mybbc-analytics.files.bbci.co.uk/echo-client-js/echo-2.6.0-avi.min.js",
+            "totalBytes": 113631
+          },
+          {
+            "totalBytes": 110631,
+            "url": "https://ichef.bbci.co.uk/images/ic/800xn/p0pgq3qs.jpg.webp"
+          },
+          {
+            "totalBytes": 107299,
+            "url": "https://cdn.optimizely.com/public/4621041136/s/bbcx_prod.js"
+          }
+        ]
+      },
+      {
+        "id": "unminified-css",
+        "title": "Minify CSS",
+        "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 2 KiB",
+        "savingsMs": {
+          "LCP": 0,
+          "FCP": 0
+        },
+        "items": [
+          {
+            "url": ".hygVWX { text-decoration: none; cursor: pointer; color: unset; } …",
+            "wastedBytes": 2247,
+            "wastedPercent": 14.073971984864809,
+            "totalBytes": 15963
+          }
+        ]
+      }
+    ]
+  },
+  "crawl": {
+    "finalUrl": "https://www.bbc.com/",
+    "status": 200,
+    "htmlBytes": 650957,
+    "headers": {
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate",
+      "contentEncoding": "gzip",
+      "xRobotsTag": "bingbot: noarchive",
+      "server": "BBC-GTM"
+    },
+    "meta": {
+      "title": "BBC Home | Breaking News, World News, US News, Sports, Business, Innovation, Climate, Culture, Travel, Video & Audio",
+      "description": "Visit BBC for trusted reporting on the latest world and US news, sports, business, climate, innovation, culture and much more",
+      "canonical": "https://www.bbc.com",
+      "lang": "en-GB",
+      "robots": "NOODP, NOYDIR",
+      "viewport": "width=device-width, initial-scale=1",
+      "openGraph": {
+        "og:title": "BBC Home | Breaking News, World News, US News, Sports, Business, Innovation, Climate, Culture, Travel, Video & Audio",
+        "og:type": "website",
+        "og:url": "https://www.bbc.com",
+        "og:description": "Visit BBC for trusted reporting on the latest world and US news, sports, business, climate, innovation, culture and much more"
+      }
+    },
+    "headings": [
+      {
+        "level": 2,
+        "text": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says"
+      },
+      {
+        "level": 2,
+        "text": "Copper wire upgrade work caused nationwide flight suspension, US transport secretary says"
+      },
+      {
+        "level": 2,
+        "text": "Hungarian authorities uncover $20m during probe of Orbán-era minister"
+      },
+      {
+        "level": 2,
+        "text": "Italy fines Meta €805m over accessing users' photos"
+      },
+      {
+        "level": 2,
+        "text": "Watch: Cruise ship overturns after collision with tanker in New Orleans"
+      },
+      {
+        "level": 2,
+        "text": "Philippines crowned first ever Eurovision Asia winner"
+      },
+      {
+        "level": 2,
+        "text": "Lauren Boebert, once a MAGA star, loses her Colorado seat"
+      },
+      {
+        "level": 2,
+        "text": "Weekend Reads"
+      },
+      {
+        "level": 2,
+        "text": "'Hundreds and hundreds of bones': In a hidden Alpine cave, a mountaineer discovers an Ice Age cave bear graveyard"
+      },
+      {
+        "level": 2,
+        "text": "'Cancelled' star Johnny Depp is making a Hollywood comeback – will it succeed?"
+      },
+      {
+        "level": 2,
+        "text": "recommended audio"
+      },
+      {
+        "level": 2,
+        "text": "The Global Story"
+      },
+      {
+        "level": 3,
+        "text": "GTA 6: A mirror of America?"
+      },
+      {
+        "level": 2,
+        "text": "Global News Podcast"
+      },
+      {
+        "level": 3,
+        "text": "The Happy Pod: I've put women on the map with Antarctic record"
+      },
+      {
+        "level": 2,
+        "text": "Witness History"
+      },
+      {
+        "level": 3,
+        "text": "Wales at Euro 2016"
+      },
+      {
+        "level": 2,
+        "text": "More or Less"
+      },
+      {
+        "level": 3,
+        "text": "Is Trump right to suggest polling errors in the US midterm elections are suspicious?"
+      },
+      {
+        "level": 2,
+        "text": "The Documentary Podcast"
+      },
+      {
+        "level": 3,
+        "text": "Living through the Gaza floods"
+      },
+      {
+        "level": 2,
+        "text": "Americast"
+      },
+      {
+        "level": 3,
+        "text": "The Democrats pull off an historic victory in Mississippi"
+      },
+      {
+        "level": 2,
+        "text": "Business Daily"
+      },
+      {
+        "level": 3,
+        "text": "Power Players: What did Trump and the White House know about Nvidia?"
+      },
+      {
+        "level": 2,
+        "text": "The Documentary Podcast"
+      },
+      {
+        "level": 3,
+        "text": "The tomb in the mountain"
+      },
+      {
+        "level": 2,
+        "text": "Witness History"
+      },
+      {
+        "level": 3,
+        "text": "Denmark’s lost Viking ships"
+      },
+      {
+        "level": 2,
+        "text": "The Interview"
+      },
+      {
+        "level": 3,
+        "text": "Mike Repole, entrepreneur: You’ve got to keep challenging"
+      },
+      {
+        "level": 2,
+        "text": "Business Daily"
+      },
+      {
+        "level": 3,
+        "text": "Taking Stock: The downfall of Nvidia's Jensen Huang"
+      },
+      {
+        "level": 2,
+        "text": "The Documentary Podcast"
+      },
+      {
+        "level": 3,
+        "text": "The Global Story: Why the Nvidia scandal is bigger than one tech CEO’s affair"
+      },
+      {
+        "level": 2,
+        "text": "More news"
+      },
+      {
+        "level": 2,
+        "text": "What we know about the US ground stop and what to do if your flight is affected"
+      },
+      {
+        "level": 2,
+        "text": "Nations Championship: Joseph scores four tries in opening 25 minutes as England run riot v Japan"
+      },
+      {
+        "level": 2,
+        "text": "Fitness obsessed & 'control freak' - what can Man Utd expect from Pochettino?"
+      },
+      {
+        "level": 2,
+        "text": "Jojo the gorilla has spent his life alone. Can he finally find a companion?"
+      }
+    ],
+    "h1Count": 0,
+    "images": {
+      "total": 140,
+      "missingAlt": 70,
+      "missingDimensions": 140,
+      "lazy": 70,
+      "firstImages": [
+        {
+          "src": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/grey-placeholder.png",
+          "alt": null,
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ichef.bbci.co.uk/news/480/cpsprodpb/d028/live/47c10ab0-e013-11f1-b441-2b33b063138f.jpg.webp",
+          "alt": "US envoy Jared Kushner speaks alongside Ukraine's President Volodymyr Zelensky in Dublin.",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/grey-placeholder.png",
+          "alt": null,
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/57aa/live/71e8bbe0-e01c-11f1-ad34-45f8f10f7c55.jpg.webp",
+          "alt": "A passengers sits waiting on a row of seats while some aircraft remain grounded, he rests his head in his left hand with his baggage in front of him",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/grey-placeholder.png",
+          "alt": null,
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ichef.bbci.co.uk/news/480/cpsprodpb/da9e/live/d437a0b0-e010-11f1-b884-a9f52ca7a4b1.jpg.webp",
+          "alt": "Piles of banknotes, lined up.",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://static.files.bbci.co.uk/bbcdotcom/web/20261110-133831-0053d0afea-web-3.28.0-4/grey-placeholder.png",
+          "alt": null,
+          "loading": null,
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        },
+        {
+          "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0pmyqpz.jpg.webp",
+          "alt": "A cave bear skull from a newly discovered cave dating from the Ice Age (Credit: Kurt Walde)",
+          "loading": "lazy",
+          "fetchpriority": null,
+          "width": null,
+          "height": null
+        }
+      ]
+    },
+    "head": {
+      "blockingStylesheets": 0,
+      "blockingScripts": 0,
+      "preloads": [],
+      "preconnects": [
+        "/"
+      ]
+    },
+    "scripts": {
+      "total": 0,
+      "external": 61,
+      "thirdPartyHosts": [
+        "static.files.bbci.co.uk",
+        "static.bbci.co.uk",
+        "cdn.tinypass.com",
+        "gn-web-assets.api.bbc.com",
+        "emp.bbci.co.uk"
+      ]
+    },
+    "structuredData": {
+      "jsonLdBlocks": 1,
+      "types": [
+        "WebPage"
+      ],
+      "invalidBlocks": 0,
+      "raw": [
+        "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"description\":\"Visit BBC for trusted reporting on the latest world and US news, sports, business, climate, innovation, culture and much more\",\"url\":\"https://www.bbc.com\",\"mainEntityOfPage\":\"https://www.bbc.com\",\"publisher\":{\"@type\":\"NewsMediaOrganization\",\"name\":\"BBC News\",\"logo\":\"https://m.files.bbci.co.uk/modules/bbc-morph-news-waf-page-meta/5.3.0/bbc_news_logo.png\",\"publishingPrinciples\":\"https://www.bbc.co.uk/news/help-41670342\",\"sameAs\":[\"https://www.facebook.com/BBCGlobalFB/\",\"https://twitter.com/bbc\",\"https://www.instagram.com/bbcglobal/\",\"https://www.youtube.com/@BBC_Global\"]},\"name\":\"BBC Home | Breaking News, World News, US News, Sports, Business, Innovation, Climate, Culture, Travel, Video & Audio\"}"
+      ]
+    },
+    "aiCrawlers": {
+      "robotsTxtFound": true,
+      "blocked": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "CCBot"
+      ],
+      "allowed": [
+        "Claude-User"
+      ],
+      "llmsTxtFound": false
+    },
+    "textSample": "Skip to contentHomeNewsSportBusinessTechnologyHealthCultureArtsTravelEarthAudioVideoLiveSite searchHomeNewsSportBusinessTechnologyHealthCultureArtsTravelEarthAudioVideoLiveWeatherNewslettersUS has floated Ukraine ceding Donbas for Nato membership, Zelensky saysThe Ukrainian president says US envoys touted the exchange as part of efforts to end the war with Russia.2 hrs agoEuropeLIVECopper wire upgrade work caused nationwide flight suspension, US transport secretary saysSean Duffy has previously warned the ripple effect caused by Friday night's four-hour ground stop could last for days.Hungarian authorities uncover $20m during probe of Orbán-era ministerPrime Minister Péter Magyar promised a sweeping anti-corruption drive after ousting Orbán in April.7 hrs agoEuropeItaly fines Meta €805m over accessing users' photosThe social media giant is accused of not informing about 20 million users it had access to their photos.48 mins agoEuropeWatch: Cruise ship overturns after collision with tanker in New OrleansAround 130 people were rescued from a cruise ship after it was struck by a tanker while docked in New Orleans, Louisiana on Friday.6 hrs agoUS & CanadaLIVEPhilippines crowned first ever Eurovision Asia winnerThe 19-year-old winner, Carmelle, is the youngest of the 11 contestants in the final and her song Sobra-Sobra secured her the win.Lauren Boebert, once a MAGA star, loses her Colorado seatBoebert, who rose to fame as one of Donald Trump's biggest cheerleaders, will not serve…"
+  }
+}
