@@ -135,8 +135,10 @@ export async function diagnose(input: {
 
   const runner = client.beta.messages.toolRunner({
     model: MODEL,
-    // Non-streaming requests are capped so the SDK's 10-minute timeout is never at risk.
-    max_tokens: 16000,
+    // Streaming lifts the SDK's non-streaming timeout, so a long diagnosis
+    // (heavy pages, higher effort) has room. Haiku 5.5 allows up to 128K.
+    max_tokens: 64000,
+    stream: true,
     max_iterations: 12,
     thread: false,
     // If the model declines, the API retries the request on a fallback model.
@@ -161,12 +163,16 @@ export async function diagnose(input: {
   let cacheRead = 0;
   let cacheWrite = 0;
   let final: Anthropic.Beta.BetaMessage | undefined;
-  for await (const message of runner) {
+  // Each turn arrives as a stream; we only need the finished message.
+  for await (const messageStream of runner) {
+    const message = await messageStream.finalMessage();
     inputTokens += message.usage.input_tokens;
     outputTokens += message.usage.output_tokens;
     cacheRead += message.usage.cache_read_input_tokens ?? 0;
     cacheWrite += message.usage.cache_creation_input_tokens ?? 0;
     final = message;
+    // Stop before the runner executes tools from a cut-off or refused turn.
+    if (message.stop_reason === "max_tokens" || message.stop_reason === "refusal") break;
   }
 
   if (!final) throw new Error("Claude returned no response.");
