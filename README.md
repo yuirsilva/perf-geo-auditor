@@ -36,6 +36,18 @@ Security notes:
 - **SSRF guard** (`url-guard.ts`): user URLs and every redirect hop are resolved and checked against private/loopback/link-local ranges before fetching. Bodies are size-capped and fetches time out.
 - Audits are always queried by `id` **and** `userId`. Server actions re-check the session.
 
+## Evals
+
+I made a dataset to test Core Web Vitals composed of 10 websites to evaluate different occasions: Airbnb, Amazon, Apple, CNN, Nike, NYTimes, Shopify (Fall 2026 - Editions), The Guardian, Walmart and Zara. With each test, the grader is separated in two parts:
+- Code check -> An optional `topIssueMetric` that is defined as the top issue (can be multiple) from real users (includes Core Web Vitals plus FCP and TTFB); and `mustNotFlag`, a metric to Claude not flag.
+- LLM-as-a-judge -> The findings by Claude are not exactly the same wording every time, so another Claude judges the output against the expected one. I use `mustFind` as an array of text to check against, for example: "Ships 1.06MB of unused JS".
+- It uses the same diagnose from the real app (Haiku as a base and the judge).
+- Each expected diagnosis from the dataset was written by hand; it includes different cases to help evaluation. Such as Zara missing the crawl data due to 403 Forbidden; Walmart having a layout shift for real users but none in the lab (the lab lacks interaction/scroll), creating a "trap" for Claude, which would evaluate if it reports misleading data; CNN’s lab LCP is 26.5s but real users get 1.9s, so Claude is expected to trust the field data and not report LCP as a problem.
+
+The current dataset scores 98% (218/222 checks) over 3 runs per site, at around $0.10 each run. To run the tests, use `pnpm eval` or `pnpm eval <site>`
+
+- Claude never sees mustFind; only the judge does. To make Claude find an image from Amazon that was missing an alt text, I had to introduce the line "Always report images missing alt text" in the System Prompt. Otherwise, it treated it as a minor finding and didn't report.
+
 ## Run it locally
 
 ```bash
