@@ -18,7 +18,7 @@ It returns a **typed diagnosis** (Zod schema + structured outputs, `src/lib/audi
 
 ## Stack
 
-Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind 4 · Postgres (PGlite locally) + Drizzle · Better Auth · Anthropic TypeScript SDK (tool runner + structured outputs)
+Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind 4 · Postgres (embedded-postgres locally, Neon deployed) + Drizzle · Better Auth · Anthropic TypeScript SDK (tool runner + structured outputs)
 
 ## Architecture
 
@@ -54,12 +54,13 @@ The current dataset scores 98% (218/222 checks) over 3 runs per site, at around 
 ```bash
 pnpm install
 cp .env.example .env          # then fill in the values below
-pnpm db:push                  # create tables (in ./.pglite by default)
-pnpm dev
+pnpm db                       # terminal 1: local Postgres on :5433 (data in ./.postgres)
+pnpm db:push                  # create tables
+pnpm dev                      # terminal 2
 ```
 
 `.env` values you need:
-- `DATABASE_URL`: leave empty to use PGlite (Postgres running inside the app, data in `./.pglite`, no server or password). Set it to a `postgres://` URL to use a Postgres server instead.
+- `DATABASE_URL`: `postgres://postgres:postgres@localhost:5433/auditor` for the local `pnpm db` server (no Docker, no install: the Postgres binaries come from the `embedded-postgres` package). Use a Neon connection string when deployed.
 - `BETTER_AUTH_SECRET`: any random 32+ byte string (`openssl rand -base64 32`)
 - `ANTHROPIC_API_KEY`: from platform.claude.com
 - `PAGESPEED_API_KEY`: free from Google Cloud ("PageSpeed Insights API"). **Without it you'll hit Google's shared anonymous quota almost immediately.**

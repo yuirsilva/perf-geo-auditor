@@ -1,31 +1,33 @@
 import "server-only";
-import { PGlite } from "@electric-sql/pglite";
-import { drizzle as drizzlePg, type NodePgDatabase } from "drizzle-orm/node-postgres";
-import { drizzle as drizzlePglite } from "drizzle-orm/pglite";
+import { drizzle, type NodePgDatabase } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 import * as schema from "./schema";
 
 /**
- * Two modes:
- * - DATABASE_URL set (postgres://...) → a normal Postgres server (e.g. for deploys).
- * - DATABASE_URL empty → PGlite: Postgres running inside this Node process,
- *   data stored in ./.pglite. No server, no password.
+ * One Postgres server for every environment: `pnpm db` locally, Neon (or any
+ * Postgres) when deployed. Same driver everywhere, so local behaves like prod.
  */
 const url = process.env.DATABASE_URL;
-export const PGLITE_DIR = "./.pglite";
-
-// Both drivers expose the same query builder. Typing them as one avoids
-// TypeScript union overload errors at every call site.
-type Db = NodePgDatabase<typeof schema>;
-
-function create(): Db {
-  if (url) {
-    return drizzlePg(new Pool({ connectionString: url, max: 10 }), { schema });
-  }
-  return drizzlePglite(new PGlite(PGLITE_DIR), { schema }) as unknown as Db;
+if (!url) {
+  throw new Error(
+    "DATABASE_URL is not set. For local dev run `pnpm db` and set " +
+      "DATABASE_URL=postgres://postgres:postgres@localhost:5433/auditor in .env",
+  );
 }
 
-// Reuse one connection across hot reloads in dev (PGlite allows only one per folder).
+type Db = NodePgDatabase<typeof schema>;
+
+// Reuse one pool across hot reloads in dev instead of opening new connections each time.
 const globalForDb = globalThis as unknown as { db?: Db };
+
+function create(): Db {
+  const pool = new Pool({ connectionString: url, max: 10 });
+  // An idle connection can die (database restart, network blip). Without this
+  // handler that error is uncaught and can crash the server; with it the pool
+  // drops the dead connection and opens a new one on the next query.
+  pool.on("error", (err) => console.error("[db] idle connection lost:", err.message));
+  return drizzle(pool, { schema });
+}
+
 export const db = globalForDb.db ?? create();
 if (process.env.NODE_ENV !== "production") globalForDb.db = db;

@@ -42,9 +42,14 @@ export async function runAudit(id: string): Promise<void> {
       .where(eq(audit.id, id));
   } catch (err) {
     console.error(`[audit ${id}]`, err);
+    // A failed DB query's message repeats the whole query and its params (the
+    // diagnosis). Its cause is the short, useful part, and storing the long one
+    // could hit the same error again and leave the audit stuck.
+    const e = err as Error;
+    const message = e.cause instanceof Error ? e.cause.message : e.message;
     await db
       .update(audit)
-      .set({ status: "failed", error: (err as Error).message.slice(0, 1000) })
+      .set({ status: "failed", error: message.slice(0, 1000) })
       .where(eq(audit.id, id));
   }
 }
