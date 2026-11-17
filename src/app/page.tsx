@@ -40,16 +40,26 @@ async function Dashboard() {
     );
   }
 
-  const recent = await db
-    .select({ id: audit.id, url: audit.url, status: audit.status, createdAt: audit.createdAt })
+  // Only small columns (no jsonb), so loading every audit for the overview stays cheap.
+  const audits = await db
+    .select({
+      id: audit.id,
+      url: audit.url,
+      status: audit.status,
+      createdAt: audit.createdAt,
+      collectMs: audit.collectMs,
+      diagnoseMs: audit.diagnoseMs,
+      costUsd: audit.costUsd,
+    })
     .from(audit)
     .where(eq(audit.userId, user.id))
-    .orderBy(desc(audit.createdAt))
-    .limit(20);
+    .orderBy(desc(audit.createdAt));
+  const recent = audits.slice(0, 20);
 
   return (
     <div className="flex flex-col gap-8">
       <AuditForm />
+      <Overview audits={audits} />
       <section>
         <h2 className="mb-3 text-sm font-medium uppercase tracking-wide text-muted">
           Your audits
@@ -76,5 +86,54 @@ async function Dashboard() {
         )}
       </section>
     </div>
+  );
+}
+
+function median(values: number[]): number | null {
+  if (values.length === 0) return null;
+  const sorted = [...values].sort((a, b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+}
+
+type OverviewRow = {
+  status: string;
+  collectMs: number | null;
+  diagnoseMs: number | null;
+  costUsd: number | null;
+};
+
+function Overview({ audits }: { audits: OverviewRow[] }) {
+  const done = audits.filter((a) => a.status === "done");
+  if (done.length === 0) return null;
+  const failed = audits.filter((a) => a.status === "failed").length;
+
+  const totalMs = median(
+    done.filter((a) => a.collectMs != null && a.diagnoseMs != null).map((a) => a.collectMs! + a.diagnoseMs!),
+  );
+  const collectMs = median(done.flatMap((a) => (a.collectMs != null ? [a.collectMs] : [])));
+  const diagnoseMs = median(done.flatMap((a) => (a.diagnoseMs != null ? [a.diagnoseMs] : [])));
+  const cost = median(done.flatMap((a) => (a.costUsd != null ? [a.costUsd] : [])));
+  const sec = (ms: number | null) => (ms == null ? "–" : `${(ms / 1000).toFixed(1)} s`);
+
+  const tiles = [
+    { label: "Audits done", value: String(done.length), hint: failed ? `${failed} failed` : "none failed" },
+    { label: "Median time", value: sec(totalMs), hint: `data ${sec(collectMs)} · diagnosis ${sec(diagnoseMs)}` },
+    { label: "Median cost", value: cost == null ? "–" : `$${cost.toFixed(3)}`, hint: "Claude diagnosis only" },
+  ];
+
+  return (
+    <section>
+      <h2 className="mb-3 text-sm font-medium uppercase tracking-wide text-muted">Overview</h2>
+      <div className="grid gap-3 sm:grid-cols-3">
+        {tiles.map((t) => (
+          <div key={t.label} className="rounded-lg border border-border p-3">
+            <div className="text-xs uppercase tracking-wide text-muted">{t.label}</div>
+            <div className="text-xl font-semibold">{t.value}</div>
+            <div className="text-xs text-muted">{t.hint}</div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
