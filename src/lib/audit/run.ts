@@ -26,6 +26,18 @@ export async function runAudit(id: string): Promise<void> {
       .set({ psi, crawl, collectMs: Date.now() - collectStart, status: "diagnosing" })
       .where(eq(audit.id, id));
 
+    // Lighthouse got the site's bot protection instead of the page. The lab data
+    // and audits describe that error page, so Claude could only guess at causes.
+    // Stop here (no Claude call). A blocked crawl alone is fine: Lighthouse's data
+    // is still real, and Claude is told the crawl failed.
+    if (psi.httpError) {
+      throw new Error(
+        "The site blocked Google's PageSpeed test (it returned an HTTP error page, likely bot protection), " +
+          "so the lab data describes that error page, not the site. No diagnosis was made and nothing was charged. " +
+          "Try again later: some sites only block intermittently.",
+      );
+    }
+
     const diagnoseStart = Date.now();
     const result = await diagnose({ url: row.url, psi, crawl });
     await db

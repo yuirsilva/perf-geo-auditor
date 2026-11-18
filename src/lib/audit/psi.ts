@@ -40,6 +40,11 @@ export type PsiSummary = {
   fetchedAt: string;
   finalUrl: string;
   lighthouseVersion: string;
+  /**
+   * Lighthouse got an HTTP error page (e.g. 403 from bot protection), so the lab
+   * data describes that page, not the site. Optional: older rows don't have it.
+   */
+  httpError?: boolean;
   categories: Record<string, number | null>; // 0–100
   field: FieldData;
   lab: {
@@ -168,6 +173,8 @@ export async function runPsi(
     fetchedAt: new Date().toISOString(),
     finalUrl: lh.finalDisplayedUrl ?? lh.finalUrl ?? url,
     lighthouseVersion: lh.lighthouseVersion,
+    // Read it directly: it can fall outside the top-40 failingAudits list.
+    httpError: audits["http-status-code"]?.score === 0,
     categories: Object.fromEntries(
       Object.entries(lh.categories).map(([k, v]) => [
         k,

@@ -63,22 +63,27 @@ export function AuditReport({ audit }: { audit: Audit }) {
             <FieldTile label="TTFB" metric={psi.field?.ttfbMs ?? null} format={fmtMs} />
           </div>
 
-          <h2 className="mt-4 text-lg font-semibold">
-            Lab <span className="text-sm font-normal text-muted">(Lighthouse {psi.lighthouseVersion}, {psi.strategy})</span>
-          </h2>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <LabTile label="LCP" metric={psi.lab.lcp} />
-            <LabTile label="TBT" metric={psi.lab.tbt} />
-            <LabTile label="CLS" metric={psi.lab.cls} />
-            <LabTile label="FCP" metric={psi.lab.fcp} />
-          </div>
-          <div className="flex flex-wrap gap-4 text-sm text-muted">
-            {Object.entries(psi.categories).map(([k, v]) => (
-              <span key={k}>
-                {k}: <strong className="text-foreground">{v ?? "–"}</strong>
-              </span>
-            ))}
-          </div>
+          {/* When Lighthouse got a block page, its lab numbers and scores describe that page, not the site. */}
+          {!psi.httpError && (
+            <>
+              <h2 className="mt-4 text-lg font-semibold">
+                Lab <span className="text-sm font-normal text-muted">(Lighthouse {psi.lighthouseVersion}, {psi.strategy})</span>
+              </h2>
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <LabTile label="LCP" metric={psi.lab.lcp} />
+                <LabTile label="TBT" metric={psi.lab.tbt} />
+                <LabTile label="CLS" metric={psi.lab.cls} />
+                <LabTile label="FCP" metric={psi.lab.fcp} />
+              </div>
+              <div className="flex flex-wrap gap-4 text-sm text-muted">
+                {Object.entries(psi.categories).map(([k, v]) => (
+                  <span key={k}>
+                    {k}: <strong className="text-foreground">{v ?? "–"}</strong>
+                  </span>
+                ))}
+              </div>
+            </>
+          )}
         </section>
       )}
 
