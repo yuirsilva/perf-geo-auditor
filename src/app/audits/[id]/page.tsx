@@ -1,4 +1,4 @@
-import { and, eq } from "drizzle-orm";
+import { and, eq, sql } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { AuditReport } from "@/components/audit-report";
@@ -25,19 +25,29 @@ async function AuditView({ params }: { params: Promise<{ id: string }> }) {
 
   const user = await requireUser();
   // Scope by user so nobody can read someone else's audit by guessing an id.
-  const [row] = await db
-    .select()
+  const [found] = await db
+    .select({
+      row: audit,
+      // If the server is killed mid-audit (e.g. the 300 s function limit), the
+      // catch in runAudit never runs and the status stays "collecting" or
+      // "diagnosing". No step takes 6 minutes, so an audit that hasn't moved
+      // is treated as stopped. Computed in SQL: render code must stay pure.
+      quiet: sql<boolean>`${audit.updatedAt} < now() - interval '6 minutes'`,
+    })
     .from(audit)
     .where(and(eq(audit.id, id), eq(audit.userId, user.id)));
-  if (!row) notFound();
+  if (!found) notFound();
+  const { row } = found;
 
-  const inProgress = row.status !== "done" && row.status !== "failed";
+  const running = row.status !== "done" && row.status !== "failed";
+  const stalled = running && found.quiet;
+  const inProgress = running && !stalled;
 
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-3">
-          <StatusBadge status={row.status} />
+          <StatusBadge status={stalled ? "failed" : row.status} />
           <span className="text-sm text-muted">{row.createdAt.toLocaleString()}</span>
         </div>
         <h1 className="break-all text-2xl font-semibold">{row.url}</h1>
@@ -52,6 +62,12 @@ async function AuditView({ params }: { params: Promise<{ id: string }> }) {
               : "Running Lighthouse and pulling real-user data. This takes 20–60 seconds."}
           </p>
         </>
+      )}
+
+      {stalled && (
+        <p role="alert" className="rounded-md border border-red-500/40 bg-red-500/10 p-3 text-sm">
+          This audit stopped before finishing, most likely because it hit the server&apos;s time limit. Run it again.
+        </p>
       )}
 
       {row.status === "failed" && (

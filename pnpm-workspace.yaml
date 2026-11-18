@@ -1,5 +1,8 @@
 allowBuilds:
+  # Local dev database (pnpm db). Only needed on Windows here; on Linux
+  # (e.g. Vercel builds) the local database isn't used, so skip its script.
   "@embedded-postgres/windows-x64": true
+  "@embedded-postgres/linux-x64": false
   esbuild: true
   sharp: false
   unrs-resolver: false

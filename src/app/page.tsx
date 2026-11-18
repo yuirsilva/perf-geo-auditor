@@ -7,6 +7,10 @@ import { db } from "@/db";
 import { audit } from "@/db/schema";
 import { getUser } from "@/lib/auth";
 
+// The audit form's server action runs the whole audit in after(), which counts
+// toward this page's limit. 300 s is the Vercel Hobby maximum; audits take ~60–100 s.
+export const maxDuration = 300;
+
 export default function Home() {
   return (
     <div className="flex flex-col gap-10">
