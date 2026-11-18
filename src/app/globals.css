@@ -18,6 +18,7 @@
   --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,8 +32,61 @@
   }
 }
 
+/* Higher contrast on request: tiles and cards are defined only by borders, which
+   are near-invisible at the default #e5e7eb. */
+@media (prefers-contrast: more) {
+  :root {
+    --border: #6b7280;
+    --muted: #374151;
+  }
+}
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root {
+    --border: #9ca3af;
+    --muted: #d1d5db;
+  }
+}
+
+/* Reduced transparency: the header becomes a solid bar. */
+@media (prefers-reduced-transparency: reduce) {
+  .header-material {
+    background: var(--background);
+    backdrop-filter: none;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Report entrance: each section fades up as it first mounts. Only active under
+   [data-reveal] (see ReportReveal), so it plays once when a running audit finishes,
+   not every time an old report is opened. Sections already on screen don't replay:
+   @starting-style only applies to an element's first style. */
+[data-reveal] .reveal-group > * {
+  transition:
+    opacity 300ms var(--ease-out-strong),
+    transform 300ms var(--ease-out-strong);
+}
+[data-reveal] .reveal-group > :nth-child(2) { transition-delay: 40ms; }
+[data-reveal] .reveal-group > :nth-child(3) { transition-delay: 90ms; }
+[data-reveal] .reveal-group > :nth-child(4) { transition-delay: 130ms; }
+[data-reveal] .reveal-group > :nth-child(n + 5) { transition-delay: 160ms; }
+
+@starting-style {
+  [data-reveal] .reveal-group > * {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* Reduced motion: keep the fade, drop the movement. */
+@media (prefers-reduced-motion: reduce) {
+  @starting-style {
+    [data-reveal] .reveal-group > * {
+      transform: none;
+    }
+  }
 }

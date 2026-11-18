@@ -2,6 +2,8 @@ import { desc, eq } from "drizzle-orm";
 import Link from "next/link";
 import { Suspense } from "react";
 import { AuditForm } from "@/components/audit-form";
+import { buttonClass } from "@/components/button";
+import { LocalTime } from "@/components/local-time";
 import { StatusBadge } from "@/components/status-badge";
 import { db } from "@/db";
 import { audit } from "@/db/schema";
@@ -24,9 +26,33 @@ export default function Home() {
         </p>
       </section>
 
-      <Suspense fallback={<div className="h-24 rounded-lg bg-card" />}>
+      <Suspense fallback={<DashboardSkeleton />}>
         <Dashboard />
       </Suspense>
+    </div>
+  );
+}
+
+/** Same shape as the signed-in dashboard (form, 3 tiles, list), so nothing jumps when it loads. */
+function DashboardSkeleton() {
+  return (
+    <div aria-hidden className="flex flex-col gap-8 motion-safe:animate-pulse">
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <div className="h-[42px] flex-1 rounded-md bg-card" />
+        <div className="h-10 rounded-md bg-card sm:h-[42px] sm:w-28" />
+      </div>
+      <div className="flex flex-col gap-3">
+        <div className="h-5 w-24 rounded bg-card" />
+        <div className="grid gap-3 sm:grid-cols-3">
+          {[0, 1, 2].map((i) => (
+            <div key={i} className="h-[86px] rounded-lg bg-card" />
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col gap-3">
+        <div className="h-5 w-24 rounded bg-card" />
+        <div className="h-48 rounded-lg bg-card" />
+      </div>
     </div>
   );
 }
@@ -35,10 +61,7 @@ async function Dashboard() {
   const user = await getUser();
   if (!user) {
     return (
-      <Link
-        href="/login"
-        className="w-fit rounded-md bg-foreground px-4 py-2 font-medium text-background"
-      >
+      <Link href="/login" className={`${buttonClass} w-fit`}>
         Sign in to run an audit
       </Link>
     );
@@ -80,7 +103,7 @@ async function Dashboard() {
                 >
                   <span className="truncate">{a.url}</span>
                   <span className="flex shrink-0 items-center gap-3 text-sm text-muted">
-                    {a.createdAt.toLocaleDateString()}
+                    <LocalTime date={a.createdAt} />
                     <StatusBadge status={a.status} />
                   </span>
                 </Link>
@@ -133,7 +156,7 @@ function Overview({ audits }: { audits: OverviewRow[] }) {
         {tiles.map((t) => (
           <div key={t.label} className="rounded-lg border border-border p-3">
             <div className="text-xs uppercase tracking-wide text-muted">{t.label}</div>
-            <div className="text-xl font-semibold">{t.value}</div>
+            <div className="text-xl font-semibold tabular-nums">{t.value}</div>
             <div className="text-xs text-muted">{t.hint}</div>
           </div>
         ))}

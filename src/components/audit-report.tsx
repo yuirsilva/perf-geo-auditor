@@ -8,11 +8,26 @@ const CATEGORY_STYLE: Record<string, string> = {
   SLOW: "text-red-600 dark:text-red-400",
 };
 
+// Spelled out so the rating never depends on telling the colours apart.
+const CATEGORY_LABEL: Record<string, string> = {
+  FAST: "Good",
+  AVERAGE: "Needs work",
+  SLOW: "Poor",
+};
+
 const SEVERITY_STYLE: Record<Issue["severity"], string> = {
   critical: "bg-red-500/15 text-red-600 dark:text-red-400",
   high: "bg-orange-500/15 text-orange-600 dark:text-orange-400",
   medium: "bg-amber-500/15 text-amber-700 dark:text-amber-400",
   low: "bg-card text-muted",
+};
+
+// Lighthouse category ids, as people read them.
+const LIGHTHOUSE_LABEL: Record<string, string> = {
+  performance: "Performance",
+  accessibility: "Accessibility",
+  "best-practices": "Best practices",
+  seo: "SEO",
 };
 
 function fmtMs(ms: number) {
@@ -24,8 +39,11 @@ function FieldTile({ label, metric, format }: { label: string; metric: FieldMetr
     <div className="rounded-lg border border-border p-3">
       <div className="text-xs uppercase tracking-wide text-muted">{label}</div>
       {metric ? (
-        <div className={`text-xl font-semibold ${CATEGORY_STYLE[metric.category] ?? ""}`}>
-          {format(metric.p75)}
+        <div className={CATEGORY_STYLE[metric.category] ?? ""}>
+          <div className="text-xl font-semibold tabular-nums">{format(metric.p75)}</div>
+          {CATEGORY_LABEL[metric.category] && (
+            <div className="text-xs font-medium">{CATEGORY_LABEL[metric.category]}</div>
+          )}
         </div>
       ) : (
         <div className="text-xl font-semibold text-muted">n/a</div>
@@ -38,7 +56,7 @@ function LabTile({ label, metric }: { label: string; metric: LabMetric }) {
   return (
     <div className="rounded-lg border border-border p-3">
       <div className="text-xs uppercase tracking-wide text-muted">{label}</div>
-      <div className="text-xl font-semibold">{metric?.display || "n/a"}</div>
+      <div className="text-xl font-semibold tabular-nums">{metric?.display || "n/a"}</div>
     </div>
   );
 }
@@ -47,7 +65,7 @@ export function AuditReport({ audit }: { audit: Audit }) {
   const { psi, crawl, diagnosis } = audit;
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="reveal-group flex flex-col gap-8">
       {psi && (
         <section className="flex flex-col gap-3">
           <h2 className="text-lg font-semibold">
@@ -78,7 +96,7 @@ export function AuditReport({ audit }: { audit: Audit }) {
               <div className="flex flex-wrap gap-4 text-sm text-muted">
                 {Object.entries(psi.categories).map(([k, v]) => (
                   <span key={k}>
-                    {k}: <strong className="text-foreground">{v ?? "–"}</strong>
+                    {LIGHTHOUSE_LABEL[k] ?? k} <strong className="tabular-nums text-foreground">{v ?? "–"}</strong>
                   </span>
                 ))}
               </div>
@@ -128,7 +146,8 @@ export function AuditReport({ audit }: { audit: Audit }) {
             ))}
           </section>
 
-          <section className="grid gap-4 sm:grid-cols-2">
+          {/* min-w-0: grid items won't shrink below a long code block otherwise, which widens the whole page. */}
+          <section className="grid gap-4 sm:grid-cols-2 [&>*]:min-w-0">
             <div className="flex flex-col gap-2 rounded-lg border border-border p-4">
               <h2 className="font-semibold">AI crawlers (GEO)</h2>
               <p className="text-sm">{diagnosis.aiCrawlers.assessment}</p>

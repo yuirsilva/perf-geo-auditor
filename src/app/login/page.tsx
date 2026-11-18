@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { Button } from "@/components/button";
 import { authClient } from "@/lib/auth-client";
 
 export default function LoginPage() {
@@ -34,16 +35,10 @@ export default function LoginPage() {
 
   return (
     <div className="mx-auto flex max-w-sm flex-col gap-6">
-      <h1 className="text-2xl font-semibold">
+      <h1 className="text-2xl font-semibold tracking-tight">
         {mode === "signin" ? "Sign in" : "Create an account"}
       </h1>
       <form onSubmit={onSubmit} className="flex flex-col gap-3">
-        {mode === "signup" && (
-          <label className="flex flex-col gap-1 text-sm">
-            Name
-            <input name="name" required className="rounded-md border border-border bg-background px-3 py-2" />
-          </label>
-        )}
         <label className="flex flex-col gap-1 text-sm">
           Email
           <input
@@ -65,18 +60,26 @@ export default function LoginPage() {
             className="rounded-md border border-border bg-background px-3 py-2"
           />
         </label>
+        {/* Added below the shared fields, so switching modes never moves Email or Password. */}
+        {mode === "signup" && (
+          <label className="flex flex-col gap-1 text-sm">
+            Name
+            <input
+              name="name"
+              autoComplete="name"
+              required
+              className="rounded-md border border-border bg-background px-3 py-2"
+            />
+          </label>
+        )}
         {error && (
-          <p role="alert" className="text-sm text-red-600">
+          <p role="alert" className="text-sm text-red-600 dark:text-red-400">
             {error}
           </p>
         )}
-        <button
-          type="submit"
-          disabled={pending}
-          className="rounded-md bg-foreground px-4 py-2 font-medium text-background disabled:opacity-60"
-        >
-          {pending ? "…" : mode === "signin" ? "Sign in" : "Create account"}
-        </button>
+        <Button type="submit" pending={pending}>
+          {mode === "signin" ? "Sign in" : "Create account"}
+        </Button>
       </form>
       <button
         type="button"
