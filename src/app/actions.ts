@@ -9,7 +9,9 @@ import { getUser } from "@/lib/auth";
 import { assertPublicUrl, UnsafeUrlError } from "@/lib/audit/url-guard";
 import { runAudit } from "@/lib/audit/run";
 
-export type CreateAuditState = { error: string | null };
+// url is what the person submitted, returned with an error: React 19 resets a form after its action runs, so the
+// field refills from it instead of coming back empty.
+export type CreateAuditState = { error: string | null; url?: string };
 
 // Raise them in .env for local testing; the defaults keep a public deploy cheap
 // (50 audits at ~$0.007 is ~$0.35/day at most).
@@ -42,18 +44,19 @@ export async function createAudit(
   const user = await getUser();
   if (!user) redirect("/login");
 
+  const submitted = String(formData.get("url") ?? "");
   let url: URL;
   try {
-    url = await assertPublicUrl(String(formData.get("url") ?? ""));
+    url = await assertPublicUrl(submitted);
   } catch (err) {
-    if (err instanceof UnsafeUrlError) return { error: err.message };
+    if (err instanceof UnsafeUrlError) return { error: err.message, url: submitted };
     throw err;
   }
 
   // Every audit spends the owner's Claude and PageSpeed quota, and anyone can
   // sign up. Cap audits per user and for the whole site over the last 24 hours.
   const limitError = await checkDailyLimits(user.id);
-  if (limitError) return { error: limitError };
+  if (limitError) return { error: limitError, url: submitted };
 
   const [row] = await db
     .insert(audit)

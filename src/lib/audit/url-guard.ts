@@ -15,7 +15,7 @@ export function normalizeUrl(input: string): URL {
   try {
     url = new URL(withScheme);
   } catch {
-    throw new UnsafeUrlError("That doesn't look like a valid URL.");
+    throw new UnsafeUrlError("That isn't a web address. Enter a page's address, like https://example.com.");
   }
   if (url.protocol !== "http:" && url.protocol !== "https:") {
     throw new UnsafeUrlError("Only http and https URLs are supported.");

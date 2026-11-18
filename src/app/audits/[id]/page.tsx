@@ -1,50 +1,46 @@
 import { and, eq, sql } from "drizzle-orm";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
-import Link from "next/link";
-import { AuditProgress } from "@/components/audit-progress";
+import { SkeletonSuspense } from "skullet/react";
+import { AuditBreadcrumb } from "@/components/audit-breadcrumb";
+import { AuditReport } from "@/components/audit-report";
+import { AuditStatus } from "@/components/audit-status";
+import { AutoRefresh } from "@/components/auto-refresh";
 import { DocumentTitle } from "@/components/document-title";
+import { Alert, AlertAction, AlertDescription, AlertTitle } from "@/components/glaze/ui/alert";
+import {
+  Step,
+  StepDescription,
+  StepIndicator,
+  StepSeparator,
+  StepText,
+  StepTitle,
+  StepTrigger,
+  Steps,
+} from "@/components/glaze/ui/steps";
 import { LocalTime } from "@/components/local-time";
 import { RerunButton } from "@/components/rerun-button";
-import { AuditReport } from "@/components/audit-report";
-import { ReportReveal } from "@/components/report-reveal";
-import { AutoRefresh } from "@/components/auto-refresh";
-import { StatusBadge } from "@/components/status-badge";
 import { db } from "@/db";
-import { audit } from "@/db/schema";
+import { audit, type Audit } from "@/db/schema";
 import { requireUser } from "@/lib/auth";
+import { SAMPLE_AUDIT } from "@/lib/sample-data";
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 export default function AuditPage({ params }: PageProps<"/audits/[id]">) {
-  // params are only known at request time, so read them behind a boundary.
+  // params are only known at request time, so read them behind a boundary. Its skeleton is the real report
+  // rendered with a sample audit, measured by Skullet.
   return (
-    <Suspense fallback={<AuditSkeleton />}>
+    <SkeletonSuspense skeleton={<AuditBody row={SAMPLE_AUDIT} stalled={false} />} label="Loading audit">
       <AuditView params={params} />
-    </Suspense>
+    </SkeletonSuspense>
   );
 }
 
-/** Same shape as the report header and first row of tiles, so nothing jumps when it loads. */
-function AuditSkeleton() {
-  return (
-    <div aria-hidden className="flex flex-col gap-6 motion-safe:animate-pulse">
-      <div className="flex flex-col gap-2">
-        <div className="h-5 w-24 rounded bg-card" />
-        <div className="h-5 w-56 rounded bg-card" />
-        <div className="h-8 w-2/3 rounded bg-card" />
-      </div>
-      <div className="flex flex-col gap-3">
-        <div className="h-7 w-48 rounded bg-card" />
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {[0, 1, 2, 3].map((i) => (
-            <div key={i} className="h-[86px] rounded-lg bg-card" />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+const STEPS = [
+  { title: "Collect data", description: "Lighthouse and real-user data" },
+  { title: "Diagnose", description: "Claude traces root causes" },
+  { title: "Report", description: "Fixes, highest impact first" },
+] as const;
 
 async function AuditView({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -75,30 +71,62 @@ async function AuditView({ params }: { params: Promise<{ id: string }> }) {
   const tabTitle = failed
     ? `Failed · ${host}`
     : row.status === "done"
-      ? `✓ Done · ${host}`
+      ? `Done · ${host}`
       : `${row.status === "diagnosing" ? "Diagnosing" : "Collecting"}… · ${host}`;
 
   return (
-    <div className="flex flex-col gap-6">
+    <>
+      {/* Side effects live here, not in AuditBody, so the skeleton never sets the title or starts refreshing. */}
       <DocumentTitle title={tabTitle} />
+      {inProgress && <AutoRefresh intervalMs={3000} />}
+      <AuditBody row={row} stalled={stalled} />
+    </>
+  );
+}
+
+/** The report screen. Also rendered with a sample audit for the skeleton, so it must not fetch or run effects. */
+function AuditBody({ row, stalled }: { row: Audit; stalled: boolean }) {
+  const running = row.status !== "done" && row.status !== "failed";
+  const inProgress = running && !stalled;
+  const failed = stalled || row.status === "failed";
+  // Queued and collecting are step 1; diagnosing is step 2.
+  const currentStep = row.status === "diagnosing" ? 2 : 1;
+
+  return (
+    <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <Link href="/" className="w-fit text-sm text-muted transition-colors hover:text-foreground">
-          ← Your audits
-        </Link>
-        <div className="flex items-center gap-3">
-          <StatusBadge status={stalled ? "failed" : row.status} />
-          <span className="text-sm text-muted">
+        <AuditBreadcrumb host={new URL(row.url).host} />
+        <h1 className="type-title wrap-anywhere">{row.url}</h1>
+        <div className="flex flex-wrap items-center gap-3">
+          {/* The one status this page watches, so it alone is live. */}
+          <AuditStatus status={stalled ? "failed" : row.status} live />
+          <span className="type-body-sm text-text-2">
             <LocalTime date={row.createdAt} withTime />
           </span>
         </div>
-        <h1 className="text-2xl font-semibold tracking-tight [overflow-wrap:anywhere]">{row.url}</h1>
       </div>
 
       {inProgress && (
         <>
-          <AutoRefresh intervalMs={3000} />
-          <AuditProgress status={row.status} />
-          <p className="-mt-3 text-sm text-muted">
+          <Steps value={currentStep} aria-label="Audit progress">
+            {STEPS.map((step, i) => (
+              <Step
+                key={step.title}
+                step={i + 1}
+                state={i + 1 === currentStep && row.status !== "queued" ? "pending" : undefined}
+              >
+                <StepTrigger>
+                  <StepIndicator />
+                  <StepText>
+                    <StepTitle>{step.title}</StepTitle>
+                    <StepDescription>{step.description}</StepDescription>
+                  </StepText>
+                </StepTrigger>
+                <StepSeparator />
+              </Step>
+            ))}
+          </Steps>
+          <p className="type-body-sm text-text-2">
             {row.status === "diagnosing"
               ? "Data collected. Claude is tracing root causes. This usually takes under a minute."
               : "Running Lighthouse and pulling real-user data. This takes 20–60 seconds."}
@@ -107,19 +135,20 @@ async function AuditView({ params }: { params: Promise<{ id: string }> }) {
       )}
 
       {failed && (
-        <div role="alert" className="flex flex-col gap-3 rounded-md border border-red-500/40 bg-red-500/10 p-3 text-sm">
-          <p>
+        <Alert status="fail">
+          <AlertTitle>This audit didn&apos;t finish</AlertTitle>
+          <AlertDescription>
             {stalled
-              ? "This audit stopped before finishing, most likely because it hit the server's time limit."
+              ? "It stopped before finishing, most likely because it hit the server's time limit."
               : (row.error ?? "The audit failed.")}
-          </p>
-          <RerunButton url={row.url} />
-        </div>
+          </AlertDescription>
+          <AlertAction>
+            <RerunButton url={row.url} />
+          </AlertAction>
+        </Alert>
       )}
 
-      <ReportReveal running={inProgress}>
-        <AuditReport audit={row} />
-      </ReportReveal>
+      <AuditReport audit={row} />
     </div>
   );
 }

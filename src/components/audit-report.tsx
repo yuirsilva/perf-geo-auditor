@@ -1,25 +1,17 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/glaze/ui/card";
+import { CodeBlock } from "@/components/glaze/ui/code-block";
+import { DataList, DataListItem, DataListLabel, DataListValue } from "@/components/glaze/ui/data-list";
+import { Status, type StatusValue } from "@/components/glaze/ui/status";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/glaze/ui/table";
 import type { Audit } from "@/db/schema";
-import type { Issue } from "@/lib/audit/diagnosis-schema";
 import type { FieldMetric, LabMetric } from "@/lib/audit/psi";
+import { EMPTY_VALUE } from "@/lib/glaze/data";
 
-const CATEGORY_STYLE: Record<string, string> = {
-  FAST: "text-green-600 dark:text-green-400",
-  AVERAGE: "text-amber-600 dark:text-amber-400",
-  SLOW: "text-red-600 dark:text-red-400",
-};
-
-// Spelled out so the rating never depends on telling the colours apart.
-const CATEGORY_LABEL: Record<string, string> = {
-  FAST: "Good",
-  AVERAGE: "Needs work",
-  SLOW: "Poor",
-};
-
-const SEVERITY_STYLE: Record<Issue["severity"], string> = {
-  critical: "bg-red-500/15 text-red-600 dark:text-red-400",
-  high: "bg-orange-500/15 text-orange-600 dark:text-orange-400",
-  medium: "bg-amber-500/15 text-amber-700 dark:text-amber-400",
-  low: "bg-card text-muted",
+// CrUX's buckets as an outcome: a glyph and a word, never colour alone.
+const RATING: Record<string, { status: StatusValue; word: string }> = {
+  FAST: { status: "ok", word: "Good" },
+  AVERAGE: { status: "warn", word: "Needs work" },
+  SLOW: { status: "fail", word: "Poor" },
 };
 
 // Lighthouse category ids, as people read them.
@@ -30,153 +22,194 @@ const LIGHTHOUSE_LABEL: Record<string, string> = {
   seo: "SEO",
 };
 
+const SEVERITY_LABEL: Record<string, string> = {
+  critical: "Critical",
+  high: "High",
+  medium: "Medium",
+  low: "Low",
+};
+
 function fmtMs(ms: number) {
   return ms >= 1000 ? `${(ms / 1000).toFixed(1)} s` : `${Math.round(ms)} ms`;
 }
 
-function FieldTile({ label, metric, format }: { label: string; metric: FieldMetric; format: (n: number) => string }) {
-  return (
-    <div className="rounded-lg border border-border p-3">
-      <div className="text-xs uppercase tracking-wide text-muted">{label}</div>
-      {metric ? (
-        <div className={CATEGORY_STYLE[metric.category] ?? ""}>
-          <div className="text-xl font-semibold tabular-nums">{format(metric.p75)}</div>
-          {CATEGORY_LABEL[metric.category] && (
-            <div className="text-xs font-medium">{CATEGORY_LABEL[metric.category]}</div>
-          )}
-        </div>
-      ) : (
-        <div className="text-xl font-semibold text-muted">n/a</div>
-      )}
-    </div>
-  );
-}
-
-function LabTile({ label, metric }: { label: string; metric: LabMetric }) {
-  return (
-    <div className="rounded-lg border border-border p-3">
-      <div className="text-xs uppercase tracking-wide text-muted">{label}</div>
-      <div className="text-xl font-semibold tabular-nums">{metric?.display || "n/a"}</div>
-    </div>
-  );
-}
+type VitalRow = {
+  name: string;
+  field: FieldMetric | undefined;
+  format: (n: number) => string;
+  lab: LabMetric | undefined;
+};
 
 export function AuditReport({ audit }: { audit: Audit }) {
   const { psi, crawl, diagnosis } = audit;
+  // When Lighthouse got a block page, its lab numbers and scores describe that page, not the site.
+  const lab = psi && !psi.httpError ? psi.lab : null;
+
+  const vitals: VitalRow[] = psi
+    ? [
+        { name: "LCP", field: psi.field?.lcpMs, format: fmtMs, lab: lab?.lcp },
+        { name: "INP", field: psi.field?.inpMs, format: fmtMs, lab: undefined },
+        { name: "CLS", field: psi.field?.cls, format: (n) => n.toFixed(2), lab: lab?.cls },
+        { name: "TTFB", field: psi.field?.ttfbMs, format: fmtMs, lab: undefined },
+        { name: "TBT", field: undefined, format: fmtMs, lab: lab?.tbt },
+        { name: "FCP", field: undefined, format: fmtMs, lab: lab?.fcp },
+      ]
+    : [];
 
   return (
-    <div className="reveal-group flex flex-col gap-8">
+    <div className="flex flex-col gap-8">
       {psi && (
         <section className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">
-            Real users{" "}
-            <span className="text-sm font-normal text-muted">
-              (CrUX p75, {psi.field ? `${psi.field.scope}-level` : "no data for this page or origin"})
-            </span>
-          </h2>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <FieldTile label="LCP" metric={psi.field?.lcpMs ?? null} format={fmtMs} />
-            <FieldTile label="INP" metric={psi.field?.inpMs ?? null} format={fmtMs} />
-            <FieldTile label="CLS" metric={psi.field?.cls ?? null} format={(n) => n.toFixed(2)} />
-            <FieldTile label="TTFB" metric={psi.field?.ttfbMs ?? null} format={fmtMs} />
-          </div>
+          <p className="type-body-sm text-text-2">
+            Real users: CrUX p75, {psi.field ? `${psi.field.scope}-level` : "no data for this page or origin"}.
+            {lab && ` Lab: Lighthouse ${psi.lighthouseVersion}, ${psi.strategy}.`}
+          </p>
+          <Table title="Core Web Vitals">
+            <TableHeader>
+              <TableRow>
+                <TableHead>Metric</TableHead>
+                <TableHead numeric>Real users</TableHead>
+                <TableHead>Rating</TableHead>
+                <TableHead numeric>Lab</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {vitals.map((v) => {
+                const rating = v.field ? RATING[v.field.category] : undefined;
+                return (
+                  <TableRow key={v.name}>
+                    <TableCell>{v.name}</TableCell>
+                    <TableCell numeric>{v.field ? v.format(v.field.p75) : EMPTY_VALUE}</TableCell>
+                    <TableCell>
+                      {rating ? (
+                        <Status status={rating.status} size="sm">
+                          {rating.word}
+                        </Status>
+                      ) : (
+                        <span className="text-text-3">{EMPTY_VALUE}</span>
+                      )}
+                    </TableCell>
+                    <TableCell numeric>{v.lab?.display || EMPTY_VALUE}</TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
 
-          {/* When Lighthouse got a block page, its lab numbers and scores describe that page, not the site. */}
-          {!psi.httpError && (
-            <>
-              <h2 className="mt-4 text-lg font-semibold">
-                Lab <span className="text-sm font-normal text-muted">(Lighthouse {psi.lighthouseVersion}, {psi.strategy})</span>
-              </h2>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                <LabTile label="LCP" metric={psi.lab.lcp} />
-                <LabTile label="TBT" metric={psi.lab.tbt} />
-                <LabTile label="CLS" metric={psi.lab.cls} />
-                <LabTile label="FCP" metric={psi.lab.fcp} />
-              </div>
-              <div className="flex flex-wrap gap-4 text-sm text-muted">
-                {Object.entries(psi.categories).map(([k, v]) => (
-                  <span key={k}>
-                    {LIGHTHOUSE_LABEL[k] ?? k} <strong className="tabular-nums text-foreground">{v ?? "–"}</strong>
-                  </span>
-                ))}
-              </div>
-            </>
+          {lab && (
+            <DataList variant="panel">
+              {Object.entries(psi.categories).map(([k, v]) => (
+                <DataListItem key={k}>
+                  <DataListLabel>{LIGHTHOUSE_LABEL[k] ?? k}</DataListLabel>
+                  <DataListValue className="tabular-nums">{v}</DataListValue>
+                </DataListItem>
+              ))}
+            </DataList>
           )}
         </section>
       )}
 
       {diagnosis && (
         <>
-          <section className="flex flex-col gap-2 rounded-lg bg-card p-4">
-            <h2 className="text-lg font-semibold">Diagnosis</h2>
-            <p>{diagnosis.summary}</p>
-            <p className="text-sm text-muted">{diagnosis.fieldVsLab}</p>
-          </section>
+          <Card>
+            <CardHeader>
+              <CardTitle>Diagnosis</CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-col gap-2">
+              <p className="type-body">{diagnosis.summary}</p>
+              <p className="type-body-sm text-text-2">{diagnosis.fieldVsLab}</p>
+            </CardContent>
+          </Card>
 
-          <section className="flex flex-col gap-4">
-            <h2 className="text-lg font-semibold">Issues, highest impact first</h2>
+          <section className="flex flex-col gap-3">
+            <h2 className="type-heading">Issues, highest impact first</h2>
             {diagnosis.issues.map((issue, i) => (
-              <article key={i} className="flex flex-col gap-2 rounded-lg border border-border p-4">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${SEVERITY_STYLE[issue.severity]}`}>
-                    {issue.severity}
-                  </span>
-                  <span className="text-xs uppercase tracking-wide text-muted">
-                    {issue.category}
+              <Card key={i}>
+                <CardHeader>
+                  <CardTitle>{issue.title}</CardTitle>
+                  <CardDescription>
+                    {SEVERITY_LABEL[issue.severity] ?? issue.severity} severity · {issue.category}
                     {issue.metric !== "none" && ` · ${issue.metric}`}
-                  </span>
-                </div>
-                <h3 className="font-semibold">{issue.title}</h3>
-                <dl className="grid gap-2 text-sm sm:grid-cols-[8rem_1fr]">
-                  <dt className="text-muted">Evidence</dt>
-                  <dd>{issue.evidence}</dd>
-                  <dt className="text-muted">Root cause</dt>
-                  <dd>{issue.rootCause}</dd>
-                  <dt className="text-muted">Fix</dt>
-                  <dd>{issue.fix}</dd>
-                  <dt className="text-muted">Impact</dt>
-                  <dd>{issue.estimatedImpact}</dd>
-                </dl>
-                {issue.codeSnippet && (
-                  <pre className="overflow-x-auto rounded-md bg-card p-3 font-mono text-xs">
-                    <code>{issue.codeSnippet}</code>
-                  </pre>
-                )}
-              </article>
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex flex-col gap-3">
+                  <DataList>
+                    <DataListItem>
+                      <DataListLabel>Evidence</DataListLabel>
+                      <DataListValue>{issue.evidence}</DataListValue>
+                    </DataListItem>
+                    <DataListItem>
+                      <DataListLabel>Root cause</DataListLabel>
+                      <DataListValue>{issue.rootCause}</DataListValue>
+                    </DataListItem>
+                    <DataListItem>
+                      <DataListLabel>Fix</DataListLabel>
+                      <DataListValue>{issue.fix}</DataListValue>
+                    </DataListItem>
+                    <DataListItem>
+                      <DataListLabel>Impact</DataListLabel>
+                      <DataListValue>{issue.estimatedImpact}</DataListValue>
+                    </DataListItem>
+                  </DataList>
+                  {/* No header: the snippet has no filename, and its language is unknown, so the header could only say
+                      "Text". Each block is named after its issue instead, so its controls are told apart. */}
+                  {issue.codeSnippet && (
+                    <CodeBlock
+                      code={issue.codeSnippet}
+                      header={false}
+                      maxLines={30}
+                      aria-label={`Fix for ${issue.title}`}
+                      copyLabel={`Copy the fix for ${issue.title}`}
+                    />
+                  )}
+                </CardContent>
+              </Card>
             ))}
           </section>
 
           {/* min-w-0: grid items won't shrink below a long code block otherwise, which widens the whole page. */}
-          <section className="grid gap-4 sm:grid-cols-2 [&>*]:min-w-0">
-            <div className="flex flex-col gap-2 rounded-lg border border-border p-4">
-              <h2 className="font-semibold">AI crawlers (GEO)</h2>
-              <p className="text-sm">{diagnosis.aiCrawlers.assessment}</p>
-              {crawl && (
-                <p className="text-xs text-muted">
-                  Blocked: {crawl.aiCrawlers.blocked.join(", ") || "none"} · llms.txt:{" "}
-                  {crawl.aiCrawlers.llmsTxtFound ? "found" : "missing"}
-                </p>
-              )}
-              <ul className="list-disc pl-5 text-sm">
-                {diagnosis.aiCrawlers.recommendations.map((r, i) => (
-                  <li key={i}>{r}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex flex-col gap-2 rounded-lg border border-border p-4">
-              <h2 className="font-semibold">Structured data</h2>
-              <p className="text-sm">{diagnosis.structuredData.assessment}</p>
-              {diagnosis.structuredData.recommendedJsonLd && (
-                <pre className="overflow-x-auto rounded-md bg-card p-3 font-mono text-xs">
-                  <code>{diagnosis.structuredData.recommendedJsonLd}</code>
-                </pre>
-              )}
-            </div>
+          <section className="grid gap-3 sm:grid-cols-2 *:min-w-0">
+            <Card>
+              <CardHeader>
+                <CardTitle>AI crawlers</CardTitle>
+                {crawl && (
+                  <CardDescription>
+                    Blocked: {crawl.aiCrawlers.blocked.join(", ") || "none"}. llms.txt{" "}
+                    {crawl.aiCrawlers.llmsTxtFound ? "found" : "missing"}.
+                  </CardDescription>
+                )}
+              </CardHeader>
+              <CardContent className="flex flex-col gap-2">
+                <p className="type-body-sm">{diagnosis.aiCrawlers.assessment}</p>
+                <ul className="type-body-sm list-disc ps-5">
+                  {diagnosis.aiCrawlers.recommendations.map((r, i) => (
+                    <li key={i}>{r}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Structured data</CardTitle>
+              </CardHeader>
+              <CardContent className="flex flex-col gap-2">
+                <p className="type-body-sm">{diagnosis.structuredData.assessment}</p>
+                {diagnosis.structuredData.recommendedJsonLd && (
+                  <CodeBlock
+                    code={diagnosis.structuredData.recommendedJsonLd}
+                    language="json"
+                    maxLines={30}
+                    aria-label="Recommended JSON-LD"
+                    copyLabel="Copy the recommended JSON-LD"
+                  />
+                )}
+              </CardContent>
+            </Card>
           </section>
 
-          <p className="text-xs text-muted">
+          <p className="type-caption text-text-3">
             {audit.model} · {audit.inputTokens?.toLocaleString()} in / {audit.outputTokens?.toLocaleString()} out
-            {audit.costUsd != null && ` · ~$${audit.costUsd.toFixed(3)}`}
+            {audit.costUsd != null && ` · about $${audit.costUsd.toFixed(3)}`}
             {audit.collectMs != null && ` · data ${fmtMs(audit.collectMs)}`}
             {audit.diagnoseMs != null && ` · diagnosis ${fmtMs(audit.diagnoseMs)}`}
           </p>

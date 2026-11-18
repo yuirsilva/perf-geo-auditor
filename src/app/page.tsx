@@ -1,13 +1,24 @@
 import { desc, eq } from "drizzle-orm";
 import Link from "next/link";
-import { Suspense } from "react";
+import { SkeletonSuspense } from "skullet/react";
 import { AuditForm } from "@/components/audit-form";
-import { buttonClass } from "@/components/button";
+import { AuditStatus } from "@/components/audit-status";
+import { Button } from "@/components/glaze/ui/button";
+import { DataList, DataListItem, DataListLabel, DataListValue } from "@/components/glaze/ui/data-list";
+import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from "@/components/glaze/ui/empty-state";
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemGroup,
+  ItemLink,
+  ItemTitle,
+} from "@/components/glaze/ui/item";
 import { LocalTime } from "@/components/local-time";
-import { StatusBadge } from "@/components/status-badge";
 import { db } from "@/db";
-import { audit } from "@/db/schema";
+import { audit, type Audit } from "@/db/schema";
 import { getUser } from "@/lib/auth";
+import { SAMPLE_AUDIT_ROWS } from "@/lib/sample-data";
 
 // The audit form's server action runs the whole audit in after(), which counts
 // toward this page's limit. 300 s is the Vercel Hobby maximum; audits take ~60–100 s.
@@ -15,44 +26,21 @@ export const maxDuration = 300;
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10">
-      <section className="flex flex-col gap-3">
-        <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+    <div className="flex flex-col gap-8">
+      <section className="flex flex-col gap-2">
+        <h1 className="type-title max-w-measure">
           Find out <em>why</em> your page is slow, and how AI search sees it.
         </h1>
-        <p className="max-w-2xl text-muted">
+        <p className="type-body max-w-measure text-text-2">
           Combines real-user Core Web Vitals (CrUX), a Lighthouse run and a crawl of your HTML,
           then has Claude trace each problem to its root cause and write the fix.
         </p>
       </section>
 
-      <Suspense fallback={<DashboardSkeleton />}>
+      {/* The skeleton is the real dashboard rendered with sample audits, measured by Skullet. */}
+      <SkeletonSuspense skeleton={<DashboardView audits={SAMPLE_AUDIT_ROWS} />} label="Loading your audits">
         <Dashboard />
-      </Suspense>
-    </div>
-  );
-}
-
-/** Same shape as the signed-in dashboard (form, 3 tiles, list), so nothing jumps when it loads. */
-function DashboardSkeleton() {
-  return (
-    <div aria-hidden className="flex flex-col gap-8 motion-safe:animate-pulse">
-      <div className="flex flex-col gap-2 sm:flex-row">
-        <div className="h-[42px] flex-1 rounded-md bg-card" />
-        <div className="h-10 rounded-md bg-card sm:h-[42px] sm:w-28" />
-      </div>
-      <div className="flex flex-col gap-3">
-        <div className="h-5 w-24 rounded bg-card" />
-        <div className="grid gap-3 sm:grid-cols-3">
-          {[0, 1, 2].map((i) => (
-            <div key={i} className="h-[86px] rounded-lg bg-card" />
-          ))}
-        </div>
-      </div>
-      <div className="flex flex-col gap-3">
-        <div className="h-5 w-24 rounded bg-card" />
-        <div className="h-48 rounded-lg bg-card" />
-      </div>
+      </SkeletonSuspense>
     </div>
   );
 }
@@ -61,9 +49,9 @@ async function Dashboard() {
   const user = await getUser();
   if (!user) {
     return (
-      <Link href="/login" className={`${buttonClass} w-fit`}>
+      <Button render={<Link href="/login" />} nativeButton={false} className="w-fit">
         Sign in to run an audit
-      </Link>
+      </Button>
     );
   }
 
@@ -81,35 +69,52 @@ async function Dashboard() {
     .from(audit)
     .where(eq(audit.userId, user.id))
     .orderBy(desc(audit.createdAt));
+
+  return <DashboardView audits={audits} />;
+}
+
+type DashboardRow = OverviewRow & { id: string; url: string; status: Audit["status"]; createdAt: Date };
+
+/** The signed-in dashboard. Also rendered with sample audits for the skeleton, so it must not fetch. */
+function DashboardView({ audits }: { audits: DashboardRow[] }) {
   const recent = audits.slice(0, 20);
 
   return (
     <div className="flex flex-col gap-8">
       <AuditForm />
       <Overview audits={audits} />
-      <section>
-        <h2 className="mb-3 text-sm font-medium uppercase tracking-wide text-muted">
-          Your audits
-        </h2>
+      <section className="flex flex-col gap-3">
+        <h2 className="type-heading-sm">Your audits</h2>
         {recent.length === 0 ? (
-          <p className="text-muted">No audits yet. Try your own site or a client&apos;s.</p>
+          <Empty>
+            <EmptyHeader>
+              <EmptyTitle>No audits yet</EmptyTitle>
+              <EmptyDescription>Try your own site or a client&apos;s.</EmptyDescription>
+            </EmptyHeader>
+          </Empty>
         ) : (
-          <ul className="divide-y divide-border rounded-lg border border-border">
+          <ItemGroup aria-label="Your audits">
             {recent.map((a) => (
-              <li key={a.id}>
-                <Link
-                  href={`/audits/${a.id}`}
-                  className="flex items-center justify-between gap-4 px-4 py-3 hover:bg-card"
-                >
-                  <span className="truncate">{a.url}</span>
-                  <span className="flex shrink-0 items-center gap-3 text-sm text-muted">
+              <Item key={a.id}>
+                <ItemContent>
+                  <ItemTitle>
+                    {/* Wraps instead of truncating: audits of one site differ only in the path at the end. */}
+                    <ItemLink
+                      render={<Link href={`/audits/${a.id}`} />}
+                      // "!": ItemLink's own truncate sets nowrap, which a plain whitespace-normal loses to.
+                      className="whitespace-normal! wrap-anywhere"
+                    >
+                      {a.url}
+                    </ItemLink>
+                  </ItemTitle>
+                  <ItemDescription>
                     <LocalTime date={a.createdAt} />
-                    <StatusBadge status={a.status} />
-                  </span>
-                </Link>
-              </li>
+                  </ItemDescription>
+                </ItemContent>
+                <AuditStatus status={a.status} size="sm" />
+              </Item>
             ))}
-          </ul>
+          </ItemGroup>
         )}
       </section>
     </div>
@@ -141,26 +146,37 @@ function Overview({ audits }: { audits: OverviewRow[] }) {
   const collectMs = median(done.flatMap((a) => (a.collectMs != null ? [a.collectMs] : [])));
   const diagnoseMs = median(done.flatMap((a) => (a.diagnoseMs != null ? [a.diagnoseMs] : [])));
   const cost = median(done.flatMap((a) => (a.costUsd != null ? [a.costUsd] : [])));
-  const sec = (ms: number | null) => (ms == null ? "–" : `${(ms / 1000).toFixed(1)} s`);
+  const sec = (ms: number) => `${(ms / 1000).toFixed(1)} s`;
 
-  const tiles = [
-    { label: "Audits done", value: String(done.length), hint: failed ? `${failed} failed` : "none failed" },
-    { label: "Median time", value: sec(totalMs), hint: `data ${sec(collectMs)} · diagnosis ${sec(diagnoseMs)}` },
-    { label: "Median cost", value: cost == null ? "–" : `$${cost.toFixed(3)}`, hint: "Claude diagnosis only" },
-  ];
-
+  // One list, not a row of equal stat cards: the numbers read as facts about the same audits.
   return (
-    <section>
-      <h2 className="mb-3 text-sm font-medium uppercase tracking-wide text-muted">Overview</h2>
-      <div className="grid gap-3 sm:grid-cols-3">
-        {tiles.map((t) => (
-          <div key={t.label} className="rounded-lg border border-border p-3">
-            <div className="text-xs uppercase tracking-wide text-muted">{t.label}</div>
-            <div className="text-xl font-semibold tabular-nums">{t.value}</div>
-            <div className="text-xs text-muted">{t.hint}</div>
-          </div>
-        ))}
-      </div>
+    <section className="flex flex-col gap-3">
+      <h2 className="type-heading-sm">Overview</h2>
+      <DataList variant="panel">
+        <DataListItem>
+          <DataListLabel>Audits done</DataListLabel>
+          {/* Each value is one string: DataListValue lays its children out with a gap. */}
+          <DataListValue className="tabular-nums">
+            {failed > 0 ? `${done.length}, ${failed} failed` : String(done.length)}
+          </DataListValue>
+        </DataListItem>
+        <DataListItem>
+          <DataListLabel>Median time</DataListLabel>
+          <DataListValue className="tabular-nums">
+            {totalMs == null
+              ? null
+              : collectMs != null && diagnoseMs != null
+                ? `${sec(totalMs)} (data ${sec(collectMs)}, diagnosis ${sec(diagnoseMs)})`
+                : sec(totalMs)}
+          </DataListValue>
+        </DataListItem>
+        <DataListItem>
+          <DataListLabel>Median cost</DataListLabel>
+          <DataListValue className="tabular-nums">
+            {cost == null ? null : `$${cost.toFixed(3)} for the Claude diagnosis`}
+          </DataListValue>
+        </DataListItem>
+      </DataList>
     </section>
   );
 }

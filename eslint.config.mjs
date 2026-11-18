@@ -12,6 +12,12 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored from the Glaze registry (checked by glaze.eslint.config.mjs instead) and installed agent skills.
+    "src/components/glaze/**",
+    "src/lib/glaze/**",
+    "glaze.eslint.config.mjs",
+    ".claude/**",
+    ".agents/**",
   ]),
 ]);
 
