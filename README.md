@@ -2,6 +2,8 @@
 
 Paste a URL. Get the **root causes** of slow Core Web Vitals and poor AI-search visibility, with fixes you can ship.
 
+**Live:** https://perf-geo-auditor-eta.vercel.app (sign up, then run an audit; about 60 s and under $0.01 each, capped at 5 per user per day)
+
 It combines three data sources, then has Claude investigate them with tools:
 
 | Source | What it gives | Where |
